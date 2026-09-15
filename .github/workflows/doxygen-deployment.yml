@@ -33,13 +33,14 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: docs
-          destination_dir: ${{ github.event.release.tag_name }}
+          destination_dir: api/${{ github.event.release.tag_name }}
           keep_files: true
 
-      - name: Deploy redirect to root
+      - name: Deploy redirect to /api/
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: redirect
+          destination_dir: api
           keep_files: true
