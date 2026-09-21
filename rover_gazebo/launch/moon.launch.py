@@ -49,6 +49,28 @@ def generate_launch_description():
         description="Nav2 controller (RPP or TEB)",
     )
 
+    headless = LaunchConfiguration("headless")
+    headless_cmd = DeclareLaunchArgument(
+        "headless",
+        default_value="False",
+        description="Run Gazebo without its GUI (server only)",
+    )
+
+    slam = LaunchConfiguration("slam")
+    slam_cmd = DeclareLaunchArgument(
+        "slam", default_value="True", description="Whether to run slam_toolbox"
+    )
+
+    explore = LaunchConfiguration("explore")
+    explore_cmd = DeclareLaunchArgument(
+        "explore", default_value="True", description="Whether to run explore_lite"
+    )
+
+    launch_rviz = LaunchConfiguration("launch_rviz")
+    launch_rviz_cmd = DeclareLaunchArgument(
+        "launch_rviz", default_value="True", description="Whether to launch rviz2"
+    )
+
     gazebo_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_path, "launch", "gazebo.launch.py")
@@ -58,12 +80,20 @@ def generate_launch_description():
             "initial_pose_z": "2.11",
             "nav2_planner": nav2_planner,
             "nav2_controller": nav2_controller,
+            "headless": headless,
+            "slam": slam,
+            "explore": explore,
+            "launch_rviz": launch_rviz,
         }.items(),
     )
 
     ld = LaunchDescription()
     ld.add_action(nav2_planner_cmd)
     ld.add_action(nav2_controller_cmd)
+    ld.add_action(headless_cmd)
+    ld.add_action(slam_cmd)
+    ld.add_action(explore_cmd)
+    ld.add_action(launch_rviz_cmd)
     ld.add_action(gazebo_cmd)
 
     return ld

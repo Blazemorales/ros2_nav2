@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+#include <chrono>
 #include <memory>
 #include <string>
 
@@ -32,11 +33,11 @@ Serial::Serial(std::string device_name, unsigned int baud_rate) {
   this->device_name = device_name;
   this->baud_rate = baud_rate;
 
-  this->io_service = std::make_unique<boost::asio::io_service>();
+  this->io_context = std::make_unique<boost::asio::io_context>();
   this->serial_port = std::make_unique<boost::asio::serial_port>(
-      boost::asio::serial_port(*this->io_service));
+      boost::asio::serial_port(*this->io_context));
   this->timer =
-      std::make_unique<boost::asio::deadline_timer>(*this->io_service);
+      std::make_unique<boost::asio::steady_timer>(*this->io_context);
 }
 
 bool Serial::connect() {
@@ -112,15 +113,15 @@ bool Serial::read_with_timeout(unsigned char &receive_data, int timeout) {
                   boost::asio::placeholders::bytes_transferred));
 
   // setup a deadline time to implement our timeout.
-  this->timer->expires_from_now(boost::posix_time::seconds(timeout));
+  this->timer->expires_after(std::chrono::seconds(timeout));
   this->timer->async_wait(
       boost::bind(&Serial::time_out, this, boost::asio::placeholders::error));
 
   // block until a character is read or until it is cancelled.
-  this->io_service->run();
+  this->io_context->run();
 
   // reset after a timeout and cancel
-  this->io_service->reset();
+  this->io_context->restart();
 
   if (!read_error)
     receive_data = buffer[0];

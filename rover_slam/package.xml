@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rover_slam</name>
+  <version>2.0.0</version>
+  <description>SLAM mapping (slam_toolbox), saved-map localization (AMCL) and autonomous frontier exploration (explore_lite) for the rover</description>
+  <maintainer email="cunhajp2006@gmail.com">mr-morales</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>slam_toolbox</depend>
+  <depend>nav2_map_server</depend>
+  <depend>nav2_amcl</depend>
+  <depend>nav2_lifecycle_manager</depend>
+  <depend>explore_lite</depend>
+  <depend>lifecycle_msgs</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -48,9 +48,9 @@ public:
 private:
   std::string device_name;
   unsigned int baud_rate;
-  std::unique_ptr<boost::asio::io_service> io_service;
+  std::unique_ptr<boost::asio::io_context> io_context;
   std::unique_ptr<boost::asio::serial_port> serial_port;
-  std::unique_ptr<boost::asio::deadline_timer> timer;
+  std::unique_ptr<boost::asio::steady_timer> timer;
 };
 
 } // namespace lx16a

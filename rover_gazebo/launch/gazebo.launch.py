@@ -37,7 +37,7 @@ from launch.substitutions import (
     EnvironmentVariable,
 )
 from launch_ros.actions import Node
-from launch.conditions import IfCondition
+from launch.conditions import IfCondition, UnlessCondition
 
 
 def generate_launch_description():
@@ -46,6 +46,7 @@ def generate_launch_description():
     pkg_gazebo_ros = get_package_share_directory("ros_gz_sim")
     pkg_rover_localization = get_package_share_directory("rover_localization")
     pkg_rover_navigation = get_package_share_directory("rover_navigation")
+    pkg_rover_slam = get_package_share_directory("rover_slam")
 
     rviz_config = os.path.join(pkg_path, "rviz", "default.rviz")
 
@@ -60,6 +61,13 @@ def generate_launch_description():
     launch_rviz = LaunchConfiguration("launch_rviz")
     launch_rviz_cmd = DeclareLaunchArgument(
         "launch_rviz", default_value="True", description="Whether launch rviz2"
+    )
+
+    headless = LaunchConfiguration("headless")
+    headless_cmd = DeclareLaunchArgument(
+        "headless",
+        default_value="False",
+        description="Run Gazebo without its GUI (server only)",
     )
 
     initial_pose_x = LaunchConfiguration("initial_pose_x")
@@ -96,6 +104,29 @@ def generate_launch_description():
         default_value="RPP",
         choices=["RPP", "TEB"],
         description="Nav2 controller (RPP or TEB)",
+    )
+
+    slam = LaunchConfiguration("slam")
+    slam_cmd_arg = DeclareLaunchArgument(
+        "slam",
+        default_value="True",
+        description="Whether to run slam_toolbox to build a map (True) or "
+        "AMCL to localize on an existing map (False)",
+    )
+
+    explore = LaunchConfiguration("explore")
+    explore_cmd_arg = DeclareLaunchArgument(
+        "explore",
+        default_value="True",
+        description="Whether to run explore_lite frontier exploration "
+        "(only takes effect while slam:=True)",
+    )
+
+    map_yaml = LaunchConfiguration("map")
+    map_cmd_arg = DeclareLaunchArgument(
+        "map",
+        default_value="",
+        description="Map yaml file to localize on, required when slam:=False",
     )
 
     ### NODES ###
@@ -150,14 +181,32 @@ def generate_launch_description():
                 PythonLaunchDescriptionSource(
                     [os.path.join(pkg_gazebo_ros, "launch", "gz_sim.launch.py")]
                 ),
-                launch_arguments=[("gz_args", [world, " -r"])],
+                launch_arguments=[
+                    (
+                        "gz_args",
+                        [world, " -r", PythonExpression(["' -s' if '", headless, "' == 'True' else ''"])],
+                    )
+                ],
             ),
         ]
     )
 
-    localization_cmd = IncludeLaunchDescription(
+    # NOTE: rover_localization's own localization.launch.py also starts the
+    # rtabmap SLAM/mapping node, which (like slam_toolbox) publishes /map and
+    # a map->odom tf. Running both at once creates two competing map owners
+    # and a broken/disconnected tf tree. Since rover_slam's slam_toolbox or
+    # AMCL owns map->odom here, only bring up the odometry pieces
+    # (rgbd_odometry -> ekf), not rtabmap's mapping node.
+    rgbd_odometry_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(pkg_rover_localization, "launch", "localization.launch.py")
+            os.path.join(pkg_rover_localization, "launch", "rgbd_odometry.launch.py")
+        ),
+        launch_arguments={"use_sim_time": "True"}.items(),
+    )
+
+    ekf_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_rover_localization, "launch", "ekf.launch.py")
         ),
         launch_arguments={"use_sim_time": "True"}.items(),
     )
@@ -171,6 +220,30 @@ def generate_launch_description():
             "planner": nav2_planner,
             "controller": nav2_controller,
         }.items(),
+    )
+
+    slam_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_rover_slam, "launch", "slam.launch.py")
+        ),
+        launch_arguments={"use_sim_time": "true"}.items(),
+        condition=IfCondition(slam),
+    )
+
+    amcl_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_rover_slam, "launch", "amcl.launch.py")
+        ),
+        launch_arguments={"use_sim_time": "true", "map": map_yaml}.items(),
+        condition=UnlessCondition(slam),
+    )
+
+    explore_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_rover_slam, "launch", "explore.launch.py")
+        ),
+        launch_arguments={"use_sim_time": "true"}.items(),
+        condition=IfCondition(PythonExpression([slam, " and ", explore])),
     )
 
     cmd_vel_cmd = IncludeLaunchDescription(
@@ -194,6 +267,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     ld.add_action(launch_rviz_cmd)
+    ld.add_action(headless_cmd)
     ld.add_action(world_cmd)
     ld.add_action(initial_pose_x_cmd)
     ld.add_action(initial_pose_y_cmd)
@@ -201,12 +275,19 @@ def generate_launch_description():
     ld.add_action(initial_pose_yaw_cmd)
     ld.add_action(nav2_planner_cmd)
     ld.add_action(nav2_controller_cmd)
+    ld.add_action(slam_cmd_arg)
+    ld.add_action(explore_cmd_arg)
+    ld.add_action(map_cmd_arg)
 
     ld.add_action(gazebo_cmd)
     ld.add_action(gz_bridge_cmd)
     ld.add_action(spawn_cmd)
-    ld.add_action(localization_cmd)
+    ld.add_action(rgbd_odometry_cmd)
+    ld.add_action(ekf_cmd)
     ld.add_action(navigation_cmd)
+    ld.add_action(slam_cmd)
+    ld.add_action(amcl_cmd)
+    ld.add_action(explore_cmd)
     ld.add_action(cmd_vel_cmd)
     ld.add_action(rviz_cmd)
 

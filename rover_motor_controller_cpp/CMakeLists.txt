@@ -34,7 +34,7 @@ set(CONTROLLER_NODE_SOURCES
   src/motor_controller/controller_node.cpp
 )
 add_executable(controller_node ${CONTROLLER_NODE_SOURCES})
-target_link_libraries(controller_node pthread boost_system)
+target_link_libraries(controller_node pthread)
 ament_target_dependencies(controller_node rclcpp rover_msgs)
 
 ### VEL PARSER NODE
