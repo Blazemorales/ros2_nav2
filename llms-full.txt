@@ -1,0 +1,843 @@
+# ROS2 Rover
+
+> Hugo & Tailwindcss Starter
+
+--------------------------------------------------------------------------------
+title: "Home"
+url: https://mgonzs13.github.io/ros2_rover/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Contact"
+url: https://mgonzs13.github.io/ros2_rover/contact/index.md
+description: this is meta description
+--------------------------------------------------------------------------------
+this is meta description
+
+--------------------------------------------------------------------------------
+title: "Hey, I am John Doe!"
+url: https://mgonzs13.github.io/ros2_rover/about/index.md
+description: this is meta description
+--------------------------------------------------------------------------------
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+
+### This is a title
+
+* Lorem ipsum, dolor sit amet
+* Enim voluptatem dicta expedita veritatis
+* Fugit voluptatibus perspiciatis assumenda
+* Enim voluptatem dicta expedita
+* Corporis illum nesciunt commodi vel
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+
+
+--------------------------------------------------------------------------------
+title: "Blog Posts"
+url: https://mgonzs13.github.io/ros2_rover/blog/index.md
+description: this is meta description
+--------------------------------------------------------------------------------
+this is meta description
+
+--------------------------------------------------------------------------------
+title: "How to build an Application with modern Technology"
+url: https://mgonzs13.github.io/ros2_rover/blog/post-1/index.md
+date: "2022-04-04"
+description: this is meta description
+--------------------------------------------------------------------------------
+
+Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+## Creative Design
+
+Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+
+> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+
+--------------------------------------------------------------------------------
+title: "How to build an Application with modern Technology"
+url: https://mgonzs13.github.io/ros2_rover/blog/post-2/index.md
+date: "2022-04-04"
+description: this is meta description
+--------------------------------------------------------------------------------
+
+Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+## Creative Design
+
+Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+
+> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+
+--------------------------------------------------------------------------------
+title: "How to build an Application with modern Technology"
+url: https://mgonzs13.github.io/ros2_rover/blog/post-3/index.md
+date: "2022-04-04"
+description: this is meta description
+--------------------------------------------------------------------------------
+
+Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+## Creative Design
+
+Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+
+> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+
+--------------------------------------------------------------------------------
+title: "How to build an Application with modern Technology"
+url: https://mgonzs13.github.io/ros2_rover/blog/post-4/index.md
+date: "2022-04-04"
+description: this is meta description
+--------------------------------------------------------------------------------
+
+Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+## Creative Design
+
+Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+
+> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+
+
+--------------------------------------------------------------------------------
+title: "Authors"
+url: https://mgonzs13.github.io/ros2_rover/authors/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "John Doe"
+url: https://mgonzs13.github.io/ros2_rover/authors/john-doe/index.md
+description: this is meta description
+--------------------------------------------------------------------------------
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+
+
+--------------------------------------------------------------------------------
+title: "Sam Wilson"
+url: https://mgonzs13.github.io/ros2_rover/authors/sam-wilson/index.md
+description: this is meta description
+--------------------------------------------------------------------------------
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+
+
+--------------------------------------------------------------------------------
+title: "William Jacob"
+url: https://mgonzs13.github.io/ros2_rover/authors/william-jacob/index.md
+description: this is meta description
+--------------------------------------------------------------------------------
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+
+
+--------------------------------------------------------------------------------
+title: "Pages"
+url: https://mgonzs13.github.io/ros2_rover/pages/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Comandos Essenciais — Simulação Gazebo do Rover"
+url: https://mgonzs13.github.io/ros2_rover/comandos-essenciais-simulacao/index.md
+description: Passo a passo completo, sequencial e testado para compilar e rodar a simulação do rover Sawppy no Gazebo (mundos Moon/Mars/Forest), com SLAM e exploração autônoma.
+--------------------------------------------------------------------------------
+
+{{< toc >}}
+
+Guia sequencial para sair do zero até o rover explorando sozinho no Gazebo.
+Baseado no repositório [`ros2_rover`](https://github.com/mgonzs13/ros2_rover)
+(fork `aresunbrovers/ros2_rover`, branch `jazzy`).
+
+## Pré-requisitos
+
+- **Docker** instalado no host. Todo o ROS 2 roda dentro do container — **não
+  instale ROS 2 / colcon direto no host**, o `Dockerfile` da raiz do repo já
+  cuida disso a partir da imagem `ros:jazzy` (que traz Gazebo Harmonic via
+  `ros_gz_sim`).
+- **Servidor X11** no host, só se você quiser a GUI do Gazebo. Sem isso, use
+  o modo `headless` (ver seção 5).
+- O repositório clonado na raiz, onde está o `Dockerfile`.
+
+## 1. Build da imagem Docker
+
+```shell
+cd ~/Documentos/ros2_rover   # raiz do repo, onde está o Dockerfile
+docker build -t rover .
+```
+
+O que esse `Dockerfile` faz por baixo:
+
+1. Parte de `ros:jazzy` e copia o repositório para `/root/ros2_ws/src`.
+2. Instala dependências de sistema (`gcc`, `git`, `wget`, `python3`, `python3-pip`).
+3. Roda `rosdep install --from-paths src --ignore-src -r -y` para instalar
+   todas as dependências ROS declaradas nos `package.xml` de cada pacote
+   (inclui `ros2controlcli`, `gz_ros2_control`, `ros_gz_sim`, `ros_gz_bridge`,
+   `controller_manager`, `rviz2`, etc.).
+4. Compila o workspace inteiro com `colcon build`.
+5. Deixa `source /root/ros2_ws/install/setup.bash` já no `~/.bashrc` do container.
+
+## 2. Subir o container
+
+**Uso rápido/efêmero** (some ao sair, bom pra testar a imagem):
+
+```shell
+docker run -it --rm rover
+```
+
+**Uso de desenvolvimento** (monta o repo do host dentro do container e
+habilita a GUI do Gazebo via X11):
+
+```shell
+xhost +local:docker   # autoriza o container a abrir janelas no X11 do host
+                       # (não persiste entre reboots do host — repita se a GUI
+                       # falhar com "Authorization required, but no authorization
+                       # protocol specified")
+
+docker run -it --name rover_dev \
+  -v $(pwd):/workspaces/ros2_ws \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  rover bash
+```
+
+Container já criado antes? Só reabrir:
+
+```shell
+docker start rover_dev
+docker exec -it rover_dev bash
+```
+
+## 3. Compilar o workspace (dentro do container)
+
+```shell
+cd /root/ros2_ws          # ou /workspaces/ros2_ws se você montou o volume
+rosdep install --from-paths src --ignore-src -r -y
+colcon build
+source install/setup.bash
+```
+
+## 4. Rodar o rover real (bringup, sem simulação)
+
+```shell
+ros2 launch rover_bringup rover.launch.py
+```
+
+## 5. Rodar a simulação no Gazebo
+
+Três mundos prontos:
+
+```shell
+ros2 launch rover_gazebo moon.launch.py
+ros2 launch rover_gazebo mars.launch.py
+ros2 launch rover_gazebo forest.launch.py
+```
+
+### Argumentos úteis (`moon.launch.py`)
+
+| Argumento          | Default      | Descrição                                                                  |
+| ------------------ | ------------ | --------------------------------------------------------------------------- |
+| `headless`          | `False`      | roda `gz sim -s` (servidor apenas, sem GUI) — evita gastar CPU renderizando |
+| `slam`              | `True`       | sobe o `slam_toolbox` (mapeamento)                                          |
+| `explore`           | `True`       | sobe o `explore_lite` (exploração autônoma via Nav2, frontier exploration)  |
+| `launch_rviz`       | `True`       | abre o RViz2                                                                |
+| `nav2_planner`      | `SmacHybrid` | `SmacHybrid` ou `SmacLattice`                                               |
+| `nav2_controller`   | `RPP`        | `RPP` ou `TEB`                                                              |
+
+Exemplo — exploração autônoma completa, sem gastar recursos com a GUI (bom
+para testar rápido ou rodar em CI):
+
+```shell
+ros2 launch rover_gazebo moon.launch.py slam:=True explore:=True headless:=True
+```
+
+Ver detalhes de como esse fluxo de SLAM + exploração + Nav2 foi validado (e
+os bugs corrigidos no caminho) no [Diário de Bordo](/diario-de-bordo).
+
+## 6. Serviço Linux (opcional, produção/boot automático)
+
+```shell
+cd ~/ros2_ws/src/ros2_rover/rover_service
+sudo ./install.sh
+sudo service rover status
+```
+
+## Limpando processos travados
+
+Dentro do container, evite `pkill -f` com padrões genéricos como `ros2`: eles
+casam com a própria linha de comando do `docker exec bash -c "..."` (que
+contém `/ros2_ws/`) e podem matar o processo errado — inclusive o PID 1 do
+container. Prefira matar por PID:
+
+```shell
+ps -eo pid=,comm= | awk '$1 != 1 {print $1}' | xargs -r kill
+```
+
+## Dependências externas
+
+| Dependência | Onde é usada | Como é resolvida |
+| --- | --- | --- |
+| Docker | build/execução de tudo | instalar manualmente no host |
+| ROS 2 Jazzy | base do workspace | vem na imagem `ros:jazzy` do Dockerfile |
+| Gazebo Harmonic | simulação 3D | trazido pelas dependências `ros_gz_sim` / `ros_gz_bridge` via rosdep |
+| `gz_ros2_control` | controllers do rover na simulação | rosdep, declarado em `rover_gazebo/package.xml` |
+| `ros2controlcli` | ativa os controllers (`ros2 control load_controller ...`) | rosdep, declarado em `rover_gazebo/package.xml` |
+| `slam_toolbox` | mapeamento (SLAM) | pacote `rover_slam` |
+| `explore_lite` (fork `robo-friends/m-explore-ros2`) | exploração autônoma de fronteiras | pacote `rover_slam` |
+| Nav2 (`SmacHybrid`/`SmacLattice` + `RPP`/`TEB`) | navegação/desvio de obstáculos | pacote `rover_navigation`, já existente no repo upstream |
+| X11 (`xhost`) | GUI do Gazebo dentro do container | só necessário se `headless:=False` |
+
+
+--------------------------------------------------------------------------------
+title: "Diário de Bordo — Rover Sim"
+url: https://mgonzs13.github.io/ros2_rover/diario-de-bordo/index.md
+description: Log técnico do desenvolvimento da simulação do rover: decisões, bugs encontrados e correções.
+--------------------------------------------------------------------------------
+
+{{< toc >}}
+
+Log técnico incremental. Cada entrada documenta o estado do projeto num dado
+momento — o que foi decidido, o que quebrou e como foi corrigido. Ver também
+os [Comandos Essenciais](/comandos-essenciais-simulacao) para rodar o que
+está descrito aqui.
+
+## 2026-09-21 — Navegação autônoma (SLAM + exploração + Nav2): funcionando
+
+**Objetivo:** o rover simulado explora sozinho (frontier exploration) e
+navega com Nav2 evitando obstáculos, sem teleop e sem goals manuais.
+
+**Resultado:** confirmado funcionando de ponta a ponta (headless e com GUI).
+O rover se move sozinho via `explore_lite` + Nav2, o `/map` do
+`slam_toolbox` cresce continuamente, e não aparecem mais avisos de "Robot is
+out of bounds of the costmap".
+
+### Decisão de escopo
+
+O pacote `rover_nav2` mencionado em planos anteriores nunca chegou a existir
+de fato. O repo upstream já trazia `rover_navigation` (SmacHybrid/SmacLattice
++ RPP/TEB) funcionando. A lacuna real era SLAM + exploração autônoma, então
+foi criado um pacote novo, `rover_slam` (slam_toolbox + AMCL + explore_lite),
+sem tocar em `rover_motor_controller_cpp/serial.cpp` e `.hpp` (edições locais
+do usuário, propositalmente preservadas).
+
+### O que foi feito
+
+- Novo pacote `rover_slam/`:
+  - `config/slam_toolbox.yaml`, `config/amcl.yaml`, `config/explore_params.yaml`
+  - `launch/slam.launch.py` (slam_toolbox como lifecycle node, configure → activate)
+  - `launch/amcl.launch.py` (map_server + amcl + lifecycle_manager_localization)
+  - `launch/explore.launch.py` (explore_lite, do fork `robo-friends/m-explore-ros2`)
+- `rover_gazebo/launch/gazebo.launch.py`:
+  - argumentos novos: `slam` (default `True`), `explore` (default `True`), `map`,
+    `headless` (default `False` — roda `gz sim -s`, sem GUI, útil para
+    testes/CI sem gastar CPU em renderização)
+  - trocou o include único de `rover_localization/launch/localization.launch.py`
+    (que subia o `rtabmap` junto) por dois includes separados:
+    `rgbd_odometry.launch.py` + `ekf.launch.py` (só odometria, sem SLAM visual)
+  - inclui os launches do `rover_slam` condicionalmente
+- `rover_gazebo/launch/moon.launch.py`: agora repassa `headless`, `slam`,
+  `explore`, `launch_rviz` para `gazebo.launch.py` (antes ficavam presos aos
+  defaults, sem poder sobrescrever via `ros2 launch ... slam:=False` etc.)
+
+### Bugs encontrados e corrigidos
+
+1. **Conflito de dono do `/map`.** `rtabmap` (SLAM visual, dentro do
+   `localization.launch.py` original) competia com `slam_toolbox` pela
+   transform `map → odom`. Corrigido subindo só `rgbd_odometry` + `ekf`
+   (odometria), sem o `rtabmap` completo.
+2. **`slam_toolbox` nunca ativava.** É um lifecycle node; o launch inicial
+   usava um `Node` simples. Corrigido com `LifecycleNode` +
+   `EmitEvent`/`RegisterEventHandler` (configure → activate), copiando o
+   padrão do `online_async_launch.py` oficial do `slam_toolbox`.
+3. **Processos zumbis entre testes.** `pkill -f` não matava tudo de forma
+   confiável; sobravam `robot_state_publisher`/`joint_state_publisher`/bridges
+   de execuções anteriores rodando junto com a atual, brigando pela tf.
+   Forma segura de limpar, dentro do container:
+   ```shell
+   ps -eo pid=,comm= | awk '$1 != 1 {print $1}' | xargs -r kill
+   ```
+   **Nunca** usar `pkill -f` com padrões genéricos como `ros2`: casa com a
+   própria linha de comando do `docker exec bash -c "..."` (que contém
+   `/ros2_ws/`) e mata o processo errado — já aconteceu de derrubar o PID 1
+   do container e precisar `docker start <container>` de novo.
+4. **`/scan` com `frame_id` errado**, causa raiz do `slam_toolbox` descartar
+   todo scan (mensagens "Message Filter dropping message... frame does not
+   exist" / "timestamp earlier than transform cache"). O sensor lidar
+   (`rover_description/urdf/sensors/hokuyo.urdf.xacro`) não tinha a tag
+   `<gz_frame_id>`, então o Gazebo publicava `/scan` com
+   `frame_id: rover/base_link/lidar` — uma frame que não existe na árvore de
+   tf (o link real se chama `laser_link`). Corrigido adicionando
+   `<gz_frame_id>${prefix}_link</gz_frame_id>` dentro do `<sensor>` do lidar,
+   igual já era feito para o RGBD (`<optical_frame_id>camera_frame</optical_frame_id>`
+   em `asus_xtion.urdf.xacro`).
+5. **"Robot is out of bounds of the costmap" / "Robot out of costmap
+   bounds"** no `explore_lite`. O `global_costmap` (em
+   `rover_navigation/params/costmaps.yaml`) não tinha `rolling_window`,
+   então seus limites vinham direto do `/map` do `slam_toolbox`. No início
+   da exploração, a área embaixo/atrás do robô ainda não tinha sido varrida
+   pelo lidar (ponto cego atrás do sensor), então o `/map` nascia sem cobrir
+   a pose do robô — e como o `explore_lite` também lê
+   `/global_costmap/costmap`, isso travava os dois num deadlock: sem costmap
+   válido não navega, sem navegar o mapa não cresce. Corrigido adicionando
+   `rolling_window: true`, `width: 30`, `height: 30` ao `global_costmap` —
+   ele passa a ficar sempre centrado no robô, independente de onde o `/map`
+   do SLAM já cresceu.
+6. **Gazebo GUI travava** com "Authorization required, but no authorization
+   protocol specified" / "could not connect to display :0", e o launch
+   matava o `gz sim server` inteiro junto com a GUI. Faltava autorização X11
+   do host para o container. Corrigido no host com `xhost +local:docker`
+   (não persiste entre reboots — repetir se voltar a acontecer). Para testes
+   automatizados/CI, usar `headless:=True` em vez de depender de X11.
+7. **Robô nunca se movia fisicamente**, mesmo publicando `/cmd_vel`
+   manualmente e mesmo com Nav2 enviando goals — causa raiz de tudo "falhar
+   em progredir" e do `explore_lite` esgotar frontiers rapidamente sem o
+   robô sair do lugar. O pacote `ros2controlcli` (fornece o verbo
+   `ros2 control`, usado por `rover_gazebo/launch/include/spawn.launch.py`
+   para ativar `joint_state_broadcaster`/`position_controller`/
+   `velocity_controller` via `ros2 control load_controller --set-state
+   active ...`) não estava instalado na imagem/container. Os processos de
+   spawn morriam na hora com `invalid choice: 'control'` (exit code 2), e
+   `ros2 service call /controller_manager/list_controllers ...` confirmava
+   zero controllers ativos. Corrigido:
+   - instalado `ros-jazzy-ros2controlcli` no container (não persiste se a
+     imagem for reconstruída do zero)
+   - adicionado `<depend>ros2controlcli</depend>` em
+     `rover_gazebo/package.xml`, para que `rosdep install --from-paths src
+     --ignore-src -r -y` (chamado no `Dockerfile` da raiz do repo) instale
+     isso automaticamente em builds futuros da imagem.
+
+### Status confirmado
+
+Testado tanto com `headless:=True` quanto com a GUI normal do Gazebo (depois
+do `xhost +local:docker`):
+
+- `/scan` publica de verdade, com `frame_id: laser_link` correto.
+- `map → base_link` resolve e atualiza continuamente.
+- `/map` cresce sem parar enquanto o robô explora (visto crescendo de 90x62
+  para 173x193+ células em ~1 min de exploração).
+- Zero ocorrências de "Robot is out of bounds of the costmap" ou
+  "[FrontierSearch] Robot out of costmap bounds".
+- `explore_lite` conecta no Nav2, manda goals sozinho, e não para cedo com
+  "All frontiers traversed/tried out" (isso só acontecia antes porque o robô
+  ficava fisicamente parado — bug #7).
+- Robô se desloca de verdade (odom saindo de `(0,0)` e progredindo, ex.:
+  `(0.33, 2.10) → (1.72, 3.33)` em ~1 min), sem teleop nem goal manual.
+- `ros2 service call /controller_manager/list_controllers ...` mostra os 3
+  controllers (`joint_state_broadcaster`, `position_controller`,
+  `velocity_controller`) com `state='active'`.
+
+### Pendências conhecidas (não bloqueantes)
+
+- Footprint em `rover_navigation/params/costmaps.yaml` é placeholder
+  0.6x0.6m, não é a medida real do chassi Sawppy — ajustar só se o
+  comportamento de desvio de obstáculo parecer errado na prática.
+- `width`/`height: 30` (metros) do `global_costmap` rolling window é um
+  chute razoável para o tamanho do `moon.world` (~100x100m de terreno) — se
+  o `explore_lite` parecer "míope" (só olhando frontiers muito perto),
+  considerar aumentar.
+- Ainda aparecem alguns "Message Filter dropping message... timestamp
+  earlier than transform cache" ocasionais e "Control loop missed its
+  desired rate" no `controller_server` — sintoma de contenção de CPU
+  (Gazebo + Nav2 + SLAM juntos). Não impede o progresso, mas
+  `headless:=True` ajuda bastante.
+- Se a imagem Docker for reconstruída do zero, o `ros2controlcli` já vem
+  incluído via `rosdep install` (fix do bug #7 no `package.xml`) — não
+  precisa mais instalar manualmente.
+
+### Como retomar
+
+Repositório montado dentro do container em `/workspaces/ros2_ws` (mesmo
+diretório do host). Não instalar ROS 2/colcon no host — tudo roda dentro do
+container, de propósito. Comandos completos em
+[Comandos Essenciais](/comandos-essenciais-simulacao).
+
+Para GUI: `xhost +local:docker` no host antes de abrir o container (não
+persiste entre reboots). Para rodar sem GUI (CI/testes rápidos):
+`headless:=True`.
+
+```shell
+ros2 launch rover_gazebo moon.launch.py slam:=True explore:=True headless:=True
+```
+
+
+--------------------------------------------------------------------------------
+title: "Elements"
+url: https://mgonzs13.github.io/ros2_rover/elements/index.md
+description: This is meta description
+--------------------------------------------------------------------------------
+
+{{< toc >}}
+
+Here is an example of headings. You can use this heading by the following markdown rules. For example: use `#` for heading 1 and use `######` for heading 6.
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+---
+
+### Emphasis
+
+The emphasis, aka italics, with _asterisks_ or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
+
+The combined emphasis with **asterisks and _underscores_**.
+
+Strike through uses two tildes. ~~Scratch this.~~
+
+---
+
+### Button
+
+{{< button label="Button" link="/" style="solid" >}}
+
+---
+
+### Link
+
+[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+URLs and URLs in angle brackets will automatically get turned into links.
+<http://www.example.com> or <http://www.example.com> and sometimes
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+---
+
+### Paragraph
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.
+
+---
+
+### Ordered List
+
+1. List item
+2. List item
+3. List item
+4. List item
+5. List item
+
+---
+
+### Unordered List
+
+- List item
+- List item
+- List item
+- List item
+- List item
+
+---
+
+### Notice
+
+{{< notice "note" >}}
+This is a simple note.
+{{< /notice >}}
+
+{{< notice "quote" >}}
+This is a simple quote.
+{{< /notice >}}
+
+{{< notice "tip" >}}
+This is a simple tip.
+{{< /notice >}}
+
+{{< notice "info" >}}
+This is a simple info.
+{{< /notice >}}
+
+{{< notice "warning" >}}
+This is a simple warning.
+{{< /notice >}}
+
+---
+
+### Tab
+
+{{< tabs >}}
+{{< tab "Tab 1" >}}
+
+#### Hey There, I am a tab
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+{{< /tab >}}
+
+{{< tab "Tab 2" >}}
+
+#### I wanna talk about the assassination attempt
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+{{< /tab >}}
+
+{{< tab "Tab 3" >}}
+
+#### We know you’re dealing in stolen ore
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+
+{{< /tab >}}
+{{< /tabs >}}
+
+---
+
+### Accordions
+
+{{< accordion "Why should you need to do this?" >}}
+
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur
+
+{{< /accordion >}}
+
+{{< accordion "How can I adjust Horizontal centering" >}}
+
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur
+
+{{< /accordion >}}
+
+{{< accordion "Should you use Negative margin?" >}}
+
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur
+
+{{< /accordion >}}
+
+---
+
+### Code and Syntax Highlighting
+
+This is an `Inline code` sample.
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+```c  { linenos=true }
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+    return 0;
+}
+```
+
+```mermaid
+flowchart TD
+    A[Start] --> B{Is it?}
+    B -- Yes --> C[OK]
+    C --> D[Rethink]
+    D --> B
+    B -- No ----> E[End]
+```
+
+---
+
+### Blockquote
+
+> Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once.
+
+---
+
+### Tables
+
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
+
+---
+
+### Image
+
+{{< image src="images/image-placeholder.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+
+---
+
+### Gallery
+
+{{< gallery dir="images/gallery" class="" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
+
+---
+
+### Slider
+
+{{< slider dir="images/gallery" class="max-w-[600px] ml-0" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
+
+---
+
+### Youtube video
+
+{{< youtube ResipmZmpDU >}}
+
+---
+
+### Custom video
+
+{{< video src="https://www.w3schools.com/html/mov_bbb.mp4" width="100%" height="auto" autoplay="false" loop="false" muted="false" controls="true" class="rounded-lg" >}}
+
+
+--------------------------------------------------------------------------------
+title: "Privacy"
+url: https://mgonzs13.github.io/ros2_rover/privacy-policy/index.md
+description: This is meta description
+--------------------------------------------------------------------------------
+
+#### Responsibility of Contributors
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+
+pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum. Lacus, facilisis tristique lectus in.
+
+#### Gathering of Personal Information
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+
+#### Protection of Personal- Information
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.
+
+Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat
+
+#### Privacy Policy Changes
+
+1. Sll the Themefisher items are designed to be with the latest , We check all
+2. comments that threaten or harm the reputation of any person or organization
+3. personal information including, but limited to, email addresses, telephone numbers
+4. Any Update come in The technology Customer will get automatic Notification.
+
+
+--------------------------------------------------------------------------------
+title: "Sections"
+url: https://mgonzs13.github.io/ros2_rover/sections/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Categories"
+url: https://mgonzs13.github.io/ros2_rover/categories/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Application"
+url: https://mgonzs13.github.io/ros2_rover/categories/application/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Architecture"
+url: https://mgonzs13.github.io/ros2_rover/categories/architecture/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Data"
+url: https://mgonzs13.github.io/ros2_rover/categories/data/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Software"
+url: https://mgonzs13.github.io/ros2_rover/categories/software/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Technology"
+url: https://mgonzs13.github.io/ros2_rover/categories/technology/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Tags"
+url: https://mgonzs13.github.io/ros2_rover/tags/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Nextjs"
+url: https://mgonzs13.github.io/ros2_rover/tags/nextjs/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Silicon"
+url: https://mgonzs13.github.io/ros2_rover/tags/silicon/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Software"
+url: https://mgonzs13.github.io/ros2_rover/tags/software/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Tailwind"
+url: https://mgonzs13.github.io/ros2_rover/tags/tailwind/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Technology"
+url: https://mgonzs13.github.io/ros2_rover/tags/technology/index.md
+--------------------------------------------------------------------------------
+<no value>

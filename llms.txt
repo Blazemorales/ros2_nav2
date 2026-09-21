@@ -1,0 +1,47 @@
+# ROS2 Rover
+
+> Hugo & Tailwindcss Starter
+
+## Pages
+- [Home](https://mgonzs13.github.io/ros2_rover/index.md)
+- [Contact](https://mgonzs13.github.io/ros2_rover/contact/index.md): this is meta description
+- [Hey, I am John Doe!](https://mgonzs13.github.io/ros2_rover/about/index.md): this is meta description
+
+## Blog Posts
+- [Blog Posts](https://mgonzs13.github.io/ros2_rover/blog/index.md): this is meta description
+
+- [How to build an Application with modern Technology](https://mgonzs13.github.io/ros2_rover/blog/post-1/index.md): this is meta description
+- [How to build an Application with modern Technology](https://mgonzs13.github.io/ros2_rover/blog/post-2/index.md): this is meta description
+- [How to build an Application with modern Technology](https://mgonzs13.github.io/ros2_rover/blog/post-3/index.md): this is meta description
+- [How to build an Application with modern Technology](https://mgonzs13.github.io/ros2_rover/blog/post-4/index.md): this is meta description
+
+## Authors
+- [Authors](https://mgonzs13.github.io/ros2_rover/authors/index.md)
+
+- [John Doe](https://mgonzs13.github.io/ros2_rover/authors/john-doe/index.md): this is meta description
+- [Sam Wilson](https://mgonzs13.github.io/ros2_rover/authors/sam-wilson/index.md): this is meta description
+- [William Jacob](https://mgonzs13.github.io/ros2_rover/authors/william-jacob/index.md): this is meta description
+
+## Pages
+- [Pages](https://mgonzs13.github.io/ros2_rover/pages/index.md)
+
+- [Comandos Essenciais — Simulação Gazebo do Rover](https://mgonzs13.github.io/ros2_rover/comandos-essenciais-simulacao/index.md): Passo a passo completo, sequencial e testado para compilar e rodar a simulação do rover Sawppy no Gazebo (mundos Moon/Mars/Forest), com SLAM e exploração autônoma.
+- [Diário de Bordo — Rover Sim](https://mgonzs13.github.io/ros2_rover/diario-de-bordo/index.md): Log técnico do desenvolvimento da simulação do rover: decisões, bugs encontrados e correções.
+- [Elements](https://mgonzs13.github.io/ros2_rover/elements/index.md): This is meta description
+- [Privacy](https://mgonzs13.github.io/ros2_rover/privacy-policy/index.md): This is meta description
+
+## Categories
+- [Categories](https://mgonzs13.github.io/ros2_rover/categories/index.md)
+- [Application](https://mgonzs13.github.io/ros2_rover/categories/application/index.md)
+- [Architecture](https://mgonzs13.github.io/ros2_rover/categories/architecture/index.md)
+- [Data](https://mgonzs13.github.io/ros2_rover/categories/data/index.md)
+- [Software](https://mgonzs13.github.io/ros2_rover/categories/software/index.md)
+- [Technology](https://mgonzs13.github.io/ros2_rover/categories/technology/index.md)
+
+## Tags
+- [Tags](https://mgonzs13.github.io/ros2_rover/tags/index.md)
+- [Nextjs](https://mgonzs13.github.io/ros2_rover/tags/nextjs/index.md)
+- [Silicon](https://mgonzs13.github.io/ros2_rover/tags/silicon/index.md)
+- [Software](https://mgonzs13.github.io/ros2_rover/tags/software/index.md)
+- [Tailwind](https://mgonzs13.github.io/ros2_rover/tags/tailwind/index.md)
+- [Technology](https://mgonzs13.github.io/ros2_rover/tags/technology/index.md)
