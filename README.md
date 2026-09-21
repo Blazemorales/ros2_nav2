@@ -46,6 +46,12 @@ After the image is created, run a docker container with the following command.
 docker run -it --rm rover
 ```
 
+### Dev Container (VS Code)
+
+A VS Code `.devcontainer` environment is pre-configured with ROS 2 Jazzy, Gazebo, RViz2, C++, Python, and automatic build tools.
+
+Para o guia detalhado de uso do Dev Container em Português, acesse: [DEVCONTAINER_GUIA_PT.md](./DEVCONTAINER_GUIA_PT.md).
+
 ## Usage
 
 <div align="center">

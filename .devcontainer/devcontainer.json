@@ -1,0 +1,50 @@
+{
+  "name": "ROS 2 Rover (Jazzy)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/ros2_ws/src/ros2_rover,type=bind",
+  "workspaceFolder": "/workspaces/ros2_ws/src/ros2_rover",
+
+  "runArgs": [
+    "--net=host",
+    "--ipc=host",
+    "--privileged",
+    "-e", "DISPLAY=${env:DISPLAY}",
+    "-v", "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+  ],
+
+  "containerEnv": {
+    "QT_X11_NO_MITSHM": "1"
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "cmake.configureOnOpen": false,
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+          }
+        },
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-iot.vscode-ros",
+        "ms-vscode.cpptools",
+        "ms-python.python",
+        "twxs.cmake",
+        "ms-vscode.cmake-tools",
+        "redhat.vscode-xml",
+        "eamodio.gitlens"
+      ]
+    }
+  },
+
+  "postCreateCommand": "cd /workspaces/ros2_ws && rosdep update && rosdep install --from-paths src --ignore-src -y -r && colcon build",
+
+  "remoteUser": "root"
+}

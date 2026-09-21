@@ -76,39 +76,24 @@ def generate_launch_description():
         parameters=[{"use_sim_time": True}],
     )
 
-    load_joint_state_controller = ExecuteProcess(
-        cmd=[
-            "ros2",
-            "control",
-            "load_controller",
-            "--set-state",
-            "active",
-            "joint_state_broadcaster",
-        ],
+    load_joint_state_controller = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_state_broadcaster"],
         output="screen",
     )
 
-    load_position_controller_controller = ExecuteProcess(
-        cmd=[
-            "ros2",
-            "control",
-            "load_controller",
-            "--set-state",
-            "active",
-            "position_controller",
-        ],
+    load_position_controller_controller = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["position_controller"],
         output="screen",
     )
 
-    load_velocity_controller_controller = ExecuteProcess(
-        cmd=[
-            "ros2",
-            "control",
-            "load_controller",
-            "--set-state",
-            "active",
-            "velocity_controller",
-        ],
+    load_velocity_controller_controller = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["velocity_controller"],
         output="screen",
     )
 
