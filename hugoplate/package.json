@@ -2,6 +2,7 @@
   "name": "hugoplate",
   "description": "hugo tailwindcss boilerplate",
   "version": "3.5.1",
+  "packageManager": "pnpm@10.33.0",
   "license": "MIT",
   "author": "zeon.studio",
   "scripts": {
