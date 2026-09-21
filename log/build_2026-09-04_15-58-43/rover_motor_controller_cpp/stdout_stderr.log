@@ -1,0 +1,243 @@
+CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- The C compiler identification is GNU 15.3.0
+-- The CXX compiler identification is GNU 15.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.21 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/libcrypto.so (found version "3.6.4")
+-- Found FastRTPS: /home/mr-morales/miniforge3/envs/ros2_jazzy/include (Required is at least version "2.13")
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rover_msgs: 2.0.0 (/home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake)
+-- Found geometry_msgs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/geometry_msgs/cmake)
+-- Found ament_cmake_clang_format: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_clang_format/cmake)
+-- Configuring done (3.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_motor_controller_cpp
+[ 11%] Building CXX object CMakeFiles/controller_node.dir/src/controller_node_main.cpp.o
+[ 22%] Building CXX object CMakeFiles/vel_parser_node.dir/src/motor_controller/vel_parser_node.cpp.o
+[ 55%] Building CXX object CMakeFiles/vel_parser_node.dir/src/vel_parser_node_main.cpp.o
+[ 55%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/serial.cpp.o
+[ 55%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/lx16a.cpp.o
+[ 66%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/motor_controller.cpp.o
+[ 77%] Building CXX object CMakeFiles/controller_node.dir/src/motor_controller/controller_node.cpp.o
+In file included from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:30,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:29,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/lx16a.hpp:33,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/motor_controller.cpp:26:
+/home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:36:1: note: '#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.'
+   36 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:32: error: 'io_service' is not a member of 'boost::asio'; did you mean 'use_service'?
+   51 |   std::unique_ptr<boost::asio::io_service> io_service;
+      |                                ^~~~~~~~~~
+      |                                use_service
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:42: error: template argument 1 is invalid
+   51 |   std::unique_ptr<boost::asio::io_service> io_service;
+      |                                          ^
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:42: error: template argument 2 is invalid
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:32: error: 'deadline_timer' is not a member of 'boost::asio'
+   53 |   std::unique_ptr<boost::asio::deadline_timer> timer;
+      |                                ^~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:46: error: template argument 1 is invalid
+   53 |   std::unique_ptr<boost::asio::deadline_timer> timer;
+      |                                              ^
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:46: error: template argument 2 is invalid
+gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:121: CMakeFiles/controller_node.dir/src/lx16a/motor_controller.cpp.o] Error 1
+gmake[2]: ** Esperando que outros processos terminem.
+In file included from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:30,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:29,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:26:
+/home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:36:1: note: '#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.'
+   36 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:32: error: 'io_service' is not a member of 'boost::asio'; did you mean 'use_service'?
+   51 |   std::unique_ptr<boost::asio::io_service> io_service;
+      |                                ^~~~~~~~~~
+      |                                use_service
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:42: error: template argument 1 is invalid
+   51 |   std::unique_ptr<boost::asio::io_service> io_service;
+      |                                          ^
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:42: error: template argument 2 is invalid
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:32: error: 'deadline_timer' is not a member of 'boost::asio'
+   53 |   std::unique_ptr<boost::asio::deadline_timer> timer;
+      |                                ^~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:46: error: template argument 1 is invalid
+   53 |   std::unique_ptr<boost::asio::deadline_timer> timer;
+      |                                              ^
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:46: error: template argument 2 is invalid
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp: In constructor 'lx16a::Serial::Serial(std::string, unsigned int)':
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:35:52: error: 'io_service' is not a member of 'boost::asio'; did you mean 'use_service'?
+   35 |   this->io_service = std::make_unique<boost::asio::io_service>();
+      |                                                    ^~~~~~~~~~
+      |                                                    use_service
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:35:63: error: no matching function for call to 'make_unique<<expression error> >()'
+   35 |   this->io_service = std::make_unique<boost::asio::io_service>();
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:35:63: note: there are 3 candidates
+In file included from /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/c++/memory:80,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:23:
+/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/c++/bits/unique_ptr.h:1102:5: note: candidate 1: 'template<class _Tp, class ... _Args> std::__detail::__unique_ptr_t<_Tp> std::make_unique(_Args&& ...)'
+ 1102 |     make_unique(_Args&&... __args)
+      |     ^~~~~~~~~~~
+/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/c++/bits/unique_ptr.h:1102:5: note: template argument deduction/substitution failed:
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:35:63: error: template argument 1 is invalid
+   35 |   this->io_service = std::make_unique<boost::asio::io_service>();
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/c++/bits/unique_ptr.h:1117:5: note: candidate 2: 'template<class _Tp> std::__detail::__unique_ptr_array_t<_Tp> std::make_unique(size_t)'
+ 1117 |     make_unique(size_t __num)
+      |     ^~~~~~~~~~~
+/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/c++/bits/unique_ptr.h:1117:5: note: candidate expects 1 argument, 0 provided
+/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/c++/bits/unique_ptr.h:1127:5: note: candidate 3: 'template<class _Tp, class ... _Args> std::__detail::__invalid_make_unique_t<_Tp> std::make_unique(_Args&& ...)' (deleted)
+ 1127 |     make_unique(_Args&&...) = delete;
+      |     ^~~~~~~~~~~
+/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/c++/bits/unique_ptr.h:1127:5: note: template argument deduction/substitution failed:
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:35:63: error: template argument 1 is invalid
+   35 |   this->io_service = std::make_unique<boost::asio::io_service>();
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:37:32: error: invalid type argument of unary '*' (have 'int')
+   37 |       boost::asio::serial_port(*this->io_service));
+      |                                ^~~~~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:39:37: error: 'deadline_timer' is not a member of 'boost::asio'
+   39 |       std::make_unique<boost::asio::deadline_timer>(*this->io_service);
+      |                                     ^~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:39:53: error: invalid type argument of unary '*' (have 'int')
+   39 |       std::make_unique<boost::asio::deadline_timer>(*this->io_service);
+      |                                                     ^~~~~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp: In member function 'void lx16a::Serial::read_complete(bool&, const boost::system::error_code&, size_t)':
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:86:14: error: base operand of '->' is not a pointer
+   86 |   this->timer->cancel();
+      |              ^~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp: In member function 'bool lx16a::Serial::read_with_timeout(unsigned char&, int)':
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:115:14: error: base operand of '->' is not a pointer
+  115 |   this->timer->expires_from_now(boost::posix_time::seconds(timeout));
+      |              ^~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:115:52: error: 'seconds' is not a member of 'boost::posix_time'
+  115 |   this->timer->expires_from_now(boost::posix_time::seconds(timeout));
+      |                                                    ^~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:115:52: note: suggested alternatives:
+In file included from /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/c++/mutex:45,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/system/detail/mutex.hpp:75,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/system/detail/error_category_impl.hpp:79,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/system/error_category.hpp:11,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/system/error_code.hpp:14,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/asio/detail/throw_error.hpp:20,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/asio/detail/impl/posix_event.ipp:23,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/asio/detail/posix_event.hpp:172,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/asio/detail/event.hpp:25,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/asio/execution/blocking_adaptation.hpp:19,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/asio/execution.hpp:22,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/asio/any_completion_executor.hpp:22,
+                 from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/asio.hpp:20,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:28:
+/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/c++/bits/chrono.h:901:11: note:   'std::chrono::seconds'
+  901 |     using seconds       = duration<_GLIBCXX_CHRONO_INT64_T>;
+      |           ^~~~~~~
+/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/c++/bits/chrono.h:901:11: note:   'std::chrono::seconds'
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:116:14: error: base operand of '->' is not a pointer
+  116 |   this->timer->async_wait(
+      |              ^~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:120:19: error: base operand of '->' is not a pointer
+  120 |   this->io_service->run();
+      |                   ^~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:123:19: error: base operand of '->' is not a pointer
+  123 |   this->io_service->reset();
+      |                   ^~
+In file included from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:30,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:29,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/lx16a.hpp:33,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/lx16a.cpp:30:
+/home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:36:1: note: '#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.'
+   36 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:32: error: 'io_service' is not a member of 'boost::asio'; did you mean 'use_service'?
+   51 |   std::unique_ptr<boost::asio::io_service> io_service;
+      |                                ^~~~~~~~~~
+      |                                use_service
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:42: error: template argument 1 is invalid
+   51 |   std::unique_ptr<boost::asio::io_service> io_service;
+      |                                          ^
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:42: error: template argument 2 is invalid
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:32: error: 'deadline_timer' is not a member of 'boost::asio'
+   53 |   std::unique_ptr<boost::asio::deadline_timer> timer;
+      |                                ^~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:46: error: template argument 1 is invalid
+   53 |   std::unique_ptr<boost::asio::deadline_timer> timer;
+      |                                              ^
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:46: error: template argument 2 is invalid
+gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:107: CMakeFiles/controller_node.dir/src/lx16a/lx16a.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:93: CMakeFiles/controller_node.dir/src/lx16a/serial.cpp.o] Error 1
+In file included from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/lx16a.hpp:33,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/motor_controller.hpp:31,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/motor_controller/controller_node.cpp:33:
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:32: error: 'io_service' is not a member of 'boost::asio'; did you mean 'use_service'?
+   51 |   std::unique_ptr<boost::asio::io_service> io_service;
+      |                                ^~~~~~~~~~
+      |                                use_service
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:42: error: template argument 1 is invalid
+   51 |   std::unique_ptr<boost::asio::io_service> io_service;
+      |                                          ^
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:42: error: template argument 2 is invalid
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:32: error: 'deadline_timer' is not a member of 'boost::asio'
+   53 |   std::unique_ptr<boost::asio::deadline_timer> timer;
+      |                                ^~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:46: error: template argument 1 is invalid
+   53 |   std::unique_ptr<boost::asio::deadline_timer> timer;
+      |                                              ^
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:46: error: template argument 2 is invalid
+In file included from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:30,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:29,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/lx16a.hpp:33,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/motor_controller.hpp:31,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/motor_controller/controller_node.hpp:30,
+                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/controller_node_main.cpp:25:
+/home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:36:1: note: '#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.'
+   36 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:32: error: 'io_service' is not a member of 'boost::asio'; did you mean 'use_service'?
+   51 |   std::unique_ptr<boost::asio::io_service> io_service;
+      |                                ^~~~~~~~~~
+      |                                use_service
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:42: error: template argument 1 is invalid
+   51 |   std::unique_ptr<boost::asio::io_service> io_service;
+      |                                          ^
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:51:42: error: template argument 2 is invalid
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:32: error: 'deadline_timer' is not a member of 'boost::asio'
+   53 |   std::unique_ptr<boost::asio::deadline_timer> timer;
+      |                                ^~~~~~~~~~~~~~
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:46: error: template argument 1 is invalid
+   53 |   std::unique_ptr<boost::asio::deadline_timer> timer;
+      |                                              ^
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:53:46: error: template argument 2 is invalid
+gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:79: CMakeFiles/controller_node.dir/src/controller_node_main.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:135: CMakeFiles/controller_node.dir/src/motor_controller/controller_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:156: CMakeFiles/controller_node.dir/all] Error 2
+gmake[1]: ** Esperando que outros processos terminem.
+[ 88%] Linking CXX executable vel_parser_node
+[ 88%] Built target vel_parser_node
+gmake: *** [Makefile:146: all] Error 2

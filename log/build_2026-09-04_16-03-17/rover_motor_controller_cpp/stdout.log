@@ -1,0 +1,39 @@
+-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.21 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rover_msgs: 2.0.0 (/home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake)
+-- Found geometry_msgs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/geometry_msgs/cmake)
+-- Found ament_cmake_clang_format: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_clang_format/cmake)
+-- Configuring done (1.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_motor_controller_cpp
+[ 33%] Built target vel_parser_node
+[ 44%] Linking CXX executable controller_node
+[100%] Built target controller_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/lib/rover_motor_controller_cpp/controller_node
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/lib/rover_motor_controller_cpp/vel_parser_node
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp//launch/motor_controller.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/ament_index/resource_index/package_run_dependencies/rover_motor_controller_cpp
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/ament_index/resource_index/parent_prefix_path/rover_motor_controller_cpp
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/environment/ament_prefix_path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/environment/ament_prefix_path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/environment/path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/environment/path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/local_setup.bash
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/local_setup.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/local_setup.zsh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/local_setup.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/package.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/ament_index/resource_index/packages/rover_motor_controller_cpp
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/cmake/rover_motor_controller_cppConfig.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/cmake/rover_motor_controller_cppConfig-version.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/package.xml

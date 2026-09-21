@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/mr-morales/ros2_ws/build/urg_node_msgs/cmake_install.cmake",
+		"/home/mr-morales/ros2_ws/build/urg_node_msgs/urg_node_msgs__py/cmake_install.cmake",
+		"/home/mr-morales/ros2_ws/build/urg_node_msgs/urg_node_msgs__rs/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

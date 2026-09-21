@@ -1,0 +1,1 @@
+/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc -Wl,--dependency-file=CMakeFiles/timeout_test.dir/link.d CMakeFiles/timeout_test.dir/current/samples/timeout_test.c.o -o timeout_test  -Wl,-rpath,/home/mr-morales/ros2_ws/build/urg_c libopen_urg_sensor.a liburg_c.so -lrt -lm

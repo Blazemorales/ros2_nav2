@@ -1,0 +1,125 @@
+-- The C compiler identification is GNU 15.3.0
+-- The CXX compiler identification is GNU 15.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.21 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/libcrypto.so (found version "3.6.4")
+-- Found FastRTPS: /home/mr-morales/miniforge3/envs/ros2_jazzy/include (Required is at least version "2.13")
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found nav_msgs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/nav_msgs/cmake)
+-- Found sensor_msgs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/sensor_msgs/cmake)
+-- Found tf2_ros: 0.36.22 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/tf2_ros/cmake)
+-- Found rover_msgs: 2.0.0 (/home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake)
+-- Found trajectory_msgs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/trajectory_msgs/cmake)
+-- Configuring done (3.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_gazebo
+[ 16%] Building CXX object CMakeFiles/motors_command_parser_node.dir/src/motors_command_parser_node.cpp.o
+[ 33%] Building CXX object CMakeFiles/ground_truth_remapper_node.dir/src/ground_truth_remapper_node.cpp.o
+[ 50%] Building CXX object CMakeFiles/odometry_node.dir/src/odometry_node.cpp.o
+[ 66%] Linking CXX executable ground_truth_remapper_node
+[ 66%] Built target ground_truth_remapper_node
+[ 83%] Linking CXX executable motors_command_parser_node
+[ 83%] Built target motors_command_parser_node
+[100%] Linking CXX executable odometry_node
+[100%] Built target odometry_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/lib/rover_gazebo/motors_command_parser_node
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/lib/rover_gazebo/odometry_node
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/lib/rover_gazebo/ground_truth_remapper_node
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/launch/curiosity.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/launch/forest.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/launch/gazebo.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/launch/include/cmd_vel.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/launch/include/spawn.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/launch/low_moon.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/launch/mars.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/launch/moon.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/worlds/curiosity.world
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/worlds/empty.world
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/worlds/forest.world
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/worlds/low_moon.world
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/worlds/mars.world
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/worlds/moon.world
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/crater/meshes/crater4k.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/crater/meshes/crater_martian_red.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/crater/model.config
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/crater/model.sdf
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/curiosity_path/meshes/curiosity_path25k.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/curiosity_path/meshes/curiosity_path25k.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/curiosity_path/meshes/mars_texture_lq.jpg
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/curiosity_path/model.config
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/curiosity_path/model.sdf
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/jaggedrock/meshes/basecolor.jpg
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/jaggedrock/meshes/bumpy.jpg
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/jaggedrock/meshes/jaggedrock_texture.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/jaggedrock/model.config
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/jaggedrock/model.sdf
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/low_moon/model.config
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/low_moon/model.sdf
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/mars_texture.jpg
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/mars_texture_lq.jpg
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/reddish-sand.jpg
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/terrain.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/terrain.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/terrain_textured.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/model.config
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/model.sdf
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/moon/materials/heightmap/moon.png
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/moon/materials/heightmap/moon.xcf
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/moon/materials/textures/ground.jpg
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/moon/materials/textures/ground_1.jpg
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/moon/materials/textures/ground_normal.jpg
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/moon/model.config
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/moon/model.sdf
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/rock9/meshes/rock9.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/rock9/meshes/rock9.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/rock9/meshes/texture.jpg
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/rock9/model.config
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/rock9/model.sdf
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/rockformation/meshes/SMALL_RED_BaseColor.png
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/rockformation/meshes/rockformation.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/rockformation/model.config
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/rockformation/model.sdf
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/terrain/materials/textures/terrain.png
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/terrain/materials/textures/terrain.xcf
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/terrain/model.config
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/models/terrain/model.sdf
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/rviz/default.rviz
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/config/gz_bridge.yaml
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/config/odometry.yaml
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/environment/gz_sim_resource_path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/environment/gz_sim_resource_path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/ament_index/resource_index/package_run_dependencies/rover_gazebo
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/ament_index/resource_index/parent_prefix_path/rover_gazebo
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/environment/ament_prefix_path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/environment/ament_prefix_path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/environment/path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/environment/path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/local_setup.bash
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/local_setup.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/local_setup.zsh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/local_setup.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/package.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/ament_index/resource_index/packages/rover_gazebo
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/cmake/rover_gazeboConfig.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/cmake/rover_gazeboConfig-version.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_gazebo/share/rover_gazebo/package.xml

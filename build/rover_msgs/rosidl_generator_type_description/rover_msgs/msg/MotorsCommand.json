@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "rover_msgs/msg/MotorsCommand",
+      "fields": [
+        {
+          "name": "drive_motor",
+          "type": {
+            "type_id": 150,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "corner_motor",
+          "type": {
+            "type_id": 150,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "rover_msgs/msg/MotorsCommand",
+      "hash_string": "RIHS01_98bf533a848d69ae218d92470ceaa3d7ecdc7f7b920d9f84507d30cf73493954"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+[0.020s] Invoking command in '/home/mr-morales/ros2_ws/build/laser_proc': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/laser_proc -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/laser_proc
+[0.031s] CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):
+[0.031s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.031s]   CMake.
+[0.031s] 
+[0.032s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.032s]   to tell CMake that the project requires at least <min> but has been updated
+[0.032s]   to work with policies introduced by <max> or earlier.
+[0.032s] This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+[0.032s] to suppress it.
+[0.032s] 
+[0.116s] -- The C compiler identification is GNU 15.3.0
+[0.316s] -- The CXX compiler identification is GNU 15.3.0
+[0.336s] -- Detecting C compiler ABI info
+[0.475s] -- Detecting C compiler ABI info - done
+[0.502s] -- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+[0.502s] -- Detecting C compile features
+[0.503s] -- Detecting C compile features - done
+[0.527s] -- Detecting CXX compiler ABI info
+[0.757s] -- Detecting CXX compiler ABI info - done
+[0.802s] -- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+[0.803s] -- Detecting CXX compile features
+[0.804s] -- Detecting CXX compile features - done
+[0.828s] -- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+[1.108s] -- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+[1.216s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.383s] -- Found class_loader: 2.7.1 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/class_loader/cmake)
+[1.457s] -- Found rclcpp: 28.1.21 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rclcpp/cmake)
+[1.556s] -- Found rosidl_generator_c: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_c/cmake)
+[1.605s] -- Found rosidl_generator_cpp: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_cpp/cmake)
+[1.671s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.729s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.048s] -- Found rmw_implementation_cmake: 7.3.3 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_implementation_cmake/cmake)
+[2.064s] -- Found rmw_fastrtps_cpp: 8.4.4 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.789s] -- Found OpenSSL: /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/libcrypto.so (found version "3.6.4")
+[2.856s] -- Found FastRTPS: /home/mr-morales/miniforge3/envs/ros2_jazzy/include (Required is at least version "2.13")
+[2.956s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.113s] -- Found rclcpp_components: 28.1.21 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rclcpp_components/cmake)
+[3.163s] -- Found sensor_msgs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/sensor_msgs/cmake)
+[3.271s] -- Found ament_lint_auto: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_lint_auto/cmake)
+[3.459s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.459s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/mr-morales/ros2_ws/src/laser_proc/include>
+[3.460s] -- Configured cppcheck exclude dirs and/or files: 
+[3.462s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.462s] -- Configured cpplint exclude dirs and/or files: 
+[3.463s] -- Added test 'lint_cmake' to check CMake code style
+[3.466s] -- Added test 'uncrustify' to check C / C++ code style
+[3.466s] -- Configured uncrustify additional arguments: 
+[3.468s] -- Added test 'xmllint' to check XML markup files
+[3.471s] -- Configuring done (3.4s)
+[3.496s] -- Generating done (0.0s)
+[3.529s] -- Build files have been written to: /home/mr-morales/ros2_ws/build/laser_proc
+[3.541s] Invoked command in '/home/mr-morales/ros2_ws/build/laser_proc' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/laser_proc -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/laser_proc
+[3.543s] Invoking command in '/home/mr-morales/ros2_ws/build/laser_proc': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/laser_proc -- -j12 -l12
+[3.615s] [ 14%] Building CXX object CMakeFiles/laser_proc.dir/src/laser_proc.cpp.o
+[3.617s] [ 28%] Building CXX object CMakeFiles/laser_proc_node.dir/rclcpp_components/node_main_laser_proc_node.cpp.o
+[3.618s] [ 42%] Building CXX object CMakeFiles/laser_proc.dir/src/laser_publisher.cpp.o
+[7.225s] [ 57%] Linking CXX executable laser_proc_node
+[7.467s] [ 57%] Built target laser_proc_node
+[9.042s] [ 71%] Linking CXX shared library liblaser_proc.so
+[9.227s] [ 71%] Built target laser_proc
+[9.253s] [ 85%] Building CXX object CMakeFiles/laser_proc_component.dir/src/laser_proc_component.cpp.o
+[16.746s] [100%] Linking CXX shared library liblaser_proc_component.so
+[16.998s] [100%] Built target laser_proc_component
+[17.009s] Invoked command in '/home/mr-morales/ros2_ws/build/laser_proc' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/laser_proc -- -j12 -l12
+[17.012s] Invoking command in '/home/mr-morales/ros2_ws/build/laser_proc': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/laser_proc
+[17.020s] -- Install configuration: ""
+[17.021s] -- Execute custom install script
+[17.021s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/lib/laser_proc/laser_proc_node
+[17.030s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/lib/liblaser_proc.so
+[17.040s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/lib/liblaser_proc_component.so
+[17.050s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/include/laser_proc/laser_proc.hpp
+[17.059s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/include/laser_proc/laser_proc_component.hpp
+[17.068s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/include/laser_proc/laser_publisher.hpp
+[17.077s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/include/laser_proc/visibility_control.hpp
+[17.088s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/ament_index/resource_index/package_run_dependencies/laser_proc
+[17.099s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/ament_index/resource_index/parent_prefix_path/laser_proc
+[17.110s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/environment/ament_prefix_path.sh
+[17.119s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/environment/ament_prefix_path.dsv
+[17.128s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/environment/path.sh
+[17.138s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/environment/path.dsv
+[17.146s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/local_setup.bash
+[17.156s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/local_setup.sh
+[17.165s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/local_setup.zsh
+[17.174s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/local_setup.dsv
+[17.183s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.dsv
+[17.195s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/ament_index/resource_index/packages/laser_proc
+[17.204s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/ament_index/resource_index/rclcpp_components/laser_proc
+[17.213s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake/ament_cmake_export_dependencies-extras.cmake
+[17.222s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake/ament_cmake_export_include_directories-extras.cmake
+[17.231s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake/ament_cmake_export_libraries-extras.cmake
+[17.241s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake/laser_procConfig.cmake
+[17.250s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake/laser_procConfig-version.cmake
+[17.259s] -- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.xml
+[17.270s] Invoked command in '/home/mr-morales/ros2_ws/build/laser_proc' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/laser_proc

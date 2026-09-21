@@ -1,0 +1,6 @@
+{
+  "package_name": "rover_msgs",
+  "non_idl_tuples": [
+    "/home/mr-morales/ros2_ws/src/ros2_rover/rover_msgs:msg/MotorsCommand.msg"
+  ]
+}

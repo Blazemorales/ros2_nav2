@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: rover_motor_controller
+Version: 2.0.0
+Summary: Rover motor controller package (Python)
+Maintainer: Miguel Ángel González Santamarta
+Maintainer-email: mgons@unileon.es
+License: MIT
+Requires-Dist: setuptools

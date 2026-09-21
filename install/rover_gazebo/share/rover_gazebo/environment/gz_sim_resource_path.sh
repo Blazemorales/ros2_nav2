@@ -1,0 +1,1 @@
+/home/mr-morales/ros2_ws/src/ros2_rover/rover_gazebo/hooks/gz_sim_resource_path.sh

@@ -1,0 +1,1 @@
+/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc -Wl,--dependency-file=CMakeFiles/get_distance.dir/link.d CMakeFiles/get_distance.dir/current/samples/get_distance.c.o -o get_distance  -Wl,-rpath,/home/mr-morales/ros2_ws/build/urg_c libopen_urg_sensor.a liburg_c.so -lrt -lm

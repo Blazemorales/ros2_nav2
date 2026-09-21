@@ -1,0 +1,214 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Python3::Interpreter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Python3__Interpreter-06ffb9052d55a786e0f0.json",
+					"name" : "Python3::Interpreter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Python3::InterpreterMultiConfig::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Python3__InterpreterMultiConfig-b95ff301c8613bae6488.json",
+					"name" : "Python3::InterpreterMultiConfig",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1
+					],
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-40a70ac82b91d81d8f70.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "urg_c",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "angle_convert_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-angle_convert_test-7c41d593643386169571.json",
+					"name" : "angle_convert_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "calculate_xy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-calculate_xy-83922dc7f4d3b572038c.json",
+					"name" : "calculate_xy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "find_port::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-find_port-25ccafa99d70ebbfba95.json",
+					"name" : "find_port",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "get_distance::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-get_distance-3ad97b70ca549681b02d.json",
+					"name" : "get_distance",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "get_distance_intensity::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-get_distance_intensity-ed358e9ca4cf70577b92.json",
+					"name" : "get_distance_intensity",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "get_multiecho::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-get_multiecho-154b1fbd4afd1000c45e.json",
+					"name" : "get_multiecho",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "get_multiecho_intensity::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-get_multiecho_intensity-88c284e660af14f2bee8.json",
+					"name" : "get_multiecho_intensity",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "open_urg_sensor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-open_urg_sensor-42135e68df433c3a1cca.json",
+					"name" : "open_urg_sensor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "reboot_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-reboot_test-68f2cc8a4332e698ec19.json",
+					"name" : "reboot_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sensor_parameter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sensor_parameter-4b30b203752a3c8c5703.json",
+					"name" : "sensor_parameter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sync_time_stamp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sync_time_stamp-03a8288b264c2e4cd1b7.json",
+					"name" : "sync_time_stamp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "timeout_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-timeout_test-58243e2f4598e5534d59.json",
+					"name" : "timeout_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-c66a71a80beacdd513e3.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "urg_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-urg_c-7827f529e34fa13ea68d.json",
+					"name" : "urg_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "urg_c_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-urg_c_uninstall-dc1a41fbbd145c6c1ea9.json",
+					"name" : "urg_c_uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mr-morales/ros2_ws/build/urg_c",
+		"source" : "/home/mr-morales/ros2_ws/src/urg_c"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	}
+}

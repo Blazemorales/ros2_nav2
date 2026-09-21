@@ -1,0 +1,1 @@
+/home/mr-morales/ros2_ws/build/laser_proc/ament_cmake_environment_hooks/local_setup.zsh

@@ -1,0 +1,1 @@
+/home/mr-morales/ros2_ws/build/urg_node_msgs/rosidl_generator_rs/urg_node_msgs/rust/src/lib.rs

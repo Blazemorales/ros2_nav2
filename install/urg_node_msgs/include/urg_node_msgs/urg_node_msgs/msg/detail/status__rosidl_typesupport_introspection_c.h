@@ -1,0 +1,1 @@
+/home/mr-morales/ros2_ws/build/urg_node_msgs/rosidl_typesupport_introspection_c/urg_node_msgs/msg/detail/status__rosidl_typesupport_introspection_c.h

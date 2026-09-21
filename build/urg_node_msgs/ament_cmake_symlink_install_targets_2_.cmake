@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/mr-morales/ros2_ws/build/urg_node_msgs/rosidl_generator_py/urg_node_msgs/urg_node_msgs_s__rosidl_typesupport_c.so" "TARGETS" "urg_node_msgs_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.12/site-packages/urg_node_msgs")

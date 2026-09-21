@@ -1,0 +1,24 @@
+{
+  "package_name": "rover_msgs",
+  "output_dir": "/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_generator_py/rover_msgs",
+  "template_dir": "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../resource",
+  "idl_tuples": [
+    "/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_adapter/rover_msgs:msg/MotorsCommand.idl"
+  ],
+  "target_dependencies": [
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages/rosidl_generator_py/generate_py_impl.py",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../resource/_action_pkg_typesupport_entry_point.c.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../resource/_action.py.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../resource/_idl_pkg_typesupport_entry_point.c.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../resource/_idl_support.c.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../resource/_idl.py.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../resource/_msg_pkg_typesupport_entry_point.c.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../resource/_msg_support.c.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
+    "/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_adapter/rover_msgs/msg/MotorsCommand.idl"
+  ]
+}

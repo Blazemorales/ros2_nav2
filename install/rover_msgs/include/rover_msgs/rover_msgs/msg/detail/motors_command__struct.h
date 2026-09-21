@@ -1,0 +1,1 @@
+/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_generator_c/rover_msgs/msg/detail/motors_command__struct.h

@@ -1,0 +1,56 @@
+[0.311s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_bringup': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/ros2_rover/rover_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/rover_bringup
+[0.320s] CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):
+[0.320s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.320s]   CMake.
+[0.320s] 
+[0.320s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.320s]   to tell CMake that the project requires at least <min> but has been updated
+[0.320s]   to work with policies introduced by <max> or earlier.
+[0.320s] This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+[0.320s] to suppress it.
+[0.320s] 
+[0.414s] -- The C compiler identification is GNU 15.3.0
+[0.580s] -- The CXX compiler identification is GNU 15.3.0
+[0.600s] -- Detecting C compiler ABI info
+[0.756s] -- Detecting C compiler ABI info - done
+[0.796s] -- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+[0.796s] -- Detecting C compile features
+[0.797s] -- Detecting C compile features - done
+[0.820s] -- Detecting CXX compiler ABI info
+[1.050s] -- Detecting CXX compiler ABI info - done
+[1.102s] -- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+[1.102s] -- Detecting CXX compile features
+[1.104s] -- Detecting CXX compile features - done
+[1.127s] -- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+[1.415s] -- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+[1.541s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.851s] -- Configuring done (1.5s)
+[1.855s] -- Generating done (0.0s)
+[1.856s] -- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_bringup
+[1.863s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_bringup' returned '0': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/ros2_rover/rover_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/rover_bringup
+[1.865s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_bringup': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_bringup -- -j12 -l12
+[1.929s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_bringup' returned '0': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_bringup -- -j12 -l12
+[1.932s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_bringup': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_bringup
+[1.945s] -- Install configuration: ""
+[1.945s] -- Execute custom install script
+[1.946s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup//launch/rover.launch.py
+[1.960s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup//launch/ublox.launch.py
+[1.974s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup//launch/urg_node.launch.py
+[1.990s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup//config/ublox.yaml
+[2.003s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup//config/urg_node_serial.yaml
+[2.018s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/ament_index/resource_index/package_run_dependencies/rover_bringup
+[2.033s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/ament_index/resource_index/parent_prefix_path/rover_bringup
+[2.049s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/environment/ament_prefix_path.sh
+[2.058s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/environment/ament_prefix_path.dsv
+[2.072s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/environment/path.sh
+[2.087s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/environment/path.dsv
+[2.102s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/local_setup.bash
+[2.118s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/local_setup.sh
+[2.133s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/local_setup.zsh
+[2.147s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/local_setup.dsv
+[2.161s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/package.dsv
+[2.175s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/ament_index/resource_index/packages/rover_bringup
+[2.187s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/cmake/rover_bringupConfig.cmake
+[2.201s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/cmake/rover_bringupConfig-version.cmake
+[2.215s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_bringup/share/rover_bringup/package.xml
+[2.232s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_bringup' returned '0': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_bringup

@@ -1,0 +1,1 @@
+/home/mr-morales/ros2_ws/build/rover_localization/ament_cmake_core/rover_localizationConfig-version.cmake

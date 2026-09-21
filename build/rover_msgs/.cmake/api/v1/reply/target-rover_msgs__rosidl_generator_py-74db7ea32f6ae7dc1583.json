@@ -1,0 +1,570 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "librover_msgs__rosidl_generator_py.so"
+		}
+	],
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include",
+			"ament_execute_extensions",
+			"rosidl_generate_interfaces",
+			"_install",
+			"ament_cmake_symlink_install_targets",
+			"install",
+			"target_link_libraries",
+			"set_target_properties",
+			"find_package",
+			"add_dependencies",
+			"add_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake",
+			"CMakeLists.txt",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_targets.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_core/cmake/symlink_install/install.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_c/cmake/rosidl_generator_c_generate_interfaces.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rcutils/cmake/rcutilsExport.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rcutils/cmake/ament_cmake_export_targets-extras.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rcutils/cmake/rcutilsConfig.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_fastrtps_c/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_cConfig.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_core_generators/cmake/rosidl_core_generators-extras.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_core_generators/cmake/rosidl_core_generatorsConfig.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_default_generators/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_ros/cmake/ament_cmake_ros-extras.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_ros/cmake/ament_cmake_rosConfig.cmake",
+			"/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c_generate_interfaces.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 280,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 140,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 240,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 37,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 50,
+				"parent" : 7
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 149,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 166,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 141,
+				"parent" : 4
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 6,
+				"parent" : 12
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 170,
+				"parent" : 13
+			},
+			{
+				"command" : 9,
+				"file" : 3,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"file" : 19,
+				"parent" : 15
+			},
+			{
+				"command" : 1,
+				"file" : 19,
+				"line" : 41,
+				"parent" : 16
+			},
+			{
+				"file" : 18,
+				"parent" : 17
+			},
+			{
+				"command" : 9,
+				"file" : 18,
+				"line" : 21,
+				"parent" : 18
+			},
+			{
+				"file" : 17,
+				"parent" : 19
+			},
+			{
+				"command" : 1,
+				"file" : 17,
+				"line" : 41,
+				"parent" : 20
+			},
+			{
+				"file" : 16,
+				"parent" : 21
+			},
+			{
+				"command" : 9,
+				"file" : 16,
+				"line" : 21,
+				"parent" : 22
+			},
+			{
+				"file" : 15,
+				"parent" : 23
+			},
+			{
+				"command" : 1,
+				"file" : 15,
+				"line" : 41,
+				"parent" : 24
+			},
+			{
+				"file" : 14,
+				"parent" : 25
+			},
+			{
+				"command" : 9,
+				"file" : 14,
+				"line" : 13,
+				"parent" : 26
+			},
+			{
+				"file" : 13,
+				"parent" : 27
+			},
+			{
+				"command" : 1,
+				"file" : 13,
+				"line" : 41,
+				"parent" : 28
+			},
+			{
+				"file" : 12,
+				"parent" : 29
+			},
+			{
+				"command" : 9,
+				"file" : 12,
+				"line" : 21,
+				"parent" : 30
+			},
+			{
+				"file" : 11,
+				"parent" : 31
+			},
+			{
+				"command" : 1,
+				"file" : 11,
+				"line" : 41,
+				"parent" : 32
+			},
+			{
+				"file" : 10,
+				"parent" : 33
+			},
+			{
+				"command" : 9,
+				"file" : 10,
+				"line" : 21,
+				"parent" : 34
+			},
+			{
+				"file" : 9,
+				"parent" : 35
+			},
+			{
+				"command" : 1,
+				"file" : 9,
+				"line" : 41,
+				"parent" : 36
+			},
+			{
+				"file" : 8,
+				"parent" : 37
+			},
+			{
+				"command" : 1,
+				"file" : 8,
+				"line" : 9,
+				"parent" : 38
+			},
+			{
+				"file" : 7,
+				"parent" : 39
+			},
+			{
+				"command" : 8,
+				"file" : 7,
+				"line" : 61,
+				"parent" : 40
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 143,
+				"parent" : 4
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 237,
+				"parent" : 4
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 48,
+				"parent" : 2
+			},
+			{
+				"file" : 22,
+				"parent" : 44
+			},
+			{
+				"command" : 9,
+				"file" : 22,
+				"line" : 21,
+				"parent" : 45
+			},
+			{
+				"file" : 21,
+				"parent" : 46
+			},
+			{
+				"command" : 1,
+				"file" : 21,
+				"line" : 41,
+				"parent" : 47
+			},
+			{
+				"file" : 20,
+				"parent" : 48
+			},
+			{
+				"command" : 11,
+				"file" : 20,
+				"line" : 25,
+				"parent" : 49
+			},
+			{
+				"command" : 12,
+				"file" : 0,
+				"line" : 154,
+				"parent" : 4
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 11,
+			"id" : "rover_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "Python3::NumPy::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "Python3::Python::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "rover_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
+		}
+	],
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fPIC"
+				},
+				{
+					"backtrace" : 43,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 43,
+					"fragment" : "-Wextra"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 50,
+					"define" : "ROS_PACKAGE_NAME=\"rover_msgs\""
+				},
+				{
+					"define" : "rover_msgs__rosidl_generator_py_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 51,
+					"path" : "/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_generator_c"
+				},
+				{
+					"backtrace" : 51,
+					"path" : "/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_generator_py"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/include/rosidl_runtime_c"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/include/rcutils"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/include/rosidl_typesupport_interface"
+				},
+				{
+					"backtrace" : 9,
+					"isSystem" : true,
+					"path" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages/numpy/_core/include"
+				},
+				{
+					"backtrace" : 9,
+					"isSystem" : true,
+					"path" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/include/python3.12"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 11,
+			"id" : "rover_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 42,
+			"id" : "rover_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 42,
+			"id" : "rover_msgs__py::@7fd4d0c25b117f40e450"
+		}
+	],
+	"id" : "rover_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 8,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 8,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/home/mr-morales/ros2_ws/install/rover_msgs"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-shared",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/mr-morales/ros2_ws/build/rover_msgs:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/libpython3.12.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "librover_msgs__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "librover_msgs__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/librosidl_runtime_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/librcutils.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 41,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 41,
+				"fragment" : "-latomic",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 11,
+			"id" : "rover_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "Python3::NumPy::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "Python3::Python::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "rover_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
+		}
+	],
+	"name" : "rover_msgs__rosidl_generator_py",
+	"nameOnDisk" : "librover_msgs__rosidl_generator_py.so",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 42,
+			"id" : "rover_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 42,
+			"id" : "rover_msgs__py::@7fd4d0c25b117f40e450"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 5,
+			"backtraces" : 
+			[
+				5
+			],
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_generator_py/rover_msgs/msg/_motors_command_s.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

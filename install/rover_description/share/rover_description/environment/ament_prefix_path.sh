@@ -1,0 +1,1 @@
+/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh

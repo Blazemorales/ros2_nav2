@@ -1,0 +1,530 @@
+[0.164s] colcon DEBUG Command line arguments: ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'build', '--symlink-install', '--packages-select', 'urg_node_msgs', 'urg_c', 'laser_proc', 'urg_node']
+[0.164s] colcon DEBUG Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['urg_node_msgs', 'urg_c', 'laser_proc', 'urg_node'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ffb23771190>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ffb23770d10>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ffb23770d10>>)
+[0.205s] colcon.colcon_core.package_discovery Level 1 discover_packages(colcon_meta) check parameters
+[0.205s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) check parameters
+[0.205s] colcon.colcon_core.package_discovery Level 1 discover_packages(ignore) check parameters
+[0.205s] colcon.colcon_core.package_discovery Level 1 discover_packages(path) check parameters
+[0.205s] colcon.colcon_core.package_discovery Level 1 discover_packages(colcon_meta) discover
+[0.205s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) discover
+[0.205s] colcon.colcon_core.package_discovery INFO Crawling recursively for packages in '/home/mr-morales/ros2_ws'
+[0.206s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'ignore'
+[0.206s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'ignore_ament_install'
+[0.206s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['colcon_pkg']
+[0.206s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'colcon_pkg'
+[0.206s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['colcon_meta']
+[0.206s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'colcon_meta'
+[0.206s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['ros']
+[0.206s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'ros'
+[0.240s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['cmake', 'python']
+[0.240s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'cmake'
+[0.240s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'python'
+[0.240s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['python_setup_py']
+[0.240s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'python_setup_py'
+[0.240s] colcon.colcon_core.package_identification Level 1 _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] colcon.colcon_core.package_identification Level 1 _identify(build) by extension 'ignore'
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(build) ignored
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(install) by extension 'ignore'
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(install) ignored
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(log) by extension 'ignore'
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(log) ignored
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'ignore'
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'ignore_ament_install'
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(src) by extensions ['colcon_pkg']
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'colcon_pkg'
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(src) by extensions ['colcon_meta']
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'colcon_meta'
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(src) by extensions ['ros']
+[0.241s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'ros'
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src) by extensions ['cmake', 'python']
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'cmake'
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'python'
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src) by extensions ['python_setup_py']
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'python_setup_py'
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src/laser_proc) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src/laser_proc) by extension 'ignore'
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src/laser_proc) by extension 'ignore_ament_install'
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src/laser_proc) by extensions ['colcon_pkg']
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src/laser_proc) by extension 'colcon_pkg'
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src/laser_proc) by extensions ['colcon_meta']
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src/laser_proc) by extension 'colcon_meta'
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src/laser_proc) by extensions ['ros']
+[0.242s] colcon.colcon_core.package_identification Level 1 _identify(src/laser_proc) by extension 'ros'
+[0.245s] colcon.colcon_core.package_identification DEBUG Package 'src/laser_proc' with type 'ros.ament_cmake' and name 'laser_proc'
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extension 'ignore'
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extension 'ignore_ament_install'
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extensions ['colcon_pkg']
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extension 'colcon_pkg'
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extensions ['colcon_meta']
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extension 'colcon_meta'
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extensions ['ros']
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extension 'ros'
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extensions ['cmake', 'python']
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extension 'cmake'
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extension 'python'
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extensions ['python_setup_py']
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover) by extension 'python_setup_py'
+[0.245s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extension 'ignore'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extension 'ignore_ament_install'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extensions ['colcon_pkg']
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extension 'colcon_pkg'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extensions ['colcon_meta']
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extension 'colcon_meta'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extensions ['ros']
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extension 'ros'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extensions ['cmake', 'python']
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extension 'cmake'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extension 'python'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extensions ['python_setup_py']
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/docs) by extension 'python_setup_py'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_bringup) by extension 'ignore'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_bringup) by extension 'ignore_ament_install'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_bringup) by extensions ['colcon_pkg']
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_bringup) by extension 'colcon_pkg'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_bringup) by extensions ['colcon_meta']
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_bringup) by extension 'colcon_meta'
+[0.246s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_bringup) by extensions ['ros']
+[0.247s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_bringup) by extension 'ros'
+[0.248s] colcon.colcon_core.package_identification DEBUG Package 'src/ros2_rover/rover_bringup' with type 'ros.ament_cmake' and name 'rover_bringup'
+[0.248s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_description) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_description) by extension 'ignore'
+[0.248s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_description) by extension 'ignore_ament_install'
+[0.248s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_description) by extensions ['colcon_pkg']
+[0.248s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_description) by extension 'colcon_pkg'
+[0.248s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_description) by extensions ['colcon_meta']
+[0.248s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_description) by extension 'colcon_meta'
+[0.248s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_description) by extensions ['ros']
+[0.248s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_description) by extension 'ros'
+[0.249s] colcon.colcon_core.package_identification DEBUG Package 'src/ros2_rover/rover_description' with type 'ros.ament_cmake' and name 'rover_description'
+[0.249s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_gazebo) by extension 'ignore'
+[0.249s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_gazebo) by extension 'ignore_ament_install'
+[0.249s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_gazebo) by extensions ['colcon_pkg']
+[0.249s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_gazebo) by extension 'colcon_pkg'
+[0.249s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_gazebo) by extensions ['colcon_meta']
+[0.249s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_gazebo) by extension 'colcon_meta'
+[0.249s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_gazebo) by extensions ['ros']
+[0.249s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_gazebo) by extension 'ros'
+[0.250s] colcon.colcon_core.package_identification DEBUG Package 'src/ros2_rover/rover_gazebo' with type 'ros.ament_cmake' and name 'rover_gazebo'
+[0.250s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_localization) by extension 'ignore'
+[0.250s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_localization) by extension 'ignore_ament_install'
+[0.251s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_localization) by extensions ['colcon_pkg']
+[0.251s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_localization) by extension 'colcon_pkg'
+[0.251s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_localization) by extensions ['colcon_meta']
+[0.251s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_localization) by extension 'colcon_meta'
+[0.251s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_localization) by extensions ['ros']
+[0.251s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_localization) by extension 'ros'
+[0.251s] colcon.colcon_core.package_identification DEBUG Package 'src/ros2_rover/rover_localization' with type 'ros.ament_cmake' and name 'rover_localization'
+[0.251s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller) by extension 'ignore'
+[0.252s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller) by extension 'ignore_ament_install'
+[0.252s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller) by extensions ['colcon_pkg']
+[0.252s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller) by extension 'colcon_pkg'
+[0.252s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller) by extensions ['colcon_meta']
+[0.252s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller) by extension 'colcon_meta'
+[0.252s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller) by extensions ['ros']
+[0.252s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller) by extension 'ros'
+[0.252s] colcon.colcon_core.package_identification DEBUG Package 'src/ros2_rover/rover_motor_controller' with type 'ros.ament_python' and name 'rover_motor_controller'
+[0.252s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller_cpp) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller_cpp) by extension 'ignore'
+[0.253s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller_cpp) by extension 'ignore_ament_install'
+[0.253s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller_cpp) by extensions ['colcon_pkg']
+[0.253s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller_cpp) by extension 'colcon_pkg'
+[0.253s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller_cpp) by extensions ['colcon_meta']
+[0.253s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller_cpp) by extension 'colcon_meta'
+[0.253s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller_cpp) by extensions ['ros']
+[0.253s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_motor_controller_cpp) by extension 'ros'
+[0.253s] colcon.colcon_core.package_identification DEBUG Package 'src/ros2_rover/rover_motor_controller_cpp' with type 'ros.ament_cmake' and name 'rover_motor_controller_cpp'
+[0.253s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_msgs) by extension 'ignore'
+[0.254s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_msgs) by extension 'ignore_ament_install'
+[0.254s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_msgs) by extensions ['colcon_pkg']
+[0.254s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_msgs) by extension 'colcon_pkg'
+[0.254s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_msgs) by extensions ['colcon_meta']
+[0.254s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_msgs) by extension 'colcon_meta'
+[0.254s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_msgs) by extensions ['ros']
+[0.254s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_msgs) by extension 'ros'
+[0.254s] colcon.colcon_core.package_identification DEBUG Package 'src/ros2_rover/rover_msgs' with type 'ros.ament_cmake' and name 'rover_msgs'
+[0.254s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.254s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_navigation) by extension 'ignore'
+[0.255s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_navigation) by extension 'ignore_ament_install'
+[0.255s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_navigation) by extensions ['colcon_pkg']
+[0.255s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_navigation) by extension 'colcon_pkg'
+[0.255s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_navigation) by extensions ['colcon_meta']
+[0.255s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_navigation) by extension 'colcon_meta'
+[0.255s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_navigation) by extensions ['ros']
+[0.255s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_navigation) by extension 'ros'
+[0.256s] colcon.colcon_core.package_identification DEBUG Package 'src/ros2_rover/rover_navigation' with type 'ros.ament_cmake' and name 'rover_navigation'
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extensions ['ignore', 'ignore_ament_install']
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extension 'ignore'
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extension 'ignore_ament_install'
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extensions ['colcon_pkg']
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extension 'colcon_pkg'
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extensions ['colcon_meta']
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extension 'colcon_meta'
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extensions ['ros']
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extension 'ros'
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extensions ['cmake', 'python']
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extension 'cmake'
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extension 'python'
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extensions ['python_setup_py']
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_service) by extension 'python_setup_py'
+[0.256s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.257s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_teleop) by extension 'ignore'
+[0.257s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_teleop) by extension 'ignore_ament_install'
+[0.257s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_teleop) by extensions ['colcon_pkg']
+[0.257s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_teleop) by extension 'colcon_pkg'
+[0.257s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_teleop) by extensions ['colcon_meta']
+[0.257s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_teleop) by extension 'colcon_meta'
+[0.257s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_teleop) by extensions ['ros']
+[0.257s] colcon.colcon_core.package_identification Level 1 _identify(src/ros2_rover/rover_teleop) by extension 'ros'
+[0.257s] colcon.colcon_core.package_identification DEBUG Package 'src/ros2_rover/rover_teleop' with type 'ros.ament_python' and name 'rover_teleop'
+[0.257s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_c) by extensions ['ignore', 'ignore_ament_install']
+[0.257s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_c) by extension 'ignore'
+[0.257s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_c) by extension 'ignore_ament_install'
+[0.258s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_c) by extensions ['colcon_pkg']
+[0.258s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_c) by extension 'colcon_pkg'
+[0.258s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_c) by extensions ['colcon_meta']
+[0.258s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_c) by extension 'colcon_meta'
+[0.258s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_c) by extensions ['ros']
+[0.258s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_c) by extension 'ros'
+[0.258s] colcon.colcon_core.package_identification DEBUG Package 'src/urg_c' with type 'ros.ament_cmake' and name 'urg_c'
+[0.258s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node) by extensions ['ignore', 'ignore_ament_install']
+[0.258s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node) by extension 'ignore'
+[0.258s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node) by extension 'ignore_ament_install'
+[0.258s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node) by extensions ['colcon_pkg']
+[0.258s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node) by extension 'colcon_pkg'
+[0.259s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node) by extensions ['colcon_meta']
+[0.259s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node) by extension 'colcon_meta'
+[0.259s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node) by extensions ['ros']
+[0.259s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node) by extension 'ros'
+[0.260s] colcon.colcon_core.package_identification DEBUG Package 'src/urg_node' with type 'ros.ament_cmake' and name 'urg_node'
+[0.260s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node_msgs) by extension 'ignore'
+[0.260s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node_msgs) by extension 'ignore_ament_install'
+[0.260s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node_msgs) by extensions ['colcon_pkg']
+[0.260s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node_msgs) by extension 'colcon_pkg'
+[0.260s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node_msgs) by extensions ['colcon_meta']
+[0.260s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node_msgs) by extension 'colcon_meta'
+[0.260s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node_msgs) by extensions ['ros']
+[0.260s] colcon.colcon_core.package_identification Level 1 _identify(src/urg_node_msgs) by extension 'ros'
+[0.261s] colcon.colcon_core.package_identification DEBUG Package 'src/urg_node_msgs' with type 'ros.ament_cmake' and name 'urg_node_msgs'
+[0.261s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) using defaults
+[0.261s] colcon.colcon_core.package_discovery Level 1 discover_packages(ignore) discover
+[0.261s] colcon.colcon_core.package_discovery Level 1 discover_packages(ignore) using defaults
+[0.261s] colcon.colcon_core.package_discovery Level 1 discover_packages(path) discover
+[0.261s] colcon.colcon_core.package_discovery Level 1 discover_packages(path) using defaults
+[0.280s] colcon.colcon_core.package_selection INFO Skipping not selected package 'rover_description' in 'src/ros2_rover/rover_description'
+[0.280s] colcon.colcon_core.package_selection INFO Skipping not selected package 'rover_localization' in 'src/ros2_rover/rover_localization'
+[0.280s] colcon.colcon_core.package_selection INFO Skipping not selected package 'rover_msgs' in 'src/ros2_rover/rover_msgs'
+[0.280s] colcon.colcon_core.package_selection INFO Skipping not selected package 'rover_navigation' in 'src/ros2_rover/rover_navigation'
+[0.280s] colcon.colcon_core.package_selection INFO Skipping not selected package 'rover_teleop' in 'src/ros2_rover/rover_teleop'
+[0.280s] colcon.colcon_core.package_selection INFO Skipping not selected package 'rover_motor_controller' in 'src/ros2_rover/rover_motor_controller'
+[0.280s] colcon.colcon_core.package_selection INFO Skipping not selected package 'rover_motor_controller_cpp' in 'src/ros2_rover/rover_motor_controller_cpp'
+[0.280s] colcon.colcon_core.package_selection INFO Skipping not selected package 'rover_bringup' in 'src/ros2_rover/rover_bringup'
+[0.280s] colcon.colcon_core.package_selection INFO Skipping not selected package 'rover_gazebo' in 'src/ros2_rover/rover_gazebo'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'laser_proc' build argument 'cmake_args' from command line to 'None'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'laser_proc' build argument 'cmake_target' from command line to 'None'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'laser_proc' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'laser_proc' build argument 'cmake_clean_cache' from command line to 'False'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'laser_proc' build argument 'cmake_clean_first' from command line to 'False'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'laser_proc' build argument 'cmake_force_configure' from command line to 'False'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'laser_proc' build argument 'ament_cmake_args' from command line to 'None'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'laser_proc' build argument 'catkin_cmake_args' from command line to 'None'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'laser_proc' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.281s] colcon.colcon_core.verb DEBUG Building package 'laser_proc' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mr-morales/ros2_ws/build/laser_proc', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mr-morales/ros2_ws/install/laser_proc', 'merge_install': False, 'path': '/home/mr-morales/ros2_ws/src/laser_proc', 'symlink_install': True, 'test_result_base': None}
+[0.281s] colcon.colcon_core.verb Level 5 set package 'urg_c' build argument 'cmake_args' from command line to 'None'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'urg_c' build argument 'cmake_target' from command line to 'None'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'urg_c' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'urg_c' build argument 'cmake_clean_cache' from command line to 'False'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'urg_c' build argument 'cmake_clean_first' from command line to 'False'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'urg_c' build argument 'cmake_force_configure' from command line to 'False'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'urg_c' build argument 'ament_cmake_args' from command line to 'None'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'urg_c' build argument 'catkin_cmake_args' from command line to 'None'
+[0.281s] colcon.colcon_core.verb Level 5 set package 'urg_c' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.281s] colcon.colcon_core.verb DEBUG Building package 'urg_c' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mr-morales/ros2_ws/build/urg_c', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mr-morales/ros2_ws/install/urg_c', 'merge_install': False, 'path': '/home/mr-morales/ros2_ws/src/urg_c', 'symlink_install': True, 'test_result_base': None}
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node_msgs' build argument 'cmake_args' from command line to 'None'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node_msgs' build argument 'cmake_target' from command line to 'None'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.282s] colcon.colcon_core.verb DEBUG Building package 'urg_node_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mr-morales/ros2_ws/build/urg_node_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mr-morales/ros2_ws/install/urg_node_msgs', 'merge_install': False, 'path': '/home/mr-morales/ros2_ws/src/urg_node_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node' build argument 'cmake_args' from command line to 'None'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node' build argument 'cmake_target' from command line to 'None'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node' build argument 'cmake_clean_cache' from command line to 'False'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node' build argument 'cmake_clean_first' from command line to 'False'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node' build argument 'cmake_force_configure' from command line to 'False'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node' build argument 'ament_cmake_args' from command line to 'None'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node' build argument 'catkin_cmake_args' from command line to 'None'
+[0.282s] colcon.colcon_core.verb Level 5 set package 'urg_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.282s] colcon.colcon_core.verb DEBUG Building package 'urg_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mr-morales/ros2_ws/build/urg_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mr-morales/ros2_ws/install/urg_node', 'merge_install': False, 'path': '/home/mr-morales/ros2_ws/src/urg_node', 'symlink_install': True, 'test_result_base': None}
+[0.282s] colcon.colcon_core.executor INFO Executing jobs using 'parallel' executor
+[0.283s] colcon.colcon_parallel_executor.executor.parallel DEBUG run_until_complete
+[0.284s] colcon.colcon_ros.task.ament_cmake.build INFO Building ROS package in '/home/mr-morales/ros2_ws/src/laser_proc' with build type 'ament_cmake'
+[0.284s] colcon.colcon_cmake.task.cmake.build INFO Building CMake package in '/home/mr-morales/ros2_ws/src/laser_proc'
+[0.286s] colcon.colcon_core.plugin_system INFO Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.286s] colcon.colcon_core.shell INFO Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.286s] colcon.colcon_core.shell DEBUG Skip shell extension 'dsv' for command environment
+[0.292s] colcon.colcon_ros.task.ament_cmake.build INFO Building ROS package in '/home/mr-morales/ros2_ws/src/urg_c' with build type 'ament_cmake'
+[0.292s] colcon.colcon_cmake.task.cmake.build INFO Building CMake package in '/home/mr-morales/ros2_ws/src/urg_c'
+[0.293s] colcon.colcon_core.shell INFO Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.293s] colcon.colcon_core.shell DEBUG Skip shell extension 'dsv' for command environment
+[0.296s] colcon.colcon_ros.task.ament_cmake.build INFO Building ROS package in '/home/mr-morales/ros2_ws/src/urg_node_msgs' with build type 'ament_cmake'
+[0.296s] colcon.colcon_cmake.task.cmake.build INFO Building CMake package in '/home/mr-morales/ros2_ws/src/urg_node_msgs'
+[0.297s] colcon.colcon_core.shell INFO Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.297s] colcon.colcon_core.shell DEBUG Skip shell extension 'dsv' for command environment
+[0.304s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/laser_proc': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/laser_proc -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/laser_proc
+[0.307s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/urg_c': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/urg_c -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/urg_c
+[0.308s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/urg_node_msgs': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/urg_node_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/urg_node_msgs
+[1.786s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/urg_c' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/urg_c -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/urg_c
+[1.789s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/urg_c': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/urg_c -- -j12 -l12
+[2.620s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/urg_c' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/urg_c -- -j12 -l12
+[2.634s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/urg_c': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/urg_c
+[3.193s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(urg_c)
+[3.194s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/urg_c' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/urg_c
+[3.198s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c' for CMake module files
+[3.200s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c' for CMake config files
+[3.200s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_c', 'cmake_prefix_path')
+[3.201s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/cmake_prefix_path.ps1'
+[3.202s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/cmake_prefix_path.dsv'
+[3.203s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/cmake_prefix_path.sh'
+[3.204s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c/lib'
+[3.204s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_c', 'ld_library_path_lib')
+[3.205s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/ld_library_path_lib.ps1'
+[3.205s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/ld_library_path_lib.dsv'
+[3.206s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/ld_library_path_lib.sh'
+[3.206s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c/bin'
+[3.206s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_c', 'path')
+[3.207s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/path.ps1'
+[3.207s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/path.dsv'
+[3.208s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/path.sh'
+[3.208s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c/lib/pkgconfig/urg_c.pc'
+[3.210s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c/lib/python3.12/site-packages'
+[3.210s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c/bin'
+[3.210s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_c', 'pythonscriptspath')
+[3.210s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/pythonscriptspath.ps1'
+[3.211s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/pythonscriptspath.dsv'
+[3.211s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/pythonscriptspath.sh'
+[3.212s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.ps1'
+[3.214s] colcon.colcon_core.shell INFO Creating package descriptor '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.dsv'
+[3.215s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.sh'
+[3.216s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.bash'
+[3.218s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.zsh'
+[3.219s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/home/mr-morales/ros2_ws/install/urg_c/share/colcon-core/packages/urg_c)
+[3.220s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(urg_c)
+[3.220s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c' for CMake module files
+[3.220s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c' for CMake config files
+[3.221s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_c', 'cmake_prefix_path')
+[3.221s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/cmake_prefix_path.ps1'
+[3.222s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/cmake_prefix_path.dsv'
+[3.223s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/cmake_prefix_path.sh'
+[3.224s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c/lib'
+[3.224s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_c', 'ld_library_path_lib')
+[3.224s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/ld_library_path_lib.ps1'
+[3.225s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/ld_library_path_lib.dsv'
+[3.226s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/ld_library_path_lib.sh'
+[3.227s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c/bin'
+[3.227s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_c', 'path')
+[3.227s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/path.ps1'
+[3.228s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/path.dsv'
+[3.228s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/path.sh'
+[3.229s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c/lib/pkgconfig/urg_c.pc'
+[3.230s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c/lib/python3.12/site-packages'
+[3.230s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_c/bin'
+[3.230s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_c', 'pythonscriptspath')
+[3.230s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/pythonscriptspath.ps1'
+[3.231s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/pythonscriptspath.dsv'
+[3.232s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/hook/pythonscriptspath.sh'
+[3.233s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.ps1'
+[3.235s] colcon.colcon_core.shell INFO Creating package descriptor '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.dsv'
+[3.236s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.sh'
+[3.237s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.bash'
+[3.238s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.zsh'
+[3.239s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/home/mr-morales/ros2_ws/install/urg_c/share/colcon-core/packages/urg_c)
+[3.826s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/laser_proc' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/laser_proc -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/laser_proc
+[3.827s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/laser_proc': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/laser_proc -- -j12 -l12
+[6.489s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/urg_node_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/urg_node_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/urg_node_msgs
+[6.491s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/urg_node_msgs': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/urg_node_msgs -- -j12 -l12
+[10.454s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/urg_node_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/urg_node_msgs -- -j12 -l12
+[10.456s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/urg_node_msgs': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/urg_node_msgs
+[11.303s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(urg_node_msgs)
+[11.304s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs' for CMake module files
+[11.305s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/urg_node_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/urg_node_msgs
+[11.307s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs' for CMake config files
+[11.308s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_node_msgs', 'cmake_prefix_path')
+[11.308s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/cmake_prefix_path.ps1'
+[11.310s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/cmake_prefix_path.dsv'
+[11.311s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/cmake_prefix_path.sh'
+[11.312s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib'
+[11.312s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_node_msgs', 'ld_library_path_lib')
+[11.312s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/ld_library_path_lib.ps1'
+[11.313s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/ld_library_path_lib.dsv'
+[11.314s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/ld_library_path_lib.sh'
+[11.314s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs/bin'
+[11.315s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/pkgconfig/urg_node_msgs.pc'
+[11.315s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages'
+[11.315s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_node_msgs', 'pythonpath')
+[11.315s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/pythonpath.ps1'
+[11.317s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/pythonpath.dsv'
+[11.317s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/pythonpath.sh'
+[11.318s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs/bin'
+[11.319s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.ps1'
+[11.320s] colcon.colcon_core.shell INFO Creating package descriptor '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.dsv'
+[11.321s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.sh'
+[11.322s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.bash'
+[11.322s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.zsh'
+[11.323s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/home/mr-morales/ros2_ws/install/urg_node_msgs/share/colcon-core/packages/urg_node_msgs)
+[11.324s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(urg_node_msgs)
+[11.324s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs' for CMake module files
+[11.325s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs' for CMake config files
+[11.325s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_node_msgs', 'cmake_prefix_path')
+[11.325s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/cmake_prefix_path.ps1'
+[11.326s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/cmake_prefix_path.dsv'
+[11.327s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/cmake_prefix_path.sh'
+[11.327s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib'
+[11.327s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_node_msgs', 'ld_library_path_lib')
+[11.328s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/ld_library_path_lib.ps1'
+[11.328s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/ld_library_path_lib.dsv'
+[11.329s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/ld_library_path_lib.sh'
+[11.329s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs/bin'
+[11.329s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/pkgconfig/urg_node_msgs.pc'
+[11.330s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages'
+[11.330s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_node_msgs', 'pythonpath')
+[11.330s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/pythonpath.ps1'
+[11.331s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/pythonpath.dsv'
+[11.331s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/hook/pythonpath.sh'
+[11.332s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node_msgs/bin'
+[11.332s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.ps1'
+[11.333s] colcon.colcon_core.shell INFO Creating package descriptor '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.dsv'
+[11.334s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.sh'
+[11.334s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.bash'
+[11.335s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.zsh'
+[11.335s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/home/mr-morales/ros2_ws/install/urg_node_msgs/share/colcon-core/packages/urg_node_msgs)
+[17.294s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/laser_proc' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/laser_proc -- -j12 -l12
+[17.296s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/laser_proc': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/laser_proc
+[17.554s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(laser_proc)
+[17.554s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/laser_proc' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/laser_proc
+[17.555s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc' for CMake module files
+[17.556s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc' for CMake config files
+[17.556s] colcon.colcon_core.shell Level 1 create_environment_hook('laser_proc', 'cmake_prefix_path')
+[17.557s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/cmake_prefix_path.ps1'
+[17.558s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/cmake_prefix_path.dsv'
+[17.558s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/cmake_prefix_path.sh'
+[17.559s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc/lib'
+[17.560s] colcon.colcon_core.shell Level 1 create_environment_hook('laser_proc', 'ld_library_path_lib')
+[17.560s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/ld_library_path_lib.ps1'
+[17.561s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/ld_library_path_lib.dsv'
+[17.562s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/ld_library_path_lib.sh'
+[17.563s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc/bin'
+[17.563s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc/lib/pkgconfig/laser_proc.pc'
+[17.563s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc/lib/python3.12/site-packages'
+[17.564s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc/bin'
+[17.564s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.ps1'
+[17.565s] colcon.colcon_core.shell INFO Creating package descriptor '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.dsv'
+[17.566s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.sh'
+[17.566s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.bash'
+[17.567s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.zsh'
+[17.567s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/home/mr-morales/ros2_ws/install/laser_proc/share/colcon-core/packages/laser_proc)
+[17.568s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(laser_proc)
+[17.569s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc' for CMake module files
+[17.569s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc' for CMake config files
+[17.569s] colcon.colcon_core.shell Level 1 create_environment_hook('laser_proc', 'cmake_prefix_path')
+[17.569s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/cmake_prefix_path.ps1'
+[17.570s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/cmake_prefix_path.dsv'
+[17.571s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/cmake_prefix_path.sh'
+[17.572s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc/lib'
+[17.572s] colcon.colcon_core.shell Level 1 create_environment_hook('laser_proc', 'ld_library_path_lib')
+[17.572s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/ld_library_path_lib.ps1'
+[17.572s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/ld_library_path_lib.dsv'
+[17.573s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/hook/ld_library_path_lib.sh'
+[17.574s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc/bin'
+[17.574s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc/lib/pkgconfig/laser_proc.pc'
+[17.574s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc/lib/python3.12/site-packages'
+[17.574s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/laser_proc/bin'
+[17.575s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.ps1'
+[17.576s] colcon.colcon_core.shell INFO Creating package descriptor '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.dsv'
+[17.576s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.sh'
+[17.577s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.bash'
+[17.578s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.zsh'
+[17.579s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/home/mr-morales/ros2_ws/install/laser_proc/share/colcon-core/packages/laser_proc)
+[17.579s] colcon.colcon_ros.task.ament_cmake.build INFO Building ROS package in '/home/mr-morales/ros2_ws/src/urg_node' with build type 'ament_cmake'
+[17.579s] colcon.colcon_cmake.task.cmake.build INFO Building CMake package in '/home/mr-morales/ros2_ws/src/urg_node'
+[17.579s] colcon.colcon_core.shell INFO Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[17.579s] colcon.colcon_core.shell DEBUG Skip shell extension 'dsv' for command environment
+[17.597s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/urg_node': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib:/home/mr-morales/ros2_ws/install/urg_c/lib:/home/mr-morales/ros2_ws/install/laser_proc/lib:${LD_LIBRARY_PATH} PATH=/home/mr-morales/ros2_ws/install/urg_c/bin:${PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/urg_node -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/urg_node
+[20.300s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/urg_node' returned '0': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib:/home/mr-morales/ros2_ws/install/urg_c/lib:/home/mr-morales/ros2_ws/install/laser_proc/lib:${LD_LIBRARY_PATH} PATH=/home/mr-morales/ros2_ws/install/urg_c/bin:${PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/urg_node -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/urg_node
+[20.301s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/urg_node': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib:/home/mr-morales/ros2_ws/install/urg_c/lib:/home/mr-morales/ros2_ws/install/laser_proc/lib:${LD_LIBRARY_PATH} PATH=/home/mr-morales/ros2_ws/install/urg_c/bin:${PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/urg_node -- -j12 -l12
+[31.664s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/urg_node' returned '0': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib:/home/mr-morales/ros2_ws/install/urg_c/lib:/home/mr-morales/ros2_ws/install/laser_proc/lib:${LD_LIBRARY_PATH} PATH=/home/mr-morales/ros2_ws/install/urg_c/bin:${PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/urg_node -- -j12 -l12
+[31.667s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/home/mr-morales/ros2_ws/build/urg_node': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib:/home/mr-morales/ros2_ws/install/urg_c/lib:/home/mr-morales/ros2_ws/install/laser_proc/lib:${LD_LIBRARY_PATH} PATH=/home/mr-morales/ros2_ws/install/urg_c/bin:${PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/urg_node
+[31.979s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(urg_node)
+[31.979s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node' for CMake module files
+[31.980s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/home/mr-morales/ros2_ws/build/urg_node' returned '0': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib:/home/mr-morales/ros2_ws/install/urg_c/lib:/home/mr-morales/ros2_ws/install/laser_proc/lib:${LD_LIBRARY_PATH} PATH=/home/mr-morales/ros2_ws/install/urg_c/bin:${PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/urg_node
+[31.981s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node' for CMake config files
+[31.981s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_node', 'cmake_prefix_path')
+[31.982s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/cmake_prefix_path.ps1'
+[31.983s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/cmake_prefix_path.dsv'
+[31.983s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/cmake_prefix_path.sh'
+[31.984s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node/lib'
+[31.985s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_node', 'ld_library_path_lib')
+[31.985s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/ld_library_path_lib.ps1'
+[31.986s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/ld_library_path_lib.dsv'
+[31.986s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/ld_library_path_lib.sh'
+[31.987s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node/bin'
+[31.987s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node/lib/pkgconfig/urg_node.pc'
+[31.987s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node/lib/python3.12/site-packages'
+[31.988s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node/bin'
+[31.988s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.ps1'
+[31.989s] colcon.colcon_core.shell INFO Creating package descriptor '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.dsv'
+[31.990s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.sh'
+[31.991s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.bash'
+[31.992s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.zsh'
+[31.992s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/home/mr-morales/ros2_ws/install/urg_node/share/colcon-core/packages/urg_node)
+[31.993s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(urg_node)
+[31.994s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node' for CMake module files
+[31.994s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node' for CMake config files
+[31.994s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_node', 'cmake_prefix_path')
+[31.994s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/cmake_prefix_path.ps1'
+[31.995s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/cmake_prefix_path.dsv'
+[31.996s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/cmake_prefix_path.sh'
+[31.996s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node/lib'
+[31.997s] colcon.colcon_core.shell Level 1 create_environment_hook('urg_node', 'ld_library_path_lib')
+[31.997s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/ld_library_path_lib.ps1'
+[31.997s] colcon.colcon_core.shell INFO Creating environment descriptor '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/ld_library_path_lib.dsv'
+[31.998s] colcon.colcon_core.shell INFO Creating environment hook '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/hook/ld_library_path_lib.sh'
+[31.998s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node/bin'
+[31.999s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node/lib/pkgconfig/urg_node.pc'
+[31.999s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node/lib/python3.12/site-packages'
+[31.999s] colcon.colcon_core.environment Level 1 checking '/home/mr-morales/ros2_ws/install/urg_node/bin'
+[31.999s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.ps1'
+[32.000s] colcon.colcon_core.shell INFO Creating package descriptor '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.dsv'
+[32.001s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.sh'
+[32.002s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.bash'
+[32.003s] colcon.colcon_core.shell INFO Creating package script '/home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.zsh'
+[32.004s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/home/mr-morales/ros2_ws/install/urg_node/share/colcon-core/packages/urg_node)
+[32.004s] colcon.colcon_parallel_executor.executor.parallel DEBUG closing loop
+[32.004s] colcon.colcon_parallel_executor.executor.parallel DEBUG loop closed
+[32.005s] colcon.colcon_parallel_executor.executor.parallel DEBUG run_until_complete finished with '0'
+[32.005s] colcon.colcon_core.event_reactor DEBUG joining thread
+[32.006s] colcon.colcon_core.event_reactor DEBUG joined thread
+[32.006s] colcon.colcon_core.shell INFO Creating prefix script '/home/mr-morales/ros2_ws/install/local_setup.ps1'
+[32.008s] colcon.colcon_core.shell INFO Creating prefix util module '/home/mr-morales/ros2_ws/install/_local_setup_util_ps1.py'
+[32.010s] colcon.colcon_core.shell INFO Creating prefix chain script '/home/mr-morales/ros2_ws/install/setup.ps1'
+[32.012s] colcon.colcon_core.shell INFO Creating prefix script '/home/mr-morales/ros2_ws/install/local_setup.sh'
+[32.013s] colcon.colcon_core.shell INFO Creating prefix util module '/home/mr-morales/ros2_ws/install/_local_setup_util_sh.py'
+[32.014s] colcon.colcon_core.shell INFO Creating prefix chain script '/home/mr-morales/ros2_ws/install/setup.sh'
+[32.016s] colcon.colcon_core.shell INFO Creating prefix script '/home/mr-morales/ros2_ws/install/local_setup.bash'
+[32.017s] colcon.colcon_core.shell INFO Creating prefix chain script '/home/mr-morales/ros2_ws/install/setup.bash'
+[32.019s] colcon.colcon_core.shell INFO Creating prefix script '/home/mr-morales/ros2_ws/install/local_setup.zsh'
+[32.020s] colcon.colcon_core.shell INFO Creating prefix chain script '/home/mr-morales/ros2_ws/install/setup.zsh'

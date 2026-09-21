@@ -1,0 +1,108 @@
+-- The C compiler identification is GNU 15.3.0
+-- The CXX compiler identification is GNU 15.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (1.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mr-morales/ros2_ws/build/urg_c
+[  2%] Building C object CMakeFiles/urg_c.dir/current/src/urg_ring_buffer.c.o
+[  5%] Building C object CMakeFiles/urg_c.dir/current/src/urg_time.c.o
+[  8%] Building C object CMakeFiles/urg_c.dir/current/src/urg_sensor.c.o
+[ 11%] Building C object CMakeFiles/urg_c.dir/current/src/urg_utils.c.o
+[ 14%] Building C object CMakeFiles/urg_c.dir/current/src/urg_debug.c.o
+[ 17%] Building C object CMakeFiles/urg_c.dir/current/src/urg_serial.c.o
+[ 23%] Building C object CMakeFiles/urg_c.dir/current/src/urg_serial_utils.c.o
+[ 23%] Building C object CMakeFiles/urg_c.dir/current/src/urg_tcpclient.c.o
+[ 26%] Building C object CMakeFiles/urg_c.dir/current/src/urg_connection.c.o
+[ 29%] Linking C shared library liburg_c.so
+[ 29%] Built target urg_c
+[ 32%] Building C object CMakeFiles/open_urg_sensor.dir/current/samples/open_urg_sensor.c.o
+[ 35%] Linking C static library libopen_urg_sensor.a
+[ 35%] Built target open_urg_sensor
+[ 38%] Building C object CMakeFiles/calculate_xy.dir/current/samples/calculate_xy.c.o
+[ 41%] Building C object CMakeFiles/get_multiecho.dir/current/samples/get_multiecho.c.o
+[ 47%] Building C object CMakeFiles/get_distance_intensity.dir/current/samples/get_distance_intensity.c.o
+[ 47%] Building C object CMakeFiles/get_distance.dir/current/samples/get_distance.c.o
+[ 50%] Building C object CMakeFiles/find_port.dir/current/samples/find_port.c.o
+[ 55%] Building C object CMakeFiles/reboot_test.dir/current/samples/reboot_test.c.o
+[ 55%] Building C object CMakeFiles/sensor_parameter.dir/current/samples/sensor_parameter.c.o
+[ 58%] Building C object CMakeFiles/angle_convert_test.dir/current/samples/angle_convert_test.c.o
+[ 61%] Building C object CMakeFiles/get_multiecho_intensity.dir/current/samples/get_multiecho_intensity.c.o
+[ 64%] Linking C executable reboot_test
+[ 67%] Linking C executable find_port
+[ 70%] Linking C executable angle_convert_test
+[ 73%] Linking C executable get_multiecho
+[ 76%] Linking C executable get_distance_intensity
+[ 79%] Linking C executable sensor_parameter
+[ 82%] Linking C executable get_distance
+[ 85%] Linking C executable get_multiecho_intensity
+[ 88%] Linking C executable calculate_xy
+[ 88%] Built target find_port
+[ 88%] Built target reboot_test
+[ 88%] Built target angle_convert_test
+[ 88%] Built target get_distance_intensity
+[ 88%] Built target get_multiecho
+[ 91%] Building C object CMakeFiles/timeout_test.dir/current/samples/timeout_test.c.o
+[ 94%] Building C object CMakeFiles/sync_time_stamp.dir/current/samples/sync_time_stamp.c.o
+[ 94%] Built target calculate_xy
+[ 94%] Built target sensor_parameter
+[ 94%] Built target get_distance
+[ 94%] Built target get_multiecho_intensity
+[ 97%] Linking C executable timeout_test
+[100%] Linking C executable sync_time_stamp
+[100%] Built target timeout_test
+[100%] Built target sync_time_stamp
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/lib/liburg_c.so
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/lib/libopen_urg_sensor.a
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/angle_convert_test
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/calculate_xy
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/find_port
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/get_distance
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/get_distance_intensity
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/get_multiecho
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/get_multiecho_intensity
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/reboot_test
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/sensor_parameter
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/sync_time_stamp
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/timeout_test
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_connection.h
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_debug.h
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_detect_os.h
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_errno.h
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_ring_buffer.h
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_sensor.h
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_serial.h
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_serial_utils.h
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_tcpclient.h
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_time.h
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_utils.h
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/ament_index/resource_index/package_run_dependencies/urg_c
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/ament_index/resource_index/parent_prefix_path/urg_c
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/environment/ament_prefix_path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/environment/ament_prefix_path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/environment/path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/environment/path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/local_setup.bash
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/local_setup.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/local_setup.zsh
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/local_setup.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/ament_index/resource_index/packages/urg_c
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/cmake/urg_cConfig.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/cmake/urg_cConfig-version.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.xml

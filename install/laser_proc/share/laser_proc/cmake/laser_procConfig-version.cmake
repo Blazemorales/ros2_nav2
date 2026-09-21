@@ -1,0 +1,1 @@
+/home/mr-morales/ros2_ws/build/laser_proc/ament_cmake_core/laser_procConfig-version.cmake

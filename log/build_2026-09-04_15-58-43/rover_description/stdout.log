@@ -1,0 +1,80 @@
+-- The C compiler identification is GNU 15.3.0
+-- The CXX compiler identification is GNU 15.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (2.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/config/control.yaml
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/launch/robot_state_publisher.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/back_left_steering_asm.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/back_right_steering_asm.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/body_box.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/differential.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/front_left_steering_asm.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/front_right_steering_asm.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/left_bogie_asm.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/left_rocker_asm.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/right_bogie_asm.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/right_rocker_asm.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/turnbuckle.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/asus_xtion/asus_xtion_pro_live.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/asus_xtion/asus_xtion_pro_live.png
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo.png
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo3d.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo3d.jpg
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo3d.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_urg_04lx.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_urg_04lx.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_ust_10lx.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_ust_20lx.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_utm_30lx.dae
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_utm_30lx.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/wheels/wheel.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/wheels/wheel_asm.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/bases/body.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/bases/bogie.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/bases/differential.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/bases/rocker.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/bases/turnbuckle.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/inertials.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/materials.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/sensors/all_sensors.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/sensors/asus_xtion.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/sensors/hokuyo.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/sensors/imu.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/wheels/corner.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/wheels/wheel.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/robots/rover.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/hooks/gz_sim_resource_path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/hooks/gz_sim_resource_path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/gz_sim_resource_path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/gz_sim_resource_path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/ament_index/resource_index/package_run_dependencies/rover_description
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/ament_index/resource_index/parent_prefix_path/rover_description
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/local_setup.bash
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/local_setup.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/local_setup.zsh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/local_setup.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/package.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/ament_index/resource_index/packages/rover_description
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/cmake/rover_descriptionConfig.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/cmake/rover_descriptionConfig-version.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/package.xml

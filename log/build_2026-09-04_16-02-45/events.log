@@ -1,0 +1,158 @@
+[0.000000] (-) TimerEvent: {}
+[0.000091] (-) JobUnselected: {'identifier': 'rover_bringup'}
+[0.000133] (-) JobUnselected: {'identifier': 'rover_description'}
+[0.000162] (-) JobUnselected: {'identifier': 'rover_gazebo'}
+[0.000187] (-) JobUnselected: {'identifier': 'rover_localization'}
+[0.000207] (-) JobUnselected: {'identifier': 'rover_motor_controller'}
+[0.000225] (-) JobUnselected: {'identifier': 'rover_msgs'}
+[0.000242] (-) JobUnselected: {'identifier': 'rover_navigation'}
+[0.000258] (-) JobUnselected: {'identifier': 'rover_teleop'}
+[0.000279] (rover_motor_controller_cpp) JobQueued: {'identifier': 'rover_motor_controller_cpp', 'dependencies': OrderedDict({'rover_msgs': '/home/mr-morales/ros2_ws/install/rover_msgs'})}
+[0.000315] (rover_motor_controller_cpp) JobStarted: {'identifier': 'rover_motor_controller_cpp'}
+[0.013168] (rover_motor_controller_cpp) JobProgress: {'identifier': 'rover_motor_controller_cpp', 'progress': 'cmake'}
+[0.014748] (rover_motor_controller_cpp) JobProgress: {'identifier': 'rover_motor_controller_cpp', 'progress': 'build'}
+[0.014807] (rover_motor_controller_cpp) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '--build', '/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp', '--', '-j12', '-l12'], 'cwd': '/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/ros2_ws/install/rover_msgs/lib:/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover/rover_motor_controller_cpp', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[0.099234] (rover_motor_controller_cpp) StdoutLine: {'line': b'[ 33%] Built target vel_parser_node\n'}
+[0.099533] (-) TimerEvent: {}
+[0.122519] (rover_motor_controller_cpp) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/controller_node.dir/src/controller_node_main.cpp.o\n'}
+[0.123128] (rover_motor_controller_cpp) StdoutLine: {'line': b'[ 55%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/serial.cpp.o\n'}
+[0.124142] (rover_motor_controller_cpp) StdoutLine: {'line': b'[ 66%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/lx16a.cpp.o\n'}
+[0.125937] (rover_motor_controller_cpp) StdoutLine: {'line': b'[ 77%] Building CXX object CMakeFiles/controller_node.dir/src/motor_controller/controller_node.cpp.o\n'}
+[0.126487] (rover_motor_controller_cpp) StdoutLine: {'line': b'[ 88%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/motor_controller.cpp.o\n'}
+[0.199760] (-) TimerEvent: {}
+[0.300067] (-) TimerEvent: {}
+[0.400359] (-) TimerEvent: {}
+[0.500678] (-) TimerEvent: {}
+[0.601002] (-) TimerEvent: {}
+[0.701276] (-) TimerEvent: {}
+[0.801564] (-) TimerEvent: {}
+[0.901879] (-) TimerEvent: {}
+[1.002220] (-) TimerEvent: {}
+[1.102536] (-) TimerEvent: {}
+[1.202820] (-) TimerEvent: {}
+[1.303108] (-) TimerEvent: {}
+[1.403410] (-) TimerEvent: {}
+[1.503712] (-) TimerEvent: {}
+[1.603982] (rover_motor_controller_cpp) StderrLine: {'line': b'In file included from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:30,\n'}
+[1.604371] (-) TimerEvent: {}
+[1.604411] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:29,\n'}
+[1.604584] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/lx16a.hpp:33,\n'}
+[1.604734] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/motor_controller.cpp:26:\n'}
+[1.604881] (rover_motor_controller_cpp) StderrLine: {'line': b"/home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:36:1: note: '#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.'\n"}
+[1.605038] (rover_motor_controller_cpp) StderrLine: {'line': b'   36 | BOOST_PRAGMA_MESSAGE(\n'}
+[1.605187] (rover_motor_controller_cpp) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~\n'}
+[1.704564] (-) TimerEvent: {}
+[1.804868] (-) TimerEvent: {}
+[1.905159] (-) TimerEvent: {}
+[2.005462] (-) TimerEvent: {}
+[2.105786] (-) TimerEvent: {}
+[2.206060] (-) TimerEvent: {}
+[2.306351] (-) TimerEvent: {}
+[2.406646] (-) TimerEvent: {}
+[2.506952] (-) TimerEvent: {}
+[2.607260] (-) TimerEvent: {}
+[2.707574] (-) TimerEvent: {}
+[2.807870] (-) TimerEvent: {}
+[2.908154] (-) TimerEvent: {}
+[3.008459] (-) TimerEvent: {}
+[3.108792] (-) TimerEvent: {}
+[3.209074] (-) TimerEvent: {}
+[3.309388] (-) TimerEvent: {}
+[3.409701] (-) TimerEvent: {}
+[3.510003] (-) TimerEvent: {}
+[3.534103] (rover_motor_controller_cpp) StderrLine: {'line': b'In file included from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:30,\n'}
+[3.534502] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:29,\n'}
+[3.534677] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/serial.cpp:27:\n'}
+[3.534840] (rover_motor_controller_cpp) StderrLine: {'line': b"/home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:36:1: note: '#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.'\n"}
+[3.535036] (rover_motor_controller_cpp) StderrLine: {'line': b'   36 | BOOST_PRAGMA_MESSAGE(\n'}
+[3.535192] (rover_motor_controller_cpp) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~\n'}
+[3.542350] (rover_motor_controller_cpp) StderrLine: {'line': b'In file included from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:30,\n'}
+[3.542706] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:29,\n'}
+[3.542881] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/lx16a.hpp:33,\n'}
+[3.543038] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/lx16a/lx16a.cpp:30:\n'}
+[3.543192] (rover_motor_controller_cpp) StderrLine: {'line': b"/home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:36:1: note: '#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.'\n"}
+[3.543355] (rover_motor_controller_cpp) StderrLine: {'line': b'   36 | BOOST_PRAGMA_MESSAGE(\n'}
+[3.543505] (rover_motor_controller_cpp) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~\n'}
+[3.610183] (-) TimerEvent: {}
+[3.710445] (-) TimerEvent: {}
+[3.810729] (-) TimerEvent: {}
+[3.911002] (-) TimerEvent: {}
+[4.011289] (-) TimerEvent: {}
+[4.111599] (-) TimerEvent: {}
+[4.211907] (-) TimerEvent: {}
+[4.312197] (-) TimerEvent: {}
+[4.408295] (rover_motor_controller_cpp) StderrLine: {'line': b'In file included from /home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:30,\n'}
+[4.408646] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/serial.hpp:29,\n'}
+[4.408822] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/lx16a.hpp:33,\n'}
+[4.409007] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/lx16a/motor_controller.hpp:31,\n'}
+[4.409167] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/include/motor_controller/controller_node.hpp:30,\n'}
+[4.409322] (rover_motor_controller_cpp) StderrLine: {'line': b'                 from /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/src/controller_node_main.cpp:25:\n'}
+[4.409472] (rover_motor_controller_cpp) StderrLine: {'line': b"/home/mr-morales/miniforge3/envs/ros2_jazzy/include/boost/bind.hpp:36:1: note: '#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.'\n"}
+[4.409664] (rover_motor_controller_cpp) StderrLine: {'line': b'   36 | BOOST_PRAGMA_MESSAGE(\n'}
+[4.409825] (rover_motor_controller_cpp) StderrLine: {'line': b'      | ^~~~~~~~~~~~~~~~~~~~\n'}
+[4.412337] (-) TimerEvent: {}
+[4.512597] (-) TimerEvent: {}
+[4.612908] (-) TimerEvent: {}
+[4.713269] (-) TimerEvent: {}
+[4.813686] (-) TimerEvent: {}
+[4.914016] (-) TimerEvent: {}
+[5.014313] (-) TimerEvent: {}
+[5.114610] (-) TimerEvent: {}
+[5.214895] (-) TimerEvent: {}
+[5.315267] (-) TimerEvent: {}
+[5.415583] (-) TimerEvent: {}
+[5.515926] (-) TimerEvent: {}
+[5.616275] (-) TimerEvent: {}
+[5.716655] (-) TimerEvent: {}
+[5.816931] (-) TimerEvent: {}
+[5.917272] (-) TimerEvent: {}
+[6.017631] (-) TimerEvent: {}
+[6.117978] (-) TimerEvent: {}
+[6.218323] (-) TimerEvent: {}
+[6.318735] (-) TimerEvent: {}
+[6.419111] (-) TimerEvent: {}
+[6.519473] (-) TimerEvent: {}
+[6.619808] (-) TimerEvent: {}
+[6.720146] (-) TimerEvent: {}
+[6.820351] (-) TimerEvent: {}
+[6.920557] (-) TimerEvent: {}
+[7.020892] (-) TimerEvent: {}
+[7.121232] (-) TimerEvent: {}
+[7.221568] (-) TimerEvent: {}
+[7.321795] (-) TimerEvent: {}
+[7.421999] (-) TimerEvent: {}
+[7.522341] (-) TimerEvent: {}
+[7.622665] (-) TimerEvent: {}
+[7.723039] (-) TimerEvent: {}
+[7.823406] (-) TimerEvent: {}
+[7.923733] (-) TimerEvent: {}
+[8.024082] (-) TimerEvent: {}
+[8.124325] (-) TimerEvent: {}
+[8.224570] (-) TimerEvent: {}
+[8.324911] (-) TimerEvent: {}
+[8.425254] (-) TimerEvent: {}
+[8.525546] (-) TimerEvent: {}
+[8.625786] (-) TimerEvent: {}
+[8.726132] (-) TimerEvent: {}
+[8.826460] (-) TimerEvent: {}
+[8.926789] (-) TimerEvent: {}
+[9.027124] (-) TimerEvent: {}
+[9.127461] (-) TimerEvent: {}
+[9.227807] (-) TimerEvent: {}
+[9.328155] (-) TimerEvent: {}
+[9.428401] (-) TimerEvent: {}
+[9.528675] (-) TimerEvent: {}
+[9.629014] (-) TimerEvent: {}
+[9.729354] (-) TimerEvent: {}
+[9.829769] (-) TimerEvent: {}
+[9.909865] (rover_motor_controller_cpp) StdoutLine: {'line': b'[100%] Linking CXX executable controller_node\n'}
+[9.929884] (-) TimerEvent: {}
+[9.981721] (rover_motor_controller_cpp) StderrLine: {'line': b'/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/x86_64-conda-linux-gnu-ld: cannot find -lboost_system: Arquivo ou diret\xc3\xb3rio inexistente\n'}
+[10.017337] (rover_motor_controller_cpp) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[10.019605] (rover_motor_controller_cpp) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:239: controller_node] Error 1\n'}
+[10.020397] (rover_motor_controller_cpp) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:156: CMakeFiles/controller_node.dir/all] Error 2\n'}
+[10.020970] (rover_motor_controller_cpp) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[10.023579] (rover_motor_controller_cpp) CommandEnded: {'returncode': 2}
+[10.030898] (-) TimerEvent: {}
+[10.041202] (rover_motor_controller_cpp) JobEnded: {'identifier': 'rover_motor_controller_cpp', 'rc': 2}
+[10.051906] (-) EventReactorShutdown: {}

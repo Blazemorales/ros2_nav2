@@ -1,0 +1,1 @@
+/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc -Wl,--dependency-file=CMakeFiles/reboot_test.dir/link.d CMakeFiles/reboot_test.dir/current/samples/reboot_test.c.o -o reboot_test  -Wl,-rpath,/home/mr-morales/ros2_ws/build/urg_c libopen_urg_sensor.a liburg_c.so -lrt -lm

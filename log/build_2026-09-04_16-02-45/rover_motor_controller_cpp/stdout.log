@@ -1,0 +1,7 @@
+[ 33%] Built target vel_parser_node
+[ 44%] Building CXX object CMakeFiles/controller_node.dir/src/controller_node_main.cpp.o
+[ 55%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/serial.cpp.o
+[ 66%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/lx16a.cpp.o
+[ 77%] Building CXX object CMakeFiles/controller_node.dir/src/motor_controller/controller_node.cpp.o
+[ 88%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/motor_controller.cpp.o
+[100%] Linking CXX executable controller_node

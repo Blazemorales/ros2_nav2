@@ -1,0 +1,1 @@
+controller_manager:gz_ros2_control:ros_gz_bridge:ros_gz_sim:rover_description:rover_motor_controller_cpp:rover_msgs:rviz2:std_msgs:trajectory_msgs

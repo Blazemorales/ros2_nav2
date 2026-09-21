@@ -1,0 +1,96 @@
+[0.027s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_description': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/ros2_rover/rover_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/rover_description
+[0.753s] CMake Warning (deprecated) at CMakeLists.txt:2 (cmake_minimum_required):
+[0.753s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.754s]   CMake.
+[0.754s] 
+[0.754s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.754s]   to tell CMake that the project requires at least <min> but has been updated
+[0.754s]   to work with policies introduced by <max> or earlier.
+[0.754s] This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+[0.755s] to suppress it.
+[0.756s] 
+[0.761s] -- The C compiler identification is GNU 15.3.0
+[0.761s] -- The CXX compiler identification is GNU 15.3.0
+[0.761s] -- Detecting C compiler ABI info
+[0.761s] -- Detecting C compiler ABI info - done
+[0.767s] -- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+[0.767s] -- Detecting C compile features
+[0.768s] -- Detecting C compile features - done
+[0.794s] -- Detecting CXX compiler ABI info
+[1.025s] -- Detecting CXX compiler ABI info - done
+[1.077s] -- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+[1.078s] -- Detecting CXX compile features
+[1.080s] -- Detecting CXX compile features - done
+[1.109s] -- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+[1.479s] -- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+[1.604s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.058s] -- Configuring done (2.0s)
+[2.067s] -- Generating done (0.0s)
+[2.070s] -- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_description
+[2.076s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_description' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/ros2_rover/rover_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/rover_description
+[2.077s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_description': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_description -- -j12 -l12
+[2.130s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_description' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_description -- -j12 -l12
+[2.132s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_description': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_description
+[2.146s] -- Install configuration: ""
+[2.148s] -- Execute custom install script
+[2.148s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/config/control.yaml
+[2.163s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/launch/robot_state_publisher.launch.py
+[2.174s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/back_left_steering_asm.stl
+[2.189s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/back_right_steering_asm.stl
+[2.203s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/body_box.stl
+[2.219s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/differential.stl
+[2.269s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/front_left_steering_asm.stl
+[2.270s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/front_right_steering_asm.stl
+[2.270s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/left_bogie_asm.stl
+[2.271s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/left_rocker_asm.stl
+[2.281s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/right_bogie_asm.stl
+[2.292s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/right_rocker_asm.stl
+[2.307s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/bases/turnbuckle.stl
+[2.322s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/asus_xtion/asus_xtion_pro_live.dae
+[2.331s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/asus_xtion/asus_xtion_pro_live.png
+[2.339s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo.png
+[2.354s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo3d.dae
+[2.367s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo3d.jpg
+[2.382s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo3d.stl
+[2.395s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_urg_04lx.dae
+[2.404s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_urg_04lx.stl
+[2.418s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_ust_10lx.dae
+[2.431s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_ust_20lx.dae
+[2.470s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_utm_30lx.dae
+[2.470s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/sensors/hokuyo/hokuyo_utm_30lx.stl
+[2.470s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/wheels/wheel.stl
+[2.480s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/meshes/wheels/wheel_asm.stl
+[2.495s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/bases/body.urdf.xacro
+[2.508s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/bases/bogie.urdf.xacro
+[2.520s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/bases/differential.urdf.xacro
+[2.535s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/bases/rocker.urdf.xacro
+[2.550s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/bases/turnbuckle.urdf.xacro
+[2.565s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/inertials.xacro
+[2.579s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/materials.xacro
+[2.593s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/sensors/all_sensors.urdf.xacro
+[2.608s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/sensors/asus_xtion.urdf.xacro
+[2.622s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/sensors/hokuyo.urdf.xacro
+[2.636s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/sensors/imu.urdf.xacro
+[2.652s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/wheels/corner.urdf.xacro
+[2.667s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/urdf/wheels/wheel.urdf.xacro
+[2.683s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/robots/rover.urdf.xacro
+[2.700s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/hooks/gz_sim_resource_path.dsv
+[2.708s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/hooks/gz_sim_resource_path.sh
+[2.723s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/gz_sim_resource_path.sh
+[2.738s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/gz_sim_resource_path.dsv
+[2.752s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/ament_index/resource_index/package_run_dependencies/rover_description
+[2.767s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/ament_index/resource_index/parent_prefix_path/rover_description
+[2.777s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/ament_prefix_path.sh
+[2.789s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/ament_prefix_path.dsv
+[2.804s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/path.sh
+[2.818s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/environment/path.dsv
+[2.828s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/local_setup.bash
+[2.842s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/local_setup.sh
+[2.856s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/local_setup.zsh
+[2.865s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/local_setup.dsv
+[2.873s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/package.dsv
+[2.882s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/ament_index/resource_index/packages/rover_description
+[2.898s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/cmake/rover_descriptionConfig.cmake
+[2.911s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/cmake/rover_descriptionConfig-version.cmake
+[2.923s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_description/share/rover_description/package.xml
+[2.940s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_description' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_description

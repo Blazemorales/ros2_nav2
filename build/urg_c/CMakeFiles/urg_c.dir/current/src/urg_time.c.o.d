@@ -1,0 +1,35 @@
+CMakeFiles/urg_c.dir/current/src/urg_time.c.o: \
+ /home/mr-morales/ros2_ws/src/urg_c/current/src/urg_time.c \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/stdc-predef.h \
+ /home/mr-morales/ros2_ws/src/urg_c/current/include/urg_c/urg_time.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/time.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/features.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/features-time64.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/wordsize.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/timesize.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/sys/cdefs.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/long-double.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/gnu/stubs.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/gnu/stubs-64.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/stddef.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/time.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/typesizes.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/time64.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/clock_t.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/time_t.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/struct_tm.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/struct_timespec.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/endian.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/endianness.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/clockid_t.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/timer_t.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/struct_itimerspec.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/locale_t.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/__locale_t.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/sys/time.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/struct_timeval.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/sys/select.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/select.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/sigset_t.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/__sigset_t.h

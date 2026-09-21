@@ -1,0 +1,40 @@
+-- The C compiler identification is GNU 15.3.0
+-- The CXX compiler identification is GNU 15.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.21 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/libcrypto.so (found version "3.6.4")
+-- Found FastRTPS: /home/mr-morales/miniforge3/envs/ros2_jazzy/include (Required is at least version "2.13")
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rover_msgs: 2.0.0 (/home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake)
+-- Found geometry_msgs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/geometry_msgs/cmake)
+-- Found ament_cmake_clang_format: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_clang_format/cmake)
+-- Configuring done (3.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_motor_controller_cpp
+[ 11%] Building CXX object CMakeFiles/controller_node.dir/src/controller_node_main.cpp.o
+[ 22%] Building CXX object CMakeFiles/vel_parser_node.dir/src/motor_controller/vel_parser_node.cpp.o
+[ 55%] Building CXX object CMakeFiles/vel_parser_node.dir/src/vel_parser_node_main.cpp.o
+[ 55%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/serial.cpp.o
+[ 55%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/lx16a.cpp.o
+[ 66%] Building CXX object CMakeFiles/controller_node.dir/src/lx16a/motor_controller.cpp.o
+[ 77%] Building CXX object CMakeFiles/controller_node.dir/src/motor_controller/controller_node.cpp.o
+[ 88%] Linking CXX executable vel_parser_node
+[ 88%] Built target vel_parser_node

@@ -1,0 +1,40 @@
+/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages/setuptools/dist.py:476: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'script-dir' will not be supported in future
+        versions. Please use the underscore name 'script_dir' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+running develop
+running egg_info
+creating rover_motor_controller.egg-info
+writing rover_motor_controller.egg-info/PKG-INFO
+writing dependency_links to rover_motor_controller.egg-info/dependency_links.txt
+writing entry points to rover_motor_controller.egg-info/entry_points.txt
+writing requirements to rover_motor_controller.egg-info/requires.txt
+writing top-level names to rover_motor_controller.egg-info/top_level.txt
+writing manifest file 'rover_motor_controller.egg-info/SOURCES.txt'
+reading manifest file 'rover_motor_controller.egg-info/SOURCES.txt'
+writing manifest file 'rover_motor_controller.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/mr-morales/ros2_ws/install/rover_motor_controller/lib/python3.12/site-packages/rover-motor-controller.egg-link (link to .)
+Installing controller_node script to /home/mr-morales/ros2_ws/install/rover_motor_controller/lib/rover_motor_controller
+Installing vel_parser_node script to /home/mr-morales/ros2_ws/install/rover_motor_controller/lib/rover_motor_controller
+
+Installed /home/mr-morales/ros2_ws/build/rover_motor_controller
+running symlink_data
+creating /home/mr-morales/ros2_ws/install/rover_motor_controller/share/ament_index
+creating /home/mr-morales/ros2_ws/install/rover_motor_controller/share/ament_index/resource_index
+creating /home/mr-morales/ros2_ws/install/rover_motor_controller/share/ament_index/resource_index/packages
+symbolically linking /home/mr-morales/ros2_ws/build/rover_motor_controller/resource/rover_motor_controller -> /home/mr-morales/ros2_ws/install/rover_motor_controller/share/ament_index/resource_index/packages
+symbolically linking /home/mr-morales/ros2_ws/build/rover_motor_controller/package.xml -> /home/mr-morales/ros2_ws/install/rover_motor_controller/share/rover_motor_controller
+creating /home/mr-morales/ros2_ws/install/rover_motor_controller/share/rover_motor_controller/launch
+symbolically linking /home/mr-morales/ros2_ws/build/rover_motor_controller/launch/motor_controller.launch.py -> /home/mr-morales/ros2_ws/install/rover_motor_controller/share/rover_motor_controller/launch/

@@ -1,0 +1,56 @@
+[0.022s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_localization': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/ros2_rover/rover_localization -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/rover_localization
+[0.745s] CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):
+[0.745s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.745s]   CMake.
+[0.746s] 
+[0.746s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.746s]   to tell CMake that the project requires at least <min> but has been updated
+[0.746s]   to work with policies introduced by <max> or earlier.
+[0.747s] This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+[0.747s] to suppress it.
+[0.747s] 
+[0.753s] -- The C compiler identification is GNU 15.3.0
+[0.754s] -- The CXX compiler identification is GNU 15.3.0
+[0.754s] -- Detecting C compiler ABI info
+[0.754s] -- Detecting C compiler ABI info - done
+[0.754s] -- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+[0.754s] -- Detecting C compile features
+[0.754s] -- Detecting C compile features - done
+[0.754s] -- Detecting CXX compiler ABI info
+[1.000s] -- Detecting CXX compiler ABI info - done
+[1.045s] -- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+[1.046s] -- Detecting CXX compile features
+[1.048s] -- Detecting CXX compile features - done
+[1.063s] -- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+[1.411s] -- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+[1.617s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.081s] -- Configuring done (2.0s)
+[2.089s] -- Generating done (0.0s)
+[2.092s] -- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_localization
+[2.100s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_localization' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/ros2_rover/rover_localization -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/rover_localization
+[2.102s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_localization': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_localization -- -j12 -l12
+[2.160s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_localization' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_localization -- -j12 -l12
+[2.162s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_localization': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_localization
+[2.169s] -- Install configuration: ""
+[2.170s] -- Execute custom install script
+[2.170s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization//launch/ekf.launch.py
+[2.184s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization//launch/localization.launch.py
+[2.198s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization//launch/rgbd_odometry.launch.py
+[2.212s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization//launch/rtabmap.launch.py
+[2.264s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization//config/ekf.yaml
+[2.265s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/ament_index/resource_index/package_run_dependencies/rover_localization
+[2.265s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/ament_index/resource_index/parent_prefix_path/rover_localization
+[2.265s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/environment/ament_prefix_path.sh
+[2.265s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/environment/ament_prefix_path.dsv
+[2.270s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/environment/path.sh
+[2.285s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/environment/path.dsv
+[2.301s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/local_setup.bash
+[2.314s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/local_setup.sh
+[2.328s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/local_setup.zsh
+[2.343s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/local_setup.dsv
+[2.359s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/package.dsv
+[2.374s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/ament_index/resource_index/packages/rover_localization
+[2.389s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/cmake/rover_localizationConfig.cmake
+[2.401s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/cmake/rover_localizationConfig-version.cmake
+[2.413s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_localization/share/rover_localization/package.xml
+[2.430s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_localization' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_localization

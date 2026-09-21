@@ -1,0 +1,12 @@
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/uninstall.dir
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/rover_gazebo_uninstall.dir
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/motors_command_parser_node.dir
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/odometry_node.dir
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/ground_truth_remapper_node.dir
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/test.dir
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/edit_cache.dir
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/rebuild_cache.dir
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/list_install_components.dir
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/install.dir
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/install/local.dir
+/home/mr-morales/ros2_ws/build/rover_gazebo/CMakeFiles/install/strip.dir

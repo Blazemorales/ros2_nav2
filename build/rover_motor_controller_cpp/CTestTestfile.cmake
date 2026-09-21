@@ -1,0 +1,8 @@
+# CMake generated Testfile for 
+# Source directory: /home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp
+# Build directory: /home/mr-morales/ros2_ws/build/rover_motor_controller_cpp
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(clang_format "/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3" "-u" "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp/test_results/rover_motor_controller_cpp/clang_format.xunit.xml" "--package-name" "rover_motor_controller_cpp" "--output-file" "/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp/ament_clang_format/clang_format.txt" "--command" "/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/ament_clang_format" "--xunit-file" "/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp/test_results/rover_motor_controller_cpp/clang_format.xunit.xml" "--config" ".clang-format")
+set_tests_properties(clang_format PROPERTIES  LABELS "clang_format;linter" TIMEOUT "60" WORKING_DIRECTORY "/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp" _BACKTRACE_TRIPLES "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_test/cmake/ament_add_test.cmake;125;add_test;/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_clang_format/cmake/ament_clang_format.cmake;57;ament_add_test;/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/CMakeLists.txt;64;ament_clang_format;/home/mr-morales/ros2_ws/src/ros2_rover/rover_motor_controller_cpp/CMakeLists.txt;0;")

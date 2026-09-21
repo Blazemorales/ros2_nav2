@@ -1,0 +1,1 @@
+/home/mr-morales/ros2_ws/build/rover_bringup/ament_cmake_core/rover_bringupConfig-version.cmake

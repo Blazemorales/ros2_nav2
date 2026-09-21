@@ -1,0 +1,44 @@
+-- The C compiler identification is GNU 15.3.0
+-- The CXX compiler identification is GNU 15.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (1.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_navigation
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/launch/bringup.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/launch/navigation.launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/RPP.yaml
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/SmacHybrid.yaml
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/SmacLattice.yaml
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/TEB.yaml
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/common.yaml
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/costmaps.yaml
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/behavior_trees/rover_bt.xml
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/ament_index/resource_index/package_run_dependencies/rover_navigation
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/ament_index/resource_index/parent_prefix_path/rover_navigation
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/environment/ament_prefix_path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/environment/ament_prefix_path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/environment/path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/environment/path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/local_setup.bash
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/local_setup.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/local_setup.zsh
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/local_setup.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/package.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/ament_index/resource_index/packages/rover_navigation
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/cmake/rover_navigationConfig.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/cmake/rover_navigationConfig-version.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/package.xml

@@ -1,0 +1,60 @@
+[0.020s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_navigation': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/ros2_rover/rover_navigation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/rover_navigation
+[0.747s] CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):
+[0.747s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.748s]   CMake.
+[0.748s] 
+[0.748s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.748s]   to tell CMake that the project requires at least <min> but has been updated
+[0.748s]   to work with policies introduced by <max> or earlier.
+[0.748s] This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+[0.749s] to suppress it.
+[0.749s] 
+[0.752s] -- The C compiler identification is GNU 15.3.0
+[0.752s] -- The CXX compiler identification is GNU 15.3.0
+[0.755s] -- Detecting C compiler ABI info
+[0.755s] -- Detecting C compiler ABI info - done
+[0.755s] -- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+[0.755s] -- Detecting C compile features
+[0.755s] -- Detecting C compile features - done
+[0.755s] -- Detecting CXX compiler ABI info
+[0.933s] -- Detecting CXX compiler ABI info - done
+[0.965s] -- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+[0.966s] -- Detecting CXX compile features
+[0.968s] -- Detecting CXX compile features - done
+[1.000s] -- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+[1.348s] -- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+[1.464s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.804s] -- Configuring done (1.8s)
+[1.812s] -- Generating done (0.0s)
+[1.815s] -- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_navigation
+[1.827s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_navigation' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/ros2_rover/rover_navigation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/rover_navigation
+[1.830s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_navigation': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_navigation -- -j12 -l12
+[1.906s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_navigation' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_navigation -- -j12 -l12
+[1.923s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_navigation': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_navigation
+[1.936s] -- Install configuration: ""
+[1.937s] -- Execute custom install script
+[1.938s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/launch/bringup.launch.py
+[1.954s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/launch/navigation.launch.py
+[1.969s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/RPP.yaml
+[1.980s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/SmacHybrid.yaml
+[1.995s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/SmacLattice.yaml
+[2.008s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/TEB.yaml
+[2.024s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/common.yaml
+[2.034s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/params/costmaps.yaml
+[2.044s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/behavior_trees/rover_bt.xml
+[2.053s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/ament_index/resource_index/package_run_dependencies/rover_navigation
+[2.061s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/ament_index/resource_index/parent_prefix_path/rover_navigation
+[2.077s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/environment/ament_prefix_path.sh
+[2.086s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/environment/ament_prefix_path.dsv
+[2.094s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/environment/path.sh
+[2.102s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/environment/path.dsv
+[2.117s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/local_setup.bash
+[2.127s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/local_setup.sh
+[2.135s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/local_setup.zsh
+[2.144s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/local_setup.dsv
+[2.151s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/package.dsv
+[2.166s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/ament_index/resource_index/packages/rover_navigation
+[2.175s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/cmake/rover_navigationConfig.cmake
+[2.183s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/cmake/rover_navigationConfig-version.cmake
+[2.199s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_navigation/share/rover_navigation/package.xml
+[2.210s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_navigation' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_navigation

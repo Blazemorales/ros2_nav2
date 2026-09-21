@@ -1,0 +1,54 @@
+{
+	"cmake" : 
+	{
+		"generator" : 
+		{
+			"multiConfig" : false,
+			"name" : "Unix Makefiles"
+		},
+		"paths" : 
+		{
+			"cmake" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake",
+			"cpack" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cpack",
+			"ctest" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/ctest",
+			"root" : "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/cmake-4.4"
+		},
+		"version" : 
+		{
+			"isDirty" : false,
+			"major" : 4,
+			"minor" : 4,
+			"patch" : 3,
+			"string" : "4.4.3",
+			"suffix" : ""
+		}
+	},
+	"objects" : 
+	[
+		{
+			"jsonFile" : "codemodel-v2-dfb1120ec96fc091879a.json",
+			"kind" : "codemodel",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 11
+			}
+		}
+	],
+	"reply" : 
+	{
+		"client-colcon-cmake" : 
+		{
+			"codemodel-v2" : 
+			{
+				"jsonFile" : "codemodel-v2-dfb1120ec96fc091879a.json",
+				"kind" : "codemodel",
+				"version" : 
+				{
+					"major" : 2,
+					"minor" : 11
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,108 @@
+CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- The C compiler identification is GNU 15.3.0
+-- The CXX compiler identification is GNU 15.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+CMake Warning (policy) at CMakeLists.txt:21 (find_package):
+  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+  --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-author or -Wno-policy to
+suppress it.
+
+-- Found Boost: /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/cmake/Boost-1.90.0/BoostConfig.cmake (found version "1.90.0")
+-- Found diagnostic_updater: 4.2.7 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/diagnostic_updater/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/libcrypto.so (found version "3.6.4")
+-- Found FastRTPS: /home/mr-morales/miniforge3/envs/ros2_jazzy/include (Required is at least version "2.13")
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found laser_proc: 1.0.3 (/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake)
+-- Found rclcpp_components: 28.1.21 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rclcpp_components/cmake)
+-- Found std_srvs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/std_srvs/cmake)
+-- Found urg_c: 1.0.4001 (/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/cmake)
+-- Found urg_node_msgs: 1.1.0 (/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake)
+-- Found ament_lint_auto: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/mr-morales/ros2_ws/src/urg_node/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (2.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mr-morales/ros2_ws/build/urg_node
+[ 14%] Building CXX object CMakeFiles/urg_node.dir/src/urg_c_wrapper.cpp.o
+[ 28%] Building CXX object CMakeFiles/urg_node_driver.dir/rclcpp_components/node_main_urg_node_driver.cpp.o
+[ 42%] Building CXX object CMakeFiles/urg_node.dir/src/urg_node.cpp.o
+[ 57%] Linking CXX executable urg_node_driver
+[ 57%] Built target urg_node_driver
+[ 71%] Linking CXX shared library liburg_node.so
+[ 71%] Built target urg_node
+[ 85%] Building CXX object CMakeFiles/getID.dir/src/get_id.cpp.o
+[100%] Linking CXX executable getID
+[100%] Built target getID
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/lib/urg_node/urg_node_driver
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/lib/liburg_node.so
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/lib/urg_node/getID
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/include/urg_node/urg_c_wrapper.hpp
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/include/urg_node/urg_node.hpp
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/lib/urg_node/set_urg_ip.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/launch/hokuyo_laser.urdf
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/launch/urg_lidar.launch
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/launch/urg_node_ethernet.yaml
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/launch/urg_node_launch.py
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/launch/urg_node_serial.yaml
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/meshes/hokuyo_ust10.stl
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/urdf/hokuyo_ust10.urdf.xacro
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/ament_index/resource_index/package_run_dependencies/urg_node
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/ament_index/resource_index/parent_prefix_path/urg_node
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/environment/ament_prefix_path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/environment/ament_prefix_path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/environment/path.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/environment/path.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/local_setup.bash
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/local_setup.sh
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/local_setup.zsh
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/local_setup.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.dsv
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/ament_index/resource_index/packages/urg_node
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/ament_index/resource_index/rclcpp_components/urg_node
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/cmake/urg_nodeConfig.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/cmake/urg_nodeConfig-version.cmake
+-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.xml

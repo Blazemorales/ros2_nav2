@@ -1,0 +1,1 @@
+/home/mr-morales/ros2_ws/build/urg_node_msgs/rosidl_typesupport_introspection_c/urg_node_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h

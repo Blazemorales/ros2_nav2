@@ -1,0 +1,29 @@
+CMakeFiles/find_port.dir/current/samples/find_port.c.o: \
+ /home/mr-morales/ros2_ws/src/urg_c/current/samples/find_port.c \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/stdc-predef.h \
+ /home/mr-morales/ros2_ws/src/urg_c/current/include/urg_c/urg_serial_utils.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/stdio.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/libc-header-start.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/features.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/features-time64.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/wordsize.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/timesize.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/sys/cdefs.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/long-double.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/gnu/stubs.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/gnu/stubs-64.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/stddef.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gcc/x86_64-conda-linux-gnu/15.3.0/include/stdarg.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/typesizes.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/time64.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/__fpos_t.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/__mbstate_t.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/__fpos64_t.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/__FILE.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/FILE.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/struct_FILE.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/types/cookie_io_functions_t.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/stdio_lim.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/floatn.h \
+ /home/mr-morales/miniforge3/envs/ros2_jazzy/x86_64-conda-linux-gnu/sysroot/usr/include/bits/floatn-common.h

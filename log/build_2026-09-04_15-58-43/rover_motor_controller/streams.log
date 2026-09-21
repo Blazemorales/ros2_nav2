@@ -1,0 +1,42 @@
+[1.249s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_motor_controller': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/build/rover_motor_controller/prefix_override:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/mr-morales/ros2_ws/install/rover_motor_controller/lib/python3.12/site-packages:/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mr-morales/ros2_ws/build/rover_motor_controller/build --no-deps symlink_data
+[1.421s] /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages/setuptools/dist.py:476: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[1.422s] !!
+[1.422s] 
+[1.422s]         ********************************************************************************
+[1.422s]         Usage of dash-separated 'script-dir' will not be supported in future
+[1.422s]         versions. Please use the underscore name 'script_dir' instead.
+[1.422s] 
+[1.422s]         This deprecation is overdue, please update your project and remove deprecated
+[1.423s]         calls to avoid build errors in the future.
+[1.423s] 
+[1.423s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[1.423s]         ********************************************************************************
+[1.423s] 
+[1.423s] !!
+[1.423s]   opt = self.warn_dash_deprecation(opt, section)
+[1.579s] running develop
+[1.774s] running egg_info
+[1.774s] creating rover_motor_controller.egg-info
+[1.792s] writing rover_motor_controller.egg-info/PKG-INFO
+[1.792s] writing dependency_links to rover_motor_controller.egg-info/dependency_links.txt
+[1.792s] writing entry points to rover_motor_controller.egg-info/entry_points.txt
+[1.793s] writing requirements to rover_motor_controller.egg-info/requires.txt
+[1.793s] writing top-level names to rover_motor_controller.egg-info/top_level.txt
+[1.793s] writing manifest file 'rover_motor_controller.egg-info/SOURCES.txt'
+[1.830s] reading manifest file 'rover_motor_controller.egg-info/SOURCES.txt'
+[1.831s] writing manifest file 'rover_motor_controller.egg-info/SOURCES.txt'
+[1.850s] running build_ext
+[1.850s] Creating /home/mr-morales/ros2_ws/install/rover_motor_controller/lib/python3.12/site-packages/rover-motor-controller.egg-link (link to .)
+[1.851s] Installing controller_node script to /home/mr-morales/ros2_ws/install/rover_motor_controller/lib/rover_motor_controller
+[1.851s] Installing vel_parser_node script to /home/mr-morales/ros2_ws/install/rover_motor_controller/lib/rover_motor_controller
+[1.851s] 
+[1.852s] Installed /home/mr-morales/ros2_ws/build/rover_motor_controller
+[1.852s] running symlink_data
+[1.852s] creating /home/mr-morales/ros2_ws/install/rover_motor_controller/share/ament_index
+[1.852s] creating /home/mr-morales/ros2_ws/install/rover_motor_controller/share/ament_index/resource_index
+[1.853s] creating /home/mr-morales/ros2_ws/install/rover_motor_controller/share/ament_index/resource_index/packages
+[1.853s] symbolically linking /home/mr-morales/ros2_ws/build/rover_motor_controller/resource/rover_motor_controller -> /home/mr-morales/ros2_ws/install/rover_motor_controller/share/ament_index/resource_index/packages
+[1.853s] symbolically linking /home/mr-morales/ros2_ws/build/rover_motor_controller/package.xml -> /home/mr-morales/ros2_ws/install/rover_motor_controller/share/rover_motor_controller
+[1.853s] creating /home/mr-morales/ros2_ws/install/rover_motor_controller/share/rover_motor_controller/launch
+[1.853s] symbolically linking /home/mr-morales/ros2_ws/build/rover_motor_controller/launch/motor_controller.launch.py -> /home/mr-morales/ros2_ws/install/rover_motor_controller/share/rover_motor_controller/launch/
+[1.901s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_motor_controller' returned '0': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/build/rover_motor_controller/prefix_override:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/mr-morales/ros2_ws/install/rover_motor_controller/lib/python3.12/site-packages:/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mr-morales/ros2_ws/build/rover_motor_controller/build --no-deps symlink_data

@@ -1,0 +1,53 @@
+[0.016s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_motor_controller_cpp -- -j12 -l12
+[0.040s] CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):
+[0.040s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.040s]   CMake.
+[0.041s] 
+[0.041s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.041s]   to tell CMake that the project requires at least <min> but has been updated
+[0.041s]   to work with policies introduced by <max> or earlier.
+[0.041s] This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+[0.041s] to suppress it.
+[0.041s] 
+[0.049s] -- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+[0.346s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.355s] -- Found rclcpp: 28.1.21 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rclcpp/cmake)
+[0.394s] -- Found rosidl_generator_c: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_c/cmake)
+[0.408s] -- Found rosidl_generator_cpp: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_cpp/cmake)
+[0.425s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.444s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.536s] -- Found rmw_implementation_cmake: 7.3.3 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_implementation_cmake/cmake)
+[0.538s] -- Found rmw_fastrtps_cpp: 8.4.4 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.712s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.821s] -- Found rover_msgs: 2.0.0 (/home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake)
+[0.833s] -- Found geometry_msgs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/geometry_msgs/cmake)
+[0.884s] -- Found ament_cmake_clang_format: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_clang_format/cmake)
+[1.013s] -- Configuring done (1.0s)
+[1.037s] -- Generating done (0.0s)
+[1.067s] -- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_motor_controller_cpp
+[1.133s] [ 33%] Built target vel_parser_node
+[1.165s] [ 44%] Linking CXX executable controller_node
+[1.466s] [100%] Built target controller_node
+[1.479s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp' returned '0': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_motor_controller_cpp -- -j12 -l12
+[1.489s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_motor_controller_cpp
+[1.497s] -- Install configuration: ""
+[1.498s] -- Execute custom install script
+[1.498s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/lib/rover_motor_controller_cpp/controller_node
+[1.508s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/lib/rover_motor_controller_cpp/vel_parser_node
+[1.518s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp//launch/motor_controller.launch.py
+[1.527s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/ament_index/resource_index/package_run_dependencies/rover_motor_controller_cpp
+[1.537s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/ament_index/resource_index/parent_prefix_path/rover_motor_controller_cpp
+[1.547s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/environment/ament_prefix_path.sh
+[1.555s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/environment/ament_prefix_path.dsv
+[1.565s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/environment/path.sh
+[1.575s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/environment/path.dsv
+[1.584s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/local_setup.bash
+[1.593s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/local_setup.sh
+[1.603s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/local_setup.zsh
+[1.612s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/local_setup.dsv
+[1.622s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/package.dsv
+[1.632s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/ament_index/resource_index/packages/rover_motor_controller_cpp
+[1.641s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/cmake/rover_motor_controller_cppConfig.cmake
+[1.652s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/cmake/rover_motor_controller_cppConfig-version.cmake
+[1.663s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_motor_controller_cpp/share/rover_motor_controller_cpp/package.xml
+[1.676s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp' returned '0': AMENT_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mr-morales/ros2_ws/install/rover_msgs:/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) LD_LIBRARY_PATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages:${PYTHONPATH} /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_motor_controller_cpp

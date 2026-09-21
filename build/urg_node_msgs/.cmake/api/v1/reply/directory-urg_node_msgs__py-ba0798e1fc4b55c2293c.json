@@ -1,0 +1,19 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "urg_node_msgs__py",
+		"source" : "/home/mr-morales/ros2_ws/build/urg_node_msgs/urg_node_msgs__py"
+	}
+}

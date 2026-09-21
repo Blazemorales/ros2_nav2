@@ -1,0 +1,1 @@
+/home/mr-morales/ros2_ws/build/rover_localization/ament_cmake_environment_hooks/local_setup.sh

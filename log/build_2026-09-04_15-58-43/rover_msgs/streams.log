@@ -1,0 +1,214 @@
+[0.040s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_msgs': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/ros2_rover/rover_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/rover_msgs
+[0.763s] CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):
+[0.764s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.764s]   CMake.
+[0.764s] 
+[0.764s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.764s]   to tell CMake that the project requires at least <min> but has been updated
+[0.764s]   to work with policies introduced by <max> or earlier.
+[0.765s] This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+[0.765s] to suppress it.
+[0.765s] 
+[0.776s] -- The C compiler identification is GNU 15.3.0
+[0.776s] -- The CXX compiler identification is GNU 15.3.0
+[0.776s] -- Detecting C compiler ABI info
+[0.776s] -- Detecting C compiler ABI info - done
+[0.777s] -- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped
+[0.777s] -- Detecting C compile features
+[0.777s] -- Detecting C compile features - done
+[0.777s] -- Detecting CXX compiler ABI info
+[1.020s] -- Detecting CXX compiler ABI info - done
+[1.065s] -- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped
+[1.065s] -- Detecting CXX compile features
+[1.066s] -- Detecting CXX compile features - done
+[1.084s] -- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)
+[1.407s] -- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+[1.618s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.750s] -- Found rosidl_default_generators: 1.6.1 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_default_generators/cmake)
+[1.782s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.970s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.209s] -- Found rosidl_adapter: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_adapter/cmake)
+[3.206s] -- Found ament_cmake_ros: 0.12.1 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_ros/cmake)
+[3.877s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.940s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.951s] -- Found python_cmake_module: 0.11.1 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/python_cmake_module/cmake)
+[5.167s] -- Found PythonExtra: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3
+[5.957s] -- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter Development NumPy Development.Module Development.Embed
+[6.041s] -- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter
+[6.066s] -- Configuring done (6.0s)
+[6.145s] -- Generating done (0.1s)
+[6.169s] -- Build files have been written to: /home/mr-morales/ros2_ws/build/rover_msgs
+[6.185s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake /home/mr-morales/ros2_ws/src/ros2_rover/rover_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/rover_msgs
+[6.188s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_msgs': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_msgs -- -j12 -l12
+[6.282s] [  2%] Generating Rust code for ROS interfaces
+[6.285s] [  5%] Generating type hashes for ROS interfaces
+[6.300s] [  5%] Built target ament_cmake_python_symlink_rover_msgs
+[6.603s] [  5%] Built target rover_msgs__rs
+[6.623s] [  5%] Built target rover_msgs__rosidl_generator_type_description
+[6.635s] [  8%] Generating C code for ROS interfaces
+[6.657s] [ 11%] Generating C++ code for ROS interfaces
+[6.822s] running egg_info
+[6.824s] creating rover_msgs.egg-info
+[6.869s] writing rover_msgs.egg-info/PKG-INFO
+[6.869s] writing dependency_links to rover_msgs.egg-info/dependency_links.txt
+[6.870s] writing top-level names to rover_msgs.egg-info/top_level.txt
+[6.870s] writing manifest file 'rover_msgs.egg-info/SOURCES.txt'
+[6.932s] [ 11%] Built target rover_msgs__cpp
+[6.978s] reading manifest file 'rover_msgs.egg-info/SOURCES.txt'
+[6.980s] writing manifest file 'rover_msgs.egg-info/SOURCES.txt'
+[7.065s] [ 11%] Built target ament_cmake_python_build_rover_msgs_egg
+[7.070s] [ 17%] Building C object CMakeFiles/rover_msgs__rosidl_generator_c.dir/rosidl_generator_c/rover_msgs/msg/detail/motors_command__description.c.o
+[7.070s] [ 17%] Building C object CMakeFiles/rover_msgs__rosidl_generator_c.dir/rosidl_generator_c/rover_msgs/msg/detail/motors_command__functions.c.o
+[7.071s] [ 20%] Building C object CMakeFiles/rover_msgs__rosidl_generator_c.dir/rosidl_generator_c/rover_msgs/msg/detail/motors_command__type_support.c.o
+[7.188s] [ 22%] Linking C shared library librover_msgs__rosidl_generator_c.so
+[7.253s] [ 22%] Built target rover_msgs__rosidl_generator_c
+[7.272s] [ 25%] Generating C type support for eProsima Fast-RTPS
+[7.273s] [ 31%] Generating C++ type support dispatch for ROS interfaces
+[7.273s] [ 31%] Generating C type support dispatch for ROS interfaces
+[7.274s] [ 34%] Generating C introspection for ROS interfaces
+[7.274s] [ 37%] Generating C++ introspection for ROS interfaces
+[7.275s] [ 40%] Generating C++ type support for eProsima Fast-RTPS
+[7.599s] [ 42%] Building C object CMakeFiles/rover_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rover_msgs/msg/detail/motors_command__type_support.c.o
+[7.626s] [ 45%] Building CXX object CMakeFiles/rover_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rover_msgs/msg/detail/motors_command__type_support_c.cpp.o
+[7.654s] [ 48%] Linking C shared library librover_msgs__rosidl_typesupport_introspection_c.so
+[7.729s] [ 48%] Built target rover_msgs__rosidl_typesupport_introspection_c
+[7.761s] [ 51%] Building CXX object CMakeFiles/rover_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rover_msgs/msg/detail/dds_fastrtps/motors_command__type_support.cpp.o
+[7.772s] [ 54%] Building CXX object CMakeFiles/rover_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rover_msgs/msg/motors_command__type_support.cpp.o
+[7.780s] [ 57%] Building CXX object CMakeFiles/rover_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rover_msgs/msg/motors_command__type_support.cpp.o
+[7.804s] [ 60%] Building CXX object CMakeFiles/rover_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rover_msgs/msg/detail/motors_command__type_support.cpp.o
+[7.890s] [ 62%] Linking CXX shared library librover_msgs__rosidl_typesupport_c.so
+[8.059s] [ 62%] Built target rover_msgs__rosidl_typesupport_c
+[8.170s] [ 65%] Linking CXX shared library librover_msgs__rosidl_typesupport_cpp.so
+[8.281s] [ 65%] Built target rover_msgs__rosidl_typesupport_cpp
+[8.313s] [ 68%] Linking CXX shared library librover_msgs__rosidl_typesupport_introspection_cpp.so
+[8.432s] [ 68%] Built target rover_msgs__rosidl_typesupport_introspection_cpp
+[8.550s] [ 71%] Linking CXX shared library librover_msgs__rosidl_typesupport_fastrtps_c.so
+[8.667s] [ 71%] Built target rover_msgs__rosidl_typesupport_fastrtps_c
+[8.818s] [ 74%] Linking CXX shared library librover_msgs__rosidl_typesupport_fastrtps_cpp.so
+[8.961s] [ 74%] Built target rover_msgs__rosidl_typesupport_fastrtps_cpp
+[9.001s] [ 74%] Built target rover_msgs
+[9.035s] [ 77%] Generating Python code for ROS interfaces
+[9.355s] [ 77%] Built target rover_msgs__py
+[9.390s] [ 80%] Building C object CMakeFiles/rover_msgs__rosidl_generator_py.dir/rosidl_generator_py/rover_msgs/msg/_motors_command_s.c.o
+[9.597s] [ 82%] Linking C shared library librover_msgs__rosidl_generator_py.so
+[9.659s] [ 82%] Built target rover_msgs__rosidl_generator_py
+[9.696s] [ 85%] Building C object CMakeFiles/rover_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/rover_msgs/_rover_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[9.697s] [ 91%] Building C object CMakeFiles/rover_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/rover_msgs/_rover_msgs_s.ep.rosidl_typesupport_c.c.o
+[9.698s] [ 91%] Building C object CMakeFiles/rover_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/rover_msgs/_rover_msgs_s.ep.rosidl_typesupport_introspection_c.c.o
+[9.851s] [ 94%] Linking C shared module rosidl_generator_py/rover_msgs/rover_msgs_s__rosidl_typesupport_fastrtps_c.so
+[9.869s] [ 97%] Linking C shared module rosidl_generator_py/rover_msgs/rover_msgs_s__rosidl_typesupport_c.so
+[9.915s] [ 97%] Built target rover_msgs_s__rosidl_typesupport_fastrtps_c
+[9.922s] [ 97%] Built target rover_msgs_s__rosidl_typesupport_c
+[9.957s] [100%] Linking C shared module rosidl_generator_py/rover_msgs/rover_msgs_s__rosidl_typesupport_introspection_c.so
+[10.017s] [100%] Built target rover_msgs_s__rosidl_typesupport_introspection_c
+[10.034s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --build /home/mr-morales/ros2_ws/build/rover_msgs -- -j12 -l12
+[10.036s] Invoking command in '/home/mr-morales/ros2_ws/build/rover_msgs': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_msgs
+[10.050s] -- Install configuration: ""
+[10.051s] -- Execute custom install script
+[10.051s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/ament_index/resource_index/rosidl_interfaces/rover_msgs
+[10.064s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/msg/MotorsCommand.json
+[10.077s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/detail/motors_command__functions.h
+[10.090s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/detail/motors_command__struct.h
+[10.103s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/detail/motors_command__type_support.h
+[10.116s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/motors_command.h
+[10.128s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/rosidl_generator_c__visibility_control.h
+[10.142s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/detail/motors_command__rosidl_typesupport_fastrtps_c.h
+[10.155s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[10.171s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/detail/motors_command__rosidl_typesupport_introspection_c.h
+[10.187s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[10.203s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/detail/motors_command__builder.hpp
+[10.218s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/detail/motors_command__struct.hpp
+[10.235s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/detail/motors_command__traits.hpp
+[10.254s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/detail/motors_command__type_support.hpp
+[10.272s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/motors_command.hpp
+[10.289s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[10.311s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/detail/motors_command__rosidl_typesupport_fastrtps_cpp.hpp
+[10.329s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[10.343s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/include/rover_msgs/rover_msgs/msg/detail/motors_command__rosidl_typesupport_introspection_cpp.hpp
+[10.357s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/environment/pythonpath.sh
+[10.373s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/environment/pythonpath.dsv
+[10.390s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs-2.0.0-py3.12.egg-info/PKG-INFO
+[10.403s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs-2.0.0-py3.12.egg-info/SOURCES.txt
+[10.416s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs-2.0.0-py3.12.egg-info/dependency_links.txt
+[10.431s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs-2.0.0-py3.12.egg-info/top_level.txt
+[10.443s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/__init__.py
+[10.457s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/_rover_msgs_s.ep.rosidl_typesupport_c.c
+[10.476s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/_rover_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[10.497s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/_rover_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[10.511s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/msg/__init__.py
+[10.529s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/msg/_motors_command.py
+[10.546s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/msg/_motors_command_s.c
+[10.564s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/rover_msgs_s__rosidl_typesupport_c.so
+[10.580s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/rover_msgs_s__rosidl_typesupport_fastrtps_c.so
+[10.596s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/rover_msgs_s__rosidl_typesupport_introspection_c.so
+[10.611s] -- Up-to-date symlink: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/rover_msgs_s__rosidl_typesupport_fastrtps_c.so
+[10.611s] -- Up-to-date symlink: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/rover_msgs_s__rosidl_typesupport_introspection_c.so
+[10.612s] -- Up-to-date symlink: /home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/rover_msgs_s__rosidl_typesupport_c.so
+[10.613s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/rust/Cargo.toml
+[10.630s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/rust/build.rs
+[10.643s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/rust/src/lib.rs
+[10.657s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/rust/src/msg.rs
+[10.670s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/rust/src/msg/rmw.rs
+[10.685s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/msg/MotorsCommand.idl
+[10.698s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/msg/MotorsCommand.msg
+[10.712s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/ament_index/resource_index/package_run_dependencies/rover_msgs
+[10.724s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/ament_index/resource_index/parent_prefix_path/rover_msgs
+[10.735s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/environment/ament_prefix_path.sh
+[10.749s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/environment/ament_prefix_path.dsv
+[10.761s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/environment/path.sh
+[10.776s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/environment/path.dsv
+[10.795s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/local_setup.bash
+[10.813s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/local_setup.sh
+[10.836s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/local_setup.zsh
+[10.856s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/local_setup.dsv
+[10.879s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/package.dsv
+[10.901s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/ament_index/resource_index/packages/rover_msgs
+[10.923s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rosidl_cmake-extras.cmake
+[10.942s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[10.960s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[10.976s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[10.994s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[11.013s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.032s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[11.048s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[11.061s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rover_msgsConfig.cmake
+[11.080s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rover_msgsConfig-version.cmake
+[11.099s] -- Symlinking: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/package.xml
+[11.121s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_generator_c.so
+[11.122s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_fastrtps_c.so
+[11.122s] -- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[11.122s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_introspection_c.so
+[11.123s] -- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_introspection_c.so" to ""
+[11.123s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_c.so
+[11.124s] -- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_c.so" to ""
+[11.124s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_fastrtps_cpp.so
+[11.124s] -- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[11.125s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_introspection_cpp.so
+[11.125s] -- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[11.125s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_cpp.so
+[11.125s] -- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_typesupport_cpp.so" to ""
+[11.229s] Listing '/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs'...
+[11.229s] Compiling '/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/__init__.py'...
+[11.229s] Listing '/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/msg'...
+[11.229s] Compiling '/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/msg/__init__.py'...
+[11.229s] Compiling '/home/mr-morales/ros2_ws/install/rover_msgs/lib/python3.12/site-packages/rover_msgs/msg/_motors_command.py'...
+[11.238s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_generator_py.so
+[11.238s] -- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/rover_msgs/lib/librover_msgs__rosidl_generator_py.so" to ""
+[11.238s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/export_rover_msgs__rosidl_generator_cExport.cmake
+[11.239s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/export_rover_msgs__rosidl_generator_cExport-noconfig.cmake
+[11.239s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/export_rover_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[11.239s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/export_rover_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[11.239s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rover_msgs__rosidl_typesupport_introspection_cExport.cmake
+[11.239s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rover_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[11.239s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rover_msgs__rosidl_typesupport_cExport.cmake
+[11.239s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rover_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[11.240s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/export_rover_msgs__rosidl_generator_cppExport.cmake
+[11.240s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/export_rover_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[11.240s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/export_rover_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[11.240s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rover_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[11.240s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rover_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[11.240s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rover_msgs__rosidl_typesupport_cppExport.cmake
+[11.240s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/rover_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[11.240s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/export_rover_msgs__rosidl_generator_pyExport.cmake
+[11.240s] -- Installing: /home/mr-morales/ros2_ws/install/rover_msgs/share/rover_msgs/cmake/export_rover_msgs__rosidl_generator_pyExport-noconfig.cmake
+[11.243s] Invoked command in '/home/mr-morales/ros2_ws/build/rover_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mr-morales/miniforge3/envs/ros2_jazzy CONDA_PROMPT_MODIFIER=(ros2_jazzy) /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake --install /home/mr-morales/ros2_ws/build/rover_msgs

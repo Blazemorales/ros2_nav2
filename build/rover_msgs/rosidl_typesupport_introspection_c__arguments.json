@@ -1,0 +1,19 @@
+{
+  "package_name": "rover_msgs",
+  "output_dir": "/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_typesupport_introspection_c/rover_msgs",
+  "template_dir": "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_introspection_c/resource",
+  "idl_tuples": [
+    "/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_adapter/rover_msgs:msg/MotorsCommand.idl"
+  ],
+  "target_dependencies": [
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages/rosidl_typesupport_introspection_c/__init__.py",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_introspection_c/resource/idl__rosidl_typesupport_introspection_c.h.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_introspection_c/resource/idl__type_support.c.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_introspection_c/resource/msg__rosidl_typesupport_introspection_c.h.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_introspection_c/resource/msg__type_support.c.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em",
+    "/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em",
+    "/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_adapter/rover_msgs/msg/MotorsCommand.idl"
+  ]
+}

@@ -1,0 +1,908 @@
+[0.000000] (-) TimerEvent: {}
+[0.000104] (-) JobUnselected: {'identifier': 'rover_bringup'}
+[0.000163] (-) JobUnselected: {'identifier': 'rover_description'}
+[0.000192] (-) JobUnselected: {'identifier': 'rover_gazebo'}
+[0.000218] (-) JobUnselected: {'identifier': 'rover_localization'}
+[0.000242] (-) JobUnselected: {'identifier': 'rover_motor_controller'}
+[0.000262] (-) JobUnselected: {'identifier': 'rover_motor_controller_cpp'}
+[0.000280] (-) JobUnselected: {'identifier': 'rover_msgs'}
+[0.000300] (-) JobUnselected: {'identifier': 'rover_navigation'}
+[0.000317] (-) JobUnselected: {'identifier': 'rover_teleop'}
+[0.000341] (laser_proc) JobQueued: {'identifier': 'laser_proc', 'dependencies': OrderedDict()}
+[0.000367] (urg_c) JobQueued: {'identifier': 'urg_c', 'dependencies': OrderedDict()}
+[0.000390] (urg_node_msgs) JobQueued: {'identifier': 'urg_node_msgs', 'dependencies': OrderedDict()}
+[0.000410] (urg_node) JobQueued: {'identifier': 'urg_node', 'dependencies': OrderedDict({'laser_proc': '/home/mr-morales/ros2_ws/install/laser_proc', 'urg_c': '/home/mr-morales/ros2_ws/install/urg_c', 'urg_node_msgs': '/home/mr-morales/ros2_ws/install/urg_node_msgs'})}
+[0.000442] (laser_proc) JobStarted: {'identifier': 'laser_proc'}
+[0.008382] (urg_c) JobStarted: {'identifier': 'urg_c'}
+[0.012769] (urg_node_msgs) JobStarted: {'identifier': 'urg_node_msgs'}
+[0.017496] (laser_proc) JobProgress: {'identifier': 'laser_proc', 'progress': 'cmake'}
+[0.018325] (laser_proc) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '/home/mr-morales/ros2_ws/src/laser_proc', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/laser_proc'], 'cwd': '/home/mr-morales/ros2_ws/build/laser_proc', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/laser_proc', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[0.020654] (urg_c) JobProgress: {'identifier': 'urg_c', 'progress': 'cmake'}
+[0.020777] (urg_c) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '/home/mr-morales/ros2_ws/src/urg_c', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/urg_c'], 'cwd': '/home/mr-morales/ros2_ws/build/urg_c', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/urg_c', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[0.023100] (urg_node_msgs) JobProgress: {'identifier': 'urg_node_msgs', 'progress': 'cmake'}
+[0.023146] (urg_node_msgs) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '/home/mr-morales/ros2_ws/src/urg_node_msgs', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/urg_node_msgs'], 'cwd': '/home/mr-morales/ros2_ws/build/urg_node_msgs', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/urg_node_msgs', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[0.028514] (urg_c) StderrLine: {'line': b'CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.028780] (urg_c) StderrLine: {'line': b'  Compatibility with CMake < 3.10 will be removed from a future version of\n'}
+[0.028931] (urg_c) StderrLine: {'line': b'  CMake.\n'}
+[0.029092] (urg_c) StderrLine: {'line': b'\n'}
+[0.029242] (urg_c) StderrLine: {'line': b'  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax\n'}
+[0.029377] (urg_c) StderrLine: {'line': b'  to tell CMake that the project requires at least <min> but has been updated\n'}
+[0.029518] (urg_c) StderrLine: {'line': b'  to work with policies introduced by <max> or earlier.\n'}
+[0.029652] (urg_c) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-author or -Wno-deprecated\n'}
+[0.029783] (urg_c) StderrLine: {'line': b'to suppress it.\n'}
+[0.029914] (urg_c) StderrLine: {'line': b'\n'}
+[0.031195] (laser_proc) StderrLine: {'line': b'CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.031546] (laser_proc) StderrLine: {'line': b'  Compatibility with CMake < 3.10 will be removed from a future version of\n'}
+[0.031683] (laser_proc) StderrLine: {'line': b'  CMake.\n'}
+[0.031813] (laser_proc) StderrLine: {'line': b'\n'}
+[0.031941] (laser_proc) StderrLine: {'line': b'  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax\n'}
+[0.032073] (laser_proc) StderrLine: {'line': b'  to tell CMake that the project requires at least <min> but has been updated\n'}
+[0.032205] (laser_proc) StderrLine: {'line': b'  to work with policies introduced by <max> or earlier.\n'}
+[0.032334] (laser_proc) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-author or -Wno-deprecated\n'}
+[0.032477] (laser_proc) StderrLine: {'line': b'to suppress it.\n'}
+[0.032609] (laser_proc) StderrLine: {'line': b'\n'}
+[0.032738] (urg_node_msgs) StderrLine: {'line': b'CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.032914] (urg_node_msgs) StderrLine: {'line': b'  Compatibility with CMake < 3.10 will be removed from a future version of\n'}
+[0.033067] (urg_node_msgs) StderrLine: {'line': b'  CMake.\n'}
+[0.033222] (urg_node_msgs) StderrLine: {'line': b'\n'}
+[0.033359] (urg_node_msgs) StderrLine: {'line': b'  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax\n'}
+[0.033501] (urg_node_msgs) StderrLine: {'line': b'  to tell CMake that the project requires at least <min> but has been updated\n'}
+[0.033632] (urg_node_msgs) StderrLine: {'line': b'  to work with policies introduced by <max> or earlier.\n'}
+[0.033765] (urg_node_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-author or -Wno-deprecated\n'}
+[0.033899] (urg_node_msgs) StderrLine: {'line': b'to suppress it.\n'}
+[0.034033] (urg_node_msgs) StderrLine: {'line': b'\n'}
+[0.099105] (-) TimerEvent: {}
+[0.112014] (urg_c) StdoutLine: {'line': b'-- The C compiler identification is GNU 15.3.0\n'}
+[0.116239] (laser_proc) StdoutLine: {'line': b'-- The C compiler identification is GNU 15.3.0\n'}
+[0.125031] (urg_node_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 15.3.0\n'}
+[0.199318] (-) TimerEvent: {}
+[0.292897] (urg_c) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 15.3.0\n'}
+[0.298148] (urg_node_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 15.3.0\n'}
+[0.299465] (-) TimerEvent: {}
+[0.312597] (urg_c) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.316155] (urg_node_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.316740] (laser_proc) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 15.3.0\n'}
+[0.336112] (laser_proc) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.399727] (-) TimerEvent: {}
+[0.460363] (urg_c) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.461460] (urg_node_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.474988] (laser_proc) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.489679] (urg_node_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped\n'}
+[0.490467] (urg_node_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.491412] (urg_node_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.499923] (-) TimerEvent: {}
+[0.501808] (laser_proc) StdoutLine: {'line': b'-- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped\n'}
+[0.502617] (laser_proc) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.503636] (laser_proc) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.508229] (urg_c) StdoutLine: {'line': b'-- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped\n'}
+[0.508980] (urg_c) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.510002] (urg_c) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.516138] (urg_node_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.527490] (laser_proc) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.532610] (urg_c) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.600095] (-) TimerEvent: {}
+[0.700427] (-) TimerEvent: {}
+[0.728339] (urg_node_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.737072] (urg_c) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.756865] (laser_proc) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.770819] (urg_node_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped\n'}
+[0.771639] (urg_node_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.772880] (urg_node_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.778031] (urg_c) StdoutLine: {'line': b'-- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped\n'}
+[0.778733] (urg_c) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.779758] (urg_c) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.792914] (urg_node_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)\n'}
+[0.800554] (-) TimerEvent: {}
+[0.802483] (laser_proc) StdoutLine: {'line': b'-- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped\n'}
+[0.803252] (laser_proc) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.804603] (laser_proc) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.804831] (urg_c) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)\n'}
+[0.827873] (laser_proc) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)\n'}
+[0.900792] (-) TimerEvent: {}
+[1.001109] (-) TimerEvent: {}
+[1.054940] (urg_node_msgs) StdoutLine: {'line': b'-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter\n'}
+[1.101332] (-) TimerEvent: {}
+[1.108517] (laser_proc) StdoutLine: {'line': b'-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter\n'}
+[1.115864] (urg_c) StdoutLine: {'line': b'-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter\n'}
+[1.165092] (urg_node_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.201449] (-) TimerEvent: {}
+[1.216082] (laser_proc) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.252764] (urg_c) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.265370] (urg_node_msgs) StdoutLine: {'line': b'-- Found builtin_interfaces: 2.0.4 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/builtin_interfaces/cmake)\n'}
+[1.301553] (-) TimerEvent: {}
+[1.340329] (urg_node_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.370248] (urg_node_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.383696] (laser_proc) StdoutLine: {'line': b'-- Found class_loader: 2.7.1 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/class_loader/cmake)\n'}
+[1.401711] (-) TimerEvent: {}
+[1.404029] (urg_node_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.441338] (urg_node_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.457416] (laser_proc) StdoutLine: {'line': b'-- Found rclcpp: 28.1.21 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rclcpp/cmake)\n'}
+[1.471516] (urg_c) StdoutLine: {'line': b'-- Configuring done (1.4s)\n'}
+[1.479073] (urg_node_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.1 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.492545] (urg_c) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.496998] (urg_c) StdoutLine: {'line': b'-- Build files have been written to: /home/mr-morales/ros2_ws/build/urg_c\n'}
+[1.501930] (urg_c) CommandEnded: {'returncode': 0}
+[1.502622] (-) TimerEvent: {}
+[1.503016] (urg_c) JobProgress: {'identifier': 'urg_c', 'progress': 'build'}
+[1.504406] (urg_c) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '--build', '/home/mr-morales/ros2_ws/build/urg_c', '--', '-j12', '-l12'], 'cwd': '/home/mr-morales/ros2_ws/build/urg_c', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/urg_c', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[1.522155] (urg_node_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_adapter/cmake)\n'}
+[1.530591] (urg_node_msgs) StdoutLine: {'line': b'-- Found std_msgs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/std_msgs/cmake)\n'}
+[1.555909] (laser_proc) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.575408] (urg_c) StdoutLine: {'line': b'[  2%] Building C object CMakeFiles/urg_c.dir/current/src/urg_ring_buffer.c.o\n'}
+[1.575905] (urg_c) StdoutLine: {'line': b'[  5%] Building C object CMakeFiles/urg_c.dir/current/src/urg_time.c.o\n'}
+[1.576134] (urg_c) StdoutLine: {'line': b'[  8%] Building C object CMakeFiles/urg_c.dir/current/src/urg_sensor.c.o\n'}
+[1.576329] (urg_c) StdoutLine: {'line': b'[ 11%] Building C object CMakeFiles/urg_c.dir/current/src/urg_utils.c.o\n'}
+[1.576928] (urg_c) StdoutLine: {'line': b'[ 14%] Building C object CMakeFiles/urg_c.dir/current/src/urg_debug.c.o\n'}
+[1.577204] (urg_c) StdoutLine: {'line': b'[ 17%] Building C object CMakeFiles/urg_c.dir/current/src/urg_serial.c.o\n'}
+[1.577424] (urg_c) StdoutLine: {'line': b'[ 23%] Building C object CMakeFiles/urg_c.dir/current/src/urg_serial_utils.c.o\n'}
+[1.577601] (urg_c) StdoutLine: {'line': b'[ 23%] Building C object CMakeFiles/urg_c.dir/current/src/urg_tcpclient.c.o\n'}
+[1.579855] (urg_c) StdoutLine: {'line': b'[ 26%] Building C object CMakeFiles/urg_c.dir/current/src/urg_connection.c.o\n'}
+[1.605168] (-) TimerEvent: {}
+[1.605497] (laser_proc) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.671435] (laser_proc) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.705263] (-) TimerEvent: {}
+[1.729673] (laser_proc) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.791842] (urg_c) StdoutLine: {'line': b'[ 29%] Linking C shared library liburg_c.so\n'}
+[1.805438] (-) TimerEvent: {}
+[1.847719] (urg_c) StdoutLine: {'line': b'[ 29%] Built target urg_c\n'}
+[1.873740] (urg_c) StdoutLine: {'line': b'[ 32%] Building C object CMakeFiles/open_urg_sensor.dir/current/samples/open_urg_sensor.c.o\n'}
+[1.905563] (-) TimerEvent: {}
+[1.927378] (urg_c) StdoutLine: {'line': b'[ 35%] Linking C static library libopen_urg_sensor.a\n'}
+[1.975060] (urg_c) StdoutLine: {'line': b'[ 35%] Built target open_urg_sensor\n'}
+[1.998725] (urg_c) StdoutLine: {'line': b'[ 38%] Building C object CMakeFiles/calculate_xy.dir/current/samples/calculate_xy.c.o\n'}
+[2.002842] (urg_c) StdoutLine: {'line': b'[ 41%] Building C object CMakeFiles/get_multiecho.dir/current/samples/get_multiecho.c.o\n'}
+[2.003732] (urg_c) StdoutLine: {'line': b'[ 47%] Building C object CMakeFiles/get_distance_intensity.dir/current/samples/get_distance_intensity.c.o\n'}
+[2.003952] (urg_c) StdoutLine: {'line': b'[ 47%] Building C object CMakeFiles/get_distance.dir/current/samples/get_distance.c.o\n'}
+[2.004542] (urg_c) StdoutLine: {'line': b'[ 50%] Building C object CMakeFiles/find_port.dir/current/samples/find_port.c.o\n'}
+[2.009146] (urg_c) StdoutLine: {'line': b'[ 55%] Building C object CMakeFiles/reboot_test.dir/current/samples/reboot_test.c.o\n'}
+[2.009449] (-) TimerEvent: {}
+[2.009477] (urg_c) StdoutLine: {'line': b'[ 55%] Building C object CMakeFiles/sensor_parameter.dir/current/samples/sensor_parameter.c.o\n'}
+[2.010354] (urg_c) StdoutLine: {'line': b'[ 58%] Building C object CMakeFiles/angle_convert_test.dir/current/samples/angle_convert_test.c.o\n'}
+[2.016553] (urg_c) StdoutLine: {'line': b'[ 61%] Building C object CMakeFiles/get_multiecho_intensity.dir/current/samples/get_multiecho_intensity.c.o\n'}
+[2.048445] (laser_proc) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[2.064657] (laser_proc) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.069652] (urg_c) StdoutLine: {'line': b'[ 64%] Linking C executable reboot_test\n'}
+[2.070087] (urg_c) StdoutLine: {'line': b'[ 67%] Linking C executable find_port\n'}
+[2.074432] (urg_c) StdoutLine: {'line': b'[ 70%] Linking C executable angle_convert_test\n'}
+[2.075353] (urg_c) StdoutLine: {'line': b'[ 73%] Linking C executable get_multiecho\n'}
+[2.085512] (urg_c) StdoutLine: {'line': b'[ 76%] Linking C executable get_distance_intensity\n'}
+[2.094202] (urg_c) StdoutLine: {'line': b'[ 79%] Linking C executable sensor_parameter\n'}
+[2.097944] (urg_c) StdoutLine: {'line': b'[ 82%] Linking C executable get_distance\n'}
+[2.111466] (-) TimerEvent: {}
+[2.117315] (urg_c) StdoutLine: {'line': b'[ 85%] Linking C executable get_multiecho_intensity\n'}
+[2.123992] (urg_c) StdoutLine: {'line': b'[ 88%] Linking C executable calculate_xy\n'}
+[2.142777] (urg_c) StdoutLine: {'line': b'[ 88%] Built target find_port\n'}
+[2.143046] (urg_c) StdoutLine: {'line': b'[ 88%] Built target reboot_test\n'}
+[2.165089] (urg_c) StdoutLine: {'line': b'[ 88%] Built target angle_convert_test\n'}
+[2.166674] (urg_c) StdoutLine: {'line': b'[ 88%] Built target get_distance_intensity\n'}
+[2.174446] (urg_c) StdoutLine: {'line': b'[ 88%] Built target get_multiecho\n'}
+[2.175418] (urg_c) StdoutLine: {'line': b'[ 91%] Building C object CMakeFiles/timeout_test.dir/current/samples/timeout_test.c.o\n'}
+[2.193128] (urg_c) StdoutLine: {'line': b'[ 94%] Building C object CMakeFiles/sync_time_stamp.dir/current/samples/sync_time_stamp.c.o\n'}
+[2.197723] (urg_c) StdoutLine: {'line': b'[ 94%] Built target calculate_xy\n'}
+[2.199614] (urg_c) StdoutLine: {'line': b'[ 94%] Built target sensor_parameter\n'}
+[2.199962] (urg_c) StdoutLine: {'line': b'[ 94%] Built target get_distance\n'}
+[2.211615] (-) TimerEvent: {}
+[2.220337] (urg_c) StdoutLine: {'line': b'[ 94%] Built target get_multiecho_intensity\n'}
+[2.228249] (urg_c) StdoutLine: {'line': b'[ 97%] Linking C executable timeout_test\n'}
+[2.249244] (urg_c) StdoutLine: {'line': b'[100%] Linking C executable sync_time_stamp\n'}
+[2.304843] (urg_c) StdoutLine: {'line': b'[100%] Built target timeout_test\n'}
+[2.311791] (-) TimerEvent: {}
+[2.317355] (urg_c) StdoutLine: {'line': b'[100%] Built target sync_time_stamp\n'}
+[2.335906] (urg_c) CommandEnded: {'returncode': 0}
+[2.337274] (urg_c) JobProgress: {'identifier': 'urg_c', 'progress': 'install'}
+[2.349286] (urg_c) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '--install', '/home/mr-morales/ros2_ws/build/urg_c'], 'cwd': '/home/mr-morales/ros2_ws/build/urg_c', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/urg_c', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[2.362494] (urg_c) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.363395] (urg_c) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.364219] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/lib/liburg_c.so\n'}
+[2.377595] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/lib/libopen_urg_sensor.a\n'}
+[2.390247] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/angle_convert_test\n'}
+[2.403028] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/calculate_xy\n'}
+[2.411978] (-) TimerEvent: {}
+[2.415821] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/find_port\n'}
+[2.428689] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/get_distance\n'}
+[2.441524] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/get_distance_intensity\n'}
+[2.454961] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/get_multiecho\n'}
+[2.470670] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/get_multiecho_intensity\n'}
+[2.484893] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/reboot_test\n'}
+[2.499265] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/sensor_parameter\n'}
+[2.512159] (-) TimerEvent: {}
+[2.513672] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/sync_time_stamp\n'}
+[2.525289] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/bin/timeout_test\n'}
+[2.538618] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_connection.h\n'}
+[2.550048] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_debug.h\n'}
+[2.562146] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_detect_os.h\n'}
+[2.574977] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_errno.h\n'}
+[2.591949] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_ring_buffer.h\n'}
+[2.606130] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_sensor.h\n'}
+[2.612321] (-) TimerEvent: {}
+[2.617644] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_serial.h\n'}
+[2.630156] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_serial_utils.h\n'}
+[2.643060] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_tcpclient.h\n'}
+[2.656664] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_time.h\n'}
+[2.670428] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/include/urg_c/urg_utils.h\n'}
+[2.681433] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/ament_index/resource_index/package_run_dependencies/urg_c\n'}
+[2.697551] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/ament_index/resource_index/parent_prefix_path/urg_c\n'}
+[2.712497] (-) TimerEvent: {}
+[2.713093] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/environment/ament_prefix_path.sh\n'}
+[2.726272] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/environment/ament_prefix_path.dsv\n'}
+[2.739879] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/environment/path.sh\n'}
+[2.753676] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/environment/path.dsv\n'}
+[2.765530] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/local_setup.bash\n'}
+[2.779332] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/local_setup.sh\n'}
+[2.788694] (laser_proc) StdoutLine: {'line': b'-- Found OpenSSL: /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/libcrypto.so (found version "3.6.4")\n'}
+[2.792710] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/local_setup.zsh\n'}
+[2.807063] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/local_setup.dsv\n'}
+[2.812664] (-) TimerEvent: {}
+[2.821994] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.dsv\n'}
+[2.832944] (urg_node_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cppcheck: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_cppcheck/cmake)\n'}
+[2.835318] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/ament_index/resource_index/packages/urg_c\n'}
+[2.844081] (urg_node_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cpplint: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_cpplint/cmake)\n'}
+[2.847709] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.855287] (urg_node_msgs) StdoutLine: {'line': b'-- Found ament_cmake_uncrustify: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_uncrustify/cmake)\n'}
+[2.856228] (laser_proc) StdoutLine: {'line': b'-- Found FastRTPS: /home/mr-morales/miniforge3/envs/ros2_jazzy/include (Required is at least version "2.13")\n'}
+[2.860869] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.867221] (urg_node_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.1 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_ros/cmake)\n'}
+[2.873718] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/cmake/urg_cConfig.cmake\n'}
+[2.885608] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/cmake/urg_cConfig-version.cmake\n'}
+[2.896887] (urg_c) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_c/share/urg_c/package.xml\n'}
+[2.910007] (urg_c) CommandEnded: {'returncode': 0}
+[2.912874] (-) TimerEvent: {}
+[2.955834] (urg_c) JobEnded: {'identifier': 'urg_c', 'rc': 0}
+[2.956587] (laser_proc) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.013115] (-) TimerEvent: {}
+[3.113254] (laser_proc) StdoutLine: {'line': b'-- Found rclcpp_components: 28.1.21 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rclcpp_components/cmake)\n'}
+[3.113520] (-) TimerEvent: {}
+[3.163701] (laser_proc) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/sensor_msgs/cmake)\n'}
+[3.213672] (-) TimerEvent: {}
+[3.271565] (laser_proc) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_lint_auto/cmake)\n'}
+[3.313901] (-) TimerEvent: {}
+[3.414229] (-) TimerEvent: {}
+[3.459474] (laser_proc) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.459741] (laser_proc) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/mr-morales/ros2_ws/src/laser_proc/include>\n'}
+[3.459868] (laser_proc) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.462227] (laser_proc) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[3.462438] (laser_proc) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[3.463633] (laser_proc) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.466437] (laser_proc) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.466632] (laser_proc) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.467956] (laser_proc) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.471242] (laser_proc) StdoutLine: {'line': b'-- Configuring done (3.4s)\n'}
+[3.496274] (laser_proc) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[3.514449] (-) TimerEvent: {}
+[3.528809] (laser_proc) StdoutLine: {'line': b'-- Build files have been written to: /home/mr-morales/ros2_ws/build/laser_proc\n'}
+[3.540682] (laser_proc) CommandEnded: {'returncode': 0}
+[3.542005] (laser_proc) JobProgress: {'identifier': 'laser_proc', 'progress': 'build'}
+[3.542736] (laser_proc) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '--build', '/home/mr-morales/ros2_ws/build/laser_proc', '--', '-j12', '-l12'], 'cwd': '/home/mr-morales/ros2_ws/build/laser_proc', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/laser_proc', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[3.614723] (laser_proc) StdoutLine: {'line': b'[ 14%] Building CXX object CMakeFiles/laser_proc.dir/src/laser_proc.cpp.o\n'}
+[3.615116] (-) TimerEvent: {}
+[3.617278] (laser_proc) StdoutLine: {'line': b'[ 28%] Building CXX object CMakeFiles/laser_proc_node.dir/rclcpp_components/node_main_laser_proc_node.cpp.o\n'}
+[3.617860] (laser_proc) StdoutLine: {'line': b'[ 42%] Building CXX object CMakeFiles/laser_proc.dir/src/laser_publisher.cpp.o\n'}
+[3.715286] (-) TimerEvent: {}
+[3.815583] (-) TimerEvent: {}
+[3.915863] (-) TimerEvent: {}
+[4.016202] (-) TimerEvent: {}
+[4.062362] (urg_node_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.116361] (-) TimerEvent: {}
+[4.216658] (-) TimerEvent: {}
+[4.316931] (-) TimerEvent: {}
+[4.417215] (-) TimerEvent: {}
+[4.517489] (-) TimerEvent: {}
+[4.617769] (-) TimerEvent: {}
+[4.708359] (urg_node_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.717973] (-) TimerEvent: {}
+[4.726654] (urg_node_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/python_cmake_module/cmake)\n'}
+[4.818147] (-) TimerEvent: {}
+[4.918438] (-) TimerEvent: {}
+[5.004190] (urg_node_msgs) StdoutLine: {'line': b'-- Found PythonExtra: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3\n'}
+[5.018577] (-) TimerEvent: {}
+[5.118844] (-) TimerEvent: {}
+[5.219137] (-) TimerEvent: {}
+[5.319420] (-) TimerEvent: {}
+[5.419693] (-) TimerEvent: {}
+[5.520042] (-) TimerEvent: {}
+[5.620317] (-) TimerEvent: {}
+[5.720582] (-) TimerEvent: {}
+[5.803113] (urg_node_msgs) StdoutLine: {'line': b'-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter Development NumPy Development.Module Development.Embed\n'}
+[5.820804] (-) TimerEvent: {}
+[5.921135] (-) TimerEvent: {}
+[5.928699] (urg_node_msgs) StdoutLine: {'line': b'-- Found ament_cmake_flake8: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_flake8/cmake)\n'}
+[5.943377] (urg_node_msgs) StdoutLine: {'line': b'-- Found ament_cmake_pep257: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake_pep257/cmake)\n'}
+[6.021244] (-) TimerEvent: {}
+[6.041332] (urg_node_msgs) StdoutLine: {'line': b'-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter\n'}
+[6.064755] (urg_node_msgs) StdoutLine: {'line': b'-- Configuring done (6.0s)\n'}
+[6.121427] (-) TimerEvent: {}
+[6.154474] (urg_node_msgs) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[6.186058] (urg_node_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/mr-morales/ros2_ws/build/urg_node_msgs\n'}
+[6.204330] (urg_node_msgs) CommandEnded: {'returncode': 0}
+[6.205328] (urg_node_msgs) JobProgress: {'identifier': 'urg_node_msgs', 'progress': 'build'}
+[6.206123] (urg_node_msgs) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '--build', '/home/mr-morales/ros2_ws/build/urg_node_msgs', '--', '-j12', '-l12'], 'cwd': '/home/mr-morales/ros2_ws/build/urg_node_msgs', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/urg_node_msgs', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[6.221546] (-) TimerEvent: {}
+[6.285428] (urg_node_msgs) StdoutLine: {'line': b'[  2%] Generating type hashes for ROS interfaces\n'}
+[6.286961] (urg_node_msgs) StdoutLine: {'line': b'[  5%] Generating Rust code for ROS interfaces\n'}
+[6.301718] (urg_node_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_symlink_urg_node_msgs\n'}
+[6.321707] (-) TimerEvent: {}
+[6.421991] (-) TimerEvent: {}
+[6.522217] (-) TimerEvent: {}
+[6.622443] (-) TimerEvent: {}
+[6.722724] (-) TimerEvent: {}
+[6.788843] (urg_node_msgs) StdoutLine: {'line': b'[  5%] Built target urg_node_msgs__rosidl_generator_type_description\n'}
+[6.807751] (urg_node_msgs) StdoutLine: {'line': b'[  8%] Generating C code for ROS interfaces\n'}
+[6.822966] (-) TimerEvent: {}
+[6.827492] (urg_node_msgs) StdoutLine: {'line': b'[ 11%] Generating C++ code for ROS interfaces\n'}
+[6.890572] (urg_node_msgs) StdoutLine: {'line': b'[ 11%] Built target urg_node_msgs__rs\n'}
+[6.923097] (-) TimerEvent: {}
+[7.023352] (-) TimerEvent: {}
+[7.123617] (-) TimerEvent: {}
+[7.215599] (urg_node_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[7.216610] (urg_node_msgs) StdoutLine: {'line': b'creating urg_node_msgs.egg-info\n'}
+[7.223761] (-) TimerEvent: {}
+[7.225248] (laser_proc) StdoutLine: {'line': b'[ 57%] Linking CXX executable laser_proc_node\n'}
+[7.233568] (urg_node_msgs) StdoutLine: {'line': b'writing urg_node_msgs.egg-info/PKG-INFO\n'}
+[7.234083] (urg_node_msgs) StdoutLine: {'line': b'writing dependency_links to urg_node_msgs.egg-info/dependency_links.txt\n'}
+[7.234485] (urg_node_msgs) StdoutLine: {'line': b'writing top-level names to urg_node_msgs.egg-info/top_level.txt\n'}
+[7.234710] (urg_node_msgs) StdoutLine: {'line': b"writing manifest file 'urg_node_msgs.egg-info/SOURCES.txt'\n"}
+[7.286289] (urg_node_msgs) StdoutLine: {'line': b"reading manifest file 'urg_node_msgs.egg-info/SOURCES.txt'\n"}
+[7.286871] (urg_node_msgs) StdoutLine: {'line': b"writing manifest file 'urg_node_msgs.egg-info/SOURCES.txt'\n"}
+[7.318376] (urg_node_msgs) StdoutLine: {'line': b'[ 11%] Built target urg_node_msgs__cpp\n'}
+[7.323953] (-) TimerEvent: {}
+[7.340297] (urg_node_msgs) StdoutLine: {'line': b'[ 11%] Built target ament_cmake_python_build_urg_node_msgs_egg\n'}
+[7.424159] (-) TimerEvent: {}
+[7.459454] (urg_node_msgs) StdoutLine: {'line': b'[ 14%] Building C object CMakeFiles/urg_node_msgs__rosidl_generator_c.dir/rosidl_generator_c/urg_node_msgs/msg/detail/status__description.c.o\n'}
+[7.460097] (urg_node_msgs) StdoutLine: {'line': b'[ 17%] Building C object CMakeFiles/urg_node_msgs__rosidl_generator_c.dir/rosidl_generator_c/urg_node_msgs/msg/detail/status__type_support.c.o\n'}
+[7.460353] (urg_node_msgs) StdoutLine: {'line': b'[ 20%] Building C object CMakeFiles/urg_node_msgs__rosidl_generator_c.dir/rosidl_generator_c/urg_node_msgs/msg/detail/status__functions.c.o\n'}
+[7.467486] (laser_proc) StdoutLine: {'line': b'[ 57%] Built target laser_proc_node\n'}
+[7.524314] (-) TimerEvent: {}
+[7.554845] (urg_node_msgs) StdoutLine: {'line': b'[ 22%] Linking C shared library liburg_node_msgs__rosidl_generator_c.so\n'}
+[7.605336] (urg_node_msgs) StdoutLine: {'line': b'[ 22%] Built target urg_node_msgs__rosidl_generator_c\n'}
+[7.619499] (urg_node_msgs) StdoutLine: {'line': b'[ 25%] Generating C++ introspection for ROS interfaces\n'}
+[7.620298] (urg_node_msgs) StdoutLine: {'line': b'[ 28%] Generating C introspection for ROS interfaces\n'}
+[7.620974] (urg_node_msgs) StdoutLine: {'line': b'[ 31%] Generating C type support dispatch for ROS interfaces\n'}
+[7.621686] (urg_node_msgs) StdoutLine: {'line': b'[ 37%] Generating C++ type support for eProsima Fast-RTPS\n'}
+[7.622043] (urg_node_msgs) StdoutLine: {'line': b'[ 37%] Generating C++ type support dispatch for ROS interfaces\n'}
+[7.624556] (-) TimerEvent: {}
+[7.625024] (urg_node_msgs) StdoutLine: {'line': b'[ 40%] Generating C type support for eProsima Fast-RTPS\n'}
+[7.724759] (-) TimerEvent: {}
+[7.825077] (-) TimerEvent: {}
+[7.925338] (-) TimerEvent: {}
+[7.983439] (urg_node_msgs) StdoutLine: {'line': b'[ 42%] Building CXX object CMakeFiles/urg_node_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/urg_node_msgs/msg/detail/status__type_support.cpp.o\n'}
+[7.988684] (urg_node_msgs) StdoutLine: {'line': b'[ 45%] Building C object CMakeFiles/urg_node_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/urg_node_msgs/msg/detail/status__type_support.c.o\n'}
+[8.025476] (-) TimerEvent: {}
+[8.034057] (urg_node_msgs) StdoutLine: {'line': b'[ 48%] Linking C shared library liburg_node_msgs__rosidl_typesupport_introspection_c.so\n'}
+[8.097264] (urg_node_msgs) StdoutLine: {'line': b'[ 48%] Built target urg_node_msgs__rosidl_typesupport_introspection_c\n'}
+[8.125592] (-) TimerEvent: {}
+[8.206907] (urg_node_msgs) StdoutLine: {'line': b'[ 51%] Building CXX object CMakeFiles/urg_node_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/urg_node_msgs/msg/detail/status__type_support_c.cpp.o\n'}
+[8.223325] (urg_node_msgs) StdoutLine: {'line': b'[ 54%] Building CXX object CMakeFiles/urg_node_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/urg_node_msgs/msg/status__type_support.cpp.o\n'}
+[8.224317] (urg_node_msgs) StdoutLine: {'line': b'[ 57%] Building CXX object CMakeFiles/urg_node_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/urg_node_msgs/msg/status__type_support.cpp.o\n'}
+[8.225696] (-) TimerEvent: {}
+[8.281785] (urg_node_msgs) StdoutLine: {'line': b'[ 60%] Linking CXX shared library liburg_node_msgs__rosidl_typesupport_c.so\n'}
+[8.324710] (urg_node_msgs) StdoutLine: {'line': b'[ 62%] Building CXX object CMakeFiles/urg_node_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/urg_node_msgs/msg/detail/dds_fastrtps/status__type_support.cpp.o\n'}
+[8.325860] (-) TimerEvent: {}
+[8.354990] (urg_node_msgs) StdoutLine: {'line': b'[ 65%] Linking CXX shared library liburg_node_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[8.426065] (-) TimerEvent: {}
+[8.446925] (urg_node_msgs) StdoutLine: {'line': b'[ 65%] Built target urg_node_msgs__rosidl_typesupport_c\n'}
+[8.517872] (urg_node_msgs) StdoutLine: {'line': b'[ 65%] Built target urg_node_msgs__rosidl_typesupport_introspection_cpp\n'}
+[8.526243] (-) TimerEvent: {}
+[8.626517] (-) TimerEvent: {}
+[8.726799] (-) TimerEvent: {}
+[8.773474] (urg_node_msgs) StdoutLine: {'line': b'[ 68%] Linking CXX shared library liburg_node_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[8.826975] (-) TimerEvent: {}
+[8.893685] (urg_node_msgs) StdoutLine: {'line': b'[ 71%] Linking CXX shared library liburg_node_msgs__rosidl_typesupport_cpp.so\n'}
+[8.912258] (urg_node_msgs) StdoutLine: {'line': b'[ 74%] Linking CXX shared library liburg_node_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[8.923528] (urg_node_msgs) StdoutLine: {'line': b'[ 74%] Built target urg_node_msgs__rosidl_typesupport_fastrtps_c\n'}
+[8.927144] (-) TimerEvent: {}
+[9.023468] (urg_node_msgs) StdoutLine: {'line': b'[ 74%] Built target urg_node_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[9.027314] (-) TimerEvent: {}
+[9.042385] (laser_proc) StdoutLine: {'line': b'[ 71%] Linking CXX shared library liblaser_proc.so\n'}
+[9.043637] (urg_node_msgs) StdoutLine: {'line': b'[ 74%] Built target urg_node_msgs__rosidl_typesupport_cpp\n'}
+[9.070992] (urg_node_msgs) StdoutLine: {'line': b'[ 74%] Built target urg_node_msgs\n'}
+[9.101883] (urg_node_msgs) StdoutLine: {'line': b'[ 77%] Generating Python code for ROS interfaces\n'}
+[9.127603] (-) TimerEvent: {}
+[9.226958] (laser_proc) StdoutLine: {'line': b'[ 71%] Built target laser_proc\n'}
+[9.227686] (-) TimerEvent: {}
+[9.253029] (laser_proc) StdoutLine: {'line': b'[ 85%] Building CXX object CMakeFiles/laser_proc_component.dir/src/laser_proc_component.cpp.o\n'}
+[9.327938] (-) TimerEvent: {}
+[9.428268] (-) TimerEvent: {}
+[9.528597] (-) TimerEvent: {}
+[9.563636] (urg_node_msgs) StdoutLine: {'line': b'[ 77%] Built target urg_node_msgs__py\n'}
+[9.591540] (urg_node_msgs) StdoutLine: {'line': b'[ 80%] Building C object CMakeFiles/urg_node_msgs__rosidl_generator_py.dir/rosidl_generator_py/urg_node_msgs/msg/_status_s.c.o\n'}
+[9.628837] (-) TimerEvent: {}
+[9.729192] (-) TimerEvent: {}
+[9.760170] (urg_node_msgs) StdoutLine: {'line': b'[ 82%] Linking C shared library liburg_node_msgs__rosidl_generator_py.so\n'}
+[9.823372] (urg_node_msgs) StdoutLine: {'line': b'[ 82%] Built target urg_node_msgs__rosidl_generator_py\n'}
+[9.829306] (-) TimerEvent: {}
+[9.852153] (urg_node_msgs) StdoutLine: {'line': b'[ 85%] Building C object CMakeFiles/urg_node_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/urg_node_msgs/_urg_node_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\n'}
+[9.854892] (urg_node_msgs) StdoutLine: {'line': b'[ 88%] Building C object CMakeFiles/urg_node_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/urg_node_msgs/_urg_node_msgs_s.ep.rosidl_typesupport_c.c.o\n'}
+[9.855187] (urg_node_msgs) StdoutLine: {'line': b'[ 91%] Building C object CMakeFiles/urg_node_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/urg_node_msgs/_urg_node_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\n'}
+[9.929507] (-) TimerEvent: {}
+[9.987653] (urg_node_msgs) StdoutLine: {'line': b'[ 94%] Linking C shared module rosidl_generator_py/urg_node_msgs/urg_node_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[10.029671] (-) TimerEvent: {}
+[10.049408] (urg_node_msgs) StdoutLine: {'line': b'[ 97%] Linking C shared module rosidl_generator_py/urg_node_msgs/urg_node_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[10.055391] (urg_node_msgs) StdoutLine: {'line': b'[ 97%] Built target urg_node_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[10.098626] (urg_node_msgs) StdoutLine: {'line': b'[100%] Linking C shared module rosidl_generator_py/urg_node_msgs/urg_node_msgs_s__rosidl_typesupport_c.so\n'}
+[10.101910] (urg_node_msgs) StdoutLine: {'line': b'[100%] Built target urg_node_msgs_s__rosidl_typesupport_introspection_c\n'}
+[10.129920] (-) TimerEvent: {}
+[10.154980] (urg_node_msgs) StdoutLine: {'line': b'[100%] Built target urg_node_msgs_s__rosidl_typesupport_c\n'}
+[10.169549] (urg_node_msgs) CommandEnded: {'returncode': 0}
+[10.170866] (urg_node_msgs) JobProgress: {'identifier': 'urg_node_msgs', 'progress': 'install'}
+[10.171363] (urg_node_msgs) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '--install', '/home/mr-morales/ros2_ws/build/urg_node_msgs'], 'cwd': '/home/mr-morales/ros2_ws/build/urg_node_msgs', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/urg_node_msgs', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[10.182384] (urg_node_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.183244] (urg_node_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[10.183766] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/ament_index/resource_index/rosidl_interfaces/urg_node_msgs\n'}
+[10.192875] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/msg/Status.json\n'}
+[10.203491] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/detail/status__functions.h\n'}
+[10.213692] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/detail/status__struct.h\n'}
+[10.224336] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/detail/status__type_support.h\n'}
+[10.230137] (-) TimerEvent: {}
+[10.235372] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[10.246105] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/status.h\n'}
+[10.257548] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/detail/status__rosidl_typesupport_fastrtps_c.h\n'}
+[10.268234] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[10.279578] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/detail/status__builder.hpp\n'}
+[10.288135] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/detail/status__struct.hpp\n'}
+[10.298112] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/detail/status__traits.hpp\n'}
+[10.308457] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/detail/status__type_support.hpp\n'}
+[10.319497] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[10.330403] (-) TimerEvent: {}
+[10.332146] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/status.hpp\n'}
+[10.345406] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.356569] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[10.368213] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/detail/status__rosidl_typesupport_introspection_c.h\n'}
+[10.382254] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[10.393972] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/include/urg_node_msgs/urg_node_msgs/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.408325] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/environment/pythonpath.sh\n'}
+[10.419600] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/environment/pythonpath.dsv\n'}
+[10.430577] (-) TimerEvent: {}
+[10.431179] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs-1.1.0-py3.12.egg-info/PKG-INFO\n'}
+[10.441257] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs-1.1.0-py3.12.egg-info/SOURCES.txt\n'}
+[10.452317] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs-1.1.0-py3.12.egg-info/dependency_links.txt\n'}
+[10.463424] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs-1.1.0-py3.12.egg-info/top_level.txt\n'}
+[10.475722] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/__init__.py\n'}
+[10.487125] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/_urg_node_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[10.499315] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/_urg_node_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[10.511507] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/_urg_node_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[10.524681] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/msg/__init__.py\n'}
+[10.530766] (-) TimerEvent: {}
+[10.537478] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/msg/_status.py\n'}
+[10.549521] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/msg/_status_s.c\n'}
+[10.562102] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/urg_node_msgs_s__rosidl_typesupport_c.so\n'}
+[10.573717] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/urg_node_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[10.584658] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/urg_node_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[10.596065] (urg_node_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/urg_node_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[10.596504] (urg_node_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/urg_node_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[10.596793] (urg_node_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/urg_node_msgs_s__rosidl_typesupport_c.so\n'}
+[10.597171] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/rust/Cargo.toml\n'}
+[10.608676] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/rust/build.rs\n'}
+[10.619737] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/rust/src/lib.rs\n'}
+[10.630940] (-) TimerEvent: {}
+[10.631277] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/rust/src/msg.rs\n'}
+[10.642773] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/rust/src/msg/rmw.rs\n'}
+[10.653917] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/msg/Status.idl\n'}
+[10.664645] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/msg/Status.msg\n'}
+[10.672515] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/mapping_rules.yaml\n'}
+[10.682404] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/ament_index/resource_index/package_run_dependencies/urg_node_msgs\n'}
+[10.693652] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/ament_index/resource_index/parent_prefix_path/urg_node_msgs\n'}
+[10.705121] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/environment/ament_prefix_path.sh\n'}
+[10.717605] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/environment/ament_prefix_path.dsv\n'}
+[10.728860] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/environment/path.sh\n'}
+[10.731105] (-) TimerEvent: {}
+[10.742872] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/environment/path.dsv\n'}
+[10.754399] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/local_setup.bash\n'}
+[10.766234] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/local_setup.sh\n'}
+[10.778165] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/local_setup.zsh\n'}
+[10.789962] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/local_setup.dsv\n'}
+[10.801615] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.dsv\n'}
+[10.813822] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/ament_index/resource_index/packages/urg_node_msgs\n'}
+[10.825744] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[10.831276] (-) TimerEvent: {}
+[10.840413] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[10.853657] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[10.865721] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[10.877378] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[10.888461] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[10.899556] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[10.911123] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[10.922095] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/urg_node_msgsConfig.cmake\n'}
+[10.931444] (-) TimerEvent: {}
+[10.932966] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/urg_node_msgsConfig-version.cmake\n'}
+[10.943907] (urg_node_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/package.xml\n'}
+[10.952356] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_generator_c.so\n'}
+[10.952870] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[10.953078] (urg_node_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[10.953331] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[10.953523] (urg_node_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[10.953645] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_introspection_c.so\n'}
+[10.953764] (urg_node_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[10.953883] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_c.so\n'}
+[10.954003] (urg_node_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_c.so" to ""\n'}
+[10.954121] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[10.954240] (urg_node_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[10.954359] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_cpp.so\n'}
+[10.954529] (urg_node_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[11.004495] (urg_node_msgs) StdoutLine: {'line': b"Listing '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs'...\n"}
+[11.004768] (urg_node_msgs) StdoutLine: {'line': b"Compiling '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/__init__.py'...\n"}
+[11.004892] (urg_node_msgs) StdoutLine: {'line': b"Listing '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/msg'...\n"}
+[11.005007] (urg_node_msgs) StdoutLine: {'line': b"Compiling '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/msg/__init__.py'...\n"}
+[11.005149] (urg_node_msgs) StdoutLine: {'line': b"Compiling '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages/urg_node_msgs/msg/_status.py'...\n"}
+[11.011826] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_generator_py.so\n'}
+[11.012363] (urg_node_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/liburg_node_msgs__rosidl_generator_py.so" to ""\n'}
+[11.012775] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/export_urg_node_msgs__rosidl_generator_cExport.cmake\n'}
+[11.013105] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/export_urg_node_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[11.013776] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/export_urg_node_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[11.014243] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/export_urg_node_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[11.014655] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/export_urg_node_msgs__rosidl_generator_cppExport.cmake\n'}
+[11.014807] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/export_urg_node_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[11.014961] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/export_urg_node_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[11.015096] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/urg_node_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[11.015228] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/urg_node_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[11.015359] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/urg_node_msgs__rosidl_typesupport_cExport.cmake\n'}
+[11.015742] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/urg_node_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[11.015898] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/urg_node_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[11.016391] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/urg_node_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[11.016551] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/urg_node_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[11.016689] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/urg_node_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[11.016821] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/export_urg_node_msgs__rosidl_generator_pyExport.cmake\n'}
+[11.016950] (urg_node_msgs) StdoutLine: {'line': b'-- Installing: /home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake/export_urg_node_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[11.019610] (urg_node_msgs) CommandEnded: {'returncode': 0}
+[11.032155] (-) TimerEvent: {}
+[11.051528] (urg_node_msgs) JobEnded: {'identifier': 'urg_node_msgs', 'rc': 0}
+[11.132307] (-) TimerEvent: {}
+[11.232650] (-) TimerEvent: {}
+[11.332994] (-) TimerEvent: {}
+[11.433373] (-) TimerEvent: {}
+[11.533727] (-) TimerEvent: {}
+[11.634075] (-) TimerEvent: {}
+[11.734468] (-) TimerEvent: {}
+[11.834822] (-) TimerEvent: {}
+[11.935169] (-) TimerEvent: {}
+[12.035514] (-) TimerEvent: {}
+[12.135908] (-) TimerEvent: {}
+[12.236285] (-) TimerEvent: {}
+[12.336701] (-) TimerEvent: {}
+[12.437064] (-) TimerEvent: {}
+[12.537537] (-) TimerEvent: {}
+[12.637750] (-) TimerEvent: {}
+[12.738058] (-) TimerEvent: {}
+[12.838365] (-) TimerEvent: {}
+[12.938675] (-) TimerEvent: {}
+[13.038977] (-) TimerEvent: {}
+[13.139278] (-) TimerEvent: {}
+[13.239594] (-) TimerEvent: {}
+[13.339889] (-) TimerEvent: {}
+[13.440179] (-) TimerEvent: {}
+[13.540486] (-) TimerEvent: {}
+[13.640793] (-) TimerEvent: {}
+[13.741106] (-) TimerEvent: {}
+[13.841395] (-) TimerEvent: {}
+[13.941621] (-) TimerEvent: {}
+[14.041922] (-) TimerEvent: {}
+[14.142214] (-) TimerEvent: {}
+[14.242510] (-) TimerEvent: {}
+[14.342805] (-) TimerEvent: {}
+[14.443101] (-) TimerEvent: {}
+[14.543403] (-) TimerEvent: {}
+[14.643711] (-) TimerEvent: {}
+[14.744015] (-) TimerEvent: {}
+[14.844349] (-) TimerEvent: {}
+[14.944677] (-) TimerEvent: {}
+[15.044986] (-) TimerEvent: {}
+[15.145298] (-) TimerEvent: {}
+[15.245601] (-) TimerEvent: {}
+[15.345908] (-) TimerEvent: {}
+[15.446210] (-) TimerEvent: {}
+[15.546503] (-) TimerEvent: {}
+[15.646797] (-) TimerEvent: {}
+[15.747088] (-) TimerEvent: {}
+[15.847381] (-) TimerEvent: {}
+[15.947673] (-) TimerEvent: {}
+[16.047960] (-) TimerEvent: {}
+[16.148249] (-) TimerEvent: {}
+[16.248583] (-) TimerEvent: {}
+[16.348918] (-) TimerEvent: {}
+[16.449258] (-) TimerEvent: {}
+[16.549602] (-) TimerEvent: {}
+[16.649946] (-) TimerEvent: {}
+[16.746330] (laser_proc) StdoutLine: {'line': b'[100%] Linking CXX shared library liblaser_proc_component.so\n'}
+[16.750193] (-) TimerEvent: {}
+[16.850538] (-) TimerEvent: {}
+[16.950881] (-) TimerEvent: {}
+[16.997918] (laser_proc) StdoutLine: {'line': b'[100%] Built target laser_proc_component\n'}
+[17.009503] (laser_proc) CommandEnded: {'returncode': 0}
+[17.011722] (laser_proc) JobProgress: {'identifier': 'laser_proc', 'progress': 'install'}
+[17.011800] (laser_proc) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '--install', '/home/mr-morales/ros2_ws/build/laser_proc'], 'cwd': '/home/mr-morales/ros2_ws/build/laser_proc', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/laser_proc', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[17.020320] (laser_proc) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[17.020843] (laser_proc) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[17.021283] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/lib/laser_proc/laser_proc_node\n'}
+[17.030729] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/lib/liblaser_proc.so\n'}
+[17.040431] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/lib/liblaser_proc_component.so\n'}
+[17.050663] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/include/laser_proc/laser_proc.hpp\n'}
+[17.050931] (-) TimerEvent: {}
+[17.059517] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/include/laser_proc/laser_proc_component.hpp\n'}
+[17.067887] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/include/laser_proc/laser_publisher.hpp\n'}
+[17.077190] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/include/laser_proc/visibility_control.hpp\n'}
+[17.088021] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/ament_index/resource_index/package_run_dependencies/laser_proc\n'}
+[17.099221] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/ament_index/resource_index/parent_prefix_path/laser_proc\n'}
+[17.109842] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/environment/ament_prefix_path.sh\n'}
+[17.119453] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/environment/ament_prefix_path.dsv\n'}
+[17.128484] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/environment/path.sh\n'}
+[17.137880] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/environment/path.dsv\n'}
+[17.146543] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/local_setup.bash\n'}
+[17.151166] (-) TimerEvent: {}
+[17.156024] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/local_setup.sh\n'}
+[17.165578] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/local_setup.zsh\n'}
+[17.174095] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/local_setup.dsv\n'}
+[17.183474] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.dsv\n'}
+[17.194950] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/ament_index/resource_index/packages/laser_proc\n'}
+[17.204666] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/ament_index/resource_index/rclcpp_components/laser_proc\n'}
+[17.212851] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[17.222060] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[17.231691] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[17.240969] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake/laser_procConfig.cmake\n'}
+[17.250408] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake/laser_procConfig-version.cmake\n'}
+[17.251356] (-) TimerEvent: {}
+[17.258816] (laser_proc) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/package.xml\n'}
+[17.270055] (laser_proc) CommandEnded: {'returncode': 0}
+[17.295778] (laser_proc) JobEnded: {'identifier': 'laser_proc', 'rc': 0}
+[17.296227] (urg_node) JobStarted: {'identifier': 'urg_node'}
+[17.311908] (urg_node) JobProgress: {'identifier': 'urg_node', 'progress': 'cmake'}
+[17.312587] (urg_node) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '/home/mr-morales/ros2_ws/src/urg_node', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/mr-morales/ros2_ws/install/urg_node'], 'cwd': '/home/mr-morales/ros2_ws/build/urg_node', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib:/home/mr-morales/ros2_ws/install/urg_c/lib:/home/mr-morales/ros2_ws/install/laser_proc/lib:/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/ros2_ws/install/urg_c/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/urg_node', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[17.323886] (urg_node) StderrLine: {'line': b'CMake Warning (deprecated) at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[17.324153] (urg_node) StderrLine: {'line': b'  Compatibility with CMake < 3.10 will be removed from a future version of\n'}
+[17.324274] (urg_node) StderrLine: {'line': b'  CMake.\n'}
+[17.324382] (urg_node) StderrLine: {'line': b'\n'}
+[17.324485] (urg_node) StderrLine: {'line': b'  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax\n'}
+[17.324588] (urg_node) StderrLine: {'line': b'  to tell CMake that the project requires at least <min> but has been updated\n'}
+[17.324691] (urg_node) StderrLine: {'line': b'  to work with policies introduced by <max> or earlier.\n'}
+[17.324800] (urg_node) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-author or -Wno-deprecated\n'}
+[17.324901] (urg_node) StderrLine: {'line': b'to suppress it.\n'}
+[17.325001] (urg_node) StderrLine: {'line': b'\n'}
+[17.351577] (-) TimerEvent: {}
+[17.394784] (urg_node) StdoutLine: {'line': b'-- The C compiler identification is GNU 15.3.0\n'}
+[17.451818] (-) TimerEvent: {}
+[17.527517] (urg_node) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 15.3.0\n'}
+[17.539697] (urg_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[17.552064] (-) TimerEvent: {}
+[17.638527] (urg_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[17.652304] (-) TimerEvent: {}
+[17.664010] (urg_node) StdoutLine: {'line': b'-- Check for working C compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cc - skipped\n'}
+[17.664452] (urg_node) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[17.664939] (urg_node) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[17.682488] (urg_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[17.752571] (-) TimerEvent: {}
+[17.834008] (urg_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[17.852822] (-) TimerEvent: {}
+[17.862705] (urg_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/c++ - skipped\n'}
+[17.863258] (urg_node) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[17.864219] (urg_node) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[17.881627] (urg_node) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_cmake/cmake)\n'}
+[17.953061] (-) TimerEvent: {}
+[18.053300] (-) TimerEvent: {}
+[18.086673] (urg_node) StdoutLine: {'line': b'-- Found Python3: /home/mr-morales/miniforge3/envs/ros2_jazzy/bin/python3 (found version "3.12.14") found components: Interpreter\n'}
+[18.153405] (-) TimerEvent: {}
+[18.186084] (urg_node) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[18.253529] (-) TimerEvent: {}
+[18.280238] (urg_node) StderrLine: {'line': b'CMake Warning (policy) at CMakeLists.txt:21 (find_package):\n'}
+[18.280480] (urg_node) StderrLine: {'line': b'  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake\n'}
+[18.280588] (urg_node) StderrLine: {'line': b'  --help-policy CMP0167" for policy details.  Use the cmake_policy command to\n'}
+[18.280685] (urg_node) StderrLine: {'line': b'  set the policy and suppress this warning.\n'}
+[18.280779] (urg_node) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-author or -Wno-policy to\n'}
+[18.280872] (urg_node) StderrLine: {'line': b'suppress it.\n'}
+[18.280964] (urg_node) StderrLine: {'line': b'\n'}
+[18.290382] (urg_node) StdoutLine: {'line': b'-- Found Boost: /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/cmake/Boost-1.90.0/BoostConfig.cmake (found version "1.90.0")\n'}
+[18.298368] (urg_node) StdoutLine: {'line': b'-- Found diagnostic_updater: 4.2.7 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/diagnostic_updater/cmake)\n'}
+[18.353762] (-) TimerEvent: {}
+[18.400290] (urg_node) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_c/cmake)\n'}
+[18.431182] (urg_node) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[18.453986] (-) TimerEvent: {}
+[18.465644] (urg_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[18.504017] (urg_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[18.554247] (-) TimerEvent: {}
+[18.654586] (-) TimerEvent: {}
+[18.723635] (urg_node) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[18.731992] (urg_node) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[18.754807] (-) TimerEvent: {}
+[18.855127] (-) TimerEvent: {}
+[18.955469] (-) TimerEvent: {}
+[19.055745] (-) TimerEvent: {}
+[19.156019] (-) TimerEvent: {}
+[19.227403] (urg_node) StdoutLine: {'line': b'-- Found OpenSSL: /home/mr-morales/miniforge3/envs/ros2_jazzy/lib/libcrypto.so (found version "3.6.4")\n'}
+[19.256244] (-) TimerEvent: {}
+[19.276055] (urg_node) StdoutLine: {'line': b'-- Found FastRTPS: /home/mr-morales/miniforge3/envs/ros2_jazzy/include (Required is at least version "2.13")\n'}
+[19.353536] (urg_node) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[19.356461] (-) TimerEvent: {}
+[19.456789] (-) TimerEvent: {}
+[19.507852] (urg_node) StdoutLine: {'line': b'-- Found laser_proc: 1.0.3 (/home/mr-morales/ros2_ws/install/laser_proc/share/laser_proc/cmake)\n'}
+[19.557025] (-) TimerEvent: {}
+[19.589463] (urg_node) StdoutLine: {'line': b'-- Found rclcpp_components: 28.1.21 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rclcpp_components/cmake)\n'}
+[19.653040] (urg_node) StdoutLine: {'line': b'-- Found std_srvs: 5.3.8 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/std_srvs/cmake)\n'}
+[19.657190] (-) TimerEvent: {}
+[19.677553] (urg_node) StdoutLine: {'line': b'-- Found urg_c: 1.0.4001 (/home/mr-morales/ros2_ws/install/urg_c/share/urg_c/cmake)\n'}
+[19.679672] (urg_node) StdoutLine: {'line': b'-- Found urg_node_msgs: 1.1.0 (/home/mr-morales/ros2_ws/install/urg_node_msgs/share/urg_node_msgs/cmake)\n'}
+[19.716374] (urg_node) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/home/mr-morales/miniforge3/envs/ros2_jazzy/share/ament_lint_auto/cmake)\n'}
+[19.757314] (-) TimerEvent: {}
+[19.857533] (-) TimerEvent: {}
+[19.896772] (urg_node) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[19.897113] (urg_node) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/mr-morales/ros2_ws/src/urg_node/include>\n'}
+[19.897536] (urg_node) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[19.900193] (urg_node) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[19.900333] (urg_node) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[19.901190] (urg_node) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[19.901343] (urg_node) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[19.902655] (urg_node) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[19.903680] (urg_node) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[19.906578] (urg_node) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[19.906723] (urg_node) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[19.907604] (urg_node) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[19.910931] (urg_node) StdoutLine: {'line': b'-- Configuring done (2.6s)\n'}
+[19.957673] (-) TimerEvent: {}
+[19.961148] (urg_node) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[20.003885] (urg_node) StdoutLine: {'line': b'-- Build files have been written to: /home/mr-morales/ros2_ws/build/urg_node\n'}
+[20.015234] (urg_node) CommandEnded: {'returncode': 0}
+[20.016264] (urg_node) JobProgress: {'identifier': 'urg_node', 'progress': 'build'}
+[20.016889] (urg_node) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '--build', '/home/mr-morales/ros2_ws/build/urg_node', '--', '-j12', '-l12'], 'cwd': '/home/mr-morales/ros2_ws/build/urg_node', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib:/home/mr-morales/ros2_ws/install/urg_c/lib:/home/mr-morales/ros2_ws/install/laser_proc/lib:/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/ros2_ws/install/urg_c/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/urg_node', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[20.057896] (-) TimerEvent: {}
+[20.080005] (urg_node) StdoutLine: {'line': b'[ 14%] Building CXX object CMakeFiles/urg_node.dir/src/urg_c_wrapper.cpp.o\n'}
+[20.081039] (urg_node) StdoutLine: {'line': b'[ 28%] Building CXX object CMakeFiles/urg_node_driver.dir/rclcpp_components/node_main_urg_node_driver.cpp.o\n'}
+[20.081668] (urg_node) StdoutLine: {'line': b'[ 42%] Building CXX object CMakeFiles/urg_node.dir/src/urg_node.cpp.o\n'}
+[20.158071] (-) TimerEvent: {}
+[20.258357] (-) TimerEvent: {}
+[20.358712] (-) TimerEvent: {}
+[20.459067] (-) TimerEvent: {}
+[20.559412] (-) TimerEvent: {}
+[20.659761] (-) TimerEvent: {}
+[20.760111] (-) TimerEvent: {}
+[20.860458] (-) TimerEvent: {}
+[20.960831] (-) TimerEvent: {}
+[21.061194] (-) TimerEvent: {}
+[21.161501] (-) TimerEvent: {}
+[21.261804] (-) TimerEvent: {}
+[21.362184] (-) TimerEvent: {}
+[21.462554] (-) TimerEvent: {}
+[21.562942] (-) TimerEvent: {}
+[21.663241] (-) TimerEvent: {}
+[21.763620] (-) TimerEvent: {}
+[21.863888] (-) TimerEvent: {}
+[21.964287] (-) TimerEvent: {}
+[22.064673] (-) TimerEvent: {}
+[22.165033] (-) TimerEvent: {}
+[22.265302] (-) TimerEvent: {}
+[22.365570] (-) TimerEvent: {}
+[22.465936] (-) TimerEvent: {}
+[22.566363] (-) TimerEvent: {}
+[22.666736] (-) TimerEvent: {}
+[22.767098] (-) TimerEvent: {}
+[22.867467] (-) TimerEvent: {}
+[22.967833] (-) TimerEvent: {}
+[23.068187] (-) TimerEvent: {}
+[23.168622] (-) TimerEvent: {}
+[23.268997] (-) TimerEvent: {}
+[23.369263] (-) TimerEvent: {}
+[23.469654] (-) TimerEvent: {}
+[23.531586] (urg_node) StdoutLine: {'line': b'[ 57%] Linking CXX executable urg_node_driver\n'}
+[23.569894] (-) TimerEvent: {}
+[23.670189] (-) TimerEvent: {}
+[23.680592] (urg_node) StdoutLine: {'line': b'[ 57%] Built target urg_node_driver\n'}
+[23.770440] (-) TimerEvent: {}
+[23.870806] (-) TimerEvent: {}
+[23.971161] (-) TimerEvent: {}
+[24.071460] (-) TimerEvent: {}
+[24.171746] (-) TimerEvent: {}
+[24.272139] (-) TimerEvent: {}
+[24.372419] (-) TimerEvent: {}
+[24.472823] (-) TimerEvent: {}
+[24.573265] (-) TimerEvent: {}
+[24.673520] (-) TimerEvent: {}
+[24.773881] (-) TimerEvent: {}
+[24.874249] (-) TimerEvent: {}
+[24.974593] (-) TimerEvent: {}
+[25.074951] (-) TimerEvent: {}
+[25.175244] (-) TimerEvent: {}
+[25.275517] (-) TimerEvent: {}
+[25.375741] (-) TimerEvent: {}
+[25.476006] (-) TimerEvent: {}
+[25.576245] (-) TimerEvent: {}
+[25.676542] (-) TimerEvent: {}
+[25.776795] (-) TimerEvent: {}
+[25.877148] (-) TimerEvent: {}
+[25.977429] (-) TimerEvent: {}
+[26.077682] (-) TimerEvent: {}
+[26.178018] (-) TimerEvent: {}
+[26.278352] (-) TimerEvent: {}
+[26.378698] (-) TimerEvent: {}
+[26.479039] (-) TimerEvent: {}
+[26.579373] (-) TimerEvent: {}
+[26.679714] (-) TimerEvent: {}
+[26.780051] (-) TimerEvent: {}
+[26.880393] (-) TimerEvent: {}
+[26.980730] (-) TimerEvent: {}
+[27.081077] (-) TimerEvent: {}
+[27.181292] (-) TimerEvent: {}
+[27.281614] (-) TimerEvent: {}
+[27.381954] (-) TimerEvent: {}
+[27.482243] (-) TimerEvent: {}
+[27.582574] (-) TimerEvent: {}
+[27.682926] (-) TimerEvent: {}
+[27.775588] (urg_node) StdoutLine: {'line': b'[ 71%] Linking CXX shared library liburg_node.so\n'}
+[27.783164] (-) TimerEvent: {}
+[27.883576] (-) TimerEvent: {}
+[27.983971] (-) TimerEvent: {}
+[28.014384] (urg_node) StdoutLine: {'line': b'[ 71%] Built target urg_node\n'}
+[28.040404] (urg_node) StdoutLine: {'line': b'[ 85%] Building CXX object CMakeFiles/getID.dir/src/get_id.cpp.o\n'}
+[28.084216] (-) TimerEvent: {}
+[28.184551] (-) TimerEvent: {}
+[28.284884] (-) TimerEvent: {}
+[28.385406] (-) TimerEvent: {}
+[28.485647] (-) TimerEvent: {}
+[28.585956] (-) TimerEvent: {}
+[28.686280] (-) TimerEvent: {}
+[28.786606] (-) TimerEvent: {}
+[28.886916] (-) TimerEvent: {}
+[28.987258] (-) TimerEvent: {}
+[29.087511] (-) TimerEvent: {}
+[29.187813] (-) TimerEvent: {}
+[29.288118] (-) TimerEvent: {}
+[29.388472] (-) TimerEvent: {}
+[29.488778] (-) TimerEvent: {}
+[29.589130] (-) TimerEvent: {}
+[29.689339] (-) TimerEvent: {}
+[29.789577] (-) TimerEvent: {}
+[29.889890] (-) TimerEvent: {}
+[29.990200] (-) TimerEvent: {}
+[30.090515] (-) TimerEvent: {}
+[30.190841] (-) TimerEvent: {}
+[30.291151] (-) TimerEvent: {}
+[30.391453] (-) TimerEvent: {}
+[30.491760] (-) TimerEvent: {}
+[30.592195] (-) TimerEvent: {}
+[30.692457] (-) TimerEvent: {}
+[30.792779] (-) TimerEvent: {}
+[30.893132] (-) TimerEvent: {}
+[30.993499] (-) TimerEvent: {}
+[31.093847] (-) TimerEvent: {}
+[31.194188] (-) TimerEvent: {}
+[31.194494] (urg_node) StdoutLine: {'line': b'[100%] Linking CXX executable getID\n'}
+[31.294455] (-) TimerEvent: {}
+[31.367134] (urg_node) StdoutLine: {'line': b'[100%] Built target getID\n'}
+[31.379544] (urg_node) CommandEnded: {'returncode': 0}
+[31.381647] (urg_node) JobProgress: {'identifier': 'urg_node', 'progress': 'install'}
+[31.382371] (urg_node) Command: {'cmd': ['/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/cmake', '--install', '/home/mr-morales/ros2_ws/build/urg_node'], 'cwd': '/home/mr-morales/ros2_ws/build/urg_node', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(ros2_jazzy)', 'AI_AGENT': 'claude-code_2-1-260_agent', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'mr-morales', 'CLAUDE_CODE_ENTRYPOINT': 'cli', 'GIT_EDITOR': 'true', 'XDG_SESSION_TYPE': 'wayland', 'ROS_ETC_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/etc/ros', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib:/home/mr-morales/ros2_ws/install/urg_c/lib:/home/mr-morales/ros2_ws/install/laser_proc/lib:/home/mr-morales/miniforge3/envs/ros2_jazzy/opt/rviz_ogre_vendor/lib', 'CLAUDE_CODE_MESSAGING_TOKEN': '4668a9c81165553f918b582e586dee34', 'HOME': '/home/mr-morales', 'CONDA_SHLVL': '1', 'OLDPWD': '/home/mr-morales/Documentos/ros2_rover', 'DESKTOP_SESSION': 'gnome', 'CLAUDE_CODE_BRIDGE_SESSION_ID': 'session_01KXmJmjaU911yw6i3azNHSv', 'NVM_BIN': '/home/mr-morales/.nvm/versions/node/v24.18.0/bin', 'NVM_INC': '/home/mr-morales/.nvm/versions/node/v24.18.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'CLAUDE_CODE_CHILD_SESSION': '1', 'CPL_ZIP_ENCODING': 'UTF-8', 'SYSTEMD_EXEC_PID': '2268', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/mr-morales/miniforge3', 'NVM_DIR': '/home/mr-morales/.nvm', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mr-morales', '_': '/home/mr-morales/miniforge3/envs/ros2_jazzy/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mr-morales', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_OS_OVERRIDE': 'conda:linux', 'OGRE_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE', 'PATH': '/home/mr-morales/ros2_ws/install/urg_c/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/bin:/home/mr-morales/miniforge3/envs/ros2_jazzy/bin:/home/mr-morales/miniforge3/condabin:/home/mr-morales/.local/share/pnpm:/home/mr-morales/.nvm/versions/node/v24.18.0/bin:/home/mr-morales/.cargo/bin:/home/mr-morales/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games', 'SESSION_MANAGER': 'local/morias-debian:@/tmp/.ICE-unix/2236,unix/morias-debian:/tmp/.ICE-unix/2236', 'GDM_LANG': 'pt_BR.UTF-8', 'PROJ_NETWORK': 'ON', 'COREPACK_ENABLE_AUTO_PIN': '0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/544d1c6d_029e_4512_bb4f_872da9053578', 'GNOME_SETUP_DISPLAY': ':1', 'PROJ_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/proj', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'high', 'DISPLAY': ':0', 'CLAUDE_PID': '33648', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'gnome', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.6K5AV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.140', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XML_CATALOG_FILES': 'file:///home/mr-morales/miniforge3/envs/ros2_jazzy/etc/xml/catalog file:///etc/xml/catalog', 'GSETTINGS_SCHEMA_DIR': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/glib-2.0/schemas', 'AMENT_PREFIX_PATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy', 'CONDA_PYTHON_EXE': '/home/mr-morales/miniforge3/bin/python', 'SHELL': '/bin/bash', 'GDAL_DRIVER_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/gdalplugins', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'gnome', 'CLAUDE_CODE_SESSION_ID': '62e2790d-e032-45ee-971e-b86db1aa20e8', 'GEM_HOME': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/rubygems/', 'CONDA_DEFAULT_ENV': 'ros2_jazzy', 'CLAUDECODE': '1', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'OGRE2_RESOURCE_PATH': '/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/OGRE-Next', '_CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mr-morales/ros2_ws/build/urg_node', 'CONDA_EXE': '/home/mr-morales/miniforge3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/mr-morales/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/', 'CLAUDE_CODE_EXECPATH': '/home/mr-morales/.local/share/claude/versions/2.1.260', 'PYTHONPATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs/lib/python3.12/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python/site-packages:/home/mr-morales/miniforge3/envs/ros2_jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/home/mr-morales/miniforge3/envs/ros2_jazzy', 'GSETTINGS_SCHEMA_DIR_CONDA_BACKUP': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PNPM_HOME': '/home/mr-morales/.local/share/pnpm', 'VTE_VERSION': '8001', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/33648.sock', 'GDAL_DATA': '/home/mr-morales/miniforge3/envs/ros2_jazzy/share/gdal', 'CMAKE_PREFIX_PATH': '/home/mr-morales/ros2_ws/install/urg_node_msgs:/home/mr-morales/ros2_ws/install/urg_c:/home/mr-morales/ros2_ws/install/laser_proc:/home/mr-morales/miniforge3/envs/ros2_jazzy'}), 'shell': False}
+[31.390756] (urg_node) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[31.391282] (urg_node) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[31.391712] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/lib/urg_node/urg_node_driver\n'}
+[31.394665] (-) TimerEvent: {}
+[31.401440] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/lib/liburg_node.so\n'}
+[31.411180] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/lib/urg_node/getID\n'}
+[31.421447] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/include/urg_node/urg_c_wrapper.hpp\n'}
+[31.430411] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/include/urg_node/urg_node.hpp\n'}
+[31.439047] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/lib/urg_node/set_urg_ip.py\n'}
+[31.448661] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/launch/hokuyo_laser.urdf\n'}
+[31.457854] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/launch/urg_lidar.launch\n'}
+[31.466348] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/launch/urg_node_ethernet.yaml\n'}
+[31.475914] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/launch/urg_node_launch.py\n'}
+[31.485402] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/launch/urg_node_serial.yaml\n'}
+[31.494574] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/meshes/hokuyo_ust10.stl\n'}
+[31.494820] (-) TimerEvent: {}
+[31.505722] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/urdf/hokuyo_ust10.urdf.xacro\n'}
+[31.515908] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/ament_index/resource_index/package_run_dependencies/urg_node\n'}
+[31.524968] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/ament_index/resource_index/parent_prefix_path/urg_node\n'}
+[31.534748] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/environment/ament_prefix_path.sh\n'}
+[31.543772] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/environment/ament_prefix_path.dsv\n'}
+[31.552797] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/environment/path.sh\n'}
+[31.562144] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/environment/path.dsv\n'}
+[31.571607] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/local_setup.bash\n'}
+[31.581099] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/local_setup.sh\n'}
+[31.590386] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/local_setup.zsh\n'}
+[31.595091] (-) TimerEvent: {}
+[31.599134] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/local_setup.dsv\n'}
+[31.609215] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.dsv\n'}
+[31.619081] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/ament_index/resource_index/packages/urg_node\n'}
+[31.628642] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/ament_index/resource_index/rclcpp_components/urg_node\n'}
+[31.636944] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[31.646672] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[31.656395] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[31.665946] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/cmake/urg_nodeConfig.cmake\n'}
+[31.674946] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/cmake/urg_nodeConfig-version.cmake\n'}
+[31.684439] (urg_node) StdoutLine: {'line': b'-- Symlinking: /home/mr-morales/ros2_ws/install/urg_node/share/urg_node/package.xml\n'}
+[31.695816] (urg_node) CommandEnded: {'returncode': 0}
+[31.696322] (-) TimerEvent: {}
+[31.720355] (urg_node) JobEnded: {'identifier': 'urg_node', 'rc': 0}
+[31.721223] (-) EventReactorShutdown: {}

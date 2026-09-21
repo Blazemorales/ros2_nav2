@@ -1,0 +1,7 @@
+{
+  "package_name": "rover_msgs",
+  "output_dir": "/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_generator_type_description/rover_msgs",
+  "idl_tuples": [
+    "/home/mr-morales/ros2_ws/build/rover_msgs/rosidl_adapter/rover_msgs:msg/MotorsCommand.idl"
+  ]
+}

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp/controller_node" "/home/mr-morales/ros2_ws/build/rover_motor_controller_cpp/vel_parser_node" "TARGETS" "controller_node" "vel_parser_node" "DESTINATION" "lib/rover_motor_controller_cpp")
