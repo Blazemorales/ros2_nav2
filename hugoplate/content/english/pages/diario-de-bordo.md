@@ -169,3 +169,54 @@ persiste entre reboots). Para rodar sem GUI (CI/testes rápidos):
 ```shell
 ros2 launch rover_gazebo moon.launch.py slam:=True explore:=True headless:=True
 ```
+
+## 2026-09-22 — `explore_lite` nunca estava de fato no workspace: achado e corrigido
+
+**Objetivo:** validar ao vivo, rodando de verdade dentro do `rover_dev`, que
+o `slam:=True explore:=True` da entrada anterior funciona ponta a ponta.
+
+**Resultado:** não funcionava.
+`ros2 launch rover_gazebo moon.launch.py slam:=True explore:=True headless:=True`
+morria logo no início com `package 'explore_lite' not found`, derrubando
+(cascade shutdown) tudo que já tinha subido.
+
+### Causa raiz
+
+`rover_slam/package.xml` declara `<depend>explore_lite</depend>`, mas
+`explore_lite` é um fork (`robo-friends/m-explore-ros2`, pacote na subpasta
+`explore/`, mais uma dependência dele, `explore_lite_msgs`) que não é uma
+chave resolvível pelo `rosdep`. O `Dockerfile` roda
+`rosdep install --from-paths src --ignore-src -r -y` — a flag `-r` faz o
+`rosdep` **pular em silêncio** dependências que falham em resolver, então o
+pacote nunca chegou a existir de fato no workspace, apesar do `package.xml`
+parecer completo e do build do Docker terminar sem erro visível.
+
+**Correção:** vendorizados `explore_lite/` e `explore_lite_msgs/` (do fork
+acima; `map_merge/`, que não é usado aqui, ficou de fora) como pastas de
+pacote no nível raiz do repo, no mesmo padrão flat de `rover_slam`/
+`rover_navigation`. Assim o `colcon build` resolve por nome de pacote
+dentro do próprio workspace, sem depender do `rosdep` pra isso.
+
+### Bug batido no caminho: processos `gz sim` órfãos
+
+Durante os testes, ficou mais de uma instância de `gz sim` rodando ao mesmo
+tempo — o wrapper do `ros2 launch` morre no shutdown (ou quando a sessão do
+`docker exec` que o iniciou fecha), mas o processo `gz sim` de baixo escapa
+e fica órfão, reparented pro PID 1, continuando a rodar. Sintoma:
+`slam_toolbox` soltando "Message Filter dropping message... timestamp
+earlier than transform cache" sem parar, com o `/clock` pulando pra frente
+e pra trás — duas simulações concorrentes disputando o tempo. Resolvido
+listando `ps -ef | grep "gz sim"` e matando por PID exato (repetindo o
+aviso já dado acima sobre `pkill -f`: `pkill -f "gz sim"`/`pkill -f "ros2"`
+também casa com a própria linha de comando do `docker exec`/`pgrep` usada
+pra limpar, e pode matar o processo errado).
+
+### Confirmado funcionando (depois da correção)
+
+- `map` resolve e `map` → `base_link` progride sozinho.
+- Os 3 controllers (`joint_state_broadcaster`, `position_controller`,
+  `velocity_controller`) ficam `active`.
+- `/map` cresceu de 96x80 para 106x83 células em ~40s de exploração.
+- Robô andou sozinho de `(0.68, 0.51)` para `(0.79, 1.03)` (tempo de sim
+  4.5s → 9.9s), sem teleop nem goal manual.
+- Zero ocorrência de "Robot is out bounds costmap" ou crash.
