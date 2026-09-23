@@ -6,7 +6,7 @@
 
 @theme {
   /* === Colors === */
-  --color-primary: #121212;
+  --color-primary: #1D4ED8;
   --color-body: #fff;
   --color-border: #eaeaea;
   --color-light: #f6f6f6;
@@ -16,7 +16,7 @@
   --color-text-light: #717171;
 
   /* === Darkmode Colors === */
-  --color-darkmode-primary: #fff;
+  --color-darkmode-primary: #60A5FA;
   --color-darkmode-body: #1c1c1c;
   --color-darkmode-border: #3E3E3E;
   --color-darkmode-light: #222222;
