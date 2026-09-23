@@ -5,7 +5,7 @@ name: Hugo Docs Deployment
 on:
   push:
     branches: ["jazzy"]
-    paths: ["hugoplate/**"]
+    paths: ["hugoplate/**", ".github/workflows/hugo-docs-deployment.yml"]
   workflow_dispatch:
 
 env:
