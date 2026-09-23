@@ -4,44 +4,15 @@
 
 ## Pages
 - [Home](https://blazemorales.github.io/ros2_nav2/index.md)
-- [Contact](https://blazemorales.github.io/ros2_nav2/contact/index.md): this is meta description
-- [Hey, I am John Doe!](https://blazemorales.github.io/ros2_nav2/about/index.md): this is meta description
-
-## Blog Posts
-- [Blog Posts](https://blazemorales.github.io/ros2_nav2/blog/index.md): this is meta description
-
-- [How to build an Application with modern Technology](https://blazemorales.github.io/ros2_nav2/blog/post-1/index.md): this is meta description
-- [How to build an Application with modern Technology](https://blazemorales.github.io/ros2_nav2/blog/post-2/index.md): this is meta description
-- [How to build an Application with modern Technology](https://blazemorales.github.io/ros2_nav2/blog/post-3/index.md): this is meta description
-- [How to build an Application with modern Technology](https://blazemorales.github.io/ros2_nav2/blog/post-4/index.md): this is meta description
-
-## Authors
-- [Authors](https://blazemorales.github.io/ros2_nav2/authors/index.md)
-
-- [John Doe](https://blazemorales.github.io/ros2_nav2/authors/john-doe/index.md): this is meta description
-- [Sam Wilson](https://blazemorales.github.io/ros2_nav2/authors/sam-wilson/index.md): this is meta description
-- [William Jacob](https://blazemorales.github.io/ros2_nav2/authors/william-jacob/index.md): this is meta description
 
 ## Pages
 - [Pages](https://blazemorales.github.io/ros2_nav2/pages/index.md)
 
 - [Comandos Essenciais — Simulação Gazebo do Rover](https://blazemorales.github.io/ros2_nav2/comandos-essenciais-simulacao/index.md): Passo a passo completo, sequencial e testado para compilar e rodar a simulação do rover Sawppy no Gazebo (mundos Moon/Mars/Forest), com SLAM e exploração autônoma.
 - [Diário de Bordo — Rover Sim](https://blazemorales.github.io/ros2_nav2/diario-de-bordo/index.md): Log técnico do desenvolvimento da simulação do rover: decisões, bugs encontrados e correções.
-- [Elements](https://blazemorales.github.io/ros2_nav2/elements/index.md): This is meta description
-- [Privacy](https://blazemorales.github.io/ros2_nav2/privacy-policy/index.md): This is meta description
 
 ## Categories
 - [Categories](https://blazemorales.github.io/ros2_nav2/categories/index.md)
-- [Application](https://blazemorales.github.io/ros2_nav2/categories/application/index.md)
-- [Architecture](https://blazemorales.github.io/ros2_nav2/categories/architecture/index.md)
-- [Data](https://blazemorales.github.io/ros2_nav2/categories/data/index.md)
-- [Software](https://blazemorales.github.io/ros2_nav2/categories/software/index.md)
-- [Technology](https://blazemorales.github.io/ros2_nav2/categories/technology/index.md)
 
 ## Tags
 - [Tags](https://blazemorales.github.io/ros2_nav2/tags/index.md)
-- [Nextjs](https://blazemorales.github.io/ros2_nav2/tags/nextjs/index.md)
-- [Silicon](https://blazemorales.github.io/ros2_nav2/tags/silicon/index.md)
-- [Software](https://blazemorales.github.io/ros2_nav2/tags/software/index.md)
-- [Tailwind](https://blazemorales.github.io/ros2_nav2/tags/tailwind/index.md)
-- [Technology](https://blazemorales.github.io/ros2_nav2/tags/technology/index.md)
