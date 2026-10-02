@@ -15,8 +15,3 @@ weight = 2
 name = "Diário de Bordo"
 url = "/diario-de-bordo"
 weight = 3
-
-[[main]]
-parent = "Pages"
-name = "404 Page"
-url = "/404"

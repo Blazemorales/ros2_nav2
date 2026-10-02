@@ -4,3 +4,35 @@
 .btn {
   @apply rounded-md shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md;
 }
+
+/* Purple navbar (same in light and dark mode) */
+.header {
+  background-color: #5b21b6;
+  color: #fff;
+}
+
+.dark .header {
+  background-color: #3b1a73;
+}
+
+.header .navbar-brand,
+.header .nav-link,
+.header label[for="nav-toggle"],
+.header #search-toggle,
+.header button {
+  color: #fff;
+}
+
+.header .nav-link:hover,
+.header .nav-link.active {
+  color: #facc15;
+}
+
+/* Purple bg needs the white logo even in light mode */
+.header .img-light {
+  display: none;
+}
+
+.header .img-dark {
+  display: initial;
+}

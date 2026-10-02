@@ -5,6 +5,12 @@
       <div class="container">
         <div class="row justify-center">
           <div class="lg:col-7 md:col-9 mb-8 text-center">
+            {{ with .logo }}
+              {{ partial "image" (dict "Src" . "Alt" "ARES" "Loading" "eager" "Class" "img img-light mx-auto mb-6 !w-40 !h-auto" "DisplayXL" "160x" "DisplayLG" "160x" "DisplayMD" "160x" "DisplaySM" "160x" "Display" "160x") }}
+            {{ end }}
+            {{ with .logo_dark }}
+              {{ partial "image" (dict "Src" . "Alt" "ARES" "Loading" "eager" "Class" "img img-dark mx-auto mb-6 !w-40 !h-auto" "DisplayXL" "160x" "DisplayLG" "160x" "DisplayMD" "160x" "DisplaySM" "160x" "Display" "160x") }}
+            {{ end }}
             <h1 class="mb-4 text-h3 lg:text-h1">
               {{ .title | markdownify }}
             </h1>
