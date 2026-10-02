@@ -1,5 +1,5 @@
 # ROS2 Rover
 
-> Hugo & Tailwindcss Starter
+> Documentação do desenvolvimento do Nav2 para o rover da equipe ARES
 
 <no value>
