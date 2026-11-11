@@ -40,6 +40,13 @@ def generate_launch_description():
         "use_sim_time", default_value="false", choices=["true", "false"]
     )
 
+    # RGBD camera render load, forwarded to xacro (simulation only).
+    camera_args = [
+        DeclareLaunchArgument("camera_width", default_value="720"),
+        DeclareLaunchArgument("camera_height", default_value="480"),
+        DeclareLaunchArgument("camera_rate", default_value="30"),
+    ]
+
     robot_state_publisher_cmd = Node(
         name="robot_state_publisher",
         package="robot_state_publisher",
@@ -49,7 +56,14 @@ def generate_launch_description():
             {"use_sim_time": LaunchConfiguration("use_sim_time")},
             {
                 "robot_description": ParameterValue(
-                    Command(["xacro", " ", xacro_file]), value_type=str
+                    Command(
+                        [
+                            "xacro", " ", xacro_file,
+                            " camera_width:=", LaunchConfiguration("camera_width"),
+                            " camera_height:=", LaunchConfiguration("camera_height"),
+                            " camera_rate:=", LaunchConfiguration("camera_rate"),
+                        ]
+                    ), value_type=str
                 )
             },
         ],
@@ -68,6 +82,8 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     ld.add_action(use_sim_time_cmd)
+    for a in camera_args:
+        ld.add_action(a)
     ld.add_action(robot_state_publisher_cmd)
     ld.add_action(joint_state_publisher_cmd)
 

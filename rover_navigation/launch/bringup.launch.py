@@ -40,7 +40,7 @@ from launch_ros.actions import PushRosNamespace
 from nav2_common.launch import RewrittenYaml
 
 
-def merge_yaml_files(files):
+def merge_yaml_files(files, patch=None):
     merged_data = {}
 
     for file_path in files:
@@ -52,6 +52,9 @@ def merge_yaml_files(files):
                 )
             merged_data.update(data)  # keys from later files will overwrite earlier ones
 
+    if patch is not None:
+        patch(merged_data)
+
     # Create a temporary file with .yaml extension
     temp = tempfile.NamedTemporaryFile(delete=False, suffix=".yaml", mode="w")
     yaml.dump(merged_data, temp)
@@ -61,6 +64,37 @@ def merge_yaml_files(files):
     return temp_path
 
 
+def use_scan_in_local_costmap(params):
+    """Feed the local costmap from /scan instead of /camera/points.
+
+    Used by the simulation's light profile (sim_lite), where the point cloud
+    is not bridged. The lidar is 2D (+-1 rad), so a plain ObstacleLayer
+    replaces the VoxelLayer; heights are left wide open because the lidar
+    sits at base_link height on uneven terrain.
+    """
+    local = params["local_costmap"]["local_costmap"]["ros__parameters"]
+    local["plugins"] = ["obstacle_layer" if p == "voxel_layer" else p for p in local["plugins"]]
+    local.pop("voxel_layer", None)
+    local["obstacle_layer"] = {
+        "plugin": "nav2_costmap_2d::ObstacleLayer",
+        "enabled": True,
+        "footprint_clearing_enabled": True,
+        "observation_sources": "scan",
+        "scan": {
+            "topic": "/scan",
+            "data_type": "LaserScan",
+            "max_obstacle_height": 5.0,
+            "min_obstacle_height": -5.0,
+            "obstacle_max_range": 2.5,
+            "obstacle_min_range": 0.0,
+            "raytrace_max_range": 3.0,
+            "raytrace_min_range": 0.0,
+            "clearing": True,
+            "marking": True,
+        },
+    }
+
+
 def generate_launch_description():
     # Get the launch directory
     pkg_dir = get_package_share_directory("rover_navigation")
@@ -68,9 +102,10 @@ def generate_launch_description():
 
     stdout_linebuf_envvar = SetEnvironmentVariable("RCUTILS_LOGGING_BUFFERED_STREAM", "1")
 
-    def run_nav2(context, planner, controller):
+    def run_nav2(context, planner, controller, obstacle_source):
         planner = str(context.perform_substitution(planner))
         controller = str(context.perform_substitution(controller))
+        obstacle_source = str(context.perform_substitution(obstacle_source))
 
         params_file = merge_yaml_files(
             [
@@ -78,7 +113,8 @@ def generate_launch_description():
                 os.path.join(pkg_dir, "params", "costmaps.yaml"),
                 os.path.join(pkg_dir, "params", f"{planner}.yaml"),
                 os.path.join(pkg_dir, "params", f"{controller}.yaml"),
-            ]
+            ],
+            patch=use_scan_in_local_costmap if obstacle_source == "scan" else None,
         )
 
         param_substitutions = {"use_sim_time": LaunchConfiguration("use_sim_time")}
@@ -194,7 +230,17 @@ def generate_launch_description():
         description="Nav2 controller (RPP or TEB)",
     )
 
-    nav2_cmd = OpaqueFunction(function=run_nav2, args=[planner, controller])
+    local_obstacle_source = LaunchConfiguration("local_obstacle_source")
+    local_obstacle_source_cmd = DeclareLaunchArgument(
+        "local_obstacle_source",
+        default_value="camera",
+        choices=["camera", "scan"],
+        description="Local costmap obstacles from /camera/points (camera) or /scan",
+    )
+
+    nav2_cmd = OpaqueFunction(
+        function=run_nav2, args=[planner, controller, local_obstacle_source]
+    )
 
     # Create the launch description and populate
     ld = LaunchDescription()
@@ -213,6 +259,7 @@ def generate_launch_description():
     ld.add_action(declare_use_respawn_cmd)
     ld.add_action(planner_cmd)
     ld.add_action(controller_cmd)
+    ld.add_action(local_obstacle_source_cmd)
 
     # Add the actions to launch all of the navigation nodes
     ld.add_action(nav2_cmd)

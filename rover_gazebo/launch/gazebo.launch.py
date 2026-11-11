@@ -130,6 +130,43 @@ def generate_launch_description():
         description="Map yaml file to localize on, required when slam:=False",
     )
 
+    # --- Simulation render load (hugoplate/content/english/pages/desempenho-simulacao.md) ---
+    # sim_lite:=true -> RGBD 320x240 @ 10 Hz, no /camera/points on the bridge,
+    # local costmap fed by /scan. Each knob can be overridden on its own
+    # (empty = take it from the profile).
+    sim_lite = LaunchConfiguration("sim_lite")
+    sim_args = [
+        DeclareLaunchArgument(
+            "sim_lite",
+            default_value="False",
+            description="Light camera profile: 320x240 @ 10 Hz, no point cloud",
+        ),
+        DeclareLaunchArgument("camera_width", default_value="", description="'' = profile"),
+        DeclareLaunchArgument("camera_height", default_value="", description="'' = profile"),
+        DeclareLaunchArgument("camera_rate", default_value="", description="'' = profile"),
+        DeclareLaunchArgument(
+            "camera_points",
+            default_value="",
+            description="Bridge /camera/points and use it in the local costmap "
+            "(False -> local costmap uses /scan). '' = profile",
+        ),
+    ]
+
+    def _profile(name, full, lite):
+        return PythonExpression(
+            [
+                "'", LaunchConfiguration(name), "' or ('", lite, "' if '",
+                sim_lite, "'.lower() == 'true' else '", full, "')",
+            ]
+        )
+
+    camera_width = _profile("camera_width", "720", "320")
+    camera_height = _profile("camera_height", "480", "240")
+    camera_rate = _profile("camera_rate", "30", "10")
+    camera_points = PythonExpression(
+        ["str('", _profile("camera_points", "true", "false"), "'.lower() == 'true')"]
+    )
+
     ### NODES ###
     rviz_cmd = Node(
         name="rviz",
@@ -140,32 +177,42 @@ def generate_launch_description():
         condition=IfCondition(launch_rviz),
     )
 
-    gz_bridge_cmd = Node(
-        package="ros_gz_bridge",
-        executable="parameter_bridge",
-        arguments=[
-            "/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock",
-            "/scan@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan",
-            "/camera/image@sensor_msgs/msg/Image[gz.msgs.Image",
-            "/camera/depth_image@sensor_msgs/msg/Image[gz.msgs.Image",
-            "/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo",
-            "/camera/points@sensor_msgs/msg/PointCloud2[gz.msgs.PointCloudPacked",
-            "/imu@sensor_msgs/msg/Imu[gz.msgs.IMU",
-            "/cmd_vel@geometry_msgs/msg/Twist[gz.msgs.Twist",
-        ],
-        parameters=[
-            os.path.join(
-                get_package_share_directory("rover_gazebo"), "config", "gz_bridge.yaml"
-            )
-        ],
-        remappings=[
-            ("/camera/image", "/camera/image_raw"),
-            ("/camera/depth_image", "/camera/depth/image_raw"),
-            ("/camera/camera_info", "/camera/camera_info"),
-            ("/camera/points", "/camera/points"),
-        ],
-        output="screen",
-    )
+    bridge_topics = [
+        "/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock",
+        "/scan@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan",
+        "/camera/image@sensor_msgs/msg/Image[gz.msgs.Image",
+        "/camera/depth_image@sensor_msgs/msg/Image[gz.msgs.Image",
+        "/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo",
+        "/imu@sensor_msgs/msg/Imu[gz.msgs.IMU",
+        "/cmd_vel@geometry_msgs/msg/Twist[gz.msgs.Twist",
+    ]
+    # /camera/points is ~4 MB/msg through the bridge at 720x480; only bridged
+    # when the local costmap actually consumes it.
+    points_topic = "/camera/points@sensor_msgs/msg/PointCloud2[gz.msgs.PointCloudPacked"
+
+    def _bridge(with_points):
+        return Node(
+            package="ros_gz_bridge",
+            executable="parameter_bridge",
+            name="ros_gz_bridge",
+            arguments=bridge_topics + ([points_topic] if with_points else []),
+            parameters=[
+                os.path.join(
+                    get_package_share_directory("rover_gazebo"), "config", "gz_bridge.yaml"
+                )
+            ],
+            remappings=[
+                ("/camera/image", "/camera/image_raw"),
+                ("/camera/depth_image", "/camera/depth/image_raw"),
+                ("/camera/camera_info", "/camera/camera_info"),
+                ("/camera/points", "/camera/points"),
+            ],
+            output="screen",
+            condition=IfCondition(camera_points) if with_points else UnlessCondition(camera_points),
+        )
+
+    gz_bridge_cmd = _bridge(True)
+    gz_bridge_lite_cmd = _bridge(False)
 
     ### LAUNCHS ###
     gazebo_cmd = GroupAction(
@@ -220,6 +267,9 @@ def generate_launch_description():
             "use_sim_time": "true",
             "planner": nav2_planner,
             "controller": nav2_controller,
+            "local_obstacle_source": PythonExpression(
+                ["'camera' if ", camera_points, " else 'scan'"]
+            ),
         }.items(),
     )
 
@@ -262,6 +312,9 @@ def generate_launch_description():
             "initial_pose_y": initial_pose_y,
             "initial_pose_z": initial_pose_z,
             "initial_pose_yaw": initial_pose_yaw,
+            "camera_width": camera_width,
+            "camera_height": camera_height,
+            "camera_rate": camera_rate,
         }.items(),
     )
 
@@ -279,9 +332,12 @@ def generate_launch_description():
     ld.add_action(slam_cmd_arg)
     ld.add_action(explore_cmd_arg)
     ld.add_action(map_cmd_arg)
+    for a in sim_args:
+        ld.add_action(a)
 
     ld.add_action(gazebo_cmd)
     ld.add_action(gz_bridge_cmd)
+    ld.add_action(gz_bridge_lite_cmd)
     ld.add_action(spawn_cmd)
     ld.add_action(rgbd_odometry_cmd)
     ld.add_action(ekf_cmd)

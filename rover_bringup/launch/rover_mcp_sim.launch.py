@@ -102,6 +102,16 @@ def generate_launch_description():
             description="Nav2 planner",
         ),
         DeclareLaunchArgument(
+            "sim_lite",
+            default_value="False",
+            description="Light camera profile (320x240 @ 10 Hz, no point "
+            "cloud, local costmap on /scan). See hugoplate/content/english/pages/desempenho-simulacao.md",
+        ),
+        *[
+            DeclareLaunchArgument(k, default_value="", description="'' = profile")
+            for k in ("camera_width", "camera_height", "camera_rate", "camera_points")
+        ],
+        DeclareLaunchArgument(
             "nav2_controller",
             default_value="RPP",
             choices=["RPP", "TEB"],
@@ -124,6 +134,11 @@ def generate_launch_description():
             "map": map_yaml,
             "nav2_planner": nav2_planner,
             "nav2_controller": nav2_controller,
+            "sim_lite": LaunchConfiguration("sim_lite"),
+            **{
+                k: LaunchConfiguration(k)
+                for k in ("camera_width", "camera_height", "camera_rate", "camera_points")
+            },
         }.items(),
     )
 
