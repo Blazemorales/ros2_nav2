@@ -13,7 +13,8 @@ RUN apt-get update \
     git \
     wget \
     python3 \
-    python3-pip
+    python3-pip \
+    ros-${ROS_DISTRO}-rosbridge-server
 RUN rosdep install --from-paths src --ignore-src -r -y
 
 # Colcon the ws

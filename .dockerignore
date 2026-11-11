@@ -1,0 +1,8 @@
+# colcon artifacts (some are committed by mistake) and non-ROS content
+.git
+build
+install
+log
+hugoplate
+docs
+**/__pycache__

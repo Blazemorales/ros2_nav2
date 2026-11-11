@@ -15,6 +15,9 @@
     "-v", "/tmp/.X11-unix:/tmp/.X11-unix:rw"
   ],
 
+  "// rosbridge": "With --net=host the rosbridge WebSocket (9090) is already reachable from the host; forwardPorts only matters if --net=host is ever removed.",
+  "forwardPorts": [9090],
+
   "containerEnv": {
     "QT_X11_NO_MITSHM": "1"
   },
