@@ -25,6 +25,7 @@ Nav2 + slam_toolbox/AMCL + explore_lite
 | `tools/rover_mcp_safe/rover_mcp_safe.py` | servidor MCP restrito (o que o LLM enxerga) |
 | `tools/rover_mcp_safe/test_policy.py` | teste offline da política (sem ROS) |
 | `tools/rover_mcp_safe/smoke_test.py` | teste MCP ponta a ponta contra a simulação |
+| `tools/rover_mcp_safe/llm_test.py` | prompts em linguagem natural via Ollama, não interativo |
 | `tools/rover_mcp_safe/setup_ollmcp.sh` | configura o `ollmcp` (temp 0.1, prompt, HIL) |
 
 `tools/rover_mcp_safe/` tem `COLCON_IGNORE`: não é pacote ROS e roda no host.
@@ -119,4 +120,35 @@ porque lá eles filtrariam a listagem de tópicos, e não as permissões.
 
 ## Validação (Fase 5)
 
-RESULTADOS_PENDENTES
+Executada em 2026-11-11 no PC (12 núcleos, 16 GB, sem GPU), container
+`rover:latest`, `rover_mcp_sim.launch.py slam:=true headless:=true launch_rviz:=false`.
+
+| # | Passo | Resultado |
+|---|---|---|
+| 0 | Infra | ✅ handshake WebSocket `101` em `localhost:9090`; `/cmd_vel`, `/odom`, `/scan`, `/map`, `/navigate_to_pose` presentes; 3 controllers `active` |
+| 1 | Teleop manual (`/cmd_vel` dentro do container) | ✅ rover andou 0,28 m (ver RTF abaixo) |
+| 2 | Goal manual (`ros2 action send_goal /navigate_to_pose`, x=2, y=0,5) | ✅ `SUCCEEDED`, chegou em (1,99; 0,52) |
+| 3 | Exploração sem LLM (`explore:=true`) | ⚠️ parcial: `/map` cresceu de 99×81 → 168×130 células em 4 min, rover se moveu sozinho, zero "out of bounds". Não rodou até o mapa fechar (`moon.world` ≈ 100×100 m) |
+| 4 | Leitura via MCP | ✅ sem LLM: `smoke_test.py` (topics, actions, `/odom`). Com LLM (qwen2.5:7b, temp 0.1): chamou `subscribe_once('/odom')` e respondeu a posição correta — **14,6 min** para 2 rodadas |
+| 5 | Goal via MCP | ✅ sem LLM: `send_action_goal('/navigate_to_pose')` → `success`, rover andou 1,94 m. `/cmd_vel` recusado pelo proxy. ⏳ com LLM: em andamento |
+| 6 | Explore comandado via MCP | ✅ sem LLM: `publish_once('/explore/resume', false→true)` aceito. ⏳ com LLM: em andamento |
+
+Bloqueio no próprio rosbridge (sem o proxy): 4 s publicando 0,5 m/s em
+`/cmd_vel` por WebSocket cru → rover deslocou 0,001 m. ✅
+
+Scripts: `test_policy.py` (offline), `smoke_test.py` (MCP sem LLM),
+`llm_test.py` (LLM via Ollama, não interativo).
+
+### Desempenho medido
+
+- **RTF da simulação: 0,09** (medido pelo `/clock`; `gz stats` não existe no
+  `gz_tools_vendor` do Jazzy). Mesmo sem LLM o RTF ficou em ~0,16.
+- `gz sim` ≈ 300 % CPU; `llama-server` ≈ 190 %. Sem pressão de RAM (sem swap ativo).
+- Câmera RGBD: `/camera/depth/image_raw` 1,38 MB/msg a ~30 Hz em tempo
+  simulado, mais `/camera/points`. Principal suspeita do RTF baixo, mas
+  alimenta o `rgbd_odometry` → EKF, então não dá para só desligar.
+- **Contexto do Ollama:** as 24 tools somam ~2,7 k tokens; o padrão de
+  4096 estoura depois de 1–2 resultados de tool. `llm_test.py` usa
+  `num_ctx: 8192`; no `ollmcp`, ajustar o contexto do modelo também.
+- Sem GPU, o LLM ao lado da simulação leva minutos por rodada de tool
+  calling: funcional, mas impraticável para uso interativo.
