@@ -11,6 +11,7 @@
   <depend>joy_linux</depend>
   <depend>teleop_twist_joy</depend>
   <depend>urg_node</depend>
+  <exec_depend>rosbridge_server</exec_depend>
   <export>
     <build_type>ament_cmake</build_type>
   </export>
