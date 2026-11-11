@@ -17,6 +17,16 @@ url = "/diario-de-bordo"
 weight = 3
 
 [[main]]
+name = "ROS-MCP"
+url = "/ros-mcp"
+weight = 4
+
+[[main]]
+name = "Desempenho"
+url = "/desempenho-simulacao"
+weight = 5
+
+[[main]]
 parent = "Pages"
 name = "404 Page"
 url = "/404"

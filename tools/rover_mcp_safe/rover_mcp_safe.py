@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """rover-mcp-safe: a restricted MCP front-end for ros-mcp-server.
 
-Architecture rule (docs/ros-mcp.md): the LLM sends *goals* and reads *state*.
+Architecture rule (hugoplate/content/english/pages/ros-mcp.md): the LLM sends *goals* and reads *state*.
 It never drives the motors directly. ros-mcp-server ships ~31 tools, among them
 publish_once / publish_for_durations, which would let a model write straight
 into /cmd_vel. This server registers the upstream ros-mcp tools in-process and

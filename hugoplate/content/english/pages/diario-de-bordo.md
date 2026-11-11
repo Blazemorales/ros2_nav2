@@ -12,6 +12,23 @@ momento — o que foi decidido, o que quebrou e como foi corrigido. Ver também
 os [Comandos Essenciais](/comandos-essenciais-simulacao) para rodar o que
 está descrito aqui.
 
+## 2026-11-11 — ROS-MCP e desempenho da simulação
+
+**ROS-MCP:** o rover passou a aceitar comandos em linguagem natural via Model
+Context Protocol. O LLM (qwen2.5:7b no Ollama) fala com um proxy restrito,
+`rover_mcp_safe`, que fala com o `rosbridge` dentro do container. O LLM só
+manda goals ao Nav2 e lê estado: `/cmd_vel` é bloqueado no proxy **e** no
+próprio rosbridge. Validação: o LLM leu a odometria corretamente e uma
+tentativa de publicar velocidade foi recusada; os goals mandados pelo LLM
+abortaram com o `explore_lite` ativo e o modelo relatou sucesso — pendente.
+Detalhes em [ROS-MCP](/ros-mcp).
+
+**Desempenho:** a simulação rodava a RTF ~0,18. Um bisect mostrou que o
+gargalo é a renderização da câmera RGBD, e que o custo é por quadro, não por
+pixel. Novo perfil `sim_lite:=true` (320×240 @ 10 Hz, sem nuvem de pontos,
+costmap local no lidar) leva o RTF a 0,42 sem quebrar a odometria visual.
+Detalhes em [Desempenho da Simulação](/desempenho-simulacao).
+
 ## 2026-09-21 — Navegação autônoma (SLAM + exploração + Nav2): funcionando
 
 **Objetivo:** o rover simulado explora sozinho (frontier exploration) e
