@@ -130,14 +130,33 @@ Executada em 2026-11-11 no PC (12 núcleos, 16 GB, sem GPU), container
 | 2 | Goal manual (`ros2 action send_goal /navigate_to_pose`, x=2, y=0,5) | ✅ `SUCCEEDED`, chegou em (1,99; 0,52) |
 | 3 | Exploração sem LLM (`explore:=true`) | ⚠️ parcial: `/map` cresceu de 99×81 → 168×130 células em 4 min, rover se moveu sozinho, zero "out of bounds". Não rodou até o mapa fechar (`moon.world` ≈ 100×100 m) |
 | 4 | Leitura via MCP | ✅ sem LLM: `smoke_test.py` (topics, actions, `/odom`). Com LLM (qwen2.5:7b, temp 0.1): chamou `subscribe_once('/odom')` e respondeu a posição correta — **14,6 min** para 2 rodadas |
-| 5 | Goal via MCP | ✅ sem LLM: `send_action_goal('/navigate_to_pose')` → `success`, rover andou 1,94 m. `/cmd_vel` recusado pelo proxy. ⏳ com LLM: em andamento |
-| 6 | Explore comandado via MCP | ✅ sem LLM: `publish_once('/explore/resume', false→true)` aceito. ⏳ com LLM: em andamento |
+| 5 | Goal via MCP | ✅ sem LLM: `send_action_goal('/navigate_to_pose')` → `success`, rover andou 1,94 m. Com LLM: ✅ "publique Twist em /cmd_vel" → `publish_once` **recusado** pelo proxy e o modelo recorreu sozinho a um goal Nav2. ❌ os goals do LLM (x=1 e x=3,y=3) terminaram em **status 6 (ABORTED)** e o modelo relatou sucesso — ver abaixo |
+| 6 | Explore comandado via MCP | ✅ sem LLM: `publish_once('/explore/resume', false→true)` aceito. ❌ com LLM: "pause a exploração" → tentou `/explore/resume` como **action** (recusado 2×) e depois mandou goal para (0,0); explore **não** pausou |
 
 Bloqueio no próprio rosbridge (sem o proxy): 4 s publicando 0,5 m/s em
 `/cmd_vel` por WebSocket cru → rover deslocou 0,001 m. ✅
 
 Scripts: `test_policy.py` (offline), `smoke_test.py` (MCP sem LLM),
 `llm_test.py` (LLM via Ollama, não interativo).
+
+### Falhas do teste com LLM (qwen2.5:7b) — pendentes
+
+1. **Goals abortados com `explore_lite` ativo.** Os goals do LLM terminaram em
+   status 6 (ABORTED). Causa provável: o `explore_lite` seguia mandando os
+   próprios goals ao Nav2 e preemptava os do LLM. Mitigação: pausar o explore
+   antes de um goal manual (e o proxy pode fazer isso automaticamente).
+2. **`send_action_goal` responde `"success": true` mesmo com goal abortado.**
+   O ros-mcp só reporta que a chamada completou; o estado real está em
+   `status`. O modelo leu `success` e afirmou que chegou. Mitigação: o proxy
+   reescrever o resultado com o texto do status (`SUCCEEDED`/`ABORTED`/...).
+3. **Tópico confundido com action.** Mesmo com o prompt de sistema citando
+   `publish_once('/explore/resume', ...)`, o modelo chamou
+   `send_action_goal('/explore/resume', 'std_msgs/msg/Bool')`. Mitigação: a
+   mensagem de recusa do proxy indicar a tool correta, ou expor uma tool
+   dedicada `set_exploration(enabled: bool)`.
+
+Nenhuma dessas falhas furou a camada de segurança: tudo que foi recusado
+continuou recusado, e o rover nunca recebeu `/cmd_vel` do LLM.
 
 ### Desempenho medido
 
