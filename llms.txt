@@ -1,6 +1,6 @@
 # ROS2 Rover
 
-> Documentação do desenvolvimento do Nav2 para o rover da equipe ARES
+> Hugo & Tailwindcss Starter
 
 ## Pages
 - [Home](https://blazemorales.github.io/ros2_nav2/index.md)
@@ -9,7 +9,9 @@
 - [Pages](https://blazemorales.github.io/ros2_nav2/pages/index.md)
 
 - [Comandos Essenciais — Simulação Gazebo do Rover](https://blazemorales.github.io/ros2_nav2/comandos-essenciais-simulacao/index.md): Passo a passo completo, sequencial e testado para compilar e rodar a simulação do rover Sawppy no Gazebo (mundos Moon/Mars/Forest), com SLAM e exploração autônoma.
+- [Desempenho da Simulação — RTF do Gazebo](https://blazemorales.github.io/ros2_nav2/desempenho-simulacao/index.md): Por que a simulação do rover rodava a 18% do tempo real, como o gargalo foi isolado e o perfil leve sim_lite que dobra o RTF.
 - [Diário de Bordo — Rover Sim](https://blazemorales.github.io/ros2_nav2/diario-de-bordo/index.md): Log técnico do desenvolvimento da simulação do rover: decisões, bugs encontrados e correções.
+- [ROS-MCP — Comandar o Rover em Linguagem Natural](https://blazemorales.github.io/ros2_nav2/ros-mcp/index.md): Arquitetura, camada de segurança e validação da integração do rover com LLMs via Model Context Protocol (ros-mcp + rosbridge).
 
 ## Categories
 - [Categories](https://blazemorales.github.io/ros2_nav2/categories/index.md)
