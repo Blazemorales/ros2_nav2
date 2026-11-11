@@ -49,6 +49,13 @@ def generate_launch_description():
         description="Nav2 controller (RPP or TEB)",
     )
 
+    sim_lite = LaunchConfiguration("sim_lite")
+    sim_lite_cmd = DeclareLaunchArgument(
+        "sim_lite",
+        default_value="False",
+        description="Light camera profile (see hugoplate/content/english/pages/desempenho-simulacao.md)",
+    )
+
     headless = LaunchConfiguration("headless")
     headless_cmd = DeclareLaunchArgument(
         "headless",
@@ -81,6 +88,7 @@ def generate_launch_description():
             "nav2_planner": nav2_planner,
             "nav2_controller": nav2_controller,
             "headless": headless,
+            "sim_lite": sim_lite,
             "slam": slam,
             "explore": explore,
             "launch_rviz": launch_rviz,
@@ -91,6 +99,7 @@ def generate_launch_description():
     ld.add_action(nav2_planner_cmd)
     ld.add_action(nav2_controller_cmd)
     ld.add_action(headless_cmd)
+    ld.add_action(sim_lite_cmd)
     ld.add_action(slam_cmd)
     ld.add_action(explore_cmd)
     ld.add_action(launch_rviz_cmd)

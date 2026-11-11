@@ -16,7 +16,7 @@
 #
 # NOTE: rosbridge serialises every message to JSON. Never keep a continuous
 # subscription to /scan, camera or point-cloud topics through it -- on a
-# Raspberry Pi 3 that starves Nav2. See docs/ros-mcp.md.
+# Raspberry Pi 3 that starves Nav2. See hugoplate/content/english/pages/ros-mcp.md.
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
