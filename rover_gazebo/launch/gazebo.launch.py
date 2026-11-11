@@ -35,6 +35,7 @@ from launch.substitutions import (
     LaunchConfiguration,
     PythonExpression,
     EnvironmentVariable,
+    AndSubstitution,
 )
 from launch_ros.actions import Node
 from launch.conditions import IfCondition, UnlessCondition
@@ -136,7 +137,7 @@ def generate_launch_description():
         executable="rviz2",
         arguments=["-d", rviz_config, "--ros-args", "--log-level", "Error"],
         parameters=[{"use_sim_time": True}],
-        condition=IfCondition(PythonExpression([launch_rviz])),
+        condition=IfCondition(launch_rviz),
     )
 
     gz_bridge_cmd = Node(
@@ -184,7 +185,7 @@ def generate_launch_description():
                 launch_arguments=[
                     (
                         "gz_args",
-                        [world, " -r", PythonExpression(["' -s' if '", headless, "' == 'True' else ''"])],
+                        [world, " -r", PythonExpression(["' -s' if '", headless, "'.lower() == 'true' else ''"])],
                     )
                 ],
             ),
@@ -243,7 +244,7 @@ def generate_launch_description():
             os.path.join(pkg_rover_slam, "launch", "explore.launch.py")
         ),
         launch_arguments={"use_sim_time": "true"}.items(),
-        condition=IfCondition(PythonExpression([slam, " and ", explore])),
+        condition=IfCondition(AndSubstitution(slam, explore)),
     )
 
     cmd_vel_cmd = IncludeLaunchDescription(
