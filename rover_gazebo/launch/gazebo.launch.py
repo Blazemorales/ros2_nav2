@@ -71,6 +71,13 @@ def generate_launch_description():
         description="Run Gazebo without its GUI (server only)",
     )
 
+    uneven_terrain_cmd = DeclareLaunchArgument(
+        "uneven_terrain",
+        default_value="True",
+        description="Nav2 global costmap from close /scan hits instead of the SLAM "
+        "map: the 2D lidar sees gentle slopes as walls (see rover_navigation bringup)",
+    )
+
     initial_pose_x = LaunchConfiguration("initial_pose_x")
     initial_pose_x_cmd = DeclareLaunchArgument(
         "initial_pose_x", default_value="0.0", description="Initial pose x"
@@ -270,6 +277,7 @@ def generate_launch_description():
             "local_obstacle_source": PythonExpression(
                 ["'camera' if ", camera_points, " else 'scan'"]
             ),
+            "uneven_terrain": LaunchConfiguration("uneven_terrain"),
         }.items(),
     )
 
@@ -322,6 +330,7 @@ def generate_launch_description():
 
     ld.add_action(launch_rviz_cmd)
     ld.add_action(headless_cmd)
+    ld.add_action(uneven_terrain_cmd)
     ld.add_action(world_cmd)
     ld.add_action(initial_pose_x_cmd)
     ld.add_action(initial_pose_y_cmd)

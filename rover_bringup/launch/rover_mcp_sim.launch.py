@@ -112,6 +112,11 @@ def generate_launch_description():
             for k in ("camera_width", "camera_height", "camera_rate", "camera_points")
         ],
         DeclareLaunchArgument(
+            "uneven_terrain",
+            default_value="True",
+            description="Nav2 costmaps tuned for terrain without walls (see rover_navigation bringup)",
+        ),
+        DeclareLaunchArgument(
             "nav2_controller",
             default_value="RPP",
             choices=["RPP", "TEB"],
@@ -135,6 +140,7 @@ def generate_launch_description():
             "nav2_planner": nav2_planner,
             "nav2_controller": nav2_controller,
             "sim_lite": LaunchConfiguration("sim_lite"),
+            "uneven_terrain": LaunchConfiguration("uneven_terrain"),
             **{
                 k: LaunchConfiguration(k)
                 for k in ("camera_width", "camera_height", "camera_rate", "camera_points")

@@ -120,13 +120,14 @@ no Groq, faça o deploy do `render.yaml` no Render e rode no host:
 
 ## Pendências
 
-**Navegação no terreno lunar (prioridade):** o Nav2 aborta com frequência
-("Start occupied", "exceeded maximum iterations"). O lidar 2D tem alcance de
-5 m e marca rampas do terreno como parede no `/map`. Depois o rover passa por
-cima delas e fica "dentro" de um obstáculo. Ideias: aumentar o alcance do lidar,
-usar a nuvem da câmera com filtro de altura (STVL) em vez do lidar 2D, ou
-ajustar o SLAM para limpar células. As tools relatam isso corretamente
-(ABORTED), mas a experiência de comandar o rover depende de resolver isso.
+**Navegação no terreno lunar:** melhorou de ~1/7 para 6/7 goals com o
+perfil `uneven_terrain` (detalhes na página Chat Web). Próximos passos:
+detectar rampas íngremes de verdade com a câmera de profundidade (análise de
+inclinação), já que o lidar 2D não distingue chão de parede.
+
+**Checks de CI vermelhos (já eram antes):** o black/clang-format falham. Parte é
+código nosso e parte é a pasta `install/` (701 arquivos de build), que foi
+commitada por engano em `bac6a4a` e deveria ir para o `.gitignore`.
 
 **Chat web:** falta validar com Groq e Render reais (precisa da chave e da
 conta do usuário). Já foi validado localmente com o Ollama.
