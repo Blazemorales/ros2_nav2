@@ -8,7 +8,7 @@ that already has ros-mcp/fastmcp:
       --server wss://SEU-APP.onrender.com --token "$AGENT_TOKEN"
 
 It builds the restricted rover_mcp_safe server in-process (profile "minimal":
-navigate_to, stop_navigation, set_exploration, get_robot_pose) and only ever
+navigate_to, run_mission, stop_navigation, set_exploration, get_robot_pose) and only ever
 executes those. The safety policy stays on the PC, so a compromised web server
 still cannot reach /cmd_vel or any other ROS interface.
 """

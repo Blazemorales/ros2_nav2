@@ -16,6 +16,7 @@ simulação**.
 | ROS-MCP: rosbridge no container, `rover_mcp_sim.launch.py`, proxy restrito `tools/rover_mcp_safe` (24/31 tools, `/cmd_vel` bloqueado no proxy **e** no rosbridge) | PR #2 |
 | `sim_lite` (perfil leve da câmera RGBD) + `tools/rtf_meter.py`; RTF 0,18 → 0,42 | PR #3 |
 | Deploy do site Hugo disparado por push em `main` | PR #4 |
+| Missões em sequência: tool `run_mission` (`go_to`, `move_forward`, `wait`, `return_to_base`) | `tools/rover_mcp_safe/rover_tools.py`; página **Chat Web** |
 | Tools MCP dedicadas (`navigate_to` → ARRIVED/ABORTED/CANCELED/TIMEOUT, `stop_navigation`, `set_exploration`, `get_robot_pose`) + chat web (Render + Groq grátis + agente local) | `tools/rover_mcp_safe/rover_tools.py`, `tools/rover_web/`, `render.yaml`; página **Chat Web** |
 
 ## 1. Subir o container

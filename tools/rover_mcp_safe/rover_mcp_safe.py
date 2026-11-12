@@ -247,12 +247,14 @@ class RoverSafetyMiddleware(Middleware):
 INSTRUCTIONS = """\
 You control a Sawppy-style rover (ROS 2 Jazzy + Nav2) in a Gazebo simulation.
 Rules:
+- For several steps ("walk 3 m, wait, come back"), call run_mission once with
+  the whole list of steps instead of chaining navigate_to calls. "Base" is the
+  start point; use the return_to_base step to go back.
 - To move, call navigate_to(x, y). It waits until the rover finishes and
   answers ARRIVED, ABORTED, CANCELED or TIMEOUT. Only ARRIVED means the rover
   got there; otherwise tell the user it did NOT arrive and why.
 - Coordinates are metres in the map frame; the rover starts near (0, 0).
-  For "go forward N metres", read get_robot_pose first and add N along the
-  current heading.
+  For "go forward N metres", use run_mission with a move_forward step.
 - When the user says stop / halt / pare, call stop_navigation immediately.
 - Autonomous exploration is a background mode: set_exploration(true/false).
   navigate_to pauses it automatically.
