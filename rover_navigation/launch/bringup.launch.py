@@ -73,7 +73,9 @@ def use_scan_in_local_costmap(params):
     sits at base_link height on uneven terrain.
     """
     local = params["local_costmap"]["local_costmap"]["ros__parameters"]
-    local["plugins"] = ["obstacle_layer" if p == "voxel_layer" else p for p in local["plugins"]]
+    local["plugins"] = [
+        "obstacle_layer" if p == "voxel_layer" else p for p in local["plugins"]
+    ]
     local.pop("voxel_layer", None)
     local["obstacle_layer"] = {
         "plugin": "nav2_costmap_2d::ObstacleLayer",
@@ -146,7 +148,9 @@ def use_uneven_terrain(params):
     The /scan local costmap (sim_lite) gets the same marking range.
     """
     glob = params["global_costmap"]["global_costmap"]["ros__parameters"]
-    glob["plugins"] = ["obstacle_layer" if p == "static_layer" else p for p in glob["plugins"]]
+    glob["plugins"] = [
+        "obstacle_layer" if p == "static_layer" else p for p in glob["plugins"]
+    ]
     glob.pop("static_layer", None)
     glob["obstacle_layer"] = _scan_obstacle_layer(TERRAIN_MARK_RANGE_M, 5.0)
 

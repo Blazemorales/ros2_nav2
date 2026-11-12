@@ -66,16 +66,32 @@ async def session(server: str, token: str, profile: str):
     async with Client(safe.build_server(profile)) as client:
         tools = await client.list_tools()
         allowed = {t.name for t in tools}
-        hello = {"type": "hello", "instructions": safe.INSTRUCTIONS,
-                 "tools": [{"name": t.name, "description": t.description or "",
-                            "inputSchema": t.inputSchema} for t in tools]}
+        hello = {
+            "type": "hello",
+            "instructions": safe.INSTRUCTIONS,
+            "tools": [
+                {
+                    "name": t.name,
+                    "description": t.description or "",
+                    "inputSchema": t.inputSchema,
+                }
+                for t in tools
+            ],
+        }
         url = f"{server.rstrip('/')}/agent"
         # header, not ?token=: query strings end up in the server's access logs
-        async with websockets.connect(url, additional_headers={"Authorization": f"Bearer {token}"},
-                                      ping_interval=20, ping_timeout=60,
-                                      max_size=2**20) as ws:
+        async with websockets.connect(
+            url,
+            additional_headers={"Authorization": f"Bearer {token}"},
+            ping_interval=20,
+            ping_timeout=60,
+            max_size=2**20,
+        ) as ws:
             await ws.send(json.dumps(hello))
-            print(f"connected to {server} with tools: {', '.join(sorted(allowed))}", flush=True)
+            print(
+                f"connected to {server} with tools: {', '.join(sorted(allowed))}",
+                flush=True,
+            )
             tasks = set()
             async for raw in ws:
                 msg = json.loads(raw)
@@ -88,15 +104,20 @@ async def session(server: str, token: str, profile: str):
 
 async def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--server", default=os.getenv("ROVER_WEB_SERVER", "ws://127.0.0.1:8000"),
-                   help="wss://<app>.onrender.com (ws:// for a local test)")
+    p.add_argument(
+        "--server",
+        default=os.getenv("ROVER_WEB_SERVER", "ws://127.0.0.1:8000"),
+        help="wss://<app>.onrender.com (ws:// for a local test)",
+    )
     p.add_argument("--token", default=os.getenv("AGENT_TOKEN", ""))
     p.add_argument("--profile", default="minimal", choices=sorted(safe.PROFILES))
     a = p.parse_args()
     if not a.token:
         sys.exit("missing --token / AGENT_TOKEN")
 
-    http_url = a.server.replace("wss://", "https://").replace("ws://", "http://").rstrip("/")
+    http_url = (
+        a.server.replace("wss://", "https://").replace("ws://", "http://").rstrip("/")
+    )
     asyncio.create_task(keep_awake(http_url))
     delay = 2
     while True:

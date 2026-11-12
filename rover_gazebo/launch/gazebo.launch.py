@@ -148,9 +148,15 @@ def generate_launch_description():
             default_value="False",
             description="Light camera profile: 320x240 @ 10 Hz, no point cloud",
         ),
-        DeclareLaunchArgument("camera_width", default_value="", description="'' = profile"),
-        DeclareLaunchArgument("camera_height", default_value="", description="'' = profile"),
-        DeclareLaunchArgument("camera_rate", default_value="", description="'' = profile"),
+        DeclareLaunchArgument(
+            "camera_width", default_value="", description="'' = profile"
+        ),
+        DeclareLaunchArgument(
+            "camera_height", default_value="", description="'' = profile"
+        ),
+        DeclareLaunchArgument(
+            "camera_rate", default_value="", description="'' = profile"
+        ),
         DeclareLaunchArgument(
             "camera_points",
             default_value="",
@@ -162,8 +168,15 @@ def generate_launch_description():
     def _profile(name, full, lite):
         return PythonExpression(
             [
-                "'", LaunchConfiguration(name), "' or ('", lite, "' if '",
-                sim_lite, "'.lower() == 'true' else '", full, "')",
+                "'",
+                LaunchConfiguration(name),
+                "' or ('",
+                lite,
+                "' if '",
+                sim_lite,
+                "'.lower() == 'true' else '",
+                full,
+                "')",
             ]
         )
 
@@ -205,7 +218,9 @@ def generate_launch_description():
             arguments=bridge_topics + ([points_topic] if with_points else []),
             parameters=[
                 os.path.join(
-                    get_package_share_directory("rover_gazebo"), "config", "gz_bridge.yaml"
+                    get_package_share_directory("rover_gazebo"),
+                    "config",
+                    "gz_bridge.yaml",
                 )
             ],
             remappings=[
@@ -215,7 +230,11 @@ def generate_launch_description():
                 ("/camera/points", "/camera/points"),
             ],
             output="screen",
-            condition=IfCondition(camera_points) if with_points else UnlessCondition(camera_points),
+            condition=(
+                IfCondition(camera_points)
+                if with_points
+                else UnlessCondition(camera_points)
+            ),
         )
 
     gz_bridge_cmd = _bridge(True)
@@ -239,7 +258,13 @@ def generate_launch_description():
                 launch_arguments=[
                     (
                         "gz_args",
-                        [world, " -r", PythonExpression(["' -s' if '", headless, "'.lower() == 'true' else ''"])],
+                        [
+                            world,
+                            " -r",
+                            PythonExpression(
+                                ["' -s' if '", headless, "'.lower() == 'true' else ''"]
+                            ),
+                        ],
                     )
                 ],
             ),

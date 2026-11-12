@@ -116,7 +116,11 @@ def generate_launch_description():
 
     ld = LaunchDescription()
 
-    for name, default in (("camera_width", "720"), ("camera_height", "480"), ("camera_rate", "30")):
+    for name, default in (
+        ("camera_width", "720"),
+        ("camera_height", "480"),
+        ("camera_rate", "30"),
+    ):
         ld.add_action(DeclareLaunchArgument(name, default_value=default))
     ld.add_action(initial_pose_x_cmd)
     ld.add_action(initial_pose_y_cmd)

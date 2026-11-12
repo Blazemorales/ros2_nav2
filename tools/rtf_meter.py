@@ -7,6 +7,7 @@ exploração ativa, rover parado:
 
     python3 tools/rtf_meter.py [segundos]   (default: 15)
 """
+
 import sys
 import time
 

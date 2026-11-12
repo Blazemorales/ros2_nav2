@@ -91,7 +91,12 @@ READ_ONLY_TOOLS = {
     "detect_ros_version",
     "ping_robots",
 }
-GENERIC_WRITE_TOOLS = {"send_action_goal", "cancel_action_goal", "call_service", "publish_once"}
+GENERIC_WRITE_TOOLS = {
+    "send_action_goal",
+    "cancel_action_goal",
+    "call_service",
+    "publish_once",
+}
 DEDICATED_TOOLS = set(rover_tools.DEDICATED_TOOLS)
 
 PROFILES = {
@@ -127,7 +132,9 @@ MOTION_TYPE_RE = re.compile(
     r"Float64MultiArray)$",
     re.IGNORECASE,
 )
-MOTION_TOPIC_RE = re.compile(r"cmd_vel|/velocity_controller/|/position_controller/", re.IGNORECASE)
+MOTION_TOPIC_RE = re.compile(
+    r"cmd_vel|/velocity_controller/|/position_controller/", re.IGNORECASE
+)
 
 SERVICE_DENY_RE = re.compile(
     r"(/_action/"  # hidden action services: bypass the action allowlist
@@ -138,7 +145,9 @@ SERVICE_DENY_RE = re.compile(
     re.IGNORECASE,
 )
 
-BULKY_TYPE_RE = re.compile(r"(PointCloud2?|/Image$|CompressedImage|OccupancyGrid)$", re.IGNORECASE)
+BULKY_TYPE_RE = re.compile(
+    r"(PointCloud2?|/Image$|CompressedImage|OccupancyGrid)$", re.IGNORECASE
+)
 MAX_SUBSCRIBE_DURATION_S = 5.0
 MAX_SUBSCRIBE_MESSAGES = 20
 
@@ -204,7 +213,9 @@ class RoverSafetyMiddleware(Middleware):
     def _check_service(args: dict) -> None:
         service = _norm(args.get("service_name", ""))
         if SERVICE_DENY_RE.search(service):
-            raise ToolError(f"Refused: service {service} is blocked by the rover safety policy.")
+            raise ToolError(
+                f"Refused: service {service} is blocked by the rover safety policy."
+            )
 
     @staticmethod
     def _check_subscribe(name: str, args: dict) -> dict:
@@ -254,7 +265,9 @@ Answer briefly, in the user's language.
 def build_server(profile: str | None = None) -> FastMCP:
     profile = profile or DEFAULT_PROFILE
     if profile not in PROFILES:
-        raise SystemExit(f"unknown profile {profile!r}; choose from {', '.join(PROFILES)}")
+        raise SystemExit(
+            f"unknown profile {profile!r}; choose from {', '.join(PROFILES)}"
+        )
     allowed = PROFILES[profile]
 
     mcp = FastMCP("rover-mcp-safe", instructions=INSTRUCTIONS)
@@ -274,7 +287,9 @@ def build_server(profile: str | None = None) -> FastMCP:
 
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    p.add_argument("--transport", choices=["stdio", "http", "streamable-http"], default="stdio")
+    p.add_argument(
+        "--transport", choices=["stdio", "http", "streamable-http"], default="stdio"
+    )
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=9000)
     p.add_argument("--profile", choices=sorted(PROFILES), default=DEFAULT_PROFILE)

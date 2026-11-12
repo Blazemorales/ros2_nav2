@@ -26,13 +26,22 @@ import websocket  # websocket-client (already a ros-mcp dependency)
 
 NAV_ACTION = "/navigate_to_pose"
 NAV_ACTION_TYPE = "nav2_msgs/action/NavigateToPose"
-CANCEL_SERVICES = ("/navigate_to_pose/_action/cancel_goal",
-                   "/navigate_through_poses/_action/cancel_goal")
+CANCEL_SERVICES = (
+    "/navigate_to_pose/_action/cancel_goal",
+    "/navigate_through_poses/_action/cancel_goal",
+)
 EXPLORE_TOPIC = "/explore/resume"
 
 # action_msgs/msg/GoalStatus
-STATUS_TEXT = {0: "UNKNOWN", 1: "ACCEPTED", 2: "EXECUTING", 3: "CANCELING",
-               4: "SUCCEEDED", 5: "CANCELED", 6: "ABORTED"}
+STATUS_TEXT = {
+    0: "UNKNOWN",
+    1: "ACCEPTED",
+    2: "EXECUTING",
+    3: "CANCELING",
+    4: "SUCCEEDED",
+    5: "CANCELED",
+    6: "ABORTED",
+}
 
 MAX_GOAL_DISTANCE_M = float(os.getenv("ROVER_MCP_MAX_GOAL_DISTANCE", "30"))
 # The simulation runs at ~0.4x real time: 6 m took 86 s, 10 m needed > 300 s.
@@ -81,16 +90,37 @@ class _Bridge:
                 return m
         return None
 
-    def call_service(self, name: str, type_: str, args: dict, timeout: float = 5.0) -> dict | None:
+    def call_service(
+        self, name: str, type_: str, args: dict, timeout: float = 5.0
+    ) -> dict | None:
         cid = f"svc_{uuid.uuid4().hex[:8]}"
-        self.send({"op": "call_service", "id": cid, "service": name, "type": type_, "args": args})
-        return self.wait_for(lambda m: m.get("op") == "service_response" and m.get("id") == cid,
-                             timeout)
+        self.send(
+            {
+                "op": "call_service",
+                "id": cid,
+                "service": name,
+                "type": type_,
+                "args": args,
+            }
+        )
+        return self.wait_for(
+            lambda m: m.get("op") == "service_response" and m.get("id") == cid, timeout
+        )
 
     def read_once(self, topic: str, type_: str, timeout: float = 3.0) -> dict | None:
         sid = f"sub_{uuid.uuid4().hex[:8]}"
-        self.send({"op": "subscribe", "id": sid, "topic": topic, "type": type_, "queue_length": 1})
-        m = self.wait_for(lambda m: m.get("op") == "publish" and m.get("topic") == topic, timeout)
+        self.send(
+            {
+                "op": "subscribe",
+                "id": sid,
+                "topic": topic,
+                "type": type_,
+                "queue_length": 1,
+            }
+        )
+        m = self.wait_for(
+            lambda m: m.get("op") == "publish" and m.get("topic") == topic, timeout
+        )
         self.send({"op": "unsubscribe", "id": sid, "topic": topic})
         return m.get("msg") if m else None
 
@@ -98,6 +128,7 @@ class _Bridge:
 # --------------------------------------------------------------------------- #
 # Helpers
 # --------------------------------------------------------------------------- #
+
 
 def _yaw_from_quat(q: dict) -> float:
     x, y, z, w = (q.get(k, 0.0) for k in ("x", "y", "z", "w"))
@@ -110,7 +141,9 @@ def _tf_pose(b: _Bridge, timeout: float = 3.0) -> dict | None:
     /pose from slam_toolbox only updates while the rover moves, so it can stay
     silent for minutes; /tf is republished continuously."""
     sid = f"tf_{uuid.uuid4().hex[:8]}"
-    b.send({"op": "subscribe", "id": sid, "topic": "/tf", "type": "tf2_msgs/msg/TFMessage"})
+    b.send(
+        {"op": "subscribe", "id": sid, "topic": "/tf", "type": "tf2_msgs/msg/TFMessage"}
+    )
     found: dict[tuple[str, str], dict] = {}
     want = {("map", "odom"), ("odom", "base_link")}
     end = time.monotonic() + timeout
@@ -120,7 +153,10 @@ def _tf_pose(b: _Bridge, timeout: float = 3.0) -> dict | None:
             if not m or m.get("op") != "publish" or m.get("topic") != "/tf":
                 continue
             for tr in m["msg"].get("transforms", []):
-                key = (tr["header"]["frame_id"].lstrip("/"), tr["child_frame_id"].lstrip("/"))
+                key = (
+                    tr["header"]["frame_id"].lstrip("/"),
+                    tr["child_frame_id"].lstrip("/"),
+                )
                 if key in want:
                     found[key] = tr["transform"]
     finally:
@@ -133,8 +169,13 @@ def _tf_pose(b: _Bridge, timeout: float = 3.0) -> dict | None:
     x = mo["translation"]["x"] + math.cos(y1) * ox - math.sin(y1) * oy
     y = mo["translation"]["y"] + math.sin(y1) * ox + math.cos(y1) * oy
     yaw = math.atan2(math.sin(y1 + y2), math.cos(y1 + y2))
-    return {"x": round(x, 2), "y": round(y, 2), "yaw_deg": round(math.degrees(yaw), 1),
-            "frame": "map", "source": "/tf"}
+    return {
+        "x": round(x, 2),
+        "y": round(y, 2),
+        "yaw_deg": round(math.degrees(yaw), 1),
+        "frame": "map",
+        "source": "/tf",
+    }
 
 
 def _pose_sync(b: _Bridge) -> dict | None:
@@ -144,9 +185,13 @@ def _pose_sync(b: _Bridge) -> dict | None:
     msg = b.read_once("/odom", "nav_msgs/msg/Odometry", timeout=4.0)
     if msg:
         p = msg["pose"]["pose"]
-        return {"x": round(p["position"]["x"], 2), "y": round(p["position"]["y"], 2),
-                "yaw_deg": round(math.degrees(_yaw_from_quat(p["orientation"])), 1),
-                "frame": "odom", "source": "/odom"}
+        return {
+            "x": round(p["position"]["x"], 2),
+            "y": round(p["position"]["y"], 2),
+            "yaw_deg": round(math.degrees(_yaw_from_quat(p["orientation"])), 1),
+            "frame": "odom",
+            "source": "/odom",
+        }
     return None
 
 
@@ -168,7 +213,9 @@ def _set_exploration_sync(b: _Bridge, enabled: bool) -> None:
 def _cancel_all_sync(b: _Bridge) -> list[str]:
     # A zero goal UUID with a zero stamp cancels every goal on that action server
     # (action_msgs/srv/CancelGoal semantics), including explore_lite's own goals.
-    req = {"goal_info": {"goal_id": {"uuid": [0] * 16}, "stamp": {"sec": 0, "nanosec": 0}}}
+    req = {
+        "goal_info": {"goal_id": {"uuid": [0] * 16}, "stamp": {"sec": 0, "nanosec": 0}}
+    }
     out = []
     for srv in CANCEL_SERVICES:
         r = b.call_service(srv, "action_msgs/srv/CancelGoal", req)
@@ -186,6 +233,7 @@ def _cancel_all_sync(b: _Bridge) -> list[str]:
 # Tool bodies (sync; the async wrappers below run them in a thread)
 # --------------------------------------------------------------------------- #
 
+
 def get_robot_pose_sync() -> str:
     with _Bridge() as b:
         p = _pose_sync(b)
@@ -195,9 +243,11 @@ def get_robot_pose_sync() -> str:
 def set_exploration_sync(enabled: bool) -> str:
     with _Bridge() as b:
         _set_exploration_sync(b, enabled)
-    return ("Autonomous exploration RESUMED: explore_lite will now pick its own goals."
-            if enabled else
-            "Autonomous exploration PAUSED: the rover only moves when you call navigate_to.")
+    return (
+        "Autonomous exploration RESUMED: explore_lite will now pick its own goals."
+        if enabled
+        else "Autonomous exploration PAUSED: the rover only moves when you call navigate_to."
+    )
 
 
 def stop_navigation_sync() -> str:
@@ -206,8 +256,10 @@ def stop_navigation_sync() -> str:
         details = _cancel_all_sync(b)
         time.sleep(1.0)
         p = _pose_sync(b)
-    return ("STOPPED: exploration paused and all Nav2 goals canceled "
-            f"({'; '.join(details)}). Rover is at {_fmt_pose(p)}.")
+    return (
+        "STOPPED: exploration paused and all Nav2 goals canceled "
+        f"({'; '.join(details)}). Rover is at {_fmt_pose(p)}."
+    )
 
 
 def navigate_to_sync(x: float, y: float, yaw_deg: float, timeout_s: float) -> str:
@@ -216,55 +268,83 @@ def navigate_to_sync(x: float, y: float, yaw_deg: float, timeout_s: float) -> st
         if start and start["frame"] == "map":
             dist = math.hypot(x - start["x"], y - start["y"])
             if dist > MAX_GOAL_DISTANCE_M:
-                return (f"REFUSED: target is {dist:.1f} m away; the limit per goal is "
-                        f"{MAX_GOAL_DISTANCE_M:.0f} m. Pick a closer intermediate point.")
+                return (
+                    f"REFUSED: target is {dist:.1f} m away; the limit per goal is "
+                    f"{MAX_GOAL_DISTANCE_M:.0f} m. Pick a closer intermediate point."
+                )
         # explore_lite would preempt this goal with its own, so pause it first.
         _set_exploration_sync(b, False)
 
         yaw = math.radians(yaw_deg)
         gid = f"nav_{uuid.uuid4().hex[:8]}"
-        b.send({
-            "op": "send_action_goal", "id": gid, "action": NAV_ACTION,
-            "action_type": NAV_ACTION_TYPE, "feedback": False,
-            "args": {"pose": {"header": {"frame_id": "map"},
-                              "pose": {"position": {"x": float(x), "y": float(y), "z": 0.0},
-                                       "orientation": {"x": 0.0, "y": 0.0,
-                                                       "z": math.sin(yaw / 2),
-                                                       "w": math.cos(yaw / 2)}}}},
-        })
+        b.send(
+            {
+                "op": "send_action_goal",
+                "id": gid,
+                "action": NAV_ACTION,
+                "action_type": NAV_ACTION_TYPE,
+                "feedback": False,
+                "args": {
+                    "pose": {
+                        "header": {"frame_id": "map"},
+                        "pose": {
+                            "position": {"x": float(x), "y": float(y), "z": 0.0},
+                            "orientation": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": math.sin(yaw / 2),
+                                "w": math.cos(yaw / 2),
+                            },
+                        },
+                    }
+                },
+            }
+        )
 
         res = b.wait_for(
             lambda m: (m.get("op") == "action_result" and m.get("id") == gid)
             or (m.get("op") == "status" and m.get("level") == "error"),
-            timeout_s)
+            timeout_s,
+        )
 
         if res is None:
             b.send({"op": "cancel_action_goal", "id": gid, "action": NAV_ACTION})
             time.sleep(1.0)
             end = _pose_sync(b)
-            return (f"TIMEOUT: the rover did not reach ({x:.2f}, {y:.2f}) within {timeout_s:.0f} s; "
-                    f"the goal was canceled. Rover is now at {_fmt_pose(end)}. "
-                    "Exploration stays paused.")
+            return (
+                f"TIMEOUT: the rover did not reach ({x:.2f}, {y:.2f}) within {timeout_s:.0f} s; "
+                f"the goal was canceled. Rover is now at {_fmt_pose(end)}. "
+                "Exploration stays paused."
+            )
         if res.get("op") == "status":
             return f"ERROR: rosbridge refused the goal: {res.get('msg')}"
 
         status = res.get("status")
-        text = STATUS_TEXT.get(status, str(status)) if isinstance(status, int) else str(status)
+        text = (
+            STATUS_TEXT.get(status, str(status))
+            if isinstance(status, int)
+            else str(status)
+        )
         end = _pose_sync(b)
 
-    miss = (math.hypot(x - end["x"], y - end["y"])
-            if end and end["frame"] == "map" else None)
+    miss = (
+        math.hypot(x - end["x"], y - end["y"]) if end and end["frame"] == "map" else None
+    )
     miss_txt = f" ({miss:.2f} m from the target)" if miss is not None else ""
     if text == "SUCCEEDED":
         head = f"ARRIVED at ({x:.2f}, {y:.2f})"
     elif text == "ABORTED":
-        head = (f"ABORTED: Nav2 could not reach ({x:.2f}, {y:.2f}) - the path may be blocked "
-                "or the point is outside the known map. The rover did NOT arrive")
+        head = (
+            f"ABORTED: Nav2 could not reach ({x:.2f}, {y:.2f}) - the path may be blocked "
+            "or the point is outside the known map. The rover did NOT arrive"
+        )
     elif text == "CANCELED":
         head = f"CANCELED: the goal to ({x:.2f}, {y:.2f}) was canceled before arrival"
     else:
         head = f"FINISHED with status {text}; the rover may NOT be at ({x:.2f}, {y:.2f})"
-    return f"{head}. Rover is now at {_fmt_pose(end)}{miss_txt}. Exploration stays paused."
+    return (
+        f"{head}. Rover is now at {_fmt_pose(end)}{miss_txt}. Exploration stays paused."
+    )
 
 
 # --------------------------------------------------------------------------- #
@@ -276,8 +356,9 @@ DEDICATED_TOOLS = ("navigate_to", "stop_navigation", "set_exploration", "get_rob
 
 def register(mcp) -> None:
     @mcp.tool
-    async def navigate_to(x: float, y: float, yaw_deg: float = 0.0,
-                          timeout_s: float = DEFAULT_NAV_TIMEOUT_S) -> str:
+    async def navigate_to(
+        x: float, y: float, yaw_deg: float = 0.0, timeout_s: float = DEFAULT_NAV_TIMEOUT_S
+    ) -> str:
         """Drive the rover to a point in the map frame using Nav2 and WAIT until it
         finishes. Pauses autonomous exploration first. Returns ARRIVED, ABORTED,
         CANCELED or TIMEOUT plus the final position - only ARRIVED means it got there.
@@ -289,8 +370,9 @@ def register(mcp) -> None:
             timeout_s: give up and cancel after this many seconds (the simulation runs
                 slower than real time, so allow a few minutes for a few metres).
         """
-        return await asyncio.to_thread(navigate_to_sync, x, y, yaw_deg,
-                                       min(max(timeout_s, 10.0), 900.0))
+        return await asyncio.to_thread(
+            navigate_to_sync, x, y, yaw_deg, min(max(timeout_s, 10.0), 900.0)
+        )
 
     @mcp.tool
     async def stop_navigation() -> str:

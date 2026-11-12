@@ -54,6 +54,7 @@ def _same(a: str, b: str) -> bool:
 # Agent link (exactly one PC agent at a time)
 # --------------------------------------------------------------------------- #
 
+
 class AgentLink:
     def __init__(self):
         self.ws: WebSocket | None = None
@@ -73,7 +74,9 @@ class AgentLink:
         fut = asyncio.get_running_loop().create_future()
         self.pending[cid] = fut
         try:
-            await self.ws.send_json({"type": "call", "id": cid, "name": name, "args": args})
+            await self.ws.send_json(
+                {"type": "call", "id": cid, "name": name, "args": args}
+            )
             return await asyncio.wait_for(fut, timeout)
         except asyncio.TimeoutError:
             return f"ERROR: tool {name} did not answer within {timeout:.0f} s."
@@ -132,38 +135,62 @@ async def agent_ws(ws: WebSocket):
 # LLM loop
 # --------------------------------------------------------------------------- #
 
+
 def _openai_tools() -> list[dict]:
-    return [{"type": "function",
-             "function": {"name": t["name"], "description": t.get("description", "")[:1000],
-                          "parameters": t.get("inputSchema") or {"type": "object",
-                                                                 "properties": {}}}}
-            for t in agent.tools]
+    return [
+        {
+            "type": "function",
+            "function": {
+                "name": t["name"],
+                "description": t.get("description", "")[:1000],
+                "parameters": t.get("inputSchema")
+                or {"type": "object", "properties": {}},
+            },
+        }
+        for t in agent.tools
+    ]
 
 
 async def _llm(http: httpx.AsyncClient, messages: list[dict]) -> dict:
     r = await http.post(
         f"{LLM_BASE_URL}/chat/completions",
         headers={"Authorization": f"Bearer {LLM_API_KEY}"},
-        json={"model": LLM_MODEL, "messages": messages, "tools": _openai_tools(),
-              "tool_choice": "auto", "temperature": 0.1},
+        json={
+            "model": LLM_MODEL,
+            "messages": messages,
+            "tools": _openai_tools(),
+            "tool_choice": "auto",
+            "temperature": 0.1,
+        },
     )
     if r.status_code == 429:
-        raise RuntimeError("the free LLM quota is exhausted for now; wait a minute and retry")
+        raise RuntimeError(
+            "the free LLM quota is exhausted for now; wait a minute and retry"
+        )
     if r.status_code >= 400:
         raise RuntimeError(f"LLM API error {r.status_code}: {r.text[:300]}")
     return r.json()["choices"][0]["message"]
 
 
-async def run_turn(ws: WebSocket, http: httpx.AsyncClient, history: list[dict], text: str):
+async def run_turn(
+    ws: WebSocket, http: httpx.AsyncClient, history: list[dict], text: str
+):
     history.append({"role": "user", "content": text})
     system = {"role": "system", "content": agent.instructions or "You control a rover."}
     for _ in range(MAX_ROUNDS):
         msg = await _llm(http, [system] + history[-MAX_HISTORY:])
         calls = msg.get("tool_calls") or []
-        history.append({"role": "assistant", "content": msg.get("content") or "",
-                        **({"tool_calls": calls} if calls else {})})
+        history.append(
+            {
+                "role": "assistant",
+                "content": msg.get("content") or "",
+                **({"tool_calls": calls} if calls else {}),
+            }
+        )
         if not calls:
-            await ws.send_json({"type": "reply", "text": msg.get("content") or "(sem resposta)"})
+            await ws.send_json(
+                {"type": "reply", "text": msg.get("content") or "(sem resposta)"}
+            )
             return
         for c in calls:
             fn = c["function"]
@@ -175,7 +202,9 @@ async def run_turn(ws: WebSocket, http: httpx.AsyncClient, history: list[dict], 
             out = await agent.call(fn["name"], args)
             await ws.send_json({"type": "tool_result", "name": fn["name"], "text": out})
             history.append({"role": "tool", "tool_call_id": c["id"], "content": out})
-    await ws.send_json({"type": "reply", "text": "(parei: muitas chamadas de ferramenta seguidas)"})
+    await ws.send_json(
+        {"type": "reply", "text": "(parei: muitas chamadas de ferramenta seguidas)"}
+    )
 
 
 async def chat_ws(ws: WebSocket):
@@ -195,20 +224,32 @@ async def chat_ws(ws: WebSocket):
                 if msg.get("type") == "stop":
                     # Emergency stop: straight to the agent, not through the LLM, and
                     # allowed while a navigate_to is still running.
-                    await ws.send_json({"type": "tool", "name": "stop_navigation", "args": {}})
+                    await ws.send_json(
+                        {"type": "tool", "name": "stop_navigation", "args": {}}
+                    )
                     out = await agent.call("stop_navigation", {}, timeout=30)
-                    await ws.send_json({"type": "tool_result", "name": "stop_navigation",
-                                        "text": out})
+                    await ws.send_json(
+                        {"type": "tool_result", "name": "stop_navigation", "text": out}
+                    )
                 elif msg.get("type") == "status":
                     await ws.send_json({"type": "status", "online": agent.online})
                 elif msg.get("type") == "chat":
                     if busy and not busy.done():
-                        await ws.send_json({"type": "error",
-                                            "text": "ainda estou executando o pedido anterior"})
+                        await ws.send_json(
+                            {
+                                "type": "error",
+                                "text": "ainda estou executando o pedido anterior",
+                            }
+                        )
                         continue
                     if not agent.online:
-                        await ws.send_json({"type": "error", "text": "rover offline: rode o "
-                                            "agent.py no PC com a simulação"})
+                        await ws.send_json(
+                            {
+                                "type": "error",
+                                "text": "rover offline: rode o "
+                                "agent.py no PC com a simulação",
+                            }
+                        )
                         continue
 
                     async def turn(text=str(msg.get("text", ""))[:2000]):
@@ -224,6 +265,7 @@ async def chat_ws(ws: WebSocket):
 
 # --------------------------------------------------------------------------- #
 
+
 async def index(_):
     return FileResponse(HERE / "index.html")
 
@@ -232,17 +274,21 @@ async def health(_):
     return JSONResponse({"ok": True, "agent_online": agent.online, "model": LLM_MODEL})
 
 
-app = Starlette(routes=[
-    Route("/", index),
-    Route("/health", health),
-    WebSocketRoute("/agent", agent_ws),
-    WebSocketRoute("/chat", chat_ws),
-])
+app = Starlette(
+    routes=[
+        Route("/", index),
+        Route("/health", health),
+        WebSocketRoute("/agent", agent_ws),
+        WebSocketRoute("/chat", chat_ws),
+    ]
+)
 
 if __name__ == "__main__":
     import uvicorn
 
-    missing = [k for k in ("LLM_API_KEY", "AGENT_TOKEN", "CHAT_PASSWORD") if not os.getenv(k)]
+    missing = [
+        k for k in ("LLM_API_KEY", "AGENT_TOKEN", "CHAT_PASSWORD") if not os.getenv(k)
+    ]
     if missing:
         print(f"warning: missing env {', '.join(missing)}", flush=True)
     uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", "8000")))

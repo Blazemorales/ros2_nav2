@@ -11,6 +11,7 @@ Steps: list topics/actions -> get_robot_pose -> try /cmd_vel (must be refused)
 -> navigate_to dx metres ahead (must answer ARRIVED) -> set_exploration
 off/on -> navigate_to far + concurrent stop_navigation (must answer CANCELED).
 """
+
 import argparse
 import asyncio
 import json
@@ -40,7 +41,9 @@ def payload(res):
 
 
 def text(res) -> str:
-    return "\n".join(getattr(c, "text", "") for c in (getattr(res, "content", None) or []))
+    return "\n".join(
+        getattr(c, "text", "") for c in (getattr(res, "content", None) or [])
+    )
 
 
 async def main(dx: float, goal_timeout: float):
@@ -50,7 +53,9 @@ async def main(dx: float, goal_timeout: float):
         names = set(topics.get("topics", [])) if isinstance(topics, dict) else set()
         need = {"/cmd_vel", "/odom", "/scan", "/map"}
         results["topics"] = need <= names
-        print("[1] topics present:", sorted(need & names), "missing:", sorted(need - names))
+        print(
+            "[1] topics present:", sorted(need & names), "missing:", sorted(need - names)
+        )
 
         actions = payload(await c.call_tool("get_actions", {}))
         results["actions"] = "/navigate_to_pose" in str(actions)
@@ -63,19 +68,30 @@ async def main(dx: float, goal_timeout: float):
         x0, y0, h0 = (float(v) for v in m.groups()) if m else (0.0, 0.0, 0.0)
 
         try:
-            await c.call_tool("publish_once", {"topic": "/cmd_vel",
-                                               "msg_type": "geometry_msgs/msg/Twist",
-                                               "msg": {"linear": {"x": 0.5}}})
+            await c.call_tool(
+                "publish_once",
+                {
+                    "topic": "/cmd_vel",
+                    "msg_type": "geometry_msgs/msg/Twist",
+                    "msg": {"linear": {"x": 0.5}},
+                },
+            )
             results["cmd_vel_refused"] = False
         except Exception as e:  # noqa: BLE001
             results["cmd_vel_refused"] = True
             print("    refusal:", str(e)[:100])
         print("[4] /cmd_vel refused:", results["cmd_vel_refused"])
 
-        gx, gy = x0 + dx * math.cos(math.radians(h0)), y0 + dx * math.sin(math.radians(h0))
+        gx, gy = x0 + dx * math.cos(math.radians(h0)), y0 + dx * math.sin(
+            math.radians(h0)
+        )
         print(f"[5] navigate_to {dx} m ahead -> ({gx:.2f}, {gy:.2f}) ...")
-        r = text(await c.call_tool("navigate_to", {"x": gx, "y": gy, "yaw_deg": h0,
-                                                   "timeout_s": goal_timeout}))
+        r = text(
+            await c.call_tool(
+                "navigate_to",
+                {"x": gx, "y": gy, "yaw_deg": h0, "timeout_s": goal_timeout},
+            )
+        )
         results["arrived"] = r.startswith("ARRIVED")
         print("    ", r)
 
@@ -85,9 +101,14 @@ async def main(dx: float, goal_timeout: float):
         print("[6] set_exploration off/on:", results["explore_toggle"])
 
         print("[7] navigate_to 10 m ahead, stop_navigation after 15 s ...")
-        far = c.call_tool("navigate_to", {"x": gx + 10 * math.cos(math.radians(h0)),
-                                          "y": gy + 10 * math.sin(math.radians(h0)),
-                                          "timeout_s": goal_timeout})
+        far = c.call_tool(
+            "navigate_to",
+            {
+                "x": gx + 10 * math.cos(math.radians(h0)),
+                "y": gy + 10 * math.sin(math.radians(h0)),
+                "timeout_s": goal_timeout,
+            },
+        )
         nav = asyncio.create_task(far)
         await asyncio.sleep(15)
         print("    ", text(await c.call_tool("stop_navigation", {})))
