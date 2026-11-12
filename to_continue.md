@@ -16,6 +16,7 @@ simulação**.
 | ROS-MCP: rosbridge no container, `rover_mcp_sim.launch.py`, proxy restrito `tools/rover_mcp_safe` (24/31 tools, `/cmd_vel` bloqueado no proxy **e** no rosbridge) | PR #2 |
 | `sim_lite` (perfil leve da câmera RGBD) + `tools/rtf_meter.py`; RTF 0,18 → 0,42 | PR #3 |
 | Deploy do site Hugo disparado por push em `main` | PR #4 |
+| Tools MCP dedicadas (`navigate_to` → ARRIVED/ABORTED/CANCELED/TIMEOUT, `stop_navigation`, `set_exploration`, `get_robot_pose`) + chat web (Render + Groq grátis + agente local) | `tools/rover_mcp_safe/rover_tools.py`, `tools/rover_web/`, `render.yaml`; página **Chat Web** |
 
 ## 1. Subir o container
 
@@ -106,17 +107,29 @@ Dicas:
   (as tools ocupam ~2,7 k tokens).
 - Ao redirecionar a saída do Python para arquivo, use `python -u`.
 
+## 4. Comandar pelo navegador (chat web)
+
+Passo a passo completo na página **Chat Web** do site
+(`hugoplate/content/english/pages/chat-web.md`). Resumo: crie uma chave grátis
+no Groq, faça o deploy do `render.yaml` no Render e rode no host:
+
+```bash
+~/.local/share/pipx/venvs/ros-mcp/bin/python -I tools/rover_web/agent.py \
+  --server wss://<seu-app>.onrender.com --token '<AGENT_TOKEN do Render>'
+```
+
 ## Pendências
 
-**Próxima fase (combinada):** tools MCP dedicadas no `rover_mcp_safe`, para
-corrigir as falhas vistas no teste com o LLM:
-- `navigate_to(x, y, yaw)`: pausa o explore, espera o resultado e devolve
-  ARRIVED/ABORTED em texto. Hoje o ros-mcp responde `success: true` mesmo com
-  o goal abortado, e o modelo afirma que chegou.
-- `stop_navigation()`: cancela os goals do Nav2 internamente, sem `/cmd_vel`.
-- `set_exploration(enabled)`: o modelo confundia o tópico `/explore/resume` com uma action.
-- `get_robot_pose()`.
-- Avaliar remover as tools genéricas de escrita e repetir o teste com LLM em `sim_lite`.
+**Navegação no terreno lunar (prioridade):** o Nav2 aborta com frequência
+("Start occupied", "exceeded maximum iterations"). O lidar 2D tem alcance de
+5 m e marca rampas do terreno como parede no `/map`. Depois o rover passa por
+cima delas e fica "dentro" de um obstáculo. Ideias: aumentar o alcance do lidar,
+usar a nuvem da câmera com filtro de altura (STVL) em vez do lidar 2D, ou
+ajustar o SLAM para limpar células. As tools relatam isso corretamente
+(ABORTED), mas a experiência de comandar o rover depende de resolver isso.
+
+**Chat web:** falta validar com Groq e Render reais (precisa da chave e da
+conta do usuário). Já foi validado localmente com o Ollama.
 
 **Desempenho:** a meta de RTF ≥ 0,6 não foi atingida (0,42 com `sim_lite`).
 O custo restante é fixo: física com passo de 1 ms (o `moon.world` não tem

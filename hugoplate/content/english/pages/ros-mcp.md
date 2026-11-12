@@ -146,7 +146,12 @@ Bloqueio no próprio rosbridge (sem o proxy): 4 s publicando 0,5 m/s em
 Scripts: `test_policy.py` (offline), `smoke_test.py` (MCP sem LLM),
 `llm_test.py` (LLM via Ollama, não interativo).
 
-### Falhas do teste com LLM (qwen2.5:7b) — pendentes
+### Falhas do teste com LLM (qwen2.5:7b)
+
+> **Resolvidas em 2026-11-12** pelas tools dedicadas `navigate_to`,
+> `stop_navigation`, `set_exploration` e `get_robot_pose` (ver [Chat Web](/chat-web)).
+> O perfil padrão do proxy (`nav`) não expõe mais `publish_once` /
+> `send_action_goal`; o comportamento antigo segue em `--profile full`.
 
 1. **Goals abortados com `explore_lite` ativo.** Os goals do LLM terminaram em
    status 6 (ABORTED). Causa provável: o `explore_lite` seguia mandando os

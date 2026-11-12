@@ -29,8 +29,26 @@ async def call(c, name, args):
 
 
 async def main():
-    mcp = safe.build_server()
     fails = 0
+    # Profile exposure: generic writes only in "full"; "minimal" = the 4 dedicated tools.
+    for prof, must_have, must_not in (
+        ("minimal", safe.DEDICATED_TOOLS, safe.READ_ONLY_TOOLS | safe.GENERIC_WRITE_TOOLS),
+        ("nav", safe.DEDICATED_TOOLS | safe.READ_ONLY_TOOLS, safe.GENERIC_WRITE_TOOLS),
+        ("full", safe.PROFILES["full"], set()),
+    ):
+        async with Client(safe.build_server(prof)) as c:
+            names = {t.name for t in await c.list_tools()}
+        ok = must_have <= names and not (must_not & names)
+        fails += not ok
+        print(f"[{'ok' if ok else 'FAIL'}] profile {prof:8s} exposes {len(names)} tools")
+    async with Client(safe.build_server("nav")) as c:
+        r = await call(c, "publish_once", {"topic": "/explore/resume", "msg_type": "std_msgs/msg/Bool",
+                                           "msg": {"data": False}})
+        ok = r == REFUSED
+        fails += not ok
+        print(f"[{'ok' if ok else 'FAIL'}] profile nav    refuses publish_once -> {r}")
+
+    mcp = safe.build_server("full")
     async with Client(mcp) as c:
         names = {t.name for t in await c.list_tools()}
         for bad in ("publish_for_durations", "set_parameter", "delete_parameter", "connect_to_robot"):

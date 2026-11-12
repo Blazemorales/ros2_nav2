@@ -7,7 +7,7 @@ publish_once / publish_for_durations, which would let a model write straight
 into /cmd_vel. This server registers the upstream ros-mcp tools in-process and
 then:
 
-  1. removes every tool that is not in TOOL_ALLOWLIST (they are not even listed
+  1. removes every tool outside the selected profile (they are not even listed
      to the client, so a model cannot hallucinate its way into them);
   2. guards the arguments of the remaining "write" tools via middleware:
        - publish_once      -> only topics in PUBLISH_TOPIC_ALLOWLIST, never any
@@ -23,6 +23,13 @@ then:
 Run it with the interpreter of the pipx venv that has ros-mcp installed:
 
   ~/.local/share/pipx/venvs/ros-mcp/bin/python -I tools/rover_mcp_safe/rover_mcp_safe.py
+
+Profiles (--profile or ROVER_MCP_PROFILE):
+  nav      (default) dedicated tools (navigate_to, stop_navigation,
+           set_exploration, get_robot_pose) + read-only ros-mcp tools
+  minimal  only the 4 dedicated tools: smallest prompt, used by the web chat
+  full     nav + the guarded generic writes (publish_once, send_action_goal,
+           cancel_action_goal, call_service): debugging only
 
 Environment:
   ROSBRIDGE_IP / ROSBRIDGE_PORT  rosbridge to connect to (127.0.0.1:9090)
@@ -43,6 +50,8 @@ from fastmcp.server.middleware import Middleware, MiddlewareContext
 
 from ros_mcp.integration import register as register_ros_mcp
 
+import rover_tools
+
 
 def _env_list(name: str, default: list[str]) -> list[str]:
     raw = os.getenv(name)
@@ -60,8 +69,7 @@ def _norm(name: str) -> str:
 # Policy
 # --------------------------------------------------------------------------- #
 
-TOOL_ALLOWLIST = {
-    # discovery / read-only
+READ_ONLY_TOOLS = {
     "get_topics",
     "get_topic_type",
     "get_topic_details",
@@ -82,12 +90,16 @@ TOOL_ALLOWLIST = {
     "get_parameter_details",
     "detect_ros_version",
     "ping_robots",
-    # guarded writes
-    "send_action_goal",
-    "cancel_action_goal",
-    "call_service",
-    "publish_once",
 }
+GENERIC_WRITE_TOOLS = {"send_action_goal", "cancel_action_goal", "call_service", "publish_once"}
+DEDICATED_TOOLS = set(rover_tools.DEDICATED_TOOLS)
+
+PROFILES = {
+    "minimal": DEDICATED_TOOLS,
+    "nav": DEDICATED_TOOLS | READ_ONLY_TOOLS,
+    "full": DEDICATED_TOOLS | READ_ONLY_TOOLS | GENERIC_WRITE_TOOLS,
+}
+DEFAULT_PROFILE = os.getenv("ROVER_MCP_PROFILE", "nav")
 # Explicitly NOT exposed: publish_for_durations (streams velocity),
 # set_parameter / delete_parameter (could retune controller limits),
 # connect_to_robot (would let the model re-point the bridge),
@@ -137,15 +149,18 @@ MAX_SUBSCRIBE_MESSAGES = 20
 
 
 class RoverSafetyMiddleware(Middleware):
+    def __init__(self, allowed: set[str]):
+        self.allowed = allowed
+
     async def on_list_tools(self, context: MiddlewareContext, call_next):
         tools = await call_next(context)
-        return [t for t in tools if t.name in TOOL_ALLOWLIST]
+        return [t for t in tools if t.name in self.allowed]
 
     async def on_call_tool(self, context: MiddlewareContext, call_next):
         name = context.message.name
         args = dict(context.message.arguments or {})
 
-        if name not in TOOL_ALLOWLIST:
+        if name not in self.allowed:
             raise ToolError(f"Tool '{name}' is disabled on this rover (safety policy).")
 
         if name == "publish_once":
@@ -168,8 +183,7 @@ class RoverSafetyMiddleware(Middleware):
         if MOTION_TOPIC_RE.search(topic) or MOTION_TYPE_RE.search(msg_type):
             raise ToolError(
                 f"Refused: publishing {msg_type or '?'} on {topic} would command motion "
-                "directly. Send a Nav2 goal with send_action_goal('/navigate_to_pose', "
-                "'nav2_msgs/action/NavigateToPose', ...) instead."
+                "directly. Use navigate_to(x, y) instead."
             )
         if topic not in PUBLISH_TOPIC_ALLOWLIST:
             raise ToolError(
@@ -220,33 +234,41 @@ class RoverSafetyMiddleware(Middleware):
 # --------------------------------------------------------------------------- #
 
 INSTRUCTIONS = """\
-You control a Sawppy-style rover running ROS 2 Jazzy + Nav2.
+You control a Sawppy-style rover (ROS 2 Jazzy + Nav2) in a Gazebo simulation.
 Rules:
-- Never try to drive the motors directly; /cmd_vel is not available to you.
-- To move, send a Nav2 goal: send_action_goal(action_name='/navigate_to_pose',
-  action_type='nav2_msgs/action/NavigateToPose', goal={'pose': {'header':
-  {'frame_id': 'map'}, 'pose': {'position': {'x': X, 'y': Y, 'z': 0.0},
-  'orientation': {'w': 1.0}}}}).
-- Read state with subscribe_once (e.g. /odom nav_msgs/msg/Odometry).
-  Do not subscribe to /scan, cameras or point clouds for more than one message.
-- Autonomous exploration is done by explore_lite, not by you. Pause/resume it
-  with publish_once(topic='/explore/resume', msg_type='std_msgs/msg/Bool',
-  msg={'data': false|true}).
+- To move, call navigate_to(x, y). It waits until the rover finishes and
+  answers ARRIVED, ABORTED, CANCELED or TIMEOUT. Only ARRIVED means the rover
+  got there; otherwise tell the user it did NOT arrive and why.
+- Coordinates are metres in the map frame; the rover starts near (0, 0).
+  For "go forward N metres", read get_robot_pose first and add N along the
+  current heading.
+- When the user says stop / halt / pare, call stop_navigation immediately.
+- Autonomous exploration is a background mode: set_exploration(true/false).
+  navigate_to pauses it automatically.
+- Use get_robot_pose to answer "where are you".
+- You cannot drive the motors directly; there is no velocity command.
+Answer briefly, in the user's language.
 """
 
 
-def build_server() -> FastMCP:
+def build_server(profile: str | None = None) -> FastMCP:
+    profile = profile or DEFAULT_PROFILE
+    if profile not in PROFILES:
+        raise SystemExit(f"unknown profile {profile!r}; choose from {', '.join(PROFILES)}")
+    allowed = PROFILES[profile]
+
     mcp = FastMCP("rover-mcp-safe", instructions=INSTRUCTIONS)
     register_ros_mcp(mcp)  # reads ROSBRIDGE_IP / ROSBRIDGE_PORT from env
+    rover_tools.register(mcp)
 
     # Defence in depth: physically remove everything not allowlisted, so the
     # policy holds even if the middleware were bypassed.
     registered = list(mcp._tool_manager._tools)  # sync view (fastmcp 2.x)
     for tool_name in registered:
-        if tool_name not in TOOL_ALLOWLIST:
+        if tool_name not in allowed:
             mcp.remove_tool(tool_name)
 
-    mcp.add_middleware(RoverSafetyMiddleware())
+    mcp.add_middleware(RoverSafetyMiddleware(allowed))
     return mcp
 
 
@@ -255,9 +277,10 @@ def main() -> None:
     p.add_argument("--transport", choices=["stdio", "http", "streamable-http"], default="stdio")
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=9000)
+    p.add_argument("--profile", choices=sorted(PROFILES), default=DEFAULT_PROFILE)
     a = p.parse_args()
 
-    mcp = build_server()
+    mcp = build_server(a.profile)
     if a.transport == "stdio":
         mcp.run(transport="stdio")
     else:
