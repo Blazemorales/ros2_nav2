@@ -7,6 +7,7 @@ Phase 5 steps 4-6 are reproducible. Each prompt runs a short tool-calling loop.
   ~/.local/share/pipx/venvs/ros-mcp/bin/python -I tools/rover_mcp_safe/llm_test.py \
       [--model qwen2.5:7b] ["prompt 1" "prompt 2" ...]
 """
+
 import argparse
 import asyncio
 import json
@@ -49,15 +50,23 @@ def result_text(res):
 
 
 async def run_prompt(http, client, tools, model, host, prompt, max_rounds):
-    msgs = [{"role": "system", "content": safe.INSTRUCTIONS}, {"role": "user", "content": prompt}]
+    msgs = [
+        {"role": "system", "content": safe.INSTRUCTIONS},
+        {"role": "user", "content": prompt},
+    ]
     print(f"\n=== USER: {prompt}")
     for _ in range(max_rounds):
         r = await http.post(
             f"{host}/api/chat",
-            json={"model": model, "messages": msgs, "tools": tools, "stream": False,
-                  # 24 tool schemas are ~2.7k tokens: Ollama's default 4096
-                  # context overflows after one or two tool results.
-                  "options": {"temperature": 0.1, "num_ctx": 8192}},
+            json={
+                "model": model,
+                "messages": msgs,
+                "tools": tools,
+                "stream": False,
+                # 24 tool schemas are ~2.7k tokens: Ollama's default 4096
+                # context overflows after one or two tool results.
+                "options": {"temperature": 0.1, "num_ctx": 8192},
+            },
         )
         r.raise_for_status()
         msg = r.json()["message"]
@@ -90,7 +99,9 @@ async def main():
     p.add_argument("prompts", nargs="*")
     a = p.parse_args()
 
-    async with Client(safe.build_server()) as client, httpx.AsyncClient(timeout=1800) as http:
+    async with Client(safe.build_server()) as client, httpx.AsyncClient(
+        timeout=1800
+    ) as http:
         tools = to_ollama_tools(await client.list_tools())
         for prompt in a.prompts or DEFAULT_PROMPTS:
             await run_prompt(http, client, tools, a.model, a.ollama, prompt, a.max_rounds)

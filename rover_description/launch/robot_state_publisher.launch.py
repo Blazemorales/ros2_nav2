@@ -58,12 +58,18 @@ def generate_launch_description():
                 "robot_description": ParameterValue(
                     Command(
                         [
-                            "xacro", " ", xacro_file,
-                            " camera_width:=", LaunchConfiguration("camera_width"),
-                            " camera_height:=", LaunchConfiguration("camera_height"),
-                            " camera_rate:=", LaunchConfiguration("camera_rate"),
+                            "xacro",
+                            " ",
+                            xacro_file,
+                            " camera_width:=",
+                            LaunchConfiguration("camera_width"),
+                            " camera_height:=",
+                            LaunchConfiguration("camera_height"),
+                            " camera_rate:=",
+                            LaunchConfiguration("camera_rate"),
                         ]
-                    ), value_type=str
+                    ),
+                    value_type=str,
                 )
             },
         ],

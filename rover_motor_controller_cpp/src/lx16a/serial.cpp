@@ -36,8 +36,7 @@ Serial::Serial(std::string device_name, unsigned int baud_rate) {
   this->io_context = std::make_unique<boost::asio::io_context>();
   this->serial_port = std::make_unique<boost::asio::serial_port>(
       boost::asio::serial_port(*this->io_context));
-  this->timer =
-      std::make_unique<boost::asio::steady_timer>(*this->io_context);
+  this->timer = std::make_unique<boost::asio::steady_timer>(*this->io_context);
 }
 
 bool Serial::connect() {
