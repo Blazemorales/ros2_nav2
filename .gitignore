@@ -2,3 +2,8 @@
 log
 __pycache__/
 .obsidian/
+
+# colcon workspace output: never commit (built per machine, inside the container)
+build/
+install/
+log/

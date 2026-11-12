@@ -1,6 +1,0 @@
-{
-  "package_name": "explore_lite_msgs",
-  "non_idl_tuples": [
-    "/workspaces/ros2_ws/explore_lite_msgs:msg/ExploreStatus.msg"
-  ]
-}
