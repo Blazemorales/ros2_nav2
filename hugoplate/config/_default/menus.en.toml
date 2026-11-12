@@ -27,6 +27,11 @@ url = "/desempenho-simulacao"
 weight = 5
 
 [[main]]
+name = "Chat Web"
+url = "/chat-web"
+weight = 6
+
+[[main]]
 parent = "Pages"
 name = "404 Page"
 url = "/404"

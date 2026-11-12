@@ -1,0 +1,25 @@
+# Render Blueprint: deploys only the rover chat page (tools/rover_web/server.py).
+# The simulation and the agent stay on the PC; see tools/rover_web/README.md.
+services:
+  - type: web
+    name: rover-chat
+    runtime: python
+    plan: free
+    rootDir: tools/rover_web
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.3"
+      - key: LLM_BASE_URL
+        value: https://api.groq.com/openai/v1
+      - key: LLM_MODEL
+        value: llama-3.3-70b-versatile
+      - key: LLM_API_KEY
+        sync: false        # Groq key: paste it in the Render dashboard
+      - key: CHAT_PASSWORD
+        sync: false        # password for the chat page
+      - key: AGENT_TOKEN
+        generateValue: true   # copy it from the dashboard to run agent.py
