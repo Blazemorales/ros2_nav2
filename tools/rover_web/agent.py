@@ -69,8 +69,10 @@ async def session(server: str, token: str, profile: str):
         hello = {"type": "hello", "instructions": safe.INSTRUCTIONS,
                  "tools": [{"name": t.name, "description": t.description or "",
                             "inputSchema": t.inputSchema} for t in tools]}
-        url = f"{server.rstrip('/')}/agent?token={token}"
-        async with websockets.connect(url, ping_interval=20, ping_timeout=60,
+        url = f"{server.rstrip('/')}/agent"
+        # header, not ?token=: query strings end up in the server's access logs
+        async with websockets.connect(url, additional_headers={"Authorization": f"Bearer {token}"},
+                                      ping_interval=20, ping_timeout=60,
                                       max_size=2**20) as ws:
             await ws.send(json.dumps(hello))
             print(f"connected to {server} with tools: {', '.join(sorted(allowed))}", flush=True)

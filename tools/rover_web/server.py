@@ -94,7 +94,11 @@ agent = AgentLink()
 
 
 async def agent_ws(ws: WebSocket):
-    if not _same(ws.query_params.get("token", ""), AGENT_TOKEN):
+    # Token in a header, never in the URL: uvicorn/Render access logs record
+    # the full path including the query string.
+    auth = ws.headers.get("authorization", "")
+    token = auth[7:] if auth.lower().startswith("bearer ") else ""
+    if not _same(token, AGENT_TOKEN):
         await ws.close(code=4401)
         return
     await ws.accept()
