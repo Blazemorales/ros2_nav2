@@ -18,6 +18,8 @@
     }
   }
   * { box-sizing: border-box; }
+  /* the author display rules below (flex) would otherwise override [hidden] */
+  [hidden] { display: none !important; }
   body { margin: 0; background: var(--bg); color: var(--text);
          font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
   main { max-width: 760px; margin: 0 auto; padding: 16px; display: flex;

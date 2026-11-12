@@ -13,7 +13,7 @@ rover_mcp_safe proxy. No port of the PC is exposed to the internet.
 Environment:
   LLM_API_KEY      key of the OpenAI-compatible provider (required)
   LLM_BASE_URL     default https://api.groq.com/openai/v1
-  LLM_MODEL        default llama-3.3-70b-versatile
+  LLM_MODEL        default openai/gpt-oss-120b
   AGENT_TOKEN      shared secret the PC agent must present (required)
   CHAT_PASSWORD    password the browser must send (required)
   PORT             listen port (Render sets it)
@@ -36,7 +36,7 @@ from starlette.routing import Route, WebSocketRoute
 from starlette.websockets import WebSocket, WebSocketDisconnect
 
 LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.groq.com/openai/v1").rstrip("/")
-LLM_MODEL = os.getenv("LLM_MODEL", "llama-3.3-70b-versatile")
+LLM_MODEL = os.getenv("LLM_MODEL", "openai/gpt-oss-120b")
 LLM_API_KEY = os.getenv("LLM_API_KEY", "")
 AGENT_TOKEN = os.getenv("AGENT_TOKEN", "")
 CHAT_PASSWORD = os.getenv("CHAT_PASSWORD", "")
