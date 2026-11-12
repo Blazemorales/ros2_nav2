@@ -1,160 +1,133 @@
-# Status: navegação autônoma (SLAM + exploração + Nav2) — FUNCIONANDO
+# Status do projeto (atualizado em 2026-11-12)
 
-Objetivo: rover simulado explora sozinho (frontier exploration) e navega com Nav2
-evitando obstáculos, sem teleop e sem goals manuais.
+Rover Sawppy simulado (ROS 2 Jazzy + Gazebo Harmonic) que explora sozinho
+(SLAM + `explore_lite` + Nav2) e pode ser comandado em linguagem natural por um
+LLM local via MCP. Tudo abaixo já está em `main` de `Blazemorales/ros2_nav2`.
 
-**Confirmado funcionando de ponta a ponta** (headless e com GUI): o rover se move
-sozinho via `explore_lite` + Nav2, o `/map` do `slam_toolbox` cresce continuamente,
-e não aparecem mais avisos de "Robot is out of bounds of the costmap".
+Documentação detalhada no site Hugo (`hugoplate/`, publicado em
+blazemorales.github.io/ros2_nav2): páginas **ROS-MCP** e **Desempenho da
+simulação**.
 
-## Decisão de escopo
+## O que já está pronto
 
-Não recriamos `rover_nav2` (não existia de fato). O repo já tinha `rover_navigation`
-(SmacHybrid/SmacLattice + RPP/TEB) funcionando. Estendemos com um pacote novo
-`rover_slam` (slam_toolbox + AMCL + explore_lite), sem tocar em
-`rover_motor_controller_cpp/serial.cpp` e `.hpp` (edições locais do usuário,
-propositalmente não commitadas/tocadas).
+| Entrega | Onde |
+|---|---|
+| Exploração autônoma: pacote `rover_slam` (slam_toolbox + AMCL + explore_lite), fixes de `/scan` frame_id, `rolling_window` no global costmap, `ros2controlcli`, arg `headless` | commit `6097a97` |
+| ROS-MCP: rosbridge no container, `rover_mcp_sim.launch.py`, proxy restrito `tools/rover_mcp_safe` (24/31 tools, `/cmd_vel` bloqueado no proxy **e** no rosbridge) | PR #2 |
+| `sim_lite` (perfil leve da câmera RGBD) + `tools/rtf_meter.py`; RTF 0,18 → 0,42 | PR #3 |
+| Deploy do site Hugo disparado por push em `main` | PR #4 |
 
-## O que foi feito
+## 1. Subir o container
 
-- Novo pacote `rover_slam/`:
-  - `config/slam_toolbox.yaml`, `config/amcl.yaml`, `config/explore_params.yaml`
-  - `launch/slam.launch.py` (slam_toolbox como lifecycle node, configure->activate)
-  - `launch/amcl.launch.py` (map_server + amcl + lifecycle_manager_localization)
-  - `launch/explore.launch.py` (explore_lite, do fork robo-friends/m-explore-ros2)
-- `rover_gazebo/launch/gazebo.launch.py` modificado:
-  - args novos: `slam` (default True), `explore` (default True), `map`,
-    `headless` (default False — roda `gz sim -s`, sem GUI, útil para
-    testes/CI sem gastar CPU em renderização)
-  - trocou o include único de `rover_localization/launch/localization.launch.py`
-    (que também subia o rtabmap) por dois includes separados:
-    `rgbd_odometry.launch.py` + `ekf.launch.py` (só odometria, sem SLAM visual)
-  - inclui `rover_slam`'s slam.launch.py / amcl.launch.py / explore.launch.py
-    condicionalmente
-- `rover_gazebo/launch/moon.launch.py`: agora repassa `headless`, `slam`,
-  `explore`, `launch_rviz` para `gazebo.launch.py` (antes ficavam presos aos
-  defaults, não dava pra sobrescrever via `ros2 launch ... slam:=False` etc.)
+Não há ROS no host, e isso é de propósito: tudo roda no container **`rover_mcp`**
+(imagem `rover:latest`, `--net=host`, repo montado em `/root/ros2_ws/src`).
+O workspace já está compilado e o `.bashrc` do container já faz
+`source /root/ros2_ws/install/setup.bash`.
 
-## Bugs encontrados e corrigidos
-
-1. **Conflito de dono do `/map`**: `rtabmap` (SLAM visual, dentro do
-   `localization.launch.py` original) competia com `slam_toolbox` por
-   `map->odom`. Corrigido subindo só `rgbd_odometry` + `ekf` (odometria),
-   sem o `rtabmap` completo.
-2. **slam_toolbox nunca ativava**: é lifecycle node, launch inicial usava
-   `Node` simples. Corrigido com `LifecycleNode` + `EmitEvent`/
-   `RegisterEventHandler` (configure -> activate), copiando o padrão do
-   `online_async_launch.py` oficial do slam_toolbox.
-3. **Processos zumbis entre testes**: `pkill -f` não matava tudo de forma
-   confiável; sobravam `robot_state_publisher`/`joint_state_publisher`/
-   bridges de execuções anteriores rodando junto com a atual, brigando pela
-   tf. **Forma segura de limpar**: dentro do container,
-   `ps -eo pid=,comm= | awk '$1 != 1 {print $1}'` e matar cada PID — nunca usar
-   `pkill -f` com padrões genéricos tipo `ros2` porque casa com a própria
-   linha de comando do `docker exec bash -c "..."` (que contém `/ros2_ws/`) e
-   mata o processo errado (já aconteceu de derrubar o PID 1 do container e
-   precisar `docker start confident_ellis` de novo).
-4. **`/scan` com frame_id errado** (causa raiz do slam_toolbox descartar
-   todo scan, mensagens "Message Filter dropping message... frame does not
-   exist" / "timestamp earlier than transform cache"): o sensor lidar
-   (`rover_description/urdf/sensors/hokuyo.urdf.xacro`) não tinha a tag
-   `<gz_frame_id>`, então o Gazebo publicava `/scan` com
-   `frame_id: rover/base_link/lidar` — uma frame que **não existe** na
-   árvore de tf (o link real se chama `laser_link`). Corrigido adicionando
-   `<gz_frame_id>${prefix}_link</gz_frame_id>` dentro do `<sensor>` do lidar,
-   igual já era feito pro RGBD (`<optical_frame_id>camera_frame</optical_frame_id>`
-   em `asus_xtion.urdf.xacro`).
-5. **"Robot is out of bounds of the costmap" / explore_lite "Robot out of
-   costmap bounds"**: o `global_costmap` (em `rover_navigation/params/costmaps.yaml`)
-   não tinha `rolling_window`, então seus limites vinham direto do `/map` do
-   slam_toolbox. No início da exploração, a área bem embaixo/atrás do robô
-   ainda não tinha sido varrida pelo lidar (ponto cego atrás do sensor), então
-   o `/map` nascia sem cobrir a pose do robô — e como o `explore_lite` também
-   lê `/global_costmap/costmap`, isso travava os dois num deadlock: sem
-   costmap válido não navega, sem navegar o mapa não cresce. Corrigido
-   adicionando `rolling_window: true`, `width: 30`, `height: 30` ao
-   `global_costmap` — ele passa a ficar sempre centrado no robô, independente
-   de onde o `/map` do SLAM já cresceu.
-6. **Gazebo GUI travava com "Authorization required, but no authorization
-   protocol specified" / "could not connect to display :0" e o launch matava
-   o `gz sim server` inteiro junto com a GUI**: faltava autorização X11 do
-   host pro container. Corrigido no host com `xhost +local:docker` (não
-   persiste entre reboots do host — rodar de novo se voltar a acontecer).
-   Para testes automatizados/CI, use `headless:=True` (novo arg) em vez de
-   depender do X11.
-7. **Robô nunca se movia fisicamente, mesmo publicando `/cmd_vel` manualmente
-   e mesmo com Nav2 enviando goals** (causa raiz de tudo "falhar em progredir"
-   e do `explore_lite` esgotar frontiers rapidinho sem o robô sair do lugar):
-   o pacote `ros2controlcli` (fornece o verbo `ros2 control`, usado por
-   `rover_gazebo/launch/include/spawn.launch.py` pra ativar
-   `joint_state_broadcaster`/`position_controller`/`velocity_controller` via
-   `ros2 control load_controller --set-state active ...`) não estava
-   instalado na imagem/container. Os processos de spawn morriam na hora com
-   `invalid choice: 'control'` (exit code 2), e
-   `ros2 service call /controller_manager/list_controllers ...` confirmava
-   **zero controllers ativos**. Corrigido:
-   - instalado `ros-jazzy-ros2controlcli` no container (`apt-get install`;
-     não persiste se a imagem for reconstruída do zero)
-   - adicionado `<depend>ros2controlcli</depend>` em `rover_gazebo/package.xml`
-     pra que `rosdep install --from-paths src --ignore-src -r -y` (chamado no
-     `Dockerfile` da raiz do repo) instale isso automaticamente em builds
-     futuros da imagem.
-
-## Status atual (CONFIRMADO funcionando)
-
-Testado tanto com `headless:=True` quanto com a GUI normal do Gazebo
-(depois do `xhost +local:docker`):
-- `/scan` publica de verdade, com `frame_id: laser_link` correto.
-- `map->base_link` resolve e atualiza continuamente.
-- `/map` cresce sem parar enquanto o robô explora (visto crescendo de
-  90x62 pra 173x193+ células em ~1 min de exploração).
-- **Zero** ocorrências de "Robot is out of bounds of the costmap" ou
-  "[FrontierSearch] Robot out of costmap bounds".
-- `explore_lite` conecta no Nav2, manda goals sozinho, e **não** para cedo
-  com "All frontiers traversed/tried out" (isso só acontecia antes porque o
-  robô ficava fisicamente parado no lugar — bug #7).
-- Robô se desloca de verdade (odom saindo de (0,0) e progredindo,
-  ex.: (0.33, 2.10) -> (1.72, 3.33) em ~1 min), sem teleop nem goal manual.
-- `ros2 service call /controller_manager/list_controllers ...` mostra os 3
-  controllers (`joint_state_broadcaster`, `position_controller`,
-  `velocity_controller`) com `state='active'`.
-
-## Pendências conhecidas (não bloqueantes, só flagar depois)
-
-- Footprint em `rover_navigation/params/costmaps.yaml` é placeholder
-  0.6x0.6m, não é a medida real do chassi Sawppy — só ajustar se o
-  comportamento de desvio de obstáculo parecer errado na prática.
-- `width`/`height: 30` (metros) do `global_costmap` rolling window é um
-  chute razoável pro tamanho do `moon.world` (~100x100m de terreno) — se o
-  explore_lite parecer "míope" (só olhando frontiers muito perto), considerar
-  aumentar.
-- Ainda aparecem alguns "Message Filter dropping message... timestamp
-  earlier than transform cache" ocasionais e "Control loop missed its
-  desired rate" no `controller_server` — o container está sob carga alta
-  (load average bem acima do número de cores com Gazebo + Nav2 + SLAM todos
-  juntos); não impede o mapeamento/navegação de progredir, mas é sintoma de
-  contenção de CPU. `headless:=True` ajuda bastante.
-- Nenhum commit foi feito ainda no fork; tudo isso está em working tree
-  (inclui `rover_navigation/params/costmaps.yaml`,
-  `rover_gazebo/launch/gazebo.launch.py`, `rover_gazebo/launch/moon.launch.py`,
-  `rover_gazebo/package.xml`, além do já existente `rover_slam/` e o fix do
-  `hokuyo.urdf.xacro`).
-- Se a imagem Docker for reconstruída do zero, o `ros2controlcli` já vem
-  incluído via `rosdep install` (fix #7 no `package.xml`) — não precisa mais
-  instalar manualmente.
-
-## Como retomar
-
-Container Docker `confident_ellis` (imagem `ros2_rover:latest`/`rover:latest`),
-repo montado em `/workspaces/ros2_ws` dentro do container (== este diretório
-no host). Usar `docker start confident_ellis` se estiver parado, depois
-`docker exec -it confident_ellis bash`. Não instalar ROS2/colcon no host
-(Debian Trixie) — tudo roda dentro do container, de propósito.
-
-Pra rodar com GUI: `xhost +local:docker` no host antes (não persiste entre
-reboots). Pra rodar sem GUI (CI/testes rápidos): `headless:=True`.
-
-Exemplo:
+```bash
+docker start rover_mcp            # se estiver parado (docker ps -a para ver)
+docker exec -it rover_mcp bash    # abre um terminal dentro dele
 ```
-ros2 launch rover_gazebo moon.launch.py slam:=True explore:=True headless:=True
+
+Se o container tiver sido apagado, recrie-o:
+
+```bash
+docker run -d --name rover_mcp --net=host \
+  -v ~/Documentos/ros2_nav2:/root/ros2_ws/src rover:latest sleep infinity
+docker exec rover_mcp bash -lc 'cd /root/ros2_ws && colcon build --symlink-install'
 ```
+
+Depois de mudar código C++, launch ou config, recompile só o necessário:
+
+```bash
+docker exec rover_mcp bash -lc 'cd /root/ros2_ws && colcon build --symlink-install --packages-select rover_gazebo rover_bringup'
+```
+
+## 2. Subir a simulação
+
+Dentro do container:
+
+```bash
+ros2 launch rover_bringup rover_mcp_sim.launch.py \
+  slam:=true explore:=false headless:=true launch_rviz:=false sim_lite:=true
+```
+
+- `headless:=true`: Gazebo sem janela. O container não tem `DISPLAY`; para usar a
+  GUI seria preciso recriá-lo com X11 e rodar `xhost +local:docker` no host.
+- `explore:=true`: o rover explora sozinho. Deixe `false` para testar goals
+  do LLM, senão o `explore_lite` preempta os goals (ver Pendências).
+- O rosbridge sobe 5 s depois, na porta 9090 (`--net=host`, então é a 9090 do host).
+
+Para conferir se está tudo de pé (em outro `docker exec -it rover_mcp bash`):
+
+```bash
+ros2 topic echo /odom --once
+ros2 action list | grep navigate_to_pose
+ros2 service call /controller_manager/list_controllers controller_manager_msgs/srv/ListControllers
+# os 3 controllers devem aparecer com state='active'
+```
+
+Para parar, use Ctrl+C no launch. Para um reinício limpo, use `docker restart rover_mcp`.
+**Nunca** use `pkill -f <padrão>` dentro de `docker exec bash -c "..."`: o padrão
+casa com a própria linha de comando e já derrubou o PID 1 do container.
+
+## 3. Testar a IA (no host, fora do container)
+
+Pré-requisitos no host (já instalados neste PC): `ollama` com `qwen2.5:7b`,
+e `pipx install ros-mcp ollmcp`.
+
+Com a simulação rodando, faça os passos em ordem, do mais barato ao mais caro:
+
+```bash
+cd ~/Documentos/ros2_nav2
+PY=~/.local/share/pipx/venvs/ros-mcp/bin/python
+
+# a) política do proxy, offline (não precisa de ROS)
+$PY -I tools/rover_mcp_safe/test_policy.py
+
+# b) MCP ponta a ponta SEM LLM: lê /odom, tenta /cmd_vel (deve ser recusado),
+#    manda um goal Nav2 2 m à frente, pausa e retoma o explore
+$PY -I tools/rover_mcp_safe/smoke_test.py --dx 2.0
+
+# c) LLM de verdade, não interativo (prompts padrão ou os seus)
+$PY -u -I tools/rover_mcp_safe/llm_test.py --model qwen2.5:7b \
+  "Where is the rover right now? Read its odometry and tell me x and y."
+
+# d) chat interativo
+tools/rover_mcp_safe/setup_ollmcp.sh        # uma vez; robô real: setup_ollmcp.sh <IP da Pi>
+ollmcp -j ~/.config/ollmcp/rover-servers.json
+```
+
+Dicas:
+- Sem GPU, o qwen2.5:7b ao lado do Gazebo leva **minutos** por rodada (~15 min
+  no pior caso). Teste com prompts curtos. Para liberar CPU: `ollama stop qwen2.5:7b`.
+- O `ollmcp` pede confirmação a cada tool call (human-in-the-loop). Isso é intencional.
+- Use temperatura ≤ 0.1 (o `setup_ollmcp.sh` já configura) e contexto ≥ 8192
+  (as tools ocupam ~2,7 k tokens).
+- Ao redirecionar a saída do Python para arquivo, use `python -u`.
+
+## Pendências
+
+**Próxima fase (combinada):** tools MCP dedicadas no `rover_mcp_safe`, para
+corrigir as falhas vistas no teste com o LLM:
+- `navigate_to(x, y, yaw)`: pausa o explore, espera o resultado e devolve
+  ARRIVED/ABORTED em texto. Hoje o ros-mcp responde `success: true` mesmo com
+  o goal abortado, e o modelo afirma que chegou.
+- `stop_navigation()`: cancela os goals do Nav2 internamente, sem `/cmd_vel`.
+- `set_exploration(enabled)`: o modelo confundia o tópico `/explore/resume` com uma action.
+- `get_robot_pose()`.
+- Avaliar remover as tools genéricas de escrita e repetir o teste com LLM em `sim_lite`.
+
+**Desempenho:** a meta de RTF ≥ 0,6 não foi atingida (0,42 com `sim_lite`).
+O custo restante é fixo: física com passo de 1 ms (o `moon.world` não tem
+bloco `<physics>`) e o gpu_lidar. A próxima ideia é testar `max_step_size`
+0,002/0,004 com checagens de sanidade.
+
+**Não bloqueantes:**
+- O footprint em `rover_navigation/params/costmaps.yaml` é um placeholder de
+  0,6×0,6 m, não a medida real do chassi.
+- A rolling window do `global_costmap` tem 30×30 m. Se o explore parecer
+  "míope", aumente.
+- Avisos ocasionais de "Control loop missed its desired rate" e "Message
+  Filter dropping message" vêm de contenção de CPU. `headless:=true` e
+  `sim_lite:=true` ajudam.
