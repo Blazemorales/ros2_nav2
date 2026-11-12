@@ -33,10 +33,10 @@ navegador ──ws /chat──▶ server.py (Render, grátis) ──HTTPS──�
 O PC fica atrás do roteador, então o site não consegue chamar o PC. Por isso
 quem abre a conexão é o **agente no PC**. Nenhuma porta do PC fica exposta na
 internet, e a política de segurança (`rover_mcp_safe`) continua rodando no PC:
-mesmo que o site fosse comprometido, ele só conseguiria pedir as 4 tools
+mesmo que o site fosse comprometido, ele só conseguiria pedir as 5 tools
 abaixo, nunca `/cmd_vel`.
 
-## As 4 tools dedicadas
+## As 5 tools dedicadas
 
 Elas substituem as tools genéricas do ros-mcp que confundiam o modelo (ver
 [ROS-MCP](/ros-mcp), seção "Falhas do teste com LLM").
@@ -44,14 +44,15 @@ Elas substituem as tools genéricas do ros-mcp que confundiam o modelo (ver
 | Tool | O que faz |
 |---|---|
 | `navigate_to(x, y, yaw_deg, timeout_s)` | pausa o explore, manda o goal ao Nav2, **espera o fim** e responde `ARRIVED` / `ABORTED` / `CANCELED` / `TIMEOUT`, com a posição final e a distância até o alvo. Recusa alvos a mais de 30 m. |
+| `run_mission(steps, on_failure)` | executa até 12 passos em ordem (`go_to`, `move_forward`, `wait`, `return_to_base`) e responde `MISSION COMPLETE` ou `MISSION FAILED` com uma linha por passo. Para no primeiro passo que falhar (ou volta para a base com `on_failure="return_to_base"`). O `stop_navigation` interrompe a missão. |
 | `stop_navigation()` | pausa o explore e cancela **todos** os goals do Nav2, inclusive os do `explore_lite` |
 | `set_exploration(enabled)` | liga/desliga o `explore_lite` |
 | `get_robot_pose()` | posição no frame `map`, calculada pelo `/tf` (map→odom→base_link) |
 
 Os perfis do `rover_mcp_safe.py` (`--profile` ou `ROVER_MCP_PROFILE`) são:
 
-- `nav` (padrão): as 4 tools mais as de leitura.
-- `minimal`: só as 4 tools. É o perfil usado pelo chat web.
+- `nav` (padrão): as 5 tools mais as de leitura.
+- `minimal`: só as 5 tools. É o perfil usado pelo chat web.
 - `full`: inclui as escritas genéricas antigas, só para depuração.
 
 O botão **PARAR** da página chama `stop_navigation` direto, sem passar pelo LLM,
@@ -156,6 +157,8 @@ Bateria de 7 goals (quadrado de 3 m, volta à origem, 6 m e 10 m):
 | Chat com senha errada | ✅ "senha incorreta" |
 | Chat → LLM (Ollama llama3.2, local) → `get_robot_pose` → resposta | ✅ ponta a ponta |
 | Botão PARAR | ✅ chama `stop_navigation` direto, sem passar pelo LLM |
+| Missão "ande 3 m, espere 3 s, volte para a base" | ✅ `MISSION COMPLETE` em 215 s (andou 2,5 m: tolerância de 0,5 m do Nav2) |
+| Missão cancelada com `stop_navigation` no meio | ✅ `MISSION FAILED`, passo 1 `CANCELED`, os demais não rodaram |
 | Fluxo com Groq + Render reais | ⏳ falta a chave/conta do usuário |
 
 
