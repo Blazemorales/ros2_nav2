@@ -95,6 +95,69 @@ def use_scan_in_local_costmap(params):
     }
 
 
+# Lidar beam height above the ground (base_link 0.148 m over the wheel axis +
+# 0.06 m wheel radius + 0.005 m mount). Terrain rising that much within a
+# given range intersects the "horizontal" 2D beam.
+LIDAR_HEIGHT_M = 0.21
+# Only hits closer than this count as obstacles: rising 0.21 m within 0.8 m is
+# a ~15 deg slope, about what a rocker-bogie should avoid. Farther hits are
+# gentle slopes the rover climbs without trouble.
+TERRAIN_MARK_RANGE_M = 0.8
+
+
+def _scan_obstacle_layer(mark_range, raytrace_range):
+    return {
+        "plugin": "nav2_costmap_2d::ObstacleLayer",
+        "enabled": True,
+        "footprint_clearing_enabled": True,
+        "observation_sources": "scan",
+        "scan": {
+            "topic": "/scan",
+            "data_type": "LaserScan",
+            "max_obstacle_height": 5.0,
+            "min_obstacle_height": -5.0,
+            "obstacle_max_range": mark_range,
+            "obstacle_min_range": 0.0,
+            "raytrace_max_range": raytrace_range,
+            "raytrace_min_range": 0.0,
+            # no return = nothing within range: clear the whole ray. On open
+            # terrain most beams return inf, and without this the known free
+            # space (what explore_lite treats as explored) would never grow.
+            "inf_is_valid": True,
+            "clearing": True,
+            "marking": True,
+        },
+    }
+
+
+def use_uneven_terrain(params):
+    """Plan on uneven terrain without trusting the 2D lidar's ground hits.
+
+    The 2D lidar sits ~0.21 m above the ground, so every gentle slope ahead
+    shows up as a wall: on moon.world (a bare heightmap, no rocks) all of the
+    SLAM map's "obstacles" are terrain. Planning on that map made Nav2 abort
+    with "Start occupied" (the rover drove onto a phantom wall) and "exceeded
+    maximum iterations" (goals boxed in by phantom walls).
+
+    The global costmap is therefore built straight from /scan instead of the
+    SLAM /map: beams clear free space up to 5 m, but only returns closer than
+    TERRAIN_MARK_RANGE_M (steep terrain) are marked, and the footprint is
+    always cleared. slam_toolbox keeps running for localisation (map->odom).
+    The /scan local costmap (sim_lite) gets the same marking range.
+    """
+    glob = params["global_costmap"]["global_costmap"]["ros__parameters"]
+    glob["plugins"] = ["obstacle_layer" if p == "static_layer" else p for p in glob["plugins"]]
+    glob.pop("static_layer", None)
+    glob["obstacle_layer"] = _scan_obstacle_layer(TERRAIN_MARK_RANGE_M, 5.0)
+
+    local = params["local_costmap"]["local_costmap"]["ros__parameters"]
+    # RPP only follows path poses inside the local costmap; 6x6 m (3 m reach)
+    # tolerates the drift the rover builds up on slopes before the next replan.
+    local["width"] = local["height"] = 6
+    if "obstacle_layer" in local:
+        local["obstacle_layer"] = _scan_obstacle_layer(TERRAIN_MARK_RANGE_M, 3.0)
+
+
 def generate_launch_description():
     # Get the launch directory
     pkg_dir = get_package_share_directory("rover_navigation")
@@ -102,10 +165,17 @@ def generate_launch_description():
 
     stdout_linebuf_envvar = SetEnvironmentVariable("RCUTILS_LOGGING_BUFFERED_STREAM", "1")
 
-    def run_nav2(context, planner, controller, obstacle_source):
+    def run_nav2(context, planner, controller, obstacle_source, uneven_terrain):
         planner = str(context.perform_substitution(planner))
         controller = str(context.perform_substitution(controller))
         obstacle_source = str(context.perform_substitution(obstacle_source))
+        uneven = str(context.perform_substitution(uneven_terrain)).lower() == "true"
+
+        def patch(params):
+            if obstacle_source == "scan":
+                use_scan_in_local_costmap(params)
+            if uneven:
+                use_uneven_terrain(params)
 
         params_file = merge_yaml_files(
             [
@@ -114,7 +184,7 @@ def generate_launch_description():
                 os.path.join(pkg_dir, "params", f"{planner}.yaml"),
                 os.path.join(pkg_dir, "params", f"{controller}.yaml"),
             ],
-            patch=use_scan_in_local_costmap if obstacle_source == "scan" else None,
+            patch=patch,
         )
 
         param_substitutions = {"use_sim_time": LaunchConfiguration("use_sim_time")}
@@ -238,8 +308,17 @@ def generate_launch_description():
         description="Local costmap obstacles from /camera/points (camera) or /scan",
     )
 
+    uneven_terrain = LaunchConfiguration("uneven_terrain")
+    uneven_terrain_cmd = DeclareLaunchArgument(
+        "uneven_terrain",
+        default_value="false",
+        description="Global costmap from /scan marking only close (steep) hits, "
+        "instead of the SLAM map; for outdoor terrain without walls",
+    )
+
     nav2_cmd = OpaqueFunction(
-        function=run_nav2, args=[planner, controller, local_obstacle_source]
+        function=run_nav2,
+        args=[planner, controller, local_obstacle_source, uneven_terrain],
     )
 
     # Create the launch description and populate
@@ -260,6 +339,7 @@ def generate_launch_description():
     ld.add_action(planner_cmd)
     ld.add_action(controller_cmd)
     ld.add_action(local_obstacle_source_cmd)
+    ld.add_action(uneven_terrain_cmd)
 
     # Add the actions to launch all of the navigation nodes
     ld.add_action(nav2_cmd)

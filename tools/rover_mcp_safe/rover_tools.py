@@ -35,7 +35,8 @@ STATUS_TEXT = {0: "UNKNOWN", 1: "ACCEPTED", 2: "EXECUTING", 3: "CANCELING",
                4: "SUCCEEDED", 5: "CANCELED", 6: "ABORTED"}
 
 MAX_GOAL_DISTANCE_M = float(os.getenv("ROVER_MCP_MAX_GOAL_DISTANCE", "30"))
-DEFAULT_NAV_TIMEOUT_S = float(os.getenv("ROVER_MCP_NAV_TIMEOUT", "300"))
+# The simulation runs at ~0.4x real time: 6 m took 86 s, 10 m needed > 300 s.
+DEFAULT_NAV_TIMEOUT_S = float(os.getenv("ROVER_MCP_NAV_TIMEOUT", "600"))
 
 
 def _url() -> str:

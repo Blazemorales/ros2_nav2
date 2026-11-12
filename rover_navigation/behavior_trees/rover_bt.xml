@@ -1,18 +1,31 @@
-<root main_tree_to_execute="MainTree">
+<!--
+  NavigateToPose for the rover.
+
+  - Replans from the current pose every 3 s (not only when the path becomes
+    invalid): on loose/uneven terrain the rover drifts off the path, and once
+    it is farther from it than the local costmap extent RPP aborts with
+    "Resulting plan has 0 poses in it".
+  - On failure, retries up to 4 times after clearing both costmaps and
+    waiting. No BackUp/Spin recoveries: they misbehave on the rover's
+    Ackermann-style steering (they were removed upstream in 12abacc).
+-->
+<root BTCPP_format="4" main_tree_to_execute="MainTree">
   <BehaviorTree ID="MainTree">
-    <PipelineSequence name="NavigateWithReplanning">
-      <RateController hz="1.0">
-        <Fallback> 
-          <ReactiveSequence>
-            <Inverter>
-              <GlobalUpdatedGoal/>
-            </Inverter>
-            <IsPathValid path="{path}"/>
-          </ReactiveSequence>
+    <RecoveryNode number_of_retries="4" name="NavigateRecovery">
+      <PipelineSequence name="NavigateWithReplanning">
+        <RateController hz="0.333">
           <ComputePathToPose goal="{goal}" path="{path}" planner_id="GridBased"/>
-        </Fallback>
-      </RateController>
-      <FollowPath path="{path}" controller_id="FollowPath"/>
-    </PipelineSequence>
+        </RateController>
+        <FollowPath path="{path}" controller_id="FollowPath"/>
+      </PipelineSequence>
+      <ReactiveFallback name="RecoveryFallback">
+        <GoalUpdated/>
+        <Sequence name="ClearAndWait">
+          <ClearEntireCostmap name="ClearLocalCostmap" service_name="local_costmap/clear_entirely_local_costmap"/>
+          <ClearEntireCostmap name="ClearGlobalCostmap" service_name="global_costmap/clear_entirely_global_costmap"/>
+          <Wait name="WaitRecovery" wait_duration="2.0"/>
+        </Sequence>
+      </ReactiveFallback>
+    </RecoveryNode>
   </BehaviorTree>
 </root>
