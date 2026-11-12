@@ -8,6 +8,7 @@
 ## Pages
 - [Pages](https://blazemorales.github.io/ros2_nav2/pages/index.md)
 
+- [Chat Web — Comandar o Rover por um Link](https://blazemorales.github.io/ros2_nav2/chat-web/index.md): Página pública (Render) onde um LLM gratuito (Groq) comanda o rover simulado no PC, através de um agente local que mantém a camada de segurança.
 - [Comandos Essenciais — Simulação Gazebo do Rover](https://blazemorales.github.io/ros2_nav2/comandos-essenciais-simulacao/index.md): Passo a passo completo, sequencial e testado para compilar e rodar a simulação do rover Sawppy no Gazebo (mundos Moon/Mars/Forest), com SLAM e exploração autônoma.
 - [Desempenho da Simulação — RTF do Gazebo](https://blazemorales.github.io/ros2_nav2/desempenho-simulacao/index.md): Por que a simulação do rover rodava a 18% do tempo real, como o gargalo foi isolado e o perfil leve sim_lite que dobra o RTF.
 - [Diário de Bordo — Rover Sim](https://blazemorales.github.io/ros2_nav2/diario-de-bordo/index.md): Log técnico do desenvolvimento da simulação do rover: decisões, bugs encontrados e correções.
