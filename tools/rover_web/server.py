@@ -67,7 +67,7 @@ class AgentLink:
     def online(self) -> bool:
         return self.ws is not None
 
-    async def call(self, name: str, args: dict, timeout: float = 960.0) -> str:
+    async def call(self, name: str, args: dict, timeout: float = 3600.0) -> str:
         if not self.ws:
             return "ERROR: the rover is offline (the agent on the PC is not connected)."
         cid = uuid.uuid4().hex

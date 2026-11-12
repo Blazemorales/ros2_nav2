@@ -19,8 +19,12 @@ import asyncio
 import json
 import math
 import os
+import threading
 import time
 import uuid
+from typing import Literal
+
+from pydantic import BaseModel, Field
 
 import websocket  # websocket-client (already a ros-mcp dependency)
 
@@ -46,6 +50,17 @@ STATUS_TEXT = {
 MAX_GOAL_DISTANCE_M = float(os.getenv("ROVER_MCP_MAX_GOAL_DISTANCE", "30"))
 # The simulation runs at ~0.4x real time: 6 m took 86 s, 10 m needed > 300 s.
 DEFAULT_NAV_TIMEOUT_S = float(os.getenv("ROVER_MCP_NAV_TIMEOUT", "600"))
+
+# Mission "base": where the rover starts (map origin) unless overridden.
+BASE_X = float(os.getenv("ROVER_MCP_BASE_X", "0"))
+BASE_Y = float(os.getenv("ROVER_MCP_BASE_Y", "0"))
+MAX_MISSION_STEPS = 12
+MAX_WAIT_S = 120.0
+MISSION_WALL_LIMIT_S = float(os.getenv("ROVER_MCP_MISSION_LIMIT", "2700"))
+
+# Set by stop_navigation so a running mission stops between/inside steps,
+# not only the Nav2 goal that happens to be active.
+_STOP = threading.Event()
 
 
 def _url() -> str:
@@ -251,6 +266,7 @@ def set_exploration_sync(enabled: bool) -> str:
 
 
 def stop_navigation_sync() -> str:
+    _STOP.set()
     with _Bridge() as b:
         _set_exploration_sync(b, False)
         details = _cancel_all_sync(b)
@@ -347,11 +363,112 @@ def navigate_to_sync(x: float, y: float, yaw_deg: float, timeout_s: float) -> st
     )
 
 
+class MissionStep(BaseModel):
+    """One step of a mission."""
+
+    action: Literal["go_to", "move_forward", "wait", "return_to_base"] = Field(
+        description="go_to: drive to (x, y) in the map frame; move_forward: drive "
+        "`meters` (> 0) straight along the current heading; wait: stay "
+        "still for `seconds`; return_to_base: drive back to the base (start point)."
+    )
+    x: float | None = Field(None, description="go_to: target x in metres (map frame)")
+    y: float | None = Field(None, description="go_to: target y in metres (map frame)")
+    yaw_deg: float | None = Field(None, description="go_to: final heading in degrees")
+    meters: float | None = Field(
+        None, description="move_forward: distance in metres (> 0)"
+    )
+    seconds: float | None = Field(None, description="wait: duration in seconds")
+
+
+def _status_of(text: str) -> str:
+    return text.split(":", 1)[0].split(" ", 1)[0]
+
+
+def _run_step(step: MissionStep, timeout_s: float) -> tuple[str, str]:
+    """Return (status, text). status is ARRIVED/DONE on success."""
+    a = step.action
+    if a == "wait":
+        secs = min(max(step.seconds or 0.0, 0.0), MAX_WAIT_S)
+        if _STOP.wait(secs):
+            return "CANCELED", f"CANCELED: wait interrupted by stop after <{secs:.0f} s"
+        return "DONE", f"DONE: waited {secs:.0f} s"
+    if a == "return_to_base":
+        text = navigate_to_sync(BASE_X, BASE_Y, 0.0, timeout_s)
+        return _status_of(text), text
+    if a == "go_to":
+        if step.x is None or step.y is None:
+            return "ERROR", "ERROR: go_to needs x and y"
+        text = navigate_to_sync(step.x, step.y, step.yaw_deg or 0.0, timeout_s)
+        return _status_of(text), text
+    if a == "move_forward":
+        if not step.meters or step.meters <= 0:
+            return "ERROR", "ERROR: move_forward needs meters > 0"
+        with _Bridge() as b:
+            p = _pose_sync(b)
+        if not p or p["frame"] != "map":
+            return "ERROR", "ERROR: current pose in the map frame is unknown"
+        h = math.radians(p["yaw_deg"])
+        gx, gy = p["x"] + step.meters * math.cos(h), p["y"] + step.meters * math.sin(h)
+        text = navigate_to_sync(gx, gy, p["yaw_deg"], timeout_s)
+        return _status_of(text), text
+    return "ERROR", f"ERROR: unknown action {a}"
+
+
+def run_mission_sync(
+    steps: list[MissionStep], on_failure: str, step_timeout_s: float
+) -> str:
+    if not steps:
+        return "REFUSED: the mission has no steps."
+    if len(steps) > MAX_MISSION_STEPS:
+        return f"REFUSED: at most {MAX_MISSION_STEPS} steps per mission."
+    _STOP.clear()
+    t0 = time.monotonic()
+    lines, ok = [], True
+    for i, step in enumerate(steps, 1):
+        if _STOP.is_set():
+            lines.append(f"{i}. {step.action}: CANCELED (stop requested)")
+            ok = False
+            break
+        if time.monotonic() - t0 > MISSION_WALL_LIMIT_S:
+            lines.append(f"{i}. {step.action}: TIMEOUT (mission time limit reached)")
+            ok = False
+            break
+        ts = time.monotonic()
+        status, text = _run_step(step, step_timeout_s)
+        lines.append(f"{i}. {step.action} [{time.monotonic() - ts:.0f} s]: {text}")
+        if status not in ("ARRIVED", "DONE"):
+            ok = False
+            break
+
+    if not ok and on_failure == "return_to_base" and not _STOP.is_set():
+        status, text = _run_step(MissionStep(action="return_to_base"), step_timeout_s)
+        lines.append(f"recovery: return_to_base: {text}")
+
+    total = time.monotonic() - t0
+    done = sum(
+        1
+        for ln in lines
+        if not ln.startswith("recovery") and ("ARRIVED" in ln or "DONE" in ln)
+    )
+    head = (
+        f"MISSION COMPLETE: all {len(steps)} steps succeeded in {total:.0f} s."
+        if ok
+        else f"MISSION FAILED after {done} of {len(steps)} steps ({total:.0f} s)."
+    )
+    return head + "\n" + "\n".join(lines)
+
+
 # --------------------------------------------------------------------------- #
 # MCP registration
 # --------------------------------------------------------------------------- #
 
-DEDICATED_TOOLS = ("navigate_to", "stop_navigation", "set_exploration", "get_robot_pose")
+DEDICATED_TOOLS = (
+    "navigate_to",
+    "run_mission",
+    "stop_navigation",
+    "set_exploration",
+    "get_robot_pose",
+)
 
 
 def register(mcp) -> None:
@@ -372,6 +489,28 @@ def register(mcp) -> None:
         """
         return await asyncio.to_thread(
             navigate_to_sync, x, y, yaw_deg, min(max(timeout_s, 10.0), 900.0)
+        )
+
+    @mcp.tool
+    async def run_mission(
+        steps: list[MissionStep],
+        on_failure: Literal["stop", "return_to_base"] = "stop",
+        step_timeout_s: float = DEFAULT_NAV_TIMEOUT_S,
+    ) -> str:
+        """Run a multi-step mission in order and WAIT until it ends, e.g. "walk 3 m,
+        wait 5 s, come back to base" = [{"action": "move_forward", "meters": 3},
+        {"action": "wait", "seconds": 5}, {"action": "return_to_base"}].
+        Stops at the first step that fails (or, with on_failure="return_to_base",
+        then drives back to base). Returns MISSION COMPLETE or MISSION FAILED with
+        one line per step. stop_navigation aborts a running mission.
+
+        Args:
+            steps: up to 12 steps, executed in order.
+            on_failure: "stop" (stay where it failed) or "return_to_base".
+            step_timeout_s: time limit per driving step (the simulation is slow).
+        """
+        return await asyncio.to_thread(
+            run_mission_sync, steps, on_failure, min(max(step_timeout_s, 10.0), 900.0)
         )
 
     @mcp.tool
