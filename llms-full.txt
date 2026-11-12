@@ -110,11 +110,39 @@ Sem GPU, porém, ele leva cerca de 1,5 min por resposta.
 - **A cota do Groq free** é limitada por minuto e por dia. Se estourar, a página
   mostra "the free LLM quota is exhausted". Espere e tente de novo.
 - **Um agente por vez:** um agente novo derruba o anterior.
-- **A navegação ainda falha no terreno lunar.** As tools relatam isso
-  corretamente (`ABORTED`), mas o Nav2 aborta com frequência ("Start occupied",
-  "exceeded maximum iterations"). O lidar 2D tem alcance de 5 m e marca rampas do
-  terreno como parede no mapa do SLAM. Goals curtos em linha reta, a partir do
-  início, funcionam (validado: `ARRIVED` a 2 m).
+- **Distâncias longas demoram.** A simulação roda a ~0,4× o tempo real: 6 m
+  levam cerca de 1,5 min, e 10 m passam de 5 min. O `navigate_to` espera até
+  600 s por padrão (`ROVER_MCP_NAV_TIMEOUT`).
+
+## Navegação no terreno lunar (perfil `uneven_terrain`)
+
+O `moon.world` é só um heightmap, sem pedras. O lidar 2D fica a ~0,21 m do
+chão, então qualquer rampa suave à frente (~2,4° a 5 m) virava "parede" no
+`/map` do SLAM, e o Nav2 planejava em cima disso. O resultado eram abortos com
+"Start occupied" (o rover passava por cima de uma parede fantasma) e
+"exceeded maximum iterations".
+
+Correções (`rover_navigation/launch/bringup.launch.py`, `rover_bt.xml`):
+
+- **Costmap global feito pelo `/scan`**, e não pelo `/map`. O raytracing vai
+  até 5 m (`inf` conta como livre), mas só retornos a **menos de 0,8 m**
+  (~15° de inclinação) viram obstáculo. A área sob o rover é sempre limpa. O
+  SLAM continua só para localização.
+- **Costmap local de 6×6 m.** O RPP só segue os pontos do caminho dentro dele;
+  com 3×3 m, um desvio de 1,5 m gerava "Resulting plan has 0 poses".
+- **Behavior tree:** replaneja a cada 3 s a partir da pose atual e faz até 4
+  novas tentativas, limpando os costmaps e esperando. Sem BackUp/Spin.
+- O perfil vem ligado por padrão no `gazebo.launch.py` e no `rover_mcp_sim.launch.py`
+  (`uneven_terrain:=false` desliga). No `bringup.launch.py`, usado pelo
+  robô real, o padrão é `false`, porque lá as paredes existem.
+
+Bateria de 7 goals (quadrado de 3 m, volta à origem, 6 m e 10 m):
+
+| Configuração | Chegaram | Falhas |
+|---|---|---|
+| original | ~1 | "Start occupied", "max iterations" |
+| + costmap global pelo `/scan` | 4/7 | "plan has 0 poses" (controller) |
+| + BT com replanejamento + costmap local 6 m | **6/7** | 1 timeout a 0,9 m do alvo de 10 m (limite antigo de 300 s) |
 
 ## Validação (2026-11-12)
 
@@ -122,7 +150,7 @@ Sem GPU, porém, ele leva cerca de 1,5 min por resposta.
 |---|---|
 | `navigate_to(2, 0)` a partir da origem | ✅ `ARRIVED` (28 s; 0,49 m do alvo, dentro da tolerância do Nav2) |
 | `navigate_to(6, 0)` + `stop_navigation` após 20 s | ✅ `STOPPED` (1 goal cancelado) e o `navigate_to` respondeu `CANCELED` |
-| Goal com o rover sobre um "obstáculo" fantasma | ✅ `ABORTED`, sem afirmar que chegou |
+| Goal com o rover sobre um "obstáculo" fantasma (antes do perfil de terreno) | ✅ `ABORTED`, sem afirmar que chegou |
 | `get_robot_pose` com o rover parado | ✅ 0,1 s, frame `map` (o `/pose` do slam_toolbox fica mudo nessa situação) |
 | Agente com token errado | ✅ recusado (HTTP 403), o agente sai |
 | Chat com senha errada | ✅ "senha incorreta" |
