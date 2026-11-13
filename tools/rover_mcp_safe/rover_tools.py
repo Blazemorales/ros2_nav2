@@ -58,9 +58,33 @@ MAX_MISSION_STEPS = 12
 MAX_WAIT_S = 120.0
 MISSION_WALL_LIMIT_S = float(os.getenv("ROVER_MCP_MISSION_LIMIT", "2700"))
 
-# Set by stop_navigation so a running mission stops between/inside steps,
-# not only the Nav2 goal that happens to be active.
-_STOP = threading.Event()
+# Stop generation: bumped by every stop_navigation and never reset. Each motion
+# call captures it when it starts and refuses to send a goal once it changed, so
+# a stop also ends a running mission (between/inside steps) and no later call can
+# erase someone else's stop (the old Event was cleared by every new mission).
+_STOP_COND = threading.Condition()
+_STOP_GEN = 0
+
+
+def _stop_gen() -> int:
+    with _STOP_COND:
+        return _STOP_GEN
+
+
+def _stopped_since(gen: int) -> bool:
+    return _stop_gen() != gen
+
+
+def _wait_unless_stopped(gen: int, secs: float) -> bool:
+    """Sleep up to `secs`; return True as soon as a stop arrives."""
+    deadline = time.monotonic() + secs
+    with _STOP_COND:
+        while _STOP_GEN == gen:
+            left = deadline - time.monotonic()
+            if left <= 0:
+                return False
+            _STOP_COND.wait(left)
+        return True
 
 
 def _url() -> str:
@@ -193,21 +217,60 @@ def _tf_pose(b: _Bridge, timeout: float = 3.0) -> dict | None:
     }
 
 
+class LocalizationBroken(RuntimeError):
+    """The pose is NaN: rosbridge sends NaN as JSON null, so values arrive as None."""
+
+
+LOCALIZATION_BROKEN_MSG = (
+    "LOCALIZATION BROKEN: the rover's odometry/TF is NaN (the EKF diverged, usually "
+    "because two simulations ran at once or the sim clock jumped back). Navigation "
+    "cannot work until the simulation is restarted. Do NOT retry; tell the user to "
+    "restart the simulation."
+)
+
+
+def _finite(*vals) -> bool:
+    return all(isinstance(v, (int, float)) and math.isfinite(v) for v in vals)
+
+
+def _quat_ok(q: dict) -> bool:
+    return _finite(*(q.get(k) for k in ("x", "y", "z", "w")))
+
+
 def _pose_sync(b: _Bridge) -> dict | None:
-    p = _tf_pose(b)
+    """Pose in map (via /tf) or odom; None if nothing answered.
+
+    Raises LocalizationBroken if the pose contains NaN."""
+    try:
+        p = _tf_pose(b)
+    except TypeError as e:  # round()/math on None = NaN in the transforms
+        raise LocalizationBroken(LOCALIZATION_BROKEN_MSG) from e
     if p:
+        if not _finite(p["x"], p["y"], p["yaw_deg"]):
+            raise LocalizationBroken(LOCALIZATION_BROKEN_MSG)
         return p
     msg = b.read_once("/odom", "nav_msgs/msg/Odometry", timeout=4.0)
     if msg:
         p = msg["pose"]["pose"]
+        pos = p["position"]
+        if not (_finite(pos.get("x"), pos.get("y")) and _quat_ok(p["orientation"])):
+            raise LocalizationBroken(LOCALIZATION_BROKEN_MSG)
         return {
-            "x": round(p["position"]["x"], 2),
-            "y": round(p["position"]["y"], 2),
+            "x": round(pos["x"], 2),
+            "y": round(pos["y"], 2),
             "yaw_deg": round(math.degrees(_yaw_from_quat(p["orientation"])), 1),
             "frame": "odom",
             "source": "/odom",
         }
     return None
+
+
+def _pose_or_none(b: _Bridge) -> dict | None:
+    """For reporting after an action already happened: never raise."""
+    try:
+        return _pose_sync(b)
+    except LocalizationBroken:
+        return None
 
 
 def _fmt_pose(p: dict | None) -> str:
@@ -251,7 +314,10 @@ def _cancel_all_sync(b: _Bridge) -> list[str]:
 
 def get_robot_pose_sync() -> str:
     with _Bridge() as b:
-        p = _pose_sync(b)
+        try:
+            p = _pose_sync(b)
+        except LocalizationBroken as e:
+            return str(e)
     return f"Rover position: {_fmt_pose(p)}."
 
 
@@ -266,28 +332,51 @@ def set_exploration_sync(enabled: bool) -> str:
 
 
 def stop_navigation_sync() -> str:
-    _STOP.set()
+    global _STOP_GEN
+    with _STOP_COND:
+        _STOP_GEN += 1
+        _STOP_COND.notify_all()
     with _Bridge() as b:
         _set_exploration_sync(b, False)
         details = _cancel_all_sync(b)
         time.sleep(1.0)
-        p = _pose_sync(b)
+        p = _pose_or_none(b)
     return (
         "STOPPED: exploration paused and all Nav2 goals canceled "
         f"({'; '.join(details)}). Rover is at {_fmt_pose(p)}."
     )
 
 
-def navigate_to_sync(x: float, y: float, yaw_deg: float, timeout_s: float) -> str:
+def navigate_to_sync(
+    x: float, y: float, yaw_deg: float, timeout_s: float, gen: int | None = None
+) -> str:
+    if gen is None:
+        gen = _stop_gen()
+    # Fail closed: NaN/inf would make the distance check below always pass.
+    if not _finite(x, y, yaw_deg):
+        return "REFUSED: x, y and yaw_deg must be finite numbers."
     with _Bridge() as b:
-        start = _pose_sync(b)
-        if start and start["frame"] == "map":
-            dist = math.hypot(x - start["x"], y - start["y"])
-            if dist > MAX_GOAL_DISTANCE_M:
-                return (
-                    f"REFUSED: target is {dist:.1f} m away; the limit per goal is "
-                    f"{MAX_GOAL_DISTANCE_M:.0f} m. Pick a closer intermediate point."
-                )
+        try:
+            start = _pose_sync(b)
+        except LocalizationBroken as e:
+            return str(e)
+        # The goal is sent in the map frame, so the per-goal limit can only be
+        # enforced from a map-frame pose; without one, refuse instead of skipping it.
+        if not start or start["frame"] != "map":
+            return (
+                "REFUSED: the rover's position in the map frame is unknown (map->odom "
+                "TF not available yet), so the "
+                f"{MAX_GOAL_DISTANCE_M:.0f} m goal limit cannot be enforced. "
+                "Wait for localization and try again."
+            )
+        dist = math.hypot(x - start["x"], y - start["y"])
+        if not math.isfinite(dist) or dist > MAX_GOAL_DISTANCE_M:
+            return (
+                f"REFUSED: target is {dist:.1f} m away; the limit per goal is "
+                f"{MAX_GOAL_DISTANCE_M:.0f} m. Pick a closer intermediate point."
+            )
+        if _stopped_since(gen):
+            return "CANCELED: stop requested before the goal was sent."
         # explore_lite would preempt this goal with its own, so pause it first.
         _set_exploration_sync(b, False)
 
@@ -326,7 +415,7 @@ def navigate_to_sync(x: float, y: float, yaw_deg: float, timeout_s: float) -> st
         if res is None:
             b.send({"op": "cancel_action_goal", "id": gid, "action": NAV_ACTION})
             time.sleep(1.0)
-            end = _pose_sync(b)
+            end = _pose_or_none(b)
             return (
                 f"TIMEOUT: the rover did not reach ({x:.2f}, {y:.2f}) within {timeout_s:.0f} s; "
                 f"the goal was canceled. Rover is now at {_fmt_pose(end)}. "
@@ -341,7 +430,7 @@ def navigate_to_sync(x: float, y: float, yaw_deg: float, timeout_s: float) -> st
             if isinstance(status, int)
             else str(status)
         )
-        end = _pose_sync(b)
+        end = _pose_or_none(b)
 
     miss = (
         math.hypot(x - end["x"], y - end["y"]) if end and end["frame"] == "map" else None
@@ -384,32 +473,37 @@ def _status_of(text: str) -> str:
     return text.split(":", 1)[0].split(" ", 1)[0]
 
 
-def _run_step(step: MissionStep, timeout_s: float) -> tuple[str, str]:
+def _run_step(step: MissionStep, timeout_s: float, gen: int) -> tuple[str, str]:
     """Return (status, text). status is ARRIVED/DONE on success."""
     a = step.action
     if a == "wait":
+        if not _finite(step.seconds or 0.0):
+            return "ERROR", "ERROR: wait needs a finite number of seconds"
         secs = min(max(step.seconds or 0.0, 0.0), MAX_WAIT_S)
-        if _STOP.wait(secs):
+        if _wait_unless_stopped(gen, secs):
             return "CANCELED", f"CANCELED: wait interrupted by stop after <{secs:.0f} s"
         return "DONE", f"DONE: waited {secs:.0f} s"
     if a == "return_to_base":
-        text = navigate_to_sync(BASE_X, BASE_Y, 0.0, timeout_s)
+        text = navigate_to_sync(BASE_X, BASE_Y, 0.0, timeout_s, gen)
         return _status_of(text), text
     if a == "go_to":
         if step.x is None or step.y is None:
             return "ERROR", "ERROR: go_to needs x and y"
-        text = navigate_to_sync(step.x, step.y, step.yaw_deg or 0.0, timeout_s)
+        text = navigate_to_sync(step.x, step.y, step.yaw_deg or 0.0, timeout_s, gen)
         return _status_of(text), text
     if a == "move_forward":
-        if not step.meters or step.meters <= 0:
+        if not step.meters or not _finite(step.meters) or step.meters <= 0:
             return "ERROR", "ERROR: move_forward needs meters > 0"
         with _Bridge() as b:
-            p = _pose_sync(b)
+            try:
+                p = _pose_sync(b)
+            except LocalizationBroken as e:
+                return "LOCALIZATION", str(e)
         if not p or p["frame"] != "map":
             return "ERROR", "ERROR: current pose in the map frame is unknown"
         h = math.radians(p["yaw_deg"])
         gx, gy = p["x"] + step.meters * math.cos(h), p["y"] + step.meters * math.sin(h)
-        text = navigate_to_sync(gx, gy, p["yaw_deg"], timeout_s)
+        text = navigate_to_sync(gx, gy, p["yaw_deg"], timeout_s, gen)
         return _status_of(text), text
     return "ERROR", f"ERROR: unknown action {a}"
 
@@ -421,11 +515,11 @@ def run_mission_sync(
         return "REFUSED: the mission has no steps."
     if len(steps) > MAX_MISSION_STEPS:
         return f"REFUSED: at most {MAX_MISSION_STEPS} steps per mission."
-    _STOP.clear()
+    gen = _stop_gen()  # a stop issued after this point aborts the mission
     t0 = time.monotonic()
     lines, ok = [], True
     for i, step in enumerate(steps, 1):
-        if _STOP.is_set():
+        if _stopped_since(gen):
             lines.append(f"{i}. {step.action}: CANCELED (stop requested)")
             ok = False
             break
@@ -434,14 +528,16 @@ def run_mission_sync(
             ok = False
             break
         ts = time.monotonic()
-        status, text = _run_step(step, step_timeout_s)
+        status, text = _run_step(step, step_timeout_s, gen)
         lines.append(f"{i}. {step.action} [{time.monotonic() - ts:.0f} s]: {text}")
         if status not in ("ARRIVED", "DONE"):
             ok = False
             break
 
-    if not ok and on_failure == "return_to_base" and not _STOP.is_set():
-        status, text = _run_step(MissionStep(action="return_to_base"), step_timeout_s)
+    if not ok and on_failure == "return_to_base" and not _stopped_since(gen):
+        status, text = _run_step(
+            MissionStep(action="return_to_base"), step_timeout_s, gen
+        )
         lines.append(f"recovery: return_to_base: {text}")
 
     total = time.monotonic() - t0
@@ -474,7 +570,10 @@ DEDICATED_TOOLS = (
 def register(mcp) -> None:
     @mcp.tool
     async def navigate_to(
-        x: float, y: float, yaw_deg: float = 0.0, timeout_s: float = DEFAULT_NAV_TIMEOUT_S
+        x: float,
+        y: float,
+        yaw_deg: float = 0.0,
+        timeout_s: float = DEFAULT_NAV_TIMEOUT_S,
     ) -> str:
         """Drive the rover to a point in the map frame using Nav2 and WAIT until it
         finishes. Pauses autonomous exploration first. Returns ARRIVED, ABORTED,

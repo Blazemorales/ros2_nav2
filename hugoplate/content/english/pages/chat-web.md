@@ -46,7 +46,7 @@ e funciona mesmo enquanto um `navigate_to` está esperando.
 ## Montar (uma vez)
 
 1. **Chave grátis do Groq:** crie uma conta em console.groq.com → *API Keys* →
-   *Create API Key*. Não pede cartão. O modelo padrão é o `llama-3.3-70b-versatile`.
+   *Create API Key*. Não pede cartão. O modelo padrão é o `openai/gpt-oss-120b` (o `llama-3.3-70b-versatile` foi desligado pelo Groq em 16/08/2026).
    Para trocar de provedor, mude `LLM_BASE_URL`/`LLM_MODEL` (qualquer API compatível
    com OpenAI serve, por exemplo Gemini ou OpenRouter).
 2. **Render:** crie uma conta em render.com com o GitHub → *New* → *Blueprint* →
