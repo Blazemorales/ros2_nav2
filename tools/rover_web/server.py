@@ -62,6 +62,10 @@ class AgentLink:
         self.instructions = ""
         self.pending: dict[str, asyncio.Future] = {}
         self.since = 0.0
+        # Bumped by every emergency stop (from any chat connection: all users share
+        # one rover). A turn that started before the bump must not command the
+        # rover again.
+        self.stop_epoch = 0
 
     @property
     def online(self) -> bool:
@@ -172,12 +176,40 @@ async def _llm(http: httpx.AsyncClient, messages: list[dict]) -> dict:
     return r.json()["choices"][0]["message"]
 
 
+STOPPED_REPLY = "(pedido interrompido pelo PARAR)"
+
+
+def close_pending_calls(history: list[dict]) -> None:
+    """Answer the tool_calls of the last assistant message that never got a result
+    (turn interrupted by a stop), so the next request to the LLM API stays valid."""
+    for i in range(len(history) - 1, -1, -1):
+        m = history[i]
+        if m.get("role") == "assistant":
+            answered = {
+                t.get("tool_call_id") for t in history[i + 1 :] if t.get("role") == "tool"
+            }
+            for c in m.get("tool_calls") or []:
+                if c.get("id") not in answered:
+                    history.append(
+                        {
+                            "role": "tool",
+                            "tool_call_id": c.get("id"),
+                            "content": "CANCELED: stopped by the user (emergency stop).",
+                        }
+                    )
+            return
+
+
 async def run_turn(
     ws: WebSocket, http: httpx.AsyncClient, history: list[dict], text: str
 ):
+    epoch = agent.stop_epoch
     history.append({"role": "user", "content": text})
     system = {"role": "system", "content": agent.instructions or "You control a rover."}
     for _ in range(MAX_ROUNDS):
+        if agent.stop_epoch != epoch:
+            await ws.send_json({"type": "reply", "text": STOPPED_REPLY})
+            return
         msg = await _llm(http, [system] + history[-MAX_HISTORY:])
         calls = msg.get("tool_calls") or []
         history.append(
@@ -193,6 +225,11 @@ async def run_turn(
             )
             return
         for c in calls:
+            if agent.stop_epoch != epoch:
+                # A stop arrived while an earlier call ran: drop the queued ones.
+                close_pending_calls(history)
+                await ws.send_json({"type": "reply", "text": STOPPED_REPLY})
+                return
             fn = c["function"]
             try:
                 args = json.loads(fn.get("arguments") or "{}")
@@ -223,7 +260,12 @@ async def chat_ws(ws: WebSocket):
                 msg = await ws.receive_json()
                 if msg.get("type") == "stop":
                     # Emergency stop: straight to the agent, not through the LLM, and
-                    # allowed while a navigate_to is still running.
+                    # allowed while a navigate_to is still running. Invalidate every
+                    # in-flight turn first so no queued tool call or later LLM round
+                    # commands the rover again after the stop.
+                    agent.stop_epoch += 1
+                    if busy and not busy.done():
+                        busy.cancel()
                     await ws.send_json(
                         {"type": "tool", "name": "stop_navigation", "args": {}}
                     )
@@ -255,6 +297,9 @@ async def chat_ws(ws: WebSocket):
                     async def turn(text=str(msg.get("text", ""))[:2000]):
                         try:
                             await run_turn(ws, http, history, text)
+                        except asyncio.CancelledError:
+                            close_pending_calls(history)
+                            await ws.send_json({"type": "reply", "text": STOPPED_REPLY})
                         except Exception as e:  # noqa: BLE001
                             await ws.send_json({"type": "error", "text": str(e)})
 
